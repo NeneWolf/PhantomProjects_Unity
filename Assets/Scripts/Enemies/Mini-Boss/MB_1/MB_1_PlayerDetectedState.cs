@@ -29,6 +29,19 @@ public class MB_1_PlayerDetectedState : PlayerDetectedState
     public override void LogicUpdate()
     {
         base.LogicUpdate();
+
+        if (performCloseRangeAction)
+        {
+            stateMachine.ChangeState(mBoss.meleeAttackState);
+        }
+        else if (performLongRangeAction)
+        {
+            stateMachine.ChangeState(mBoss.rangeAttackState);
+        }
+        else if (!isPlayerInMaxAgroRange)
+        {
+            stateMachine.ChangeState(mBoss.lookForPlayerState);
+        }
     }
 
     public override void PhysicsUpdate()

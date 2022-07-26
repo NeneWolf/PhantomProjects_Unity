@@ -26,6 +26,18 @@ public class Entity : MonoBehaviour
     [SerializeField] private Transform playerCheck;
     [SerializeField] private Transform groundCheck;
 
+    [Header("Spawn Minions")]
+    [Space]
+    [SerializeField] private bool canSpawnMinions = false;
+    [SerializeField] private bool spawnAfterDead = false;
+    [SerializeField] private int spawnCount;
+    [SerializeField] private Transform spawnPosition;
+    [SerializeField] private Transform enemiesLocation;
+    [SerializeField] private GameObject enemySpawn;
+
+
+    private bool hasSpawnMinions;
+
     private float currentHealth;
     protected bool isDead;
     
@@ -48,7 +60,25 @@ public class Entity : MonoBehaviour
     {
         stateMachine.currentState.LogicUpdate();
 
-        animator.SetFloat("yVelocity",rb2d.velocity.y);
+        
+        //animator.SetFloat("yVelocity", rb2d.velocity.y);
+
+        print(currentHealth);
+
+        if(canSpawnMinions && hasSpawnMinions == false)
+        {
+            if (spawnAfterDead  && currentHealth == 0)
+            {
+                SpawnMinions();
+                hasSpawnMinions = true;
+            }
+            else if (!spawnAfterDead && currentHealth <= (entityData.maxHealth / 2))
+            {
+                SpawnMinions();
+                hasSpawnMinions = true;
+            }
+                
+        }
     }
 
     public virtual void FixedUpdate()
@@ -142,5 +172,14 @@ public class Entity : MonoBehaviour
         Gizmos.DrawWireSphere(playerCheck.position + (Vector3)(Vector2.right * entityData.closeRangeActionDistance), 0.2f);
         Gizmos.DrawWireSphere(playerCheck.position + (Vector3)(Vector2.right * entityData.minAgroDistance), 0.2f);
         Gizmos.DrawWireSphere(playerCheck.position + (Vector3)(Vector2.right * entityData.maxAgroDistance), 0.2f);
+    }
+
+    public virtual void SpawnMinions()
+    {
+        for(int i = 0; i < spawnCount; i++)
+        {
+            //TODO: Change this...
+            Instantiate(enemySpawn, new Vector3(spawnPosition.transform.position.x + Random.Range(-10.0f,10.0f), spawnPosition.transform.position.y, 0f), Quaternion.identity, enemiesLocation.transform);
+        }
     }
 }

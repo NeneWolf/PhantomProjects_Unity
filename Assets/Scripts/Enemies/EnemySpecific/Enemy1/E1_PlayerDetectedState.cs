@@ -25,6 +25,7 @@ public class E1_PlayerDetectedState : PlayerDetectedState
     public override void LogicUpdate()
     {
         base.LogicUpdate();
+
         if (performCloseRangeAction)
         {
             stateMachine.ChangeState(enemy.meleeAttackState);

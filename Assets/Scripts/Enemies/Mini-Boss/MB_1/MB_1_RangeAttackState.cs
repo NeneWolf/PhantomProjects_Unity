@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MB_1_MeleeAttackState : MeleeAttackState
+public class MB_1_RangeAttackState : RangeAttackState
 {
     protected Mini_Boss_Eye mBoss;
 
-    public MB_1_MeleeAttackState(FiniteStateMachine stateMachine, Entity entity, string animBoolName, Transform attackPosition, D_MeleeAttack stateData, Mini_Boss_Eye mBoss) : base(stateMachine, entity, animBoolName, attackPosition, stateData)
+    public MB_1_RangeAttackState(FiniteStateMachine stateMachine, Entity entity, string animBoolName, Transform attackPosition, D_RangeAttackState stateData, Mini_Boss_Eye mBoss) : base(stateMachine, entity, animBoolName, attackPosition, stateData)
     {
         this.mBoss = mBoss;
     }
@@ -34,11 +34,6 @@ public class MB_1_MeleeAttackState : MeleeAttackState
     public override void LogicUpdate()
     {
         base.LogicUpdate();
-    }
-
-    public override void PhysicsUpdate()
-    {
-        base.PhysicsUpdate();
 
         if (isAnimationFinish)
         {
@@ -46,11 +41,14 @@ public class MB_1_MeleeAttackState : MeleeAttackState
             {
                 stateMachine.ChangeState(mBoss.playerDetectedState);
             }
-            else if (!isPlayerInMinAgroRange)
-            {
+            else
                 stateMachine.ChangeState(mBoss.lookForPlayerState);
-            }
         }
+    }
+
+    public override void PhysicsUpdate()
+    {
+        base.PhysicsUpdate();
     }
 
     public override void TriggerAttack()

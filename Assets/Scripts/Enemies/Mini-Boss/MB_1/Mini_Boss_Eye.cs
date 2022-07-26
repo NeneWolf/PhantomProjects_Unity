@@ -9,6 +9,8 @@ public class Mini_Boss_Eye : Entity
     public MB_1_PlayerDetectedState playerDetectedState { get; private set; }
     public MB_1_LookForPlayerState lookForPlayerState { get; private set; }
     public MB_1_MeleeAttackState meleeAttackState { get; private set; }
+    public MB_1_RangeAttackState rangeAttackState { get; private set; }
+    public MB_1_DeadState deadState { get; private set; }
 
     [Header("StateData")]
     [Space]
@@ -17,6 +19,8 @@ public class Mini_Boss_Eye : Entity
     [SerializeField] D_PlayerDetectedState playerDetectedStateData;
     [SerializeField] D_MeleeAttack meleeAttackStateData;
     [SerializeField] D_LookForPlayerState lookForPlayerStateData;
+    [SerializeField] D_RangeAttackState rangeAttackStateData;
+    [SerializeField] D_DeadState deadStateData;
 
     [Header("Attacks")]
     [Space]
@@ -32,6 +36,8 @@ public class Mini_Boss_Eye : Entity
         playerDetectedState = new MB_1_PlayerDetectedState(stateMachine, this, "playerDetected", playerDetectedStateData, this);
         lookForPlayerState = new MB_1_LookForPlayerState(stateMachine, this, "lookForPlayer", lookForPlayerStateData,this);
         meleeAttackState = new MB_1_MeleeAttackState(stateMachine, this, "meleeAttack", meleeAttackPosition, meleeAttackStateData, this);
+        rangeAttackState = new MB_1_RangeAttackState(stateMachine, this, "rangeAttack", RangeAttackPosition, rangeAttackStateData, this);
+        deadState = new MB_1_DeadState(stateMachine, this, "dead", deadStateData, this);
 
         stateMachine.Initialize(moveState);
     }
@@ -42,8 +48,17 @@ public class Mini_Boss_Eye : Entity
 
         if (isDead)
         {
-            //stateMachine.ChangeState(deadState);
+            stateMachine.ChangeState(deadState);
             StartCoroutine("WaitToDisable");
+        }
+        else if (CheckPlayerInMinAgroRange())
+        {
+            stateMachine.ChangeState(rangeAttackState);
+        }
+        else if (!CheckPlayerInMinAgroRange())
+        {
+            lookForPlayerState.SetTurnImmediatly(true);
+            stateMachine.ChangeState(lookForPlayerState);
         }
 
     }
@@ -52,7 +67,7 @@ public class Mini_Boss_Eye : Entity
     {
         base.OnDrawGizmos();
 
-        //TODO: Draw Melee Wire Sphere
+        Gizmos.DrawWireSphere(meleeAttackPosition.position, meleeAttackStateData.attackRadius);
     }
 
     private IEnumerator WaitToDisable()
