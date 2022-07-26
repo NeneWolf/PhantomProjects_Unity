@@ -2,13 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class E1_MeleeAttackState : MeleeAttackState
+public class MB_1_MeleeAttackState : MeleeAttackState
 {
-    private Enemy1 enemy;
-
-    public E1_MeleeAttackState(FiniteStateMachine stateMachine, Entity entity, string animBoolName, Transform attackPosition, D_MeleeAttack stateData, Enemy1 enemy) : base(stateMachine, entity, animBoolName, attackPosition, stateData)
+    protected Mini_Boss_Eye mBoss;
+    public MB_1_MeleeAttackState(FiniteStateMachine stateMachine, Entity entity, string animBoolName, Transform attackPosition, D_MeleeAttack stateData, Mini_Boss_Eye mBoss) : base(stateMachine, entity, animBoolName, attackPosition, stateData)
     {
-        this.enemy = enemy;
+        this.mBoss = mBoss;
     }
 
     public override void DoChecks()
@@ -34,21 +33,23 @@ public class E1_MeleeAttackState : MeleeAttackState
     public override void LogicUpdate()
     {
         base.LogicUpdate();
-
-        if (isAnimationFinish)
-        {
-            if (isPlayerInMinAgroRange)
-            {
-                stateMachine.ChangeState(enemy.playerDetectedState);
-            }
-            else if (!isPlayerInMinAgroRange)
-                stateMachine.ChangeState(enemy.lookForPlayerState);
-        }
     }
 
     public override void PhysicsUpdate()
     {
         base.PhysicsUpdate();
+
+        if (isAnimationFinish)
+        {
+            if (isPlayerInMinAgroRange)
+            {
+                stateMachine.ChangeState(mBoss.playerDetectedState);
+            }
+            else if (!isPlayerInMinAgroRange)
+            {
+                stateMachine.ChangeState(mBoss.lookForPlayerState);
+            }
+        }
     }
 
     public override void TriggerAttack()
