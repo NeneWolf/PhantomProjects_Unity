@@ -31,7 +31,7 @@ namespace PhantomProjects.Manager
 
             if (player != null)
             {
-                isDead = player.GetComponent<PlayerMovement>().IsPlayerDead;
+                isDead = player.GetComponent<PlayerState>().IsPlayerDead;
 
                 if (isDead == true)
                 {
