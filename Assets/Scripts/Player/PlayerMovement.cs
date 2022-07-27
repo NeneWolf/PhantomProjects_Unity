@@ -24,7 +24,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetButtonDown("Jump"))                                        // Check to see if the player has pressed the jump button
         {
-            jump = true;                                                        // Set jump to true to prevent further jumps
+            controller.CanJump(true);                                           // Set jump to true to prevent further jumps
         }
     }
 
@@ -32,8 +32,7 @@ public class PlayerMovement : MonoBehaviour
     {
         #region Player Movement
 
-        controller.Move(horizontalMove * Time.fixedDeltaTime, jump);            // Player movement
-        jump = false;
+        controller.Move(horizontalMove * Time.fixedDeltaTime);            // Player movement
 
         #endregion
     }

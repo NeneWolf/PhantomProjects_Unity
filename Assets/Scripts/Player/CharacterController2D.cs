@@ -5,44 +5,68 @@ public class CharacterController2D : MonoBehaviour
 {
 	[Header("Player Movement & What is Ground / Ceiling Checks")]
 	[Space]
-	//[Range(0, 1)] [SerializeField] private float crouchSpeed = .36f;			// Amount of maxSpeed applied to crouching movement. 1 = 100%
-	[Range(0, .3f)] [SerializeField] private float movementSmoothing = .05f;
-	// How much to smooth out the movement
-	[SerializeField] private bool airControl = false;                           // Whether or not a player can steer while jumping;
+	[Range(0, .3f)] [SerializeField] private float movementSmoothing = .05f;	// How much to smooth out the movement
 	[SerializeField] private LayerMask whatIsGround;                            // A mask determining what is ground to the character
 	[SerializeField] private Transform groundCheck;                             // A position marking where to check if the player is grounded.
-																				//[SerializeField] private Transform ceilingCheck;                            // A position marking where to check for ceilings
 
 	private Rigidbody2D rb;
 	private Vector2 velocity = Vector2.zero;
 	const float groundedRadius = .2f;                                           // Radius of the overlap circle to determine if grounded
 	private bool grounded;                                                      // Whether or not the player is grounded.
-																				//const float ceilingRadius = .2f;											// Radius of the overlap circle to determine if the player can stand up
-	//[SerializeField] private Collider2D crouchDisableCollider;				// A collider that will be disabled when crouching
-	//private bool wasCrouching = false;
+	bool facingRight = true;                                                    // For determining which way the player is currently facing.
+
+	/*
+	[Header("Crouch")]
+	[Space]
+	[Range(0, 1)] [SerializeField] private float crouchSpeed = .36f;			// Amount of maxSpeed applied to crouching movement. 1 = 100%
+	[SerializeField] private Transform ceilingCheck;							// A position marking where to check for ceilings
+	const float ceilingRadius = .2f;											// Radius of the overlap circle to determine if the player can stand up
+	[SerializeField] private Collider2D crouchDisableCollider;					// A collider that will be disabled when crouching
+	private bool wasCrouching = false;
+	*/
 
 	[Header("Jump")]
 	[Space]
-	[Range(1, 10)] public float jumpVelocity;
+	[SerializeField] private bool airControl = false;                           // Whether or not a player can steer while jumping;
+	[SerializeField] bool doubleJumpActive = false;								// Whether or not the player can double jump
+	[SerializeField] int extraJumpsValue;										// Number of extra jumps the player can peform whilst in the air
+	[SerializeField] private float coyoteTime = 0.2f;                           // Time given for the player to jump if they fall off a tile/platform 
+	public float jumpVelocity = 6.5f;											// How high the player will Jump
 	public float fallMultiplier = 2.5f;                                         // Gravity affecting player when they high jump
 	public float lowJumpMultiplier = 2f;                                        // Gravity affecting player when they low jump
-	[SerializeField] private float coyoteTime = 0.2f;                           // Time given for the player to jump if they fall off a tile/platform 
+	bool jump = false;
+	int extraJumps;                                                             // Stores the number of extra jumps
 	private float coyoteTimeCounter;
-
-	[Header("Player Direction")]
-	[Space]
-	bool facingRight = true;                                             // For determining which way the player is currently facing.
 
 	private void Awake()
 	{
 		rb = GetComponent<Rigidbody2D>();
 	}
 
-	private void FixedUpdate()
+    private void Update()
+    {
+		Gravity();
+    }
+
+    private void FixedUpdate()
 	{
 		bool wasGrounded = grounded;
 		grounded = false;
 
+		GroundCheck();
+
+		if (jump)
+		{
+			Jump();
+		}
+
+		// Check to see if double jump is active
+		if (doubleJumpActive && grounded)
+			extraJumps = extraJumpsValue;
+	}
+
+	void GroundCheck()
+	{
 		// The player is grounded if a circlecast to the groundcheck position hits anything designated as ground
 		// This can be done using layers instead but Sample Assets will not overwrite your project settings.
 		Collider2D[] colliders = Physics2D.OverlapCircleAll(groundCheck.position, groundedRadius, whatIsGround);
@@ -53,11 +77,9 @@ public class CharacterController2D : MonoBehaviour
 				grounded = true;
 			}
 		}
-
-		Jump();
 	}
 
-	public void Move(float move, /*bool crouch,*/ bool jump)
+	public void Move(float move/*, bool crouch*/)
 	{
 		/* If crouching, check to see if the character can stand up
 		if (!crouch)
@@ -118,18 +140,9 @@ public class CharacterController2D : MonoBehaviour
 				Flip();
 			}
 		}
-		// If the player should jump...
-		if (coyoteTimeCounter > 0 && jump)                                      // Check to see if the player still has time to jump (Coyote Time) and the jump button is pressed
-		{
-			// Add a vertical force to the player.
-			grounded = false;
-			rb.velocity = Vector2.up * jumpVelocity;                            // Add upward force to the player to make them jump
-
-			coyoteTimeCounter = 0f;                                             // Reset Coyote Time timer for the next jump check
-		}
 	}
 
-	void Jump()
+	void Gravity()
     {
 		if (rb.velocity.y < 0)
 		{
@@ -138,6 +151,28 @@ public class CharacterController2D : MonoBehaviour
 		else if (rb.velocity.y > 0 && !Input.GetButton("Jump"))
 		{
 			rb.velocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;  // If jump button isn't being held carry out low jump
+		}
+	}
+
+	void Jump()
+    {
+		// If the player should jump...
+		if (coyoteTimeCounter > 0 && jump && extraJumps > 0)                    // Check to see if the player still has time to jump (Coyote Time) and the jump button is pressed
+		{
+			// Add a vertical force to the player.
+			grounded = false;
+			rb.velocity = Vector2.up * jumpVelocity;                            // Add upward force to the player to make them jump
+			extraJumps--;
+
+			coyoteTimeCounter = 0f;                                             // Reset Coyote Time timer for the next jump check
+		}
+		else if (coyoteTimeCounter > 0 && jump && extraJumps == 0)
+        {
+			grounded = false;
+			rb.velocity = Vector2.up * jumpVelocity;                            // Add upward force to the player to make them jump
+			jump = false;
+
+			coyoteTimeCounter = 0f;
 		}
 
 		if (grounded)
@@ -149,6 +184,11 @@ public class CharacterController2D : MonoBehaviour
 			coyoteTimeCounter -= Time.deltaTime;                                // Reduce timer every second
 		}
 	}
+
+	public void CanJump(bool canJump)
+    {
+		jump = canJump;
+    }
 
 	private void Flip()
 	{
