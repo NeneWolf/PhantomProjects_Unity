@@ -30,11 +30,13 @@ public class CharacterController2D : MonoBehaviour
 	[SerializeField] private bool airControl = false;                           // Whether or not a player can steer while jumping;
 	[SerializeField] bool doubleJumpActive = false;								// Whether or not the player can double jump
 	[SerializeField] int extraJumpsValue;                                       // Number of extra jumps the player can peform whilst in the air
-	public float jumpVelocity = 400f;											// How high the player will Jump
-	public float fallMultiplier = 5f;                                         // Gravity affecting player when they high jump
-	public float lowJumpMultiplier = 3f;                                        // Gravity affecting player when they low jump
+	[SerializeField] float coyoteTime = 0.2f;
+	public float jumpVelocity = 6.5f;											// How high the player will Jump
+	public float fallMultiplier = 2.5f;                                         // Gravity affecting player when they high jump
+	public float lowJumpMultiplier = 2f;                                        // Gravity affecting player when they low jump
 	bool jump = false;
 	int extraJumps;                                                             // Stores the number of extra jumps
+	float coyoteTimeCounter;
 
 	private void Awake()
 	{
@@ -52,6 +54,15 @@ public class CharacterController2D : MonoBehaviour
 		grounded = false;
 
 		GroundCheck();
+
+		if (grounded)
+        {
+			coyoteTimeCounter = coyoteTime;
+        }
+		else
+        {
+			coyoteTimeCounter -= Time.deltaTime;
+        }
 
 		// Check to see if double jump is active
 		if (doubleJumpActive && grounded)
@@ -144,33 +155,33 @@ public class CharacterController2D : MonoBehaviour
     {
 		if (rb.velocity.y < 0)
 		{
-			rb.gravityScale = fallMultiplier;
+			rb.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;     // Gravity affecting the player after they jump
 		}
 		else if (rb.velocity.y > 0 && !Input.GetButton("Jump"))
 		{
-			rb.gravityScale = lowJumpMultiplier;
+			rb.velocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;  // If jump button isn't being held carry out low jump
 		}
-		else
-        {
-			rb.gravityScale = 1f;
-        }
 	}
 
 	void Jump()
     {
-		if (jump && extraJumps > 0)
-		{
-			rb.AddForce(new Vector2(0f, jumpVelocity));
-			extraJumps--;
-		}
-		else if (jump && grounded && extraJumps == 0)
-		{
-			rb.AddForce(new Vector2(0f, jumpVelocity));
+		if (coyoteTimeCounter > 0 && jump)
+        {
+			grounded = false;
+			rb.velocity = Vector2.up * jumpVelocity;
 			jump = false;
+
+			coyoteTimeCounter = 0f;
+        }
+		else if (jump && extraJumps > 0)
+        {
+			rb.velocity = Vector2.up * jumpVelocity;
+			extraJumps--;
 		}
 
 		jump = false;
 	}
+
 	public void CanJump(bool canJump)
     {
 		jump = canJump;
