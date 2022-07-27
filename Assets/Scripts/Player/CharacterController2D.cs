@@ -30,13 +30,11 @@ public class CharacterController2D : MonoBehaviour
 	[SerializeField] private bool airControl = false;                           // Whether or not a player can steer while jumping;
 	[SerializeField] bool doubleJumpActive = false;								// Whether or not the player can double jump
 	[SerializeField] int extraJumpsValue;										// Number of extra jumps the player can peform whilst in the air
-	[SerializeField] private float coyoteTime = 0.2f;                           // Time given for the player to jump if they fall off a tile/platform 
 	public float jumpVelocity = 6.5f;											// How high the player will Jump
 	public float fallMultiplier = 2.5f;                                         // Gravity affecting player when they high jump
 	public float lowJumpMultiplier = 2f;                                        // Gravity affecting player when they low jump
 	bool jump = false;
 	int extraJumps;                                                             // Stores the number of extra jumps
-	private float coyoteTimeCounter;
 
 	private void Awake()
 	{
@@ -157,31 +155,11 @@ public class CharacterController2D : MonoBehaviour
 	void Jump()
     {
 		// If the player should jump...
-		if (coyoteTimeCounter > 0 && jump && extraJumps > 0)                    // Check to see if the player still has time to jump (Coyote Time) and the jump button is pressed
+		if (grounded && jump)
 		{
 			// Add a vertical force to the player.
 			grounded = false;
 			rb.velocity = Vector2.up * jumpVelocity;                            // Add upward force to the player to make them jump
-			extraJumps--;
-
-			coyoteTimeCounter = 0f;                                             // Reset Coyote Time timer for the next jump check
-		}
-		else if (coyoteTimeCounter > 0 && jump && extraJumps == 0)
-        {
-			grounded = false;
-			rb.velocity = Vector2.up * jumpVelocity;                            // Add upward force to the player to make them jump
-			jump = false;
-
-			coyoteTimeCounter = 0f;
-		}
-
-		if (grounded)
-		{
-			coyoteTimeCounter = coyoteTime;                                     // Set Coyote Timer timer
-		}
-		else
-		{
-			coyoteTimeCounter -= Time.deltaTime;                                // Reduce timer every second
 		}
 	}
 

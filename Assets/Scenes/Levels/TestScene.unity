@@ -7123,7 +7123,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.0561244, y: 4.229187, z: -10}
+  m_LocalPosition: {x: -2.2983797, y: 4.225219, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8311,7 +8311,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7053232, y: 1}
+    m_SensorSize: {x: 1.1368822, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -10319,7 +10319,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2317611941591930425}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.4, z: 0}
+  m_LocalPosition: {x: 0, y: -1.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10528,15 +10528,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSmoothing: 0.05
-  airControl: 1
   whatIsGround:
     serializedVersion: 2
     m_Bits: 47
   groundCheck: {fileID: 2317611941591930424}
+  airControl: 1
+  doubleJumpActive: 0
+  extraJumpsValue: 0
   jumpVelocity: 6.5
   fallMultiplier: 2.5
   lowJumpMultiplier: 2
-  coyoteTime: 0.2
 --- !u!114 &4728480915677779088
 MonoBehaviour:
   m_ObjectHideFlags: 0
