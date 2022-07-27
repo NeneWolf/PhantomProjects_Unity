@@ -35,6 +35,7 @@ public class Entity : MonoBehaviour
     [SerializeField] private Transform enemiesLocation;
     [SerializeField] private GameObject enemySpawn;
 
+    public bool hasBeenDamage { get; private set; }
 
     private bool hasSpawnMinions;
 
@@ -52,6 +53,7 @@ public class Entity : MonoBehaviour
         atsm = aliveGO.GetComponent<AnimationToStateMachine>();
         ui = GameObject.FindObjectOfType<CanvasUI>();
         currentHealth = entityData.maxHealth;
+        hasBeenDamage = false;
 
         stateMachine = new FiniteStateMachine();
     }
@@ -127,6 +129,11 @@ public class Entity : MonoBehaviour
         return Physics2D.Raycast(playerCheck.position, aliveGO.transform.right, entityData.closeRangeActionDistance, entityData.whatIsPlayer);
     }
 
+    public virtual bool CheckPlayerInRangePosition()
+    {
+        return Physics2D.Raycast(playerCheck.position, aliveGO.transform.right, entityData.maxAgroDistance, entityData.whatIsPlayer);
+    }
+
     public virtual bool CheckGround()
     {
         return Physics2D.OverlapCircle(groundCheck.position, entityData.groundCheckRadius, entityData.whatIsGround);
@@ -142,7 +149,7 @@ public class Entity : MonoBehaviour
     {
         //Optional
         //DamageHop(entityData.damageHopSpeed);
-
+        hasBeenDamage = true;
         currentHealth -= dmg;
         Instantiate(entityData.hitParticle, aliveGO.transform.position, Quaternion.Euler(0f, 0f, Random.Range(0, 360f)));
 
@@ -152,7 +159,7 @@ public class Entity : MonoBehaviour
 
             if (canGiveReward)
             {
-                ui.MutationPointsCollection(mutationPoints);
+                GiveRewards(mutationPoints);
                 canGiveReward = false;
             } 
         }
@@ -181,5 +188,10 @@ public class Entity : MonoBehaviour
             //TODO: Change this...
             Instantiate(enemySpawn, new Vector3(spawnPosition.transform.position.x + Random.Range(-10.0f,10.0f), spawnPosition.transform.position.y, 0f), Quaternion.identity, enemiesLocation.transform);
         }
+    }
+
+    public virtual void GiveRewards(int points)
+    {
+        ui.MutationPointsCollection(points);
     }
 }

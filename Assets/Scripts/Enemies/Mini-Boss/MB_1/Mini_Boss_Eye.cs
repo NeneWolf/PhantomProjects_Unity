@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Mini_Boss_Eye : Entity
 {
+    #region 
     public MB_1_IdleState idleState { get; private set; }
     public MB_1_MoveState moveState { get; private set; }
     public MB_1_PlayerDetectedState playerDetectedState { get; private set; }
@@ -26,6 +27,7 @@ public class Mini_Boss_Eye : Entity
     [Space]
     [SerializeField] private Transform meleeAttackPosition;
     [SerializeField] private Transform RangeAttackPosition;
+    #endregion
 
     public override void Start()
     {

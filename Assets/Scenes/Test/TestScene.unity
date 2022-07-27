@@ -8209,7 +8209,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.770909, y: 1}
+    m_SensorSize: {x: 1.7777259, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -10001,6 +10001,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6148322110492450053, guid: 9272c5944964dc540b3b4c1afa792d86, type: 3}
+      propertyPath: enemySpawn
+      value: 
+      objectReference: {fileID: 3232583526800357565, guid: 4b384c195ff47a34bb6c9881d8ff1345, type: 3}
     - target: {fileID: 6148322110492450053, guid: 9272c5944964dc540b3b4c1afa792d86, type: 3}
       propertyPath: enemiesLocation
       value: 
