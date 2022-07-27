@@ -7,7 +7,8 @@ public class PlayerMovement : MonoBehaviour
     public CharacterController2D controller;
 
     [SerializeField] float speed = 40f;
-    float horizontalMove = 0f;
+
+    float horizontalMove;
 
     private Rigidbody2D rb;
 
@@ -18,11 +19,11 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        horizontalMove = Input.GetAxisRaw("Horizontal") * speed;                // Horizontal movement of the player
+        horizontalMove = Input.GetAxisRaw("Horizontal") * speed;
 
-        if (Input.GetButtonDown("Jump"))                                        // Check to see if the player has pressed the jump button
+        if (Input.GetButtonDown("Jump"))
         {
-            controller.CanJump(true);                                           // Inform the controller that the player has pressed the jump button
+            controller.CanJump(true);
         }
     }
 
