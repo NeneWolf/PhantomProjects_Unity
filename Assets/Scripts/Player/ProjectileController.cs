@@ -27,10 +27,9 @@ public class ProjectileController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Enemy") || collision.CompareTag("Boss"))
+        if (collision.CompareTag("Enemy"))
         {
-            //es = GameObject.Find("Enemy").GetComponent<EnemyState>();
-            //es.TakeDamage(weaponDamage);
+            collision.GetComponent<Entity>().Damage(100);
             Destroy(this.gameObject);
         }
 

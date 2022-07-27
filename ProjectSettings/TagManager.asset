@@ -12,6 +12,7 @@ TagManager:
   - EnergyPotion
   - KeyCard
   - SceneManager
+  - Wall
   layers:
   - Default
   - TransparentFX
