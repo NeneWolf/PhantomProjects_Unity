@@ -20,8 +20,6 @@ namespace PhantomProjects.Core
         bool isDead = false;
 
         public bool IsPlayerDead { get { return isDead; } }
-
-        public GameObject enemyTestDamage;
         #endregion
 
         // Start is called before the first frame update
@@ -44,12 +42,6 @@ namespace PhantomProjects.Core
                 {
                     playerControls.CanJump(true);
                 }
-            }
-
-            if (Input.GetKeyDown(KeyCode.G))
-            {
-                //FindObjectOfType<Entity>().gameObject.GetComponents<Entity>
-                enemyTestDamage.GetComponent<Entity>().Damage(10f);
             }
         }
 

@@ -62,10 +62,7 @@ public class Entity : MonoBehaviour
     {
         stateMachine.currentState.LogicUpdate();
 
-        
-        //animator.SetFloat("yVelocity", rb2d.velocity.y);
-
-        print(currentHealth);
+        animator.SetFloat("yVelocity", rb2d.velocity.y);
 
         if(canSpawnMinions && hasSpawnMinions == false)
         {
