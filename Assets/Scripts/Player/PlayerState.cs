@@ -10,95 +10,69 @@ public class PlayerState : MonoBehaviour
 
     [Header("Player Stats")]
     [Space]
-    [SerializeField] private float health;
-    [SerializeField] private float maxHealth = 100;
-    [SerializeField] private float energy;
-    [SerializeField] private float maxEnergy = 100;
-    [SerializeField] private float weaponDamage = 20;
-    [SerializeField] private float unstableChargeDamage = 35;
+    [SerializeField] private float health;                                      // Player's current amount of health
+    [SerializeField] private float maxHealth = 100;                             // Player's maximum amount of health
+    [SerializeField] private float energy;                                      // Player's current amount of energy
+    [SerializeField] private float maxEnergy = 100;                             // Player's maximum amount of energy
 
-    public bool IsPlayerDead;
+    private float energyRegenAmount = 2;                                        // Amount of energy restored each tick
+    private float energyRegenRate = 0.5f;                                       // The rate at which energy is restored (every 0.5 seconds will restore 2 energy)
+    private float energyDelayPeriod = 5f;                                       // Delay before energy starts to regenerate
 
-    /*
-    [Header("Text Fields")]
-    [Space]
-    [SerializeField] TextMeshProUGUI healthText;
-    [SerializeField] TextMeshProUGUI energyText;
-    */
+    public bool IsPlayerDead;                                                   // Public bool to inform if the player has died or not
 
-    private RectTransform uiHealth;
-    private RectTransform uiEnergy;
-
-    private Coroutine energyRegen;
-    //private Coroutine healthRegen;
+    private Coroutine energyRegen;                                              // Performs energy regen
+    //private Coroutine healthRegen;                                            // Performs health regen
 
     #endregion
 
     void Start()
     {
-        // Set the player's resource bars at the start
+        // Set the player's health and energy to their maximum amount on start
         health = maxHealth;
-        //healthText.text = (int)health + " / " + maxHealth;
-        //uiHealth = GameObject.Find("Health").GetComponent<RectTransform>();
-        //UpdateHealthbar();
-
         energy = maxEnergy;
-        //energyText.text = (int)energy + " / " + maxEnergy;
-        //uiEnergy = GameObject.Find("Energy").GetComponent<RectTransform>();
-        //UpdateEnergyBar();
     }
 
     void Update()
     {
         IsDead();                                                               // Method to check if the player has run out of health
-        //healthText.text = (int)health + " / " + maxHealth;                      // Update player's health text
-        //energyText.text = (int)energy + " / " + maxEnergy;                      // Update player's energy text
     }
 
     public void IsDead()
     {
-        if (health <= 0)
+        if (health <= 0)                                                        // Check's to see if the player has ran out of health
         {
-            IsPlayerDead = true;   // If the player has run out of health, reload the current level
+            IsPlayerDead = true;                                                // If the player runs out of health, set the player dead bool to true
         }
     }
 
     #region Health Methods
 
-    public void UpdateHealthbar()                                              // Method to update the player's healthbar
-    {
-        float x = health / maxHealth;
-        float y = uiHealth.localScale.y;
-        float z = uiHealth.localScale.z;
-        uiHealth.localScale = new Vector3(x, y, z);
-    }
-
-    public float GetCurrentHealth()                                            // Method to get the player's current health
+    public float GetCurrentHealth()                                             // Method to get the player's current health
     {
         return health;
     }
 
-    public float GetMaxHealth()                                                // Method to get the player's max health
+    public float GetMaxHealth()                                                 // Method to get the player's max health
     {
         return maxHealth;
     }
 
-    public void SetHealth(float h)                                             // Adjust health to not go over max health or below 0
+    public void SetHealth(float amount)                                         // Adjust health to not go over max health or below 0
     {
-        if (h < 0) health = 0;
-        else if (h > maxHealth) health = maxHealth;
-        else health = h;
-        //UpdateHealthbar();                                                     // Update the healthbar with these changes
+        if (amount < 0) health = 0;                                             // If the amount being set is less than 0, set health to 0 instead
+        else if (amount > maxHealth) health = maxHealth;                        // If the amount being set is greater than the player's maximum health, set the health to the maximum health instead
+        else health = amount;                                                   // Else set health to the amount
     }
 
-    public void IncreaseHealth(float h)                                        // Method for increasing the player's health
+    public void IncreaseHealth(float amount)                                    // Method for increasing the player's health
     {
-        SetHealth(health + h);
+        SetHealth(health + amount);                                             // Use the set health method to increase the player's health by the amount
     }
 
-    public void TakeDamage(float h)                                          // Method for reducing the player's health
+    public void TakeDamage(float damage)                                        // Method for reducing the player's health
     {
-        SetHealth(health - h);
+        SetHealth(health - damage);                                             // Use the set health method to decrease the player's health by damage
 
         /*
         // Health regen over time if needed
@@ -119,7 +93,7 @@ public class PlayerState : MonoBehaviour
         {
             yield return new WaitForSeconds(3f);
 
-            IncreaseEnergy(1);
+            IncreaseHealth(1);
         }
     }
     */
@@ -127,14 +101,6 @@ public class PlayerState : MonoBehaviour
     #endregion
 
     #region Energy Methods
-
-    public void UpdateEnergyBar()                                               // Method to update player's enerybar
-    {
-        float x = energy / maxEnergy;
-        float y = uiEnergy.localScale.y;
-        float z = uiEnergy.localScale.z;
-        uiEnergy.localScale = new Vector3(x, y, z);
-    }
 
     public float GetCurrentEnergy()                                             // Method to get the player's current energy
     {
@@ -146,22 +112,21 @@ public class PlayerState : MonoBehaviour
         return maxEnergy;
     }
 
-    public void SetEnergy(float e)                                              // Adjust energy to not go over max energy or below 0        
+    public void SetEnergy(float amount)                                         // Adjust energy to not go over max energy or below 0        
     {
-        if (e < 0) e = 0;
-        else if (e > maxEnergy) energy = maxEnergy;
-        else energy = e;
-        //UpdateEnergyBar();
+        if (amount < 0) energy = 0;                                             // If the amount being set is less than 0, set energy to 0 instead
+        else if (amount > maxEnergy) energy = maxEnergy;                        // If the amount being set is greater than the player's maximum energy, set the energy to the maximum energy instead
+        else energy = amount;                                                   // Else set energy to the amount
     }
 
-    public void IncreaseEnergy(float e)                                         // Method to increase the player's energy
+    public void IncreaseEnergy(float amount)                                    // Method to increase the player's energy
     {
-        SetEnergy(energy + e);
+        SetEnergy(energy + amount);                                             // Use the set health method to increase the player's health by the amount
     }
 
-    public void ReduceEnergy(float e)                                           // Method to increase the player's energy
+    public void ReduceEnergy(float amount)                                      // Method to increase the player's energy
     {
-        SetEnergy(energy - e);
+        SetEnergy(energy - amount);                                             // Use the set health method to decrease the player's energy by the amount
 
         // Energy Regen over time
         if (energyRegen != null)
@@ -169,43 +134,19 @@ public class PlayerState : MonoBehaviour
             StopCoroutine(energyRegen);
         }
 
-        energyRegen = StartCoroutine(EnergyRegen());
+        energyRegen = StartCoroutine(EnergyRegen());                            // Start regenerating energy
     }
 
     private IEnumerator EnergyRegen()
     {
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(energyDelayPeriod);                    // Wait for the delay period to start regenerating energy
 
-        while (energy <= maxEnergy)
+        while (energy <= maxEnergy)                                            // While energy is less than the player's maximum energy, keep regenerating energy
         {
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(energyRegenRate);                  // Wait a set amount of time each time energy is restored
 
-            IncreaseEnergy(2);
+            IncreaseEnergy(energyRegenAmount);                                 // Increase energy by a given amount
         }
-    }
-
-    #endregion
-
-    #region Damage Methods
-
-    public float GetWeaponDamage()                                              // Get the player's weapon damage
-    {
-        return weaponDamage;
-    }
-
-    public float GetUnstableChargeDamage()                                      // Get the player's ability damage
-    {
-        return unstableChargeDamage;
-    }
-
-    public void WeaponDamageIncrease(float amount)                                    // Upgrade (Increase) the player's weapon damage
-    {
-        weaponDamage += amount;
-    }
-
-    public void UnstableChargeDamageIncrease(float amount)                                    // Upgrade (Increase) the player's ability damage
-    {
-        unstableChargeDamage += amount;
     }
 
     #endregion

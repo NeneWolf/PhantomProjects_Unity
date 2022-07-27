@@ -12,14 +12,9 @@ public class PlayerAbilities : MonoBehaviour
     [Header("Ability 1: Shield")]
     [Space]
     [SerializeField] private GameObject shield;                                 // Get shield sprite
-    [SerializeField] private GameObject shieldDurationUITimer;                  // UI Timer for duration
-    [SerializeField] private GameObject shieldCooldownUITimer;                  // UI Timer for cooldown
 
-    private TextMeshProUGUI shieldDurationText;                                 // Get the text for the duration timer to be updated
-    private TextMeshProUGUI shieldCooldownText;                                 // Get the text for the cooldown timer to be updated
-
-    private float shieldDuration = 5.5f;                                        // Set the duration for the shield (how long it will stay up)
-    private float shieldCooldown = 20.5f;                                       // Set shield cooldown (how long before the shield is available to use again)
+    [SerializeField] private float shieldDuration = 5.5f;                       // Set the duration for the shield (how long it will stay up)
+    [SerializeField] private float shieldCooldown = 20.5f;                      // Set shield cooldown (how long before the shield is available to use again)
     private float shieldDurationCounter;                                        // Timer for shield duration
     private float shieldCooldownCounter;                                        // Timer for shield cooldown
     private bool shieldReady = true;                                            // Check to see if the shield is ready to be used
@@ -27,6 +22,7 @@ public class PlayerAbilities : MonoBehaviour
 
     [Header("Ability 2: Unstable Charge")]
     [Space]
+    [SerializeField] Transform firePoint;
     [SerializeField] GameObject energyProjectilePrefab;                         // Get the enery projectile sprite
     [SerializeField] float attackInterval = 0.5f;                               // Time before each attack
     int chargeEnergyCost;                                                       // Cost for using this ability
@@ -34,9 +30,6 @@ public class PlayerAbilities : MonoBehaviour
 
     private void Start()
     {
-        shieldDurationText = shieldDurationUITimer.GetComponentInChildren<TextMeshProUGUI>();       // Get the text for the duration timer to be updated
-        shieldCooldownText = shieldCooldownUITimer.GetComponentInChildren<TextMeshProUGUI>();       // Get the text for the cooldown timer to be updated
-
         shieldDurationCounter = shieldDuration;                                 // Set timer
         shieldCooldownCounter = shieldCooldown;                                 // Set timer
     }
@@ -80,17 +73,14 @@ public class PlayerAbilities : MonoBehaviour
         if (collision.tag == "Projectile")                                      // Check to see if a projectile has collided with the shield
         {
             Destroy(collision.gameObject);                                      // Destroy that projectile
-            //collision.GetComponent<EnemyState>().NullifyDamage();               // Nullify the damage taken from that projectile
         }
     }
 
     IEnumerator ShieldDuration()                                                // Method to keep shield active for the specified duration
     {
-        shieldDurationUITimer.SetActive(true);                                  // Display duration timer on the player's UI
 
         yield return new WaitForSecondsRealtime(shieldDuration);                // How long the shield will stay up for in seconds
 
-        shieldDurationUITimer.SetActive(false);                                 // Hide shield duration timer from UI
         shield.SetActive(false);                                                // Deactivate shield
         shieldActive = false;                                                   // Set shield active check to false
         shieldCooldownCounter = shieldCooldown;                                 // Set shield cooldown counter
@@ -101,7 +91,6 @@ public class PlayerAbilities : MonoBehaviour
     private void ShieldDurationTimer()                                          // Method for shield duration timer
     {
         shieldDurationCounter -= Time.deltaTime;
-        shieldDurationText.text = "Shield Duration: " + (int)shieldDurationCounter;
 
         if (shieldDurationCounter < 0)
         {
@@ -112,7 +101,6 @@ public class PlayerAbilities : MonoBehaviour
     private void ShieldCooldownTimer()                                          // Method for shield duration timer
     {
         shieldCooldownCounter -= Time.deltaTime;
-        shieldCooldownText.text = "Shield Cooldown: " + (int)shieldCooldownCounter;
 
         if (shieldCooldownCounter < 0)
         {
@@ -122,11 +110,8 @@ public class PlayerAbilities : MonoBehaviour
 
     IEnumerator ShieldCooldown()                                                // Method to prepare shield for next use after cooldown period
     {
-        shieldCooldownUITimer.SetActive(true);                                  // Display cooldown timer on player's UI
-
         yield return new WaitForSecondsRealtime(shieldCooldown);                // How long before the next shield activation
 
-        shieldCooldownUITimer.SetActive(false);                                 // Hide shield cooldown from UI
         shieldReady = true;                                                     // Set shield ready to be true so the player will be able to activate it again
         shieldDurationCounter = shieldDuration;                                 // Set shield duration counter
     }
@@ -147,25 +132,14 @@ public class PlayerAbilities : MonoBehaviour
 
         if (Input.GetMouseButtonDown(1) && ps.GetCurrentEnergy() >= chargeEnergyCost)           // Check to see if the player has enough energy to use the ability and the appropriate mouse button has been pressed
         {
-            if (!controller.facingRight)                                        // Check to see which way the player is facing
-            {
-                SpawnProjectile(-0.5f, Vector2.left);                           // If facing to the left, spawn and launch projectile to the left side (-0.5f)
-                ps.ReduceEnergy(chargeEnergyCost);                              // Reduce the player's energy by the specified amount
-            }
-            else
-            {
-                SpawnProjectile(0.5f, Vector2.right);                           // Else if the player is facing right, spawn and launch projectile to the left side (0.5f)
-                ps.ReduceEnergy(chargeEnergyCost);                              // Reduce the player's energy by the specified amount
-            }
-
+            Shoot();
+            ps.ReduceEnergy(chargeEnergyCost);
             attackTimer = attackInterval;                                       // Reset attack timer so the player has to wait before using the attack again
         }
     }
 
-    private void SpawnProjectile(float num, Vector2 direction)                  // Method for spawning projectiles
+    void Shoot()
     {
-        Vector2 spawnEnergyProjectile = new Vector2(transform.position.x + num, transform.position.y);
-        GameObject instance = Instantiate(energyProjectilePrefab, spawnEnergyProjectile, Quaternion.identity);
-        instance.GetComponent<UnstableChargeProjectileController>().SetVelocity(direction);
+        Instantiate(energyProjectilePrefab, firePoint.position, firePoint.rotation);
     }
 }

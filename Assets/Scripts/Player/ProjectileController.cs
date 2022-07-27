@@ -4,38 +4,41 @@ using UnityEngine;
 
 public class ProjectileController : MonoBehaviour
 {
-    [SerializeField] float speed = 10f;
-
-    float weaponDamage;
-    float unstableChargeDamage;
-
+    public float speed = 20f;
+    float projectileDamage = 20;
     Rigidbody2D rb;
-    PlayerState ps;
-    //EnemyState es;
 
-    private void Awake()
+    private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        ps = GameObject.Find("Player").GetComponent<PlayerState>();
-        weaponDamage = ps.GetWeaponDamage();
-    }
-
-    public void SetVelocity(Vector2 velocity)
-    {
-        rb.velocity = velocity * speed;
+        rb.velocity = transform.right * speed;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Enemy"))
         {
-            collision.GetComponent<Entity>().Damage(100);
-            Destroy(this.gameObject);
+            collision.GetComponent<Entity>().Damage(projectileDamage);
+            Destroy(gameObject);
         }
 
         if (collision.CompareTag("Wall"))
         {
-            Destroy(this.gameObject);
+            Destroy(gameObject);
         }
     }
+
+    #region Get Damage + Upgrade Method
+
+    public float GetWeaponDamage()                                              // Get the player's weapon damage
+    {
+        return projectileDamage;
+    }
+
+    public void WeaponDamageIncrease(float amount)                                    // Upgrade (Increase) the player's weapon damage
+    {
+        projectileDamage += amount;
+    }
+
+    #endregion
 }

@@ -7123,7 +7123,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.08382678, y: 4.229187, z: -10}
+  m_LocalPosition: {x: -2.0561244, y: 4.229187, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8311,7 +8311,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.9870801, y: 1}
+    m_SensorSize: {x: 1.7053232, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -8337,6 +8337,37 @@ MonoBehaviour:
   m_BoundingShape2D: {fileID: 323288718}
   m_ConfineScreenEdges: 1
   m_Damping: 0
+--- !u!1 &1265847354
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1265847355}
+  m_Layer: 0
+  m_Name: FirePoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1265847355
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1265847354}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.5, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2317611942782445197}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1273326667
 GameObject:
   m_ObjectHideFlags: 0
@@ -10106,8 +10137,9 @@ MonoBehaviour:
   controller: {fileID: 4247771767961082863}
   ps: {fileID: 8737197565641911022}
   shield: {fileID: 2317611941190429062}
-  shieldDurationUITimer: {fileID: 952796469}
-  shieldCooldownUITimer: {fileID: 1175556055}
+  shieldDuration: 5.5
+  shieldCooldown: 20.5
+  firePoint: {fileID: 1265847355}
   energyProjectilePrefab: {fileID: 585653256439993513, guid: 52f2f5efff6370541961bd8e175f2cc8, type: 3}
   attackInterval: 0.5
 --- !u!1001 &2187430799745509582
@@ -10408,6 +10440,7 @@ Transform:
   - {fileID: 2317611941824554620}
   - {fileID: 2317611941591930424}
   - {fileID: 2317611941190429060}
+  - {fileID: 1265847355}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -10426,6 +10459,7 @@ GameObject:
   - component: {fileID: 4247771767961082863}
   - component: {fileID: 4728480915677779088}
   - component: {fileID: 8737197565641911022}
+  - component: {fileID: 8737197565641911023}
   - component: {fileID: 547931087484436466}
   m_Layer: 0
   m_Name: Player
@@ -10503,9 +10537,6 @@ MonoBehaviour:
   fallMultiplier: 2.5
   lowJumpMultiplier: 2
   coyoteTime: 0.2
-  facingRight: 1
-  weaponProjectilePrefab: {fileID: 585653256439993513, guid: 5c6905ba1808f1e4ead22278df498e88, type: 3}
-  attackInterval: 0.5
 --- !u!114 &4728480915677779088
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10650,9 +10681,22 @@ MonoBehaviour:
   maxHealth: 100
   energy: 0
   maxEnergy: 100
-  weaponDamage: 20
-  unstableChargeDamage: 35
   IsPlayerDead: 0
+--- !u!114 &8737197565641911023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2317611942782445198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33dc556e71d0e1c4096882c1793bb4ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firePoint: {fileID: 1265847355}
+  weaponProjectilePrefab: {fileID: 585653256439993513, guid: 5c6905ba1808f1e4ead22278df498e88, type: 3}
+  attackInterval: 1
 --- !u!1001 &9217664714340863850
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -4,38 +4,41 @@ using UnityEngine;
 
 public class UnstableChargeProjectileController : MonoBehaviour
 {
-    [SerializeField] float speed = 10f;
-
-    float unstableChargeDamage;
-
+    public float speed = 10f;
+    float projectileDamage = 35;
     Rigidbody2D rb;
-    PlayerState ps;
-    //EnemyState es;
 
-    private void Awake()
+    private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        ps = GameObject.Find("Player").GetComponent<PlayerState>();
-        unstableChargeDamage = ps.GetUnstableChargeDamage();
-    }
-
-    public void SetVelocity(Vector2 velocity)
-    {
-        rb.velocity = velocity * speed;
+        rb.velocity = transform.right * speed;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Enemy"))
         {
-            //es = GameObject.Find("Enemy").GetComponent<EnemyState>();
-            //es.TakeDamage(unstableChargeDamage);
-            Destroy(this.gameObject);
+            collision.GetComponent<Entity>().Damage(projectileDamage);
+            Destroy(gameObject);
         }
 
         if (collision.CompareTag("Wall"))
         {
-            Destroy(this.gameObject);
+            Destroy(gameObject);
         }
     }
+
+    #region Get Damage + Upgrade Method
+
+    public float GetUnstableChargeDamage()                                      // Get the player's ability damage
+    {
+        return projectileDamage;
+    }
+
+    public void UnstableChargeDamageIncrease(float amount)                                    // Upgrade (Increase) the player's ability damage
+    {
+        projectileDamage += amount;
+    }
+
+    #endregion
 }

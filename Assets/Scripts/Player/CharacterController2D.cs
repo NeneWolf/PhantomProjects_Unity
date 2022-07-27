@@ -31,30 +31,11 @@ public class CharacterController2D : MonoBehaviour
 
 	[Header("Player Direction")]
 	[Space]
-	public bool facingRight = true;                                             // For determining which way the player is currently facing.
-
-	[Header("Player Attacks")]
-	[Space]
-	[SerializeField] GameObject weaponProjectilePrefab;                         // Load projectile sprite
-	[SerializeField] float attackInterval = 0.5f;                               // Time before next projectile is spawned 
-	float attackTimer = 0;
+	bool facingRight = true;                                             // For determining which way the player is currently facing.
 
 	private void Awake()
 	{
 		rb = GetComponent<Rigidbody2D>();
-	}
-
-	private void Update()
-	{
-		if (attackTimer <= 0)
-		{
-			attackTimer = 0;                                                    // Set attack timer to 0 instead of going into negatives
-			Attack();                                                           // Player Attack Method
-		}
-		else
-		{
-			attackTimer -= Time.deltaTime;                                      // Recude attack timer every second so the next attack can be peformed
-		}
 	}
 
 	private void FixedUpdate()
@@ -73,23 +54,7 @@ public class CharacterController2D : MonoBehaviour
 			}
 		}
 
-		if (rb.velocity.y < 0)
-		{
-			rb.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;     // Gravity affecting the player after they jump
-		}
-		else if (rb.velocity.y > 0 && !Input.GetButton("Jump"))
-		{
-			rb.velocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;  // If jump button isn't being held carry out low jump
-		}
-
-		if (grounded)
-		{
-			coyoteTimeCounter = coyoteTime;                                     // Set Coyote Timer timer
-		}
-		else
-		{
-			coyoteTimeCounter -= Time.deltaTime;                                // Reduce timer every second
-		}
+		Jump();
 	}
 
 	public void Move(float move, /*bool crouch,*/ bool jump)
@@ -164,29 +129,25 @@ public class CharacterController2D : MonoBehaviour
 		}
 	}
 
-	private void Attack()
-	{
-
-		if (Input.GetMouseButtonDown(0))
+	void Jump()
+    {
+		if (rb.velocity.y < 0)
 		{
-			if (!facingRight)
-			{
-				SpawnProjectile(-0.5f, Vector2.left);                           // If the player presses the left mouse button and they are facing to the left, projectiles will be launched to the left (-0.5f)
-			}
-			else
-			{
-				SpawnProjectile(0.5f, Vector2.right);                           // Else the player is facing right and so projectiles will be launched to the right (0.5f)
-			}
-
-			attackTimer = attackInterval;                                       // Reset timer between each attack to prevent continous attack inputs
+			rb.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;     // Gravity affecting the player after they jump
 		}
-	}
+		else if (rb.velocity.y > 0 && !Input.GetButton("Jump"))
+		{
+			rb.velocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;  // If jump button isn't being held carry out low jump
+		}
 
-	private void SpawnProjectile(float num, Vector2 direction)                  // Method to instantiate projectile and launch in the given direction
-	{
-		Vector2 spawnWeaponProjectile = new Vector2(transform.position.x + num, transform.position.y);
-		GameObject instance = Instantiate(weaponProjectilePrefab, spawnWeaponProjectile, Quaternion.identity);
-		instance.GetComponent<ProjectileController>().SetVelocity(direction);
+		if (grounded)
+		{
+			coyoteTimeCounter = coyoteTime;                                     // Set Coyote Timer timer
+		}
+		else
+		{
+			coyoteTimeCounter -= Time.deltaTime;                                // Reduce timer every second
+		}
 	}
 
 	private void Flip()
@@ -194,9 +155,6 @@ public class CharacterController2D : MonoBehaviour
 		// Switch the way the player is labelled as facing.
 		facingRight = !facingRight;
 
-		// Multiply the player's x local scale by -1.
-		Vector3 theScale = transform.localScale;
-		theScale.x *= -1;
-		transform.localScale = theScale;
+		transform.Rotate(0f, 180f, 0f);
 	}
 }
