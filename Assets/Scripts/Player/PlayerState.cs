@@ -48,16 +48,6 @@ public class PlayerState : MonoBehaviour
 
     #region Health Methods
 
-    public float GetCurrentHealth()                                             // Method to get the player's current health
-    {
-        return health;
-    }
-
-    public float GetMaxHealth()                                                 // Method to get the player's max health
-    {
-        return maxHealth;
-    }
-
     public void SetHealth(float amount)                                         // Adjust health to not go over max health or below 0
     {
         if (amount < 0) health = 0;                                             // If the amount being set is less than 0, set health to 0 instead
