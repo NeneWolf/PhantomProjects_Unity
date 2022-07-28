@@ -7123,7 +7123,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.85632265, y: 4.229187, z: -10}
+  m_LocalPosition: {x: 1.5385259, y: 4.229187, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8237,7 +8237,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.1213872, y: 1}
+    m_SensorSize: {x: 2.218845, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -10115,6 +10115,7 @@ GameObject:
   - component: {fileID: 8737197565641911022}
   - component: {fileID: 8737197565641911025}
   - component: {fileID: 547931087484436466}
+  - component: {fileID: 8737197565641911026}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -10180,6 +10181,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 4247771767961082863}
+  animator: {fileID: 8737197565641911026}
   speed: 40
 --- !u!1001 &5664139567371445449
 PrefabInstance:
@@ -10353,6 +10355,26 @@ MonoBehaviour:
   firePoint: {fileID: 1265847355}
   weaponProjectilePrefab: {fileID: 585653256439993513, guid: 5c6905ba1808f1e4ead22278df498e88, type: 3}
   attackInterval: 1
+--- !u!95 &8737197565641911026
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2317611942782445198}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a9e8a7291a8f5fb4aab3e23f3129c2b5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &9217664714340863850
 PrefabInstance:
   m_ObjectHideFlags: 0
