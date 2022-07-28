@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &7217195225041921215
+--- !u!1 &7634943790813005344
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,10 +8,10 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7217195225041921210}
-  - component: {fileID: 7217195225041921213}
-  - component: {fileID: 2107266573341230394}
-  - component: {fileID: 7217195225041921211}
+  - component: {fileID: 7634943790813005349}
+  - component: {fileID: 7634943790813005346}
+  - component: {fileID: 1216789884823414693}
+  - component: {fileID: 6040635470801291295}
   m_Layer: 0
   m_Name: TestHealthPotion
   m_TagString: HealthPotion
@@ -19,28 +19,28 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7217195225041921210
+--- !u!4 &7634943790813005349
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7217195225041921215}
+  m_GameObject: {fileID: 7634943790813005344}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 26.29, y: 2.513, z: 0}
+  m_LocalPosition: {x: 10.164926, y: -0.24171114, z: 0}
   m_LocalScale: {x: 1.1854633, y: 1.1854633, z: 2.3709266}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &7217195225041921213
+--- !u!212 &7634943790813005346
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7217195225041921215}
+  m_GameObject: {fileID: 7634943790813005344}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -86,13 +86,13 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &2107266573341230394
+--- !u!58 &1216789884823414693
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7217195225041921215}
+  m_GameObject: {fileID: 7634943790813005344}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -102,16 +102,17 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.45
---- !u!114 &7217195225041921211
+--- !u!114 &6040635470801291295
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7217195225041921215}
+  m_GameObject: {fileID: 7634943790813005344}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 443e986da4ad4f643bd67c5d02b8a901, type: 3}
+  m_Script: {fileID: 11500000, guid: ff817d2af2db5b941b9ea0f7ffc97390, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  recoverAmount: 5
+  playerStats: {fileID: 0}
+  healthRestore: 10
