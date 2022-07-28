@@ -11,14 +11,14 @@ public class PlayerAbilities : MonoBehaviour
     //Shield Ability
     [Header("Ability 1: Shield")]
     [Space]
-    [SerializeField] private GameObject shield;                                 // Get shield sprite
+    [SerializeField] GameObject shield;                                 // Get shield sprite
 
-    [SerializeField] private float shieldDuration = 5.5f;                       // Set the duration for the shield (how long it will stay up)
-    [SerializeField] private float shieldCooldown = 20.5f;                      // Set shield cooldown (how long before the shield is available to use again)
-    private float shieldDurationCounter;                                        // Timer for shield duration
-    private float shieldCooldownCounter;                                        // Timer for shield cooldown
-    private bool shieldReady = true;                                            // Check to see if the shield is ready to be used
-    private bool shieldActive = false;                                          // Check to see if the shield is currently active
+    [SerializeField] float shieldDuration = 5.5f;                       // Set the duration for the shield (how long it will stay up)
+    [SerializeField] float shieldCooldown = 20.5f;                      // Set shield cooldown (how long before the shield is available to use again)
+    float shieldDurationCounter;                                        // Timer for shield duration
+    float shieldCooldownCounter;                                        // Timer for shield cooldown
+    bool shieldReady = true;                                            // Check to see if the shield is ready to be used
+    public bool shieldActive { get; private set; } = false;                                          // Check to see if the shield is currently active
 
     [Header("Ability 2: Unstable Charge")]
     [Space]
@@ -35,6 +35,48 @@ public class PlayerAbilities : MonoBehaviour
     }
 
     private void Update()
+    {
+        ActivateShield();
+        AttackTimer();
+    }
+
+    #region Ability 1: Unstable Charge
+
+    void AttackTimer()
+    {
+        if (attackTimer <= 0)
+        {
+            attackTimer = 0;                                                    // Set attack timer to 0 so it doesnt go into negatives
+            UnstableCharge();                                                   // Method to peform the player's Unstable Charge ability
+        }
+        else
+        {
+            attackTimer -= Time.deltaTime;                                      // Count down timer every second
+        }
+    }
+
+    private void UnstableCharge()                                               // Method for the Unstable Charge ability
+    {
+        chargeEnergyCost = (int)ps.maxEnergy / 2;
+
+        if (Input.GetMouseButtonDown(1) && ps.CanConsumeEnergy(chargeEnergyCost))           // Check to see if the player has enough energy to use the ability and the appropriate mouse button has been pressed
+        {
+            Shoot();
+            ps.ConsumeEnergy(chargeEnergyCost);
+            attackTimer = attackInterval;                                       // Reset attack timer so the player has to wait before using the attack again
+        }
+    }
+
+    void Shoot()
+    {
+        Instantiate(energyProjectilePrefab, firePoint.position, firePoint.rotation);
+    }
+
+    #endregion
+
+    #region Ability 2: Shield
+
+    void ActivateShield()
     {
         if (shieldReady)                                                        // Check to see if the shield is ready to be used
         {
@@ -56,24 +98,6 @@ public class PlayerAbilities : MonoBehaviour
         {
             ShieldDurationTimer();                                              // If the shield is active, start and update shield duration timer
         }
-
-        if (attackTimer <= 0)
-        {
-            attackTimer = 0;                                                    // Set attack timer to 0 so it doesnt go into negatives
-            UnstableCharge();                                                   // Method to peform the player's Unstable Charge ability
-        }
-        else
-        {
-            attackTimer -= Time.deltaTime;                                      // Count down timer every second
-        }
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.tag == "Projectile")                                      // Check to see if a projectile has collided with the shield
-        {
-            Destroy(collision.gameObject);                                      // Destroy that projectile
-        }
     }
 
     IEnumerator ShieldDuration()                                                // Method to keep shield active for the specified duration
@@ -91,20 +115,20 @@ public class PlayerAbilities : MonoBehaviour
     private void ShieldDurationTimer()                                          // Method for shield duration timer
     {
         shieldDurationCounter -= Time.deltaTime;
-
-        if (shieldDurationCounter < 0)
-        {
-            shieldDurationCounter = 0;
-        }
+        FixValues(shieldDurationCounter);
     }
 
     private void ShieldCooldownTimer()                                          // Method for shield duration timer
     {
         shieldCooldownCounter -= Time.deltaTime;
+        FixValues(shieldCooldownCounter);
+    }
 
-        if (shieldCooldownCounter < 0)
+    private void FixValues(float timer)
+    {
+        if (timer < 0)
         {
-            shieldCooldownCounter = 0;
+            timer = 0;
         }
     }
 
@@ -116,6 +140,10 @@ public class PlayerAbilities : MonoBehaviour
         shieldDurationCounter = shieldDuration;                                 // Set shield duration counter
     }
 
+    #endregion
+
+    #region Shield Upgrade Methods
+
     public void ShieldDurationIncrease(float amount)                            // Method for upgrading (increasing) the duration of the shield (how long it will be up for).
     {
         shieldDuration += amount;
@@ -126,20 +154,5 @@ public class PlayerAbilities : MonoBehaviour
         shieldCooldown -= amount;
     }
 
-    private void UnstableCharge()                                               // Method for the Unstable Charge ability
-    {
-        chargeEnergyCost = (int)ps.GetMaxEnergy() / 2;
-
-        if (Input.GetMouseButtonDown(1) && ps.GetCurrentEnergy() >= chargeEnergyCost)           // Check to see if the player has enough energy to use the ability and the appropriate mouse button has been pressed
-        {
-            Shoot();
-            ps.ReduceEnergy(chargeEnergyCost);
-            attackTimer = attackInterval;                                       // Reset attack timer so the player has to wait before using the attack again
-        }
-    }
-
-    void Shoot()
-    {
-        Instantiate(energyProjectilePrefab, firePoint.position, firePoint.rotation);
-    }
+    #endregion
 }
