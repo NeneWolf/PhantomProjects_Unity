@@ -19,7 +19,7 @@ public class UnstableChargeProjectileController : MonoBehaviour
     {
         if (collision.CompareTag("Enemy"))
         {
-            collision.GetComponent<Entity>().Damage(projectileDamage);
+            collision.transform.parent.GetComponent<Entity>().Damage(projectileDamage);
             Destroy(gameObject);
         }
 

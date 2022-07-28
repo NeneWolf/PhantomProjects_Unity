@@ -20,7 +20,7 @@ public class ProjectileController : MonoBehaviour
     {
         if (collision.tag == "Enemy")
         {
-            //collision.GetComponent<Entity>().Damage(projectileDamage);
+            collision.transform.parent.GetComponent<Entity>().Damage(projectileDamage);
             Destroy(gameObject);
         }
 
