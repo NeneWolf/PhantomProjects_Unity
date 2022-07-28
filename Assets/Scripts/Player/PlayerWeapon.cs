@@ -8,6 +8,7 @@ public class PlayerWeapon : MonoBehaviour
 	[Space]
 	[SerializeField] Transform firePoint;
 	[SerializeField] GameObject weaponProjectilePrefab;                       // Load projectile sprite
+	[SerializeField] public float weaponDamage { get; private set; } = 20;
 	[SerializeField] float attackInterval = 1f;                               // Time before next projectile is spawned 
 	float attackTimer = 0;
 
@@ -40,5 +41,14 @@ public class PlayerWeapon : MonoBehaviour
 		Instantiate(weaponProjectilePrefab, firePoint.position, firePoint.rotation);
 	}
 
-    #endregion
+	#endregion
+
+	#region Damage Upgrade Method
+
+	public void WeaponDamageIncrease(float amount)                                    // Upgrade (Increase) the player's weapon damage
+	{
+		weaponDamage += amount;
+	}
+
+	#endregion
 }

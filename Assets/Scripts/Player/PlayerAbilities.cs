@@ -5,14 +5,14 @@ using UnityEngine;
 
 public class PlayerAbilities : MonoBehaviour
 {
-    public CharacterController2D controller;
-    public PlayerState ps;
+    [SerializeField] CharacterController2D controller;
+    [SerializeField] PlayerState ps;
+
 
     //Shield Ability
     [Header("Ability 1: Shield")]
     [Space]
     [SerializeField] GameObject shield;                                 // Get shield sprite
-
     [SerializeField] float shieldDuration = 5.5f;                       // Set the duration for the shield (how long it will stay up)
     [SerializeField] float shieldCooldown = 20.5f;                      // Set shield cooldown (how long before the shield is available to use again)
     float shieldDurationCounter;                                        // Timer for shield duration
@@ -24,6 +24,7 @@ public class PlayerAbilities : MonoBehaviour
     [Space]
     [SerializeField] Transform firePoint;
     [SerializeField] GameObject energyProjectilePrefab;                         // Get the enery projectile sprite
+    [SerializeField] public float unstableChargeDamage { get; private set; } = 35;
     [SerializeField] float attackInterval = 0.5f;                               // Time before each attack
     int chargeEnergyCost;                                                       // Cost for using this ability
     float attackTimer = 0;
@@ -152,6 +153,16 @@ public class PlayerAbilities : MonoBehaviour
     public void ShieldCooldownDecrease(float amount)                            // Method for upgrading (decreasing) the cooldown of the shield (how long before being able to use it again).
     {
         shieldCooldown -= amount;
+    }
+
+    #endregion
+
+
+    #region Unstable Charge Upgrade Method
+
+    public void UnstableChargeDamageIncrease(float amount)                                    // Upgrade (Increase) the player's ability damage
+    {
+        unstableChargeDamage += amount;
     }
 
     #endregion
