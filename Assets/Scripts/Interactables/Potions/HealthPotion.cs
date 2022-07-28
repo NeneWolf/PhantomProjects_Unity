@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class HealthPotion : MonoBehaviour
 {
-    [SerializeField] private PlayerState playerStats;
     [SerializeField] private float healthRestore = 10;
 
     // Check to see if the player is next to the potion and is pressing the interact key
@@ -12,7 +11,7 @@ public class HealthPotion : MonoBehaviour
     {
         if (collision.tag == "Player" && Input.GetKeyDown(KeyCode.F))
         {
-            playerStats.IncreaseHealth(healthRestore);              // Restore the player's health by a certain amount
+            collision.GetComponent<PlayerState>().IncreaseHealth(healthRestore);            // Restore the player's health by a certain amount      
             Destroy(this.gameObject);
         }
     }
