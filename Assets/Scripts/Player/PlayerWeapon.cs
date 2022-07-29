@@ -8,6 +8,7 @@ public class PlayerWeapon : MonoBehaviour
 	[Space]
 	[SerializeField] Transform firePoint;
 	[SerializeField] GameObject weaponProjectilePrefab;                       // Load projectile sprite
+	[SerializeField] LayerMask whatIsPlayerProjectile;
 	[SerializeField] public float weaponDamage { get; private set; } = 20;
 	[SerializeField] float attackInterval = 1f;                               // Time before next projectile is spawned 
 	float attackTimer = 0;

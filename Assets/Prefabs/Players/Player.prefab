@@ -163,6 +163,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePoint: {fileID: 1707379278287922166}
   weaponProjectilePrefab: {fileID: 585653256439993513, guid: 5c6905ba1808f1e4ead22278df498e88, type: 3}
+  whatIsPlayerProjectile:
+    serializedVersion: 2
+    m_Bits: 512
   attackInterval: 1
 --- !u!1 &1707379278287922167
 GameObject:
