@@ -49,6 +49,7 @@ public class PlayerState : MonoBehaviour
         if (currentHealth <= 0)                                                        // Check's to see if the player has ran out of health
         {
             IsPlayerDead = true;                                                // If the player runs out of health, set the player dead bool to true
+            Destroy(gameObject);
         }
     }
 
