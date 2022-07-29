@@ -11,6 +11,7 @@ public class IdleState : State
     protected float idleTime;
 
     protected bool isPlayerInMinAgroRange;
+    protected bool isPlayerInMaxAgroRange;
 
     public IdleState(FiniteStateMachine stateMachine, Entity entity, string animBoolName, D_IdleState stateData) : base(stateMachine, entity, animBoolName)
     {
@@ -68,5 +69,7 @@ public class IdleState : State
     {
         base.DoChecks();
         isPlayerInMinAgroRange = entity.CheckPlayerInMinAgroRange();
+
+        isPlayerInMaxAgroRange = entity.CheckPlayerInMaxAgroRange();
     }
 }

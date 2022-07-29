@@ -22,7 +22,7 @@ public class Enemy2 : Entity
     [SerializeField] D_LookForPlayerState lookForPlayerStateData;
     [SerializeField] D_DeadState deadStateData;
     [SerializeField] public D_DodgeState dodgeStateData;
-    [SerializeField] D_RangeAttackState RangeAttackStateData;
+    [SerializeField] D_RangeAttackState rangeAttackStateData;
 
     [Header("Attacks")]
     [Space]
@@ -40,7 +40,7 @@ public class Enemy2 : Entity
         lookForPlayerState = new E2_LookForPlayerState(stateMachine,this,"lookForPlayer", lookForPlayerStateData, this);
         deadState = new E2_DeadState(stateMachine, this, "dead", deadStateData, this);
         dodgeState = new E2_DodgeState(stateMachine, this, "dodge", dodgeStateData, this);
-        rangeAttackState = new E2_RangeAttackState(stateMachine, this, "rangeAttack", RangeAttackPosition, RangeAttackStateData, this);
+        rangeAttackState = new E2_RangeAttackState(stateMachine, this, "rangeAttack", RangeAttackPosition, rangeAttackStateData, this);
 
         stateMachine.Initialize(moveState);
     }

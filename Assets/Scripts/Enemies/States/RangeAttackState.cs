@@ -9,6 +9,10 @@ public class RangeAttackState : AttackState
     protected GameObject projectile;
     protected Projectile projectileScript;
 
+    protected GameObject lazer;
+    protected bool useLazer;
+
+
     public RangeAttackState(FiniteStateMachine stateMachine, Entity entity, string animBoolName, Transform attackPosition, D_RangeAttackState stateData) : base(stateMachine, entity, animBoolName, attackPosition)
     {
         this.stateData = stateData;
@@ -17,11 +21,12 @@ public class RangeAttackState : AttackState
     public override void DoChecks()
     {
         base.DoChecks();
+        this.useLazer = stateData.useLazer;
     }
 
     public override void Enter()
     {
-        base.Enter();
+        base.Enter();      
     }
 
     public override void Exit()
@@ -48,8 +53,15 @@ public class RangeAttackState : AttackState
     {
         base.TriggerAttack();
 
-        projectile = GameObject.Instantiate(stateData.projectile, attackPosition.position, attackPosition.rotation);
-        projectileScript = projectile.GetComponent<Projectile>();
-        projectileScript.FireProjectile(stateData.projectileSpeed, stateData.projectileDamage);
+        if (useLazer == false)
+        {
+            projectile = GameObject.Instantiate(stateData.projectile, attackPosition.position, attackPosition.rotation);
+            projectileScript = projectile.GetComponent<Projectile>();
+            projectileScript.FireProjectile(stateData.projectileSpeed, stateData.projectileDamage);
+        }
+        else 
+        {
+            lazer = GameObject.Instantiate(stateData.lazer, attackPosition.position, attackPosition.rotation);
+        }
     }
 }

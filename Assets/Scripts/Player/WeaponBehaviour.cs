@@ -9,8 +9,8 @@ public class WeaponBehaviour : MonoBehaviour
     private BoxCollider2D coll;
 
     [SerializeField] private LayerMask whatIsEnemy;
-    [SerializeField] private Transform damagePosition;
-    [SerializeField] private float damageRadius;
+    //[SerializeField] private Transform damagePosition;
+    //[SerializeField] private float damageRadius;
 
     // Start is called before the first frame update
     void Start()
@@ -40,14 +40,14 @@ public class WeaponBehaviour : MonoBehaviour
         //}
     }
 
-    //private void OnCollisionEnter2D(Collision2D collision)
-    //{
-    //    if(collision.transform.tag == "Enemy")
-    //    {
-    //        collision.transform.parent.GetComponent<Entity>().Damage(damage);
-    //        print(collision.transform.parent);
-    //    }
-    //}
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.transform.tag == "Enemy")
+        {
+            collision.transform.parent.GetComponent<Entity>().Damage(damage);
+            print(collision.transform.parent);
+        }
+    }
 
 
 

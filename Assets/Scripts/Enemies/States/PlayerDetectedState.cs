@@ -50,6 +50,7 @@ public class PlayerDetectedState : State
 
         isPlayerInMinAgroRange = entity.CheckPlayerInMinAgroRange();
         isPlayerInMaxAgroRange = entity.CheckPlayerInMaxAgroRange();
+
         performCloseRangeAction = entity.CheckPlayerInCloseRangeAction();
     }
 }
