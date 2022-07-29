@@ -6,6 +6,8 @@ public class E2_MoveState : MoveState
 {
     private Enemy2 enemy;
 
+
+
     public E2_MoveState(FiniteStateMachine stateMachine, Entity entity, string animBoolName, D_MoveState stateData, Enemy2 enemy) : base(stateMachine, entity, animBoolName, stateData)
     {
         this.enemy = enemy;
@@ -14,6 +16,8 @@ public class E2_MoveState : MoveState
     public override void DoChecks()
     {
         base.DoChecks();
+
+
     }
 
     public override void Enter()

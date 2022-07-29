@@ -20,6 +20,9 @@ namespace PhantomProjects.Core
         bool isDead = false;
 
         public bool IsPlayerDead { get { return isDead; } }
+
+        [SerializeField] GameObject bullet;
+        [SerializeField] Transform bulletPoint;
         #endregion
 
         // Start is called before the first frame update

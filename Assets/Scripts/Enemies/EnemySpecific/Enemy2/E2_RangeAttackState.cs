@@ -5,6 +5,7 @@ using UnityEngine;
 public class E2_RangeAttackState : RangeAttackState
 {
     private Enemy2 enemy;
+
     public E2_RangeAttackState(FiniteStateMachine stateMachine, Entity entity, string animBoolName, Transform attackPosition, D_RangeAttackState stateData, Enemy2 enemy) : base(stateMachine, entity, animBoolName, attackPosition, stateData)
     {
         this.enemy = enemy;

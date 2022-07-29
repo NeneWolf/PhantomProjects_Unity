@@ -28,8 +28,8 @@ public class Mini_Boss_ME16 : Entity
     {
         base.Start();
 
-        moveState = new MB_2_MoveState(stateMachine, this, "move", moveStateData, this);
         idleState = new MB_2_IdleState(stateMachine, this, "idle", idleStateData, this);
+        moveState = new MB_2_MoveState(stateMachine, this, "move", moveStateData, this);
         playerDetectedState = new MB_2_PlayerDetectedState(stateMachine, this, "playerDetected", playerDetectedStateData, this);
         lookForPlayerState = new MB_2_LookForPlayerState(stateMachine, this, "lookForPlayer", lookForPlayerStateData, this);
         deadState = new MB_2_DeadState(stateMachine, this, "dead", deadStateData, this);

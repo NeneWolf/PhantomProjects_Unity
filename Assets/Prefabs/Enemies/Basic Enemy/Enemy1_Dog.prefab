@@ -113,6 +113,12 @@ MonoBehaviour:
   ledgeCheck: {fileID: 5664139566706581505}
   playerCheck: {fileID: 5664139568562167007}
   groundCheck: {fileID: 4699911967658020618}
+  canSpawnMinions: 0
+  spawnAfterDead: 0
+  spawnCount: 0
+  spawnPosition: {fileID: 0}
+  enemiesLocation: {fileID: 0}
+  enemySpawn: {fileID: 0}
   idleStateData: {fileID: 11400000, guid: acd36c051641f89439f5d534347e045f, type: 2}
   moveStateData: {fileID: 11400000, guid: 9f9a737cd97a59a4880d4cd0c3c789f5, type: 2}
   playerDetectedStateData: {fileID: 11400000, guid: fb525fd3916d4294ca7e364ad49cacc8, type: 2}
@@ -265,7 +271,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &5664139568120307050
 BoxCollider2D:
   m_ObjectHideFlags: 0

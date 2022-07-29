@@ -12,6 +12,7 @@ TagManager:
   - EnergyPotion
   - KeyCard
   - SceneManager
+  - PBullet
   layers:
   - Default
   - TransparentFX
@@ -23,8 +24,8 @@ TagManager:
   - Player
   - Decoration
   - Weapon
-  - 
-  - 
+  - Destroyable
+  - PProjectiles
   - 
   - 
   - 

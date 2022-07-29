@@ -242,7 +242,7 @@ MonoBehaviour:
   spawnCount: 3
   spawnPosition: {fileID: 6148322110919607713}
   enemiesLocation: {fileID: 0}
-  enemySpawn: {fileID: 5664139566969684943, guid: c13269dcea8d42442b598887930ea419, type: 3}
+  enemySpawn: {fileID: 3232583526800357565, guid: 4b384c195ff47a34bb6c9881d8ff1345, type: 3}
   idleStateData: {fileID: 11400000, guid: 74fccdcb684a2674585eaf63df8f1abc, type: 2}
   moveStateData: {fileID: 11400000, guid: 65761cb15bdb534429e2fb56773350d2, type: 2}
   playerDetectedStateData: {fileID: 11400000, guid: 1f24a8d86fec17b459371c3711ebfeeb, type: 2}

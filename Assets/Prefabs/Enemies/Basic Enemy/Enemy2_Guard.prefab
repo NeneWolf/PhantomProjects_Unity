@@ -259,7 +259,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8402189771883538736}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 35.46, y: 4.26, z: 0}
   m_LocalScale: {x: 3.114067, y: 3.114067, z: 3.114067}
   m_ConstrainProportionsScale: 0
@@ -286,6 +286,12 @@ MonoBehaviour:
   ledgeCheck: {fileID: 8402189772820283902}
   playerCheck: {fileID: 8402189771234254022}
   groundCheck: {fileID: 8402189772216449940}
+  canSpawnMinions: 0
+  spawnAfterDead: 0
+  spawnCount: 0
+  spawnPosition: {fileID: 0}
+  enemiesLocation: {fileID: 0}
+  enemySpawn: {fileID: 0}
   moveStateData: {fileID: 11400000, guid: 25a797fe09b6b2d43a2e2a85311461f7, type: 2}
   idleStateData: {fileID: 11400000, guid: d16c34ccd927fe741b5d9c70c0911838, type: 2}
   playerDetectedStateData: {fileID: 11400000, guid: d6e8d40b64a53ea43a71e8587fc3394f, type: 2}
@@ -293,7 +299,7 @@ MonoBehaviour:
   lookForPlayerStateData: {fileID: 11400000, guid: 2c6fb83b7cb5827458226e8469c6574f, type: 2}
   deadStateData: {fileID: 11400000, guid: 938089c57dd35804db12e8f9206214da, type: 2}
   dodgeStateData: {fileID: 11400000, guid: 8147805d59687004eb50e6607d017205, type: 2}
-  RangeAttackStateData: {fileID: 11400000, guid: 4b2c79b5487ef8d4f83f2a3fdb9058dc, type: 2}
+  rangeAttackStateData: {fileID: 11400000, guid: 4b2c79b5487ef8d4f83f2a3fdb9058dc, type: 2}
   meleeAttackPosition: {fileID: 8402189773149124107}
   RangeAttackPosition: {fileID: 8402189771586322844}
 --- !u!1 &8402189772216449941

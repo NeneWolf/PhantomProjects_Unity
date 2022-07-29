@@ -16,4 +16,4 @@ MonoBehaviour:
   projectileDamage: 10
   projectileSpeed: 12
   useLazer: 1
-  lineRenderer: {fileID: 1963497735913987225, guid: 4edbd4ebd1607a94f9899482d7d1aa50, type: 3}
+  lazer: {fileID: 4867997639881995114, guid: 8f6075ec11829ee4395a4514b2fbcedd, type: 3}
