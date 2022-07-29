@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1485588833226739802}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1963497735345092052}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: RangeAttackPosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -150,7 +150,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1963497736171914149}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.247, y: 0.045, z: 0}
+  m_LocalPosition: {x: 0.247, y: -0.08, z: 0}
   m_LocalScale: {x: 0.48116246, y: 0.48116246, z: 0.48116246}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -197,7 +197,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1963497736468202383}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: PlayerCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -370,7 +370,7 @@ Animator:
   m_GameObject: {fileID: 1963497736562197049}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 21c6ecc461997b14da296f7f0575ed10, type: 2}
+  m_Controller: {fileID: 9100000, guid: f891cc1c0efba294dae72843bfecd3ec, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -401,7 +401,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6171248861251518232}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: AreaPlayerCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
