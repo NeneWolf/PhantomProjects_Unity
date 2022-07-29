@@ -8,7 +8,6 @@ public class PlayerAbilities : MonoBehaviour
     [SerializeField] CharacterController2D controller;
     [SerializeField] PlayerState ps;
 
-
     //Shield Ability
     [Header("Ability 1: Shield")]
     [Space]
@@ -72,6 +71,14 @@ public class PlayerAbilities : MonoBehaviour
     {
         Instantiate(energyProjectilePrefab, firePoint.position, firePoint.rotation);
     }
+
+    #endregion
+
+    #region Ability 1 Upgrade: Laser
+
+
+
+
 
     #endregion
 

@@ -99,8 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3af5d9a536681734da4c515d4498cbdb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weapon: {fileID: 0}
-  unstableCharge: {fileID: 0}
+  weapon: {fileID: 4541181114221547549, guid: 3044a880e414f8f439a733c526879a42, type: 3}
   speed: 20
 --- !u!50 &1985919831809672464
 Rigidbody2D:
