@@ -13,7 +13,7 @@ namespace PhantomProjects.Core
         {
             if (collision.gameObject.tag == "Player")
             {
-                collision.gameObject.GetComponent<PlayerStats>().AddEnergy(recoverAmount);
+                //collision.gameObject.GetComponent<PlayerStats>().AddEnergy(recoverAmount);
 
                 Destroy(this.gameObject);
             }

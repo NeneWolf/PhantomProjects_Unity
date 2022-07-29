@@ -1,134 +1,120 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-namespace PhantomProjects.Core
+public class PlayerStats : MonoBehaviour
 {
-    public class PlayerStats : MonoBehaviour
+    #region Variables
+
+    [Header("Player Stats")]
+    [Space]
+    [SerializeField] float currentHealth;                                      // Player's current amount of health
+    [SerializeField] float maxHealth = 100;                             // Player's maximum amount of health
+    [SerializeField] float currentEnergy;                 // Player's current amount of energy
+    [SerializeField] public float maxEnergy { get; private set; } = 100;        // Player's maximum amount of energy
+    public bool canUseEnergy { get; private set; }
+
+    float energyRegenAmount = 2f;                                        // Amount of energy restored each tick
+    float energyRegenRate = 0.5f;                                       // The rate at which energy is restored (every 0.5 seconds will restore 2 energy)
+    float energyDelayPeriod = 5f;                                       // Delay before energy starts to regenerate
+
+    public bool IsPlayerDead;                                                   // Public bool to inform if the player has died or not
+
+    Coroutine energyRegen;                                              // Performs energy regen
+    //Coroutine healthRegen;                                            // Performs health regen
+
+    //[SerializeField] PlayerAbilities shield;
+
+    #endregion
+
+    void Start()
     {
-        #region 
-        [Header("Bars")]
-        [Space]
-        public HealthBar healthBar;
-        public EnergyBar energyBar;
+        // Set the player's health and energy to their maximum amount on start
+        currentHealth = maxHealth;
+        currentEnergy = maxEnergy;
+        canUseEnergy = true;
+    }
 
-        [Header("Basic Stats")]
-        [Space]
-        [SerializeField] int maxHealth;
-        [SerializeField] int maxEnergy;
-        int currentHealth;
-        int currentEnergy;
+    void Update()
+    {
+        IsDead();                                                               // Method to check if the player has run out of health
+    }
 
-        [Header("Regenerating Energy - Time ( Seconds ) & Points ")]
-        [Space]
-        [SerializeField] float regenEnergyPerSecond = 6f;
-        [SerializeField] int regenEnergyPointsRegain;
+    #region Methods
 
-        private WaitForSecondsRealtime regenTick = new WaitForSecondsRealtime(0.5f);
-
-        private Coroutine regen;
-
-        #endregion
-
-        // Start is called before the first frame update
-        void Awake()
+    public void IsDead()
+    {
+        if (currentHealth <= 0)                                                        // Check's to see if the player has ran out of health
         {
-            //Set Health & Energy
-            currentHealth = maxHealth;
-            currentEnergy = maxEnergy;
-
-            //Set the bars values
-            healthBar.SetMaxHealth(maxHealth);
-            energyBar.SetMaxEnergy(maxEnergy);
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-            //Always making sure the energy & Health does not goes pass the max
-            if (currentEnergy > maxEnergy)
-                currentEnergy = maxEnergy;
-
-            if (currentHealth > maxHealth)
-                currentHealth = maxHealth;
-        }
-
-        public void TakeDamage(AttackDetails attackDetails)
-        {
-            if (currentHealth - attackDetails.damageAmount >= 0)
-            {
-                currentHealth -= (int)attackDetails.damageAmount;
-
-                healthBar.SetHealth(currentHealth);
-            }
-        }
-
-        //Cost of the Energy when using "Special Skill"
-        public void UseEnergy(int amount)
-        {
-            if (currentEnergy - amount >= 0)
-            {
-                currentEnergy -= amount;
-                energyBar.SetEnergy(currentEnergy);
-
-                //Start and stop the coroutine to regen the energy back
-                if (regen != null)
-                    StopCoroutine(regen);
-
-                regen = StartCoroutine(RegenEnergy());
-            }
-        }
-
-        public void AddEnergy(int amount)
-        {
-            if(currentEnergy + amount >= maxEnergy)
-            {
-                currentEnergy = maxEnergy;
-            }
-            else
-            {
-                currentEnergy += amount;
-            }
-            
-            energyBar.SetEnergy(currentEnergy);
-        }
-
-        public void AddHealth(int amount)
-        {
-            if (currentHealth + amount >= maxHealth)
-            {
-                currentHealth = maxHealth;
-            }
-            else
-            {
-                currentHealth += amount;
-            }
-
-            healthBar.SetHealth(currentHealth);
-        }
-
-        //Auto Energy Regen
-        private IEnumerator RegenEnergy()
-        {
-            // Wait time before starting to regen
-            yield return new WaitForSecondsRealtime(regenEnergyPerSecond);
-
-            while (currentEnergy <= maxEnergy)
-            {
-                //Regen Tick - Time between each regeneration 
-                yield return regenTick;
-
-                AddEnergy(regenEnergyPointsRegain);
-
-                yield return regenTick;
-            }
-
-            regen = null;
-        }
-
-        public int ReportHealth()
-        {
-            return currentHealth;
+            IsPlayerDead = true;                                                // If the player runs out of health, set the player dead bool to true
+            Destroy(gameObject);
         }
     }
+
+    public void IncreaseHealth(float amount)                                         // Adjust health to not go over max health or below 0
+    {
+        if (currentHealth + amount >= maxHealth) currentHealth = maxHealth;                                             // If the amount being set is less than 0, set health to 0 instead
+        else currentHealth += amount;                                           // Else set health to the amount
+    }
+
+    public void IncreaseEnergy(float amount)                                    // Method to increase the player's energy
+    {
+        if (currentEnergy + amount >= maxEnergy) currentEnergy = maxEnergy;                                             // If the amount being set is less than 0, set health to 0 instead
+        else currentEnergy += amount;                                           // Use the set health method to increase the player's health by the amount
+    }
+
+    public void ConsumeEnergy(float amount)
+    {
+        if (currentEnergy - amount == 0)
+        {
+            currentEnergy = 0;
+        }
+        else currentEnergy -= amount;
+
+        if (currentEnergy < maxEnergy)
+        {
+            StartCoroutine(EnergyRegen());
+        }
+    }
+
+    public bool CanConsumeEnergy(float consume)
+    {
+        if (currentEnergy >= consume)
+        {
+            return true;
+        }
+        else return false;
+    }
+
+    private IEnumerator EnergyRegen()
+    {
+        yield return new WaitForSeconds(energyDelayPeriod);                    // Wait for the delay period to start regenerating energy
+
+        while (currentEnergy <= maxEnergy)                                            // While energy is less than the player's maximum energy, keep regenerating energy
+        {
+            yield return new WaitForSeconds(energyRegenRate);                  // Wait a set amount of time each time energy is restored
+
+            IncreaseEnergy(energyRegenAmount);                                 // Increase energy by a given amount
+        }
+    }
+
+    public void TakeDamage(AttackDetails attackDetails)                                        // Method for reducing the player's health
+    {
+        //if (!shield.shieldActive)
+        //{
+        //    if (currentHealth - attackDetails.damageAmount <= 0)
+        //    {
+        //        currentHealth = 0;
+        //        IsPlayerDead = true;
+        //    }
+        //    else
+        //    {
+        //        currentHealth -= attackDetails.damageAmount;
+        //    }
+        //}
+    }
+
+    #endregion
 }

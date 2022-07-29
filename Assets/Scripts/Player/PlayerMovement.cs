@@ -2,81 +2,36 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace PhantomProjects.Core
+public class PlayerMovement : MonoBehaviour
 {
-    public class PlayerMovement : MonoBehaviour
+    public CharacterController2D controller;
+    public Animator animator;
+
+    [SerializeField] float speed = 40f;
+
+    float horizontalMove;
+
+    private Rigidbody2D rb;
+
+    private void Start()
     {
-        #region Serializables
-        [Header("Controls of the Movement")]
-        [Space]
-        //Get other scripts within the player
-        PlayerControls playerControls;
-        PlayerStats playerStats;
+        rb = GetComponent<Rigidbody2D>();
+    }
 
-        //Movement fields
-        float horizontalMove = 0f;
-        [SerializeField] float runSpeed = 75f;                                 //Player speed
+    void Update()
+    {
+        horizontalMove = Input.GetAxisRaw("Horizontal") * speed;
 
-        bool isDead = false;
+        //animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
 
-        public bool IsPlayerDead { get { return isDead; } }
-
-        public GameObject enemyTestDamage;
-        #endregion
-
-        // Start is called before the first frame update
-        void Awake()
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            playerControls = GetComponent<PlayerControls>();
-            playerStats = GetComponent<PlayerStats>();
+            controller.CanJump(true);
         }
+    }
 
-        // Update is called once per frame
-        void Update()
-        {
-            CheckHealth();
-
-            if (!isDead)
-            {
-                PCControlsMovement();
-
-                if (Input.GetButtonDown("Jump"))
-                {
-                    playerControls.CanJump(true);
-                }
-            }
-
-            if (Input.GetKeyDown(KeyCode.G))
-            {
-                //FindObjectOfType<Entity>().gameObject.GetComponents<Entity>
-                enemyTestDamage.GetComponent<Entity>().Damage(10f);
-            }
-        }
-
-        private void FixedUpdate()
-        {
-        }
-
-        void PCControlsMovement()
-        {
-            //Takes defaul input values and multiply by the runSpeed - Speed of the player
-            horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
-            playerControls.Move(horizontalMove * Time.fixedDeltaTime);
-        }
-
-        void InteractionWithObjects()
-        {
-            //Add the controls to interact with
-            // - Doors
-            // - KeyCards
-        }
-
-        void CheckHealth()
-        {
-            if (playerStats.ReportHealth() <= 0)
-            {
-                isDead = true;
-            }
-        }
+    private void FixedUpdate()
+    {
+        controller.Move(horizontalMove * Time.fixedDeltaTime);            // Player movements
     }
 }
