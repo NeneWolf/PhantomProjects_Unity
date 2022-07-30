@@ -62,6 +62,15 @@ namespace PhantomProjects.Core
                 healthBar.SetHealth(currentHealth);
             }
         }
+        public void TakeDamage(float damageAmount)
+        {
+            if (currentHealth - damageAmount >= 0)
+            {
+                currentHealth -= (int)damageAmount;
+
+                healthBar.SetHealth(currentHealth);
+            }
+        }
 
         //Cost of the Energy when using "Special Skill"
         public void UseEnergy(int amount)

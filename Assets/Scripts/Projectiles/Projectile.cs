@@ -5,16 +5,16 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    private AttackDetails attackDetails;
+    AttackDetails attackDetails;
 
-    private float speed;
-    private Rigidbody2D rigidbody2;
-    private bool hasHitGround;
+    float speed;
+    Rigidbody2D rigidbody2;
+    bool hasHitGround;
 
-    [SerializeField] private LayerMask whatIsGround;
-    [SerializeField] private LayerMask whatIsPlayer;
-    [SerializeField] private Transform damagePosition;
-    [SerializeField] private float damageRadius;
+    [SerializeField] LayerMask whatIsGround;
+    [SerializeField] LayerMask whatIsPlayer;
+    [SerializeField] Transform damagePosition;
+    [SerializeField] float damageRadius;
 
     private void Start()
     {
