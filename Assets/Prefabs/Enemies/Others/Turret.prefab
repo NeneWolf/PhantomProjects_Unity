@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2120051948826164007}
   - component: {fileID: 2120051948826164006}
   m_Layer: 0
-  m_Name: Turrent
+  m_Name: Turret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e488d417ee52a74792f8948ca8703b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turrentHead: {fileID: 2120051949411289487}
+  turretHead: {fileID: 2120051949411289487}
   shootPoint: {fileID: 2120051949013552730}
   bullet: {fileID: 2106420017863790262, guid: 5958735ab4ca7684e8057cfa89b123b3, type: 3}
   fireRate: 1.2
@@ -149,7 +149,7 @@ GameObject:
   - component: {fileID: 2120051949411289488}
   - component: {fileID: 2120051949411289489}
   m_Layer: 0
-  m_Name: TurrentHead
+  m_Name: TurretHead
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

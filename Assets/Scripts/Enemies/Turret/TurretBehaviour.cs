@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TurrentBehaviour : MonoBehaviour
+public class TurretBehaviour : MonoBehaviour
 {
     [Header("Properties")]
     [Space]
-    [SerializeField] GameObject turrentHead;
+    [SerializeField] GameObject turretHead;
     [SerializeField] GameObject shootPoint;
     [SerializeField] GameObject bullet;
 
@@ -46,7 +46,7 @@ public class TurrentBehaviour : MonoBehaviour
             if(targetPos.y < transform.position.y)
             {
                 //playerDetected = true;
-                turrentHead.transform.up = direction;
+                turretHead.transform.up = direction;
 
                 if (Time.time > nextTimeToFire)
                 {
