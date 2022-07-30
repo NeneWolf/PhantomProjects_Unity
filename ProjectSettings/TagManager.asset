@@ -26,7 +26,7 @@ TagManager:
   - Weapon
   - Destroyable
   - PProjectiles
-  - 
+  - WireTraps
   - 
   - 
   - 
@@ -49,6 +49,9 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Traps
+    uniqueID: 3443667225
     locked: 0
   - name: Player
     uniqueID: 2593170335
