@@ -58,6 +58,11 @@ public class Enemy1 : Entity
             stateMachine.ChangeState(deadState);
             StartCoroutine("WaitToDisable");
         }
+        else if (!CheckPlayerInMinAgroRange())
+        {
+            lookForPlayerState.SetTurnImmediatly(true);
+            stateMachine.ChangeState(lookForPlayerState);
+        }
     }
 
     private IEnumerator WaitToDisable()
