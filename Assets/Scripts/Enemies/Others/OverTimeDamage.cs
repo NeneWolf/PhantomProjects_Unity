@@ -3,10 +3,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WireBehaviour : MonoBehaviour
+public class OverTimeDamage : MonoBehaviour
 {
-    [Header("Active Wire")]
+    [Header("Active Wire (Default)")]
+    [SerializeField] bool wire = true; //Default
     [SerializeField] bool canDamage = false;
+
+    [Header("Toxic Area")]
+    [SerializeField] bool toxicArea = false;
+
+    [Header("Damage Overtime")]
     [SerializeField] float damage;
     [SerializeField] float damageRate;
 
@@ -25,7 +31,7 @@ public class WireBehaviour : MonoBehaviour
     }
     void Start()
     {
-        if (canDamage)
+        if (wire && canDamage)
         {
             sparks.Play();
         }
@@ -35,7 +41,7 @@ public class WireBehaviour : MonoBehaviour
     {
         damageHit = Physics2D.OverlapBox(coll.bounds.center, coll.bounds.size, 0f, whatIsPlayer);
 
-        if (canDamage)
+        if (wire && canDamage)
         {
             if (damageHit)
             {
@@ -44,6 +50,15 @@ public class WireBehaviour : MonoBehaviour
                     nextTimeToDamage = Time.time + damageRate;
                     damageHit.gameObject.GetComponent<PlayerStats>().TakeDamage(damage);
                 }
+            }
+        }
+
+        if (toxicArea && damageHit)
+        {
+            if (Time.time > nextTimeToDamage)
+            {
+                nextTimeToDamage = Time.time + damageRate;
+                damageHit.gameObject.GetComponent<PlayerStats>().TakeDamage(damage);
             }
         }
     }
