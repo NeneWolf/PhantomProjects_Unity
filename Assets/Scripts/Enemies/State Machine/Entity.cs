@@ -5,11 +5,15 @@ using UnityEngine;
 
 public class Entity : MonoBehaviour
 {
+
+    public string name;
+
     //Rewards
     [Header ("Rewards")]
     CanvasUI ui;
     public int mutationPoints;
     protected bool canGiveReward = true;
+
 
     public FiniteStateMachine stateMachine;
     public D_Entity entityData;
@@ -39,7 +43,7 @@ public class Entity : MonoBehaviour
 
     private bool hasSpawnMinions;
 
-    private float currentHealth;
+    public float currentHealth { get; private set; }
     protected bool isDead;
     
     Vector2 velocityWorkspace;
@@ -76,7 +80,6 @@ public class Entity : MonoBehaviour
                 SpawnMinions();
                 hasSpawnMinions = true;
             }
-                
         }
     }
 
@@ -147,7 +150,9 @@ public class Entity : MonoBehaviour
         //Optional
         //DamageHop(entityData.damageHopSpeed);
         hasBeenDamage = true;
+
         currentHealth -= dmg;
+
         Instantiate(entityData.hitParticle, aliveGO.transform.position, Quaternion.Euler(0f, 0f, Random.Range(0, 360f)));
 
         if (currentHealth <= 0)

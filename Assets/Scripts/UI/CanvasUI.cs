@@ -14,6 +14,7 @@ namespace PhantomProjects.Core
         [Space]
         [SerializeField] TextMeshProUGUI keycardsTextDisplay;
         [SerializeField] TextMeshProUGUI mutationPointsTextDisplay;
+        [SerializeField] TextMeshProUGUI bossName;
 
         [Header("Keycards - Requirement")]
         [Space]
@@ -29,6 +30,12 @@ namespace PhantomProjects.Core
         GameObject player;
         bool isDead;
 
+        [Header("Boss")]
+        [Space]
+        [SerializeField] GameObject bossHealthBar;
+        GameObject boss;
+        bool bossLevel;
+
         GameObject sceneManager;
 
         private void Start()
@@ -39,6 +46,16 @@ namespace PhantomProjects.Core
 
             keycardsTextDisplay.text = currentKeycards.ToString();
             mutationPointsTextDisplay.text = currentMutationPoints.ToString();
+
+            boss = GameObject.FindGameObjectWithTag("Boss");
+
+            if (boss != null)
+            {
+                bossLevel = true;
+                bossName.text = boss.GetComponent<Entity>().name.ToString();
+            }
+
+            bossHealthBar.SetActive(bossLevel);
         }
 
         private void Update()

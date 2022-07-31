@@ -46,11 +46,11 @@ namespace PhantomProjects.Core
                     playerControls.CanJump(true);
                 }
 
-                //TO REMOVE
-                if (Input.GetKeyDown(KeyCode.P))
-                {
-                    Instantiate(bullet, bulletPoint);
-                }
+                ////TO REMOVE
+                //if (Input.GetKeyDown(KeyCode.P))
+                //{
+                //    Instantiate(bullet, bulletPoint);
+                //}
             }
         }
 

@@ -2,19 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using PhantomProjects.Core;
 
 public class EnergyBar : MonoBehaviour
 {
     public Slider energyBarSlider;
-        
-    public void SetMaxEnergy(int energy)
+    GameObject player;
+
+    public void Awake()
     {
-        energyBarSlider.maxValue = energy;
-        energyBarSlider.value = energy;
+        player = GameObject.FindGameObjectWithTag("Player");
+        energyBarSlider.maxValue = player.GetComponent<PlayerStats>().maxEnergy;
     }
 
-    public void SetEnergy(int energy)
+    public void Update()
     {
-        energyBarSlider.value = energy;
+        energyBarSlider.value = player.GetComponent<PlayerStats>().currentEnergy;
     }
 }

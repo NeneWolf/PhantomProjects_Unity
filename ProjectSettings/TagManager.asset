@@ -13,6 +13,7 @@ TagManager:
   - KeyCard
   - SceneManager
   - PBullet
+  - Boss
   layers:
   - Default
   - TransparentFX
@@ -27,7 +28,7 @@ TagManager:
   - Destroyable
   - PProjectiles
   - Traps
-  - 
+  - Boss
   - 
   - 
   - 

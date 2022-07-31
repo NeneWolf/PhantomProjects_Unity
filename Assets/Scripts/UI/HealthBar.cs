@@ -2,19 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using PhantomProjects.Core;
 
 public class HealthBar : MonoBehaviour
 {
     public Slider healthBarSlider;
-        
-    public void SetMaxHealth(int health)
+    GameObject player;
+
+    public void Awake()
     {
-        healthBarSlider.maxValue = health;
-        healthBarSlider.value = health;
+        player = GameObject.FindGameObjectWithTag("Player");
+        healthBarSlider.maxValue = player.GetComponent<PlayerStats>().maxHealth;
+
     }
 
-    public void SetHealth(int health)
+    public void Update()
     {
-        healthBarSlider.value = health;
+        healthBarSlider.value = player.GetComponent<PlayerStats>().currentHealth;
     }
 }

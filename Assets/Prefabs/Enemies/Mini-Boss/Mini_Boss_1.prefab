@@ -251,7 +251,7 @@ MonoBehaviour:
   rangeAttackStateData: {fileID: 11400000, guid: 962d7b93024440f4c8ff295524eff56b, type: 2}
   deadStateData: {fileID: 11400000, guid: dba400bbe1529d94180ef94f53ef4f0a, type: 2}
   meleeAttackPosition: {fileID: 6148322109906260132}
-  RangeAttackPosition: {fileID: 6148322110082663753}
+  rangeAttackPosition: {fileID: 0}
 --- !u!1 &6148322110919607726
 GameObject:
   m_ObjectHideFlags: 0

@@ -7,17 +7,12 @@ namespace PhantomProjects.Core
     public class PlayerStats : MonoBehaviour
     {
         #region 
-        [Header("Bars")]
+        [Header("health & Energy")]
         [Space]
-        public HealthBar healthBar;
-        public EnergyBar energyBar;
-
-        [Header("Basic Stats")]
-        [Space]
-        [SerializeField] int maxHealth;
-        [SerializeField] int maxEnergy;
-        int currentHealth;
-        int currentEnergy;
+        [SerializeField] public int maxHealth;
+        [SerializeField] public int maxEnergy;
+        public int currentHealth { get; private set; }
+        public int currentEnergy { get; private set; }
 
         [Header("Regenerating Energy - Time ( Seconds ) & Points ")]
         [Space]
@@ -37,9 +32,6 @@ namespace PhantomProjects.Core
             currentHealth = maxHealth;
             currentEnergy = maxEnergy;
 
-            //Set the bars values
-            healthBar.SetMaxHealth(maxHealth);
-            energyBar.SetMaxEnergy(maxEnergy);
         }
 
         // Update is called once per frame
@@ -59,7 +51,6 @@ namespace PhantomProjects.Core
             {
                 currentHealth -= (int)attackDetails.damageAmount;
 
-                healthBar.SetHealth(currentHealth);
             }
         }
         public void TakeDamage(float damageAmount)
@@ -68,7 +59,6 @@ namespace PhantomProjects.Core
             {
                 currentHealth -= (int)damageAmount;
 
-                healthBar.SetHealth(currentHealth);
             }
         }
 
@@ -78,7 +68,6 @@ namespace PhantomProjects.Core
             if (currentEnergy - amount >= 0)
             {
                 currentEnergy -= amount;
-                energyBar.SetEnergy(currentEnergy);
 
                 //Start and stop the coroutine to regen the energy back
                 if (regen != null)
@@ -99,7 +88,6 @@ namespace PhantomProjects.Core
                 currentEnergy += amount;
             }
             
-            energyBar.SetEnergy(currentEnergy);
         }
 
         public void AddHealth(int amount)
@@ -113,7 +101,6 @@ namespace PhantomProjects.Core
                 currentHealth += amount;
             }
 
-            healthBar.SetHealth(currentHealth);
         }
 
         //Auto Energy Regen

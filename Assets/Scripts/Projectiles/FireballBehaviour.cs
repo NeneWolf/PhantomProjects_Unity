@@ -3,9 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TurrentProjectiles : MonoBehaviour
+public class FireballBehaviour : MonoBehaviour
 {
-    [SerializeField]float damage;
+    [SerializeField] float damage;
+    [SerializeField] float force;
 
     Rigidbody2D rd2d;
 
@@ -13,13 +14,15 @@ public class TurrentProjectiles : MonoBehaviour
     [SerializeField] private LayerMask whatIsPlayer;
     [SerializeField] float damageRadius;
 
-    private void Awake()
+    // Start is called before the first frame update
+    void Awake()
     {
         rd2d = GetComponent<Rigidbody2D>();
+        rd2d.gravityScale = force;
     }
- 
-    
-    void FixedUpdate()
+
+    // Update is called once per frame
+    void Update()
     {
         Collider2D damageHit = Physics2D.OverlapCircle(transform.position, damageRadius, whatIsPlayer);
         Collider2D groundHit = Physics2D.OverlapCircle(transform.position, damageRadius, whatIsGround);
@@ -34,6 +37,7 @@ public class TurrentProjectiles : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+
     }
 
     private void OnDrawGizmos()
