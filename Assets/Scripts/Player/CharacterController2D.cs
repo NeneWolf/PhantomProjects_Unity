@@ -85,6 +85,18 @@ public class CharacterController2D : MonoBehaviour
 			{
 				grounded = true;
 			}
+
+			foreach (var c in colliders)
+            {
+				if (c.tag == "SpecialPlatform")
+                {
+					transform.parent = c.transform;
+                }
+				else
+                {
+					transform.parent = null;
+                }
+            }
 		}
 	}
 

@@ -6,15 +6,16 @@ using UnityEngine.UI;
 public class EnergyBar : MonoBehaviour
 {
     public Slider energyBarSlider;
-        
-    public void SetMaxEnergy(int energy)
+    GameObject player;
+
+    public void Awake()
     {
-        energyBarSlider.maxValue = energy;
-        energyBarSlider.value = energy;
+        player = GameObject.FindGameObjectWithTag("Player");
+        energyBarSlider.maxValue = player.GetComponent<PlayerState>().maxEnergy;
     }
 
-    public void SetEnergy(int energy)
+    private void Update()
     {
-        energyBarSlider.value = energy;
+        energyBarSlider.value = player.GetComponent<PlayerState>().currentEnergy;
     }
 }
