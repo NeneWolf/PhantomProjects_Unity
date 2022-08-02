@@ -65,6 +65,14 @@ namespace PhantomProjects.Core
                 isDead = player.GetComponent<PlayerMovement>().IsPlayerDead;
                 UpdateDisplay();
             }
+
+            if(boss != null)
+            {
+                if(boss.GetComponent<Entity>().currentHealth <= 0)
+                {
+                    bossHealthBar.SetActive(false);
+                }
+            }
         }
 
         void UpdateDisplay()

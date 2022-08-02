@@ -107,6 +107,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 402485e4f07741e49bd7cccb05c10c93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  name: Dog
   mutationPoints: 10
   entityData: {fileID: 11400000, guid: 6ce1f4a3140d53b41998491453e22e8a, type: 2}
   wallCheck: {fileID: 5664139566657232116}
