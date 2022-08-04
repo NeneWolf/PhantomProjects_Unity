@@ -14,8 +14,8 @@ public class PlayerAbilities : MonoBehaviour
     [SerializeField] GameObject shield;                                 // Get shield sprite
     [SerializeField] float shieldDuration = 5.5f;                       // Set the duration for the shield (how long it will stay up)
     [SerializeField] float shieldCooldown = 20.5f;                      // Set shield cooldown (how long before the shield is available to use again)
-    float shieldDurationCounter;                                        // Timer for shield duration
-    float shieldCooldownCounter;                                        // Timer for shield cooldown
+    float shieldDurationCounter;                                        // Variable to hold timer for shield duration
+    float shieldCooldownCounter;                                        // Variable to hold timer for shield cooldown
     bool shieldReady = true;                                            // Check to see if the shield is ready to be used
     public bool shieldActive { get; private set; } = false;                                          // Check to see if the shield is currently active
 
@@ -74,14 +74,6 @@ public class PlayerAbilities : MonoBehaviour
 
     #endregion
 
-    #region Ability 1 Upgrade: Laser
-
-
-
-
-
-    #endregion
-
     #region Ability 2: Shield
 
     void ActivateShield()
@@ -110,7 +102,6 @@ public class PlayerAbilities : MonoBehaviour
 
     IEnumerator ShieldDuration()                                                // Method to keep shield active for the specified duration
     {
-
         yield return new WaitForSecondsRealtime(shieldDuration);                // How long the shield will stay up for in seconds
 
         shield.SetActive(false);                                                // Deactivate shield

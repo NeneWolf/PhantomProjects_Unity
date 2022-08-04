@@ -7269,7 +7269,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.2983816, y: 4.223875, z: -10}
+  m_LocalPosition: {x: 0.166919, y: 4.229187, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8383,7 +8383,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 0.95610684, y: 1}
+    m_SensorSize: {x: 2.0229008, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -9807,7 +9807,7 @@ GameObject:
   - component: {fileID: 1998903456}
   - component: {fileID: 1998903455}
   m_Layer: 0
-  m_Name: Lazor
+  m_Name: Laser
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9893,7 +9893,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 056a00804f29f0841ad1d7fa6e14985a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defDistanceRay: 50
+  laserDamage: 5
+  rayDistance: 10
+  laserTickRate: 0.2
   whatIsEnemy:
     serializedVersion: 2
     m_Bits: 64
@@ -10672,6 +10674,18 @@ PrefabInstance:
     - target: {fileID: 5664139566969684943, guid: c13269dcea8d42442b598887930ea419, type: 3}
       propertyPath: m_Name
       value: Enemy1_Dog
+      objectReference: {fileID: 0}
+    - target: {fileID: 5664139568120307050, guid: c13269dcea8d42442b598887930ea419, type: 3}
+      propertyPath: m_Size.y
+      value: 0.41594177
+      objectReference: {fileID: 0}
+    - target: {fileID: 5664139568120307050, guid: c13269dcea8d42442b598887930ea419, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.011507422
+      objectReference: {fileID: 0}
+    - target: {fileID: 5664139568120307050, guid: c13269dcea8d42442b598887930ea419, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.055307776
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c13269dcea8d42442b598887930ea419, type: 3}
