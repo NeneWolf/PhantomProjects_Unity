@@ -114,21 +114,11 @@ public class PlayerAbilities : MonoBehaviour
     private void ShieldDurationTimer()                                          // Method for shield duration timer
     {
         shieldDurationCounter -= Time.deltaTime;
-        FixValues(shieldDurationCounter);
     }
 
     private void ShieldCooldownTimer()                                          // Method for shield duration timer
     {
         shieldCooldownCounter -= Time.deltaTime;
-        FixValues(shieldCooldownCounter);
-    }
-
-    private void FixValues(float timer)
-    {
-        if (timer < 0)
-        {
-            timer = 0;
-        }
     }
 
     IEnumerator ShieldCooldown()                                                // Method to prepare shield for next use after cooldown period

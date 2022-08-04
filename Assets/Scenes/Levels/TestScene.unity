@@ -7057,8 +7057,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1615080069}
   - {fileID: 1998903453}
+  - {fileID: 1615080069}
   m_Father: {fileID: 2317611942782445197}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7269,7 +7269,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.166919, y: 4.229187, z: -10}
+  m_LocalPosition: {x: 2.1841178, y: 4.229187, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8383,7 +8383,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.0229008, y: 1}
+    m_SensorSize: {x: 2.311072, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -8886,14 +8886,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1615080068}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 60846435}
   m_Father: {fileID: 495024115}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1615080070
 SpriteRenderer:
@@ -9821,13 +9821,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1998903452}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.15, y: 0.15, z: 0}
+  m_LocalPosition: {x: 0.15, y: 0.11, z: 0}
   m_LocalScale: {x: 1, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 317069799}
   m_Father: {fileID: 495024115}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1998903454
 SpriteRenderer:
@@ -9869,7 +9869,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -9895,12 +9895,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   laserDamage: 5
   rayDistance: 10
+  laserDuration: 10.5
   laserTickRate: 0.2
+  laserCooldown: 30.5
+  laserFirePoint: {fileID: 317069799}
+  m_lineRenderer: {fileID: 1998903456}
   whatIsEnemy:
     serializedVersion: 2
     m_Bits: 64
-  laserFirePoint: {fileID: 317069799}
-  m_lineRenderer: {fileID: 1998903456}
 --- !u!120 &1998903456
 LineRenderer:
   m_ObjectHideFlags: 0

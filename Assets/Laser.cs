@@ -107,7 +107,8 @@ public class Laser : MonoBehaviour
 
         laserTickRateCounter -= Time.deltaTime;                                 // Reduce the tick rate timer by real time seconds
 
-        FixValues(laserTickRateCounter);                                        // Adjust timer to not go below 0 using the fix values method
+        if (laserTickRateCounter < 0)                                           // Adjust timer to not go below 0 using the fix values method
+            laserTickRateCounter = 0;
 
         if (enemyHit & laserTickRateCounter == 0)                               // If the raycast hits an object and the tick rate is 0
         {
