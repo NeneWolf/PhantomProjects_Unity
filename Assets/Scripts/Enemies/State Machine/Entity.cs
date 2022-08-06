@@ -167,6 +167,21 @@ public class Entity : MonoBehaviour
         }
     }
 
+    public virtual void Heal(float amount)
+    {
+        if (!isDead && currentHealth != entityData.maxHealth)
+        {
+            if (currentHealth + amount < entityData.maxHealth)
+            {
+                currentHealth += amount;
+            }
+            else if (currentHealth + amount >= entityData.maxHealth)
+            {
+                currentHealth = entityData.maxHealth;
+            }
+        }
+    }
+
     public virtual void Flip()
     {
         facingDirection *= -1;

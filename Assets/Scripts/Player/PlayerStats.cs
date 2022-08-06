@@ -9,15 +9,15 @@ namespace PhantomProjects.Core
         #region 
         [Header("health & Energy")]
         [Space]
-        [SerializeField] public int maxHealth;
-        [SerializeField] public int maxEnergy;
-        public int currentHealth { get; private set; }
-        public int currentEnergy { get; private set; }
+        [SerializeField] public float maxHealth;
+        [SerializeField] public float maxEnergy;
+        public float currentHealth { get; private set; }
+        public float currentEnergy { get; private set; }
 
         [Header("Regenerating Energy - Time ( Seconds ) & Points ")]
         [Space]
         [SerializeField] float regenEnergyPerSecond = 6f;
-        [SerializeField] int regenEnergyPointsRegain;
+        [SerializeField] float regenEnergyPointsRegain;
 
         private WaitForSecondsRealtime regenTick = new WaitForSecondsRealtime(0.5f);
 
@@ -57,7 +57,7 @@ namespace PhantomProjects.Core
         {
             if (currentHealth - damageAmount >= 0)
             {
-                currentHealth -= (int)damageAmount;
+                currentHealth -= damageAmount;
 
             }
         }
@@ -114,7 +114,7 @@ namespace PhantomProjects.Core
                 //Regen Tick - Time between each regeneration 
                 yield return regenTick;
 
-                AddEnergy(regenEnergyPointsRegain);
+                //AddEnergy(regenEnergyPointsRegain);
 
                 yield return regenTick;
             }
@@ -122,7 +122,7 @@ namespace PhantomProjects.Core
             regen = null;
         }
 
-        public int ReportHealth()
+        public float ReportHealth()
         {
             return currentHealth;
         }

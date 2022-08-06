@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LazerBehaviour : MonoBehaviour
+public class LaserBehaviour : MonoBehaviour
 {
     private AttackDetails attackDetails;
 
@@ -26,10 +26,10 @@ public class LazerBehaviour : MonoBehaviour
     {
         target = GameObject.FindGameObjectWithTag("Player");
 
-        ShootLazer();
+        ShootLaser();
     }
 
-    void ShootLazer()
+    void ShootLaser()
     {
         RaycastHit2D damageHit = Physics2D.Raycast(lazerFirePoint.position, transform.right, defDistanceRay, whatIsPlayer);
 

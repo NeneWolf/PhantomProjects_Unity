@@ -22,7 +22,6 @@ public class TurretBehaviour : MonoBehaviour
     [SerializeField] LayerMask whatIsPlayer;
 
     Transform target;
-    bool playerDetected = false;
     Vector2 direction;
 
 
