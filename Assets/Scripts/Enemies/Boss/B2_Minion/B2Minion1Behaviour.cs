@@ -36,11 +36,6 @@ public class B2Minion1Behaviour : MonoBehaviour
             currentAngle = transform.eulerAngles;
             RotateToAttack();
         }
-
-        if (currentHealth <= 0)
-        {
-            isDead = true;
-        }
     }
 
     void RotateToAttack()
@@ -88,22 +83,18 @@ public class B2Minion1Behaviour : MonoBehaviour
         hasShoot = fire;
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    public void TakeDamage(float dmg)
     {
-        if (collision.transform.tag == "PBullet")
+        if(currentHealth - dmg <= 0)
         {
-            //TODO: Add Damage from the player
-            //TakeDamage()
-        }
-    }
-
-    void TakeDamage(float dmg)
-    {
-        currentHealth -= dmg;
-
-        if (currentHealth <= 0)
-        {
+            currentHealth = 0;
             isDead = true;
+            this.gameObject.SetActive(false);
+
+        }
+        else
+        {
+            currentHealth -= dmg;
         }
     }
 }

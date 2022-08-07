@@ -20,21 +20,6 @@ public class B2Minion2Behaviour : MonoBehaviour
         isDead = false;
     }
 
-    private void Update()
-    {
-        if(currentHealth <= 0)
-        {
-            isDead = true;
-        }
-
-        //TEST 
-
-        if (Input.GetKeyDown(KeyCode.O))
-        {
-            boss.GetComponent<Entity>().Damage(50);
-        }
-    }
-
     public void healBoss()
     {
         if (boss.GetComponent<Entity>().CheckPlayerInMinAgroRange() && !isDead)
@@ -53,22 +38,18 @@ public class B2Minion2Behaviour : MonoBehaviour
         boss.GetComponent<Entity>().Heal(healAmount);
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    public void TakeDamage(float dmg)
     {
-        if (collision.transform.tag == "PBullet")
+        if (currentHealth - dmg <= 0)
         {
-            //TODO:
-            //TakeDamage();
-        }
-    }
-
-    void TakeDamage(float dmg)
-    {
-        currentHealth -= dmg;
-
-        if (currentHealth <= 0)
-        {
+            currentHealth = 0;
             isDead = true;
+            this.gameObject.SetActive(false);
+
+        }
+        else
+        {
+            currentHealth -= dmg;
         }
     }
 }

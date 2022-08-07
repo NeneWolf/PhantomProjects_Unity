@@ -20,15 +20,40 @@ public class MinionsControls : MonoBehaviour
     private float nextSpit = 0.15f;
     [SerializeField] float spitDelay = 10f;
 
-    // Update is called once per frame
+    int totalNumber;
+
+    private void Awake()
+    {
+        totalNumber = differentMinions.Length;
+    }
+
     void Update()
     {
-        UpdateMinion1();
-        UpdateMinion2();
-        UpdateMinion3();
+        if (!differentMinions[0].GetComponent<B2Minion1Behaviour>().isDead && Time.time > nextShot)
+        {
+            UpdateMinion1();
+        }
 
-        //Disable the main minion control if all are killed
-        if(differentMinions[0].GetComponent<B2Minion1Behaviour>().isDead && differentMinions[1].GetComponent<B2Minion1Behaviour>().isDead && differentMinions[2].GetComponent<B2Minion1Behaviour>().isDead)
+        if (!differentMinions[1].GetComponent<B2Minion2Behaviour>().isDead && Time.time > nextHeal)
+        {
+            UpdateMinion2();
+        }
+
+        if (!differentMinions[2].GetComponent<B2Minion3Behaviour>().isDead && Time.time > nextSpit)
+        {
+            UpdateMinion3();
+        }
+
+        
+        foreach(var differentMinion in differentMinions)
+        {
+            if(differentMinion.activeInHierarchy == false)
+            {
+                totalNumber--;
+            }
+        }
+
+        if(totalNumber <= 0)
         {
             this.gameObject.SetActive(false);
         }
@@ -36,33 +61,20 @@ public class MinionsControls : MonoBehaviour
 
     void UpdateMinion1()
     {
-        if (!differentMinions[0].GetComponent<B2Minion1Behaviour>().isDead && Time.time > nextShot)
-        {
-            differentMinions[0].GetComponent<B2Minion1Behaviour>().SetFire(false);
-            laser.GetComponentInChildren<B2MinionLaser>().SetFire(false);
-            nextShot = Time.time + fireDelay;
-        }
-        else if (differentMinions[0].GetComponent<B2Minion1Behaviour>().isDead)
-        {
-            differentMinions[0].SetActive(false);
-        }
+        differentMinions[0].GetComponent<B2Minion1Behaviour>().SetFire(false);
+        laser.GetComponentInChildren<B2MinionLaser>().SetFire(false);
+        nextShot = Time.time + fireDelay;
     }
 
     void UpdateMinion2()
     {
-        if (!differentMinions[1].GetComponent<B2Minion2Behaviour>().isDead && Time.time > nextHeal)
-        {
-            differentMinions[1].GetComponent<B2Minion2Behaviour>().healBoss();
-            nextHeal = Time.time + healDelay;
-        }
+        differentMinions[1].GetComponent<B2Minion2Behaviour>().healBoss();
+        nextHeal = Time.time + healDelay;
     }
 
     void UpdateMinion3()
     {
-        if (!differentMinions[2].GetComponent<B2Minion3Behaviour>().isDead && Time.time > nextSpit)
-        {
-            differentMinions[2].GetComponent<B2Minion3Behaviour>().FireToxicSpit();
-            nextSpit = Time.time + spitDelay;
-        }
+        differentMinions[2].GetComponent<B2Minion3Behaviour>().FireToxicSpit();
+        nextSpit = Time.time + spitDelay;
     }
 }

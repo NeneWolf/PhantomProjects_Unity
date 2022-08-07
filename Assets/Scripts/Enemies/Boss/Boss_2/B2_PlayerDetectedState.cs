@@ -5,6 +5,7 @@ using UnityEngine;
 public class B2_PlayerDetectedState : PlayerDetectedState
 {
     protected B2_Fetiddeviation boss;
+    bool minionsDead;
 
     public B2_PlayerDetectedState(FiniteStateMachine stateMachine, Entity entity, string animBoolName, D_PlayerDetectedState stateData, B2_Fetiddeviation boss) : base(stateMachine, entity, animBoolName, stateData)
     {
@@ -14,6 +15,7 @@ public class B2_PlayerDetectedState : PlayerDetectedState
     public override void DoChecks()
     {
         base.DoChecks();
+        minionsDead = boss.minionsDead;
     }
 
     public override void Enter()
@@ -30,14 +32,33 @@ public class B2_PlayerDetectedState : PlayerDetectedState
     {
         base.LogicUpdate();
 
-        if (performCloseRangeAction)
+        if (!minionsDead)
         {
-            stateMachine.ChangeState(boss.meleeAttackState);
+            if (performCloseRangeAction)
+            {
+                stateMachine.ChangeState(boss.meleeAttackState);
+            }
+            else if (!isPlayerInMaxAgroRange)
+            {
+                stateMachine.ChangeState(boss.lookForPlayerState);
+            }
         }
-        else if (!isPlayerInMaxAgroRange)
+        else if(minionsDead)
         {
-            stateMachine.ChangeState(boss.lookForPlayerState);
+            if (performCloseRangeAction)
+            {
+                stateMachine.ChangeState(boss.meleeAttackState);
+            }
+            else if (performLongRangeAction)
+            {
+                stateMachine.ChangeState(boss.chargeState);
+            }
+            else if (!isPlayerInMaxAgroRange)
+            {
+                stateMachine.ChangeState(boss.lookForPlayerState);
+            }
         }
+
     }
 
     public override void PhysicsUpdate()

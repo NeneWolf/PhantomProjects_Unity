@@ -10,8 +10,7 @@ public class B2_Fetiddeviation : Entity
     public B2_LookForPlayerState lookForPlayerState { get; private set; }
     public B2_DeadState deadState { get; private set; }
     public B2_MeleeAttackState meleeAttackState { get; private set; }
-
-    // TODO : Add - Charge behaviour new lookforplayer
+    public B2_ChargeState chargeState { get; private set; }
 
     [Header("State Data")]
     [Space]
@@ -21,16 +20,19 @@ public class B2_Fetiddeviation : Entity
     [SerializeField] D_LookForPlayerState lookForPlayerStateData;
     [SerializeField] D_DeadState deadStateData;
     [SerializeField] D_MeleeAttack meleeAttackStateData;
+    [SerializeField] D_ChargeState chargeStateData;
 
     [Header("Attacks")]
     [Space]
     [SerializeField] private Transform MeleeAttackPosition;
 
     [SerializeField] GameObject minionsGroup;
+    public bool minionsDead { get; private set; }
 
     public override void Start()
     {
         base.Start();
+        minionsDead = false;
 
         idleState = new B2_IdleState(stateMachine, this, "idle", idleStateData, this);
         moveState = new B2_MoveState(stateMachine, this, "move", moveStateData, this);
@@ -38,6 +40,7 @@ public class B2_Fetiddeviation : Entity
         lookForPlayerState = new B2_LookForPlayerState(stateMachine, this, "lookForPlayer", lookForPlayerStateData, this);
         deadState = new B2_DeadState(stateMachine, this, "dead", deadStateData, this);
         meleeAttackState = new B2_MeleeAttackState(stateMachine, this, "meleeAttack", MeleeAttackPosition, meleeAttackStateData, this);
+        chargeState = new B2_ChargeState(stateMachine, this, "charge", chargeStateData, this);
 
         stateMachine.Initialize(moveState);
 
@@ -47,9 +50,9 @@ public class B2_Fetiddeviation : Entity
     {
         base.FixedUpdate();
 
-        if (!minionsGroup.active)
+        if (minionsGroup.activeInHierarchy == false && !minionsDead)
         {
-            //TO ADD
+            minionsDead = true;
         }
     }
 

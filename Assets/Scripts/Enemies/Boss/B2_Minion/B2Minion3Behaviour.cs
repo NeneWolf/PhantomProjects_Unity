@@ -20,14 +20,6 @@ public class B2Minion3Behaviour : MonoBehaviour
         isDead = false;
     }
 
-    void Update()
-    {
-        if (currentHealth <= 0)
-        {
-            isDead = true;
-        }
-    }
-
     public void FireToxicSpit()
     {
         if (boss.GetComponent<Entity>().CheckPlayerInMinAgroRange() && !isDead)
@@ -36,22 +28,18 @@ public class B2Minion3Behaviour : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    public void TakeDamage(float dmg)
     {
-        if (collision.transform.tag == "PBullet")
+        if (currentHealth - dmg <= 0)
         {
-            //TODO: Add Damage from the player
-            //TakeDamage()
-        }
-    }
-
-    void TakeDamage(float dmg)
-    {
-        currentHealth -= dmg;
-
-        if (currentHealth <= 0)
-        {
+            currentHealth = 0;
             isDead = true;
+            this.gameObject.SetActive(false);
+
+        }
+        else
+        {
+            currentHealth -= dmg;
         }
     }
 }
