@@ -14,6 +14,7 @@ namespace PhantomProjects.Core
         [Space]
         [Range(0f, 0.3f)][SerializeField] float movementSmoothing = 0.05f;     //Smooth movement
         [SerializeField] LayerMask whatIsGround;                               //Define whats ground for the player
+        [SerializeField] LayerMask whatIsSPlatform;
         [SerializeField] Transform groundCheck;                                //Check transform to see if its ground
 
         [Header("Controls of the Movement")]
@@ -78,30 +79,18 @@ namespace PhantomProjects.Core
         void CheckGround()
         {
             //Player register as "grounded" once the radius of the ground check its the layers designated as "ground"
-            Collider2D[] colliders = Physics2D.OverlapCircleAll(groundCheck.position, groundRadius, whatIsGround);
-            for (int i = 0; i < colliders.Length; i++)
+            Collider2D[] groundHit = Physics2D.OverlapCircleAll(groundCheck.position, groundRadius, whatIsGround);
+
+            for (int i = 0; i < groundHit.Length; i++)
             {
                 // Checking if what is colliding is "ground"
-                if (colliders[i].gameObject != gameObject)
+                if (groundHit[i].gameObject != gameObject)
                 {
                     grounded = true;
                 }
-
-                //if the "Ground" is a "platform" with that tag, the player becomes its child
-                //if not the player is removed from it
-                foreach (var c in colliders)
-                {
-                    if (c.tag == "SpecialPlatform")
-                    {
-                        transform.parent = c.transform;
-                    }
-                    else
-                    {
-                        transform.parent = null;
-                    }
-                }
             }
         }
+
 
         //Basic Movement of the player
         public void Move(float move)

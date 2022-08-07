@@ -4,21 +4,65 @@ using UnityEngine;
 
 public class PlatformBehaviour : MonoBehaviour
 {
-    public List<Transform> points;
-    public Transform platform;
-    int goalPoint = 0;
-    public float moveSpeed = 2f;
+    [SerializeField] List<Transform> points;
+    [SerializeField] float moveSpeed = 2f;
 
-    // Update is called once per frame
+    [Header("Check Player Under or Next to")]
+    [SerializeField] LayerMask whatIsPlayer;
+    [SerializeField] Transform playerCheck;
+    [SerializeField] float extraX = 0.1f;
+    [SerializeField] float extraY = 0.3f;
+
+    BoxCollider2D coll;
+
+    int goalPoint = 0;
+
+    private void Awake()
+    {
+        coll = GetComponent<BoxCollider2D>();
+    }
+
     void Update()
     {
         MoveToNextPoint();
+
+        CheckCollisions();
     }
 
+    void CheckCollisions()
+    {
+        Collider2D playerUnderHit = Physics2D.OverlapBox(playerCheck.position, new Vector2(transform.lossyScale.x + extraX, transform.lossyScale.y + extraY), 0f, whatIsPlayer);
+
+        if (playerUnderHit)
+        {
+            coll.enabled = false;
+        }
+        else
+        {
+            coll.enabled = true;
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            collision.gameObject.transform.parent = this.transform;
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            collision.gameObject.transform.parent = null;
+        }
+    }
+    
     void MoveToNextPoint()
     {
         //Change position of the platform
-        platform.position = Vector2.MoveTowards(platform.position, points[goalPoint].position, Time.deltaTime * moveSpeed);
+        transform.position = Vector2.MoveTowards(transform.position, points[goalPoint].position, Time.deltaTime * moveSpeed);
         if (Vector2.Distance(transform.position, points[goalPoint].position) < 0.1f)
         {
             if (goalPoint == points.Count - 1)
@@ -31,5 +75,10 @@ public class PlatformBehaviour : MonoBehaviour
             }
         }
 
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireCube(playerCheck.position, new Vector2(transform.lossyScale.x + extraX, transform.lossyScale.y + extraY));
     }
 }
