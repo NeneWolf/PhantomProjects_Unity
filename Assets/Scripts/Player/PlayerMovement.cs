@@ -22,8 +22,6 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        horizontalMove = Input.GetAxisRaw("Horizontal") * speed;
-
         animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
 
         if (Input.GetButtonDown("Jump"))
@@ -34,6 +32,12 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        PCControls();
+    }
+
+    void PCControls()
+    {
+        horizontalMove = Input.GetAxisRaw("Horizontal") * speed;
         controller.Move(horizontalMove * Time.fixedDeltaTime);            // Player movements
     }
 
