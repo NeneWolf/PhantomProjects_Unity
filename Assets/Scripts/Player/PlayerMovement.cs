@@ -10,12 +10,14 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float speed = 40f;
 
     float horizontalMove;
+    float currentSpeed;
 
     private Rigidbody2D rb;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        currentSpeed = speed;
     }
 
     void Update()
@@ -33,5 +35,22 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         controller.Move(horizontalMove * Time.fixedDeltaTime);            // Player movements
+    }
+
+    public void ReduceSpeed(float amount)
+    {
+        if (currentSpeed - amount > 25)
+        {
+            currentSpeed -= amount;
+        }
+        else if (currentSpeed - amount <= 25)
+        {
+            currentSpeed = 25;
+        }
+    }
+    
+    public void ResetSpeed()
+    {
+        currentSpeed = speed;
     }
 }
