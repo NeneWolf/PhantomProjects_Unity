@@ -37,7 +37,7 @@ public class PlayerMovement : MonoBehaviour
 
     void PCControls()
     {
-        horizontalMove = Input.GetAxisRaw("Horizontal") * speed;
+        horizontalMove = Input.GetAxisRaw("Horizontal") * currentSpeed;
         controller.Move(horizontalMove * Time.fixedDeltaTime);            // Player movements
     }
 

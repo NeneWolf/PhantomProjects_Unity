@@ -78,25 +78,18 @@ public class PlayerAbilities : MonoBehaviour
 
     void ActivateShield()
     {
-        if (shieldReady)                                                        // Check to see if the shield is ready to be used
+        if (shieldReady && Input.GetKeyDown(KeyCode.E))                     // Check to see if the shield is ready to be used
         {
-            if (Input.GetKeyDown(KeyCode.E))                                    // Assign shield activation hotkey and check if has been pressed
-            {
-                shield.SetActive(true);                                         // Activate shield
-                shieldReady = false;                                            // Set shield ready to false to prevent the player from constantly shielding
-                shieldActive = true;                                            // Set shield active check to true
+            shield.SetActive(true);                                         // Activate shield
+            shieldReady = false;                                            // Set shield ready to false to prevent the player from constantly shielding
+            shieldActive = true;                                            // Set shield active check to true
 
-                StartCoroutine(ShieldDuration());                               // Method to activate shield for a given amount of time
-            }
+            ShieldDurationTimer();                                          // If the shield is active, start and update shield duration timer
+            StartCoroutine(ShieldDuration());                               // Method to activate shield for a given amount of time
         }
-        else if (!shieldReady && !shieldActive)                                 // Check to see if shield is not ready and the shield isn't active
+        else if (!shieldReady && !shieldActive)                             // Check to see if shield is not ready and the shield isn't active
         {
-            ShieldCooldownTimer();                                              // Start and update shield cooldown timer
-        }
-
-        if (shieldActive)
-        {
-            ShieldDurationTimer();                                              // If the shield is active, start and update shield duration timer
+            ShieldCooldownTimer();                                          // Start and update shield cooldown timer
         }
     }
 

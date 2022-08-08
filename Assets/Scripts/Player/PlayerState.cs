@@ -10,21 +10,22 @@ public class PlayerState : MonoBehaviour
 
     [Header("Health & Energy")]
     [Space]
-    [SerializeField] public int maxHealth = 100;                    // Player's maximum amount of health
-    [SerializeField] public int maxEnergy = 100;                    // Player's maximum amount of energy
-    public int currentHealth { get; private set; }                  // Player's current amount of health
-    public int currentEnergy { get; private set; }                  // Player's current amount of energy
+    [SerializeField] public float maxHealth = 100;                    // Player's maximum amount of health
+    [SerializeField] public float maxEnergy = 100;                    // Player's maximum amount of energy
+    public float currentHealth { get; private set; }                  // Player's current amount of health
+    public float currentEnergy { get; private set; }                  // Player's current amount of energy
     public bool canUseEnergy { get; private set; }
+
+    public bool IsPlayerDead { get; private set; }                    // Public bool to inform if the player has died or not
+
 
     [Header("Energy Regeneration - Time (Seconds)")]
     [Space]
-    [SerializeField] int energyRegenAmount = 2;                     // Amount of energy restored each tick
+    [SerializeField] float energyRegenAmount = 2;                   // Amount of energy restored each tick
     [SerializeField] float energyRegenRate = 1.5f;                  // The rate at which energy is restored (every 0.5 seconds will restore 2 energy)
     [SerializeField] float energyDelayPeriod = 5f;                  // Delay before energy starts to regenerate
 
-    public bool IsPlayerDead;                                       // Public bool to inform if the player has died or not
-
-    [SerializeField] PlayerAbilities shield;
+    bool isShielded;
 
     #endregion
 
@@ -39,6 +40,7 @@ public class PlayerState : MonoBehaviour
     void Update()
     {
         IsDead();                                                   // Method to check if the player has run out of health
+        isShielded = this.transform.GetComponent<PlayerAbilities>().shieldActive;
     }
 
     #region Methods
@@ -52,13 +54,13 @@ public class PlayerState : MonoBehaviour
         }
     }
 
-    public void IncreaseHealth(int amount)
+    public void IncreaseHealth(float amount)
     {
         if (currentHealth + amount >= maxHealth) currentHealth = maxHealth;         // Check to see if amount added goves over max health. If so set the player's health to max
         else currentHealth += amount;                                               // Else add the specified amount to the player's health
     }
 
-    public void IncreaseEnergy(int amount)                                          // Method to increase the player's energy
+    public void IncreaseEnergy(float amount)                                          // Method to increase the player's energy
     {
         if (currentEnergy + amount >= maxEnergy) currentEnergy = maxEnergy;         // Check to see if amount added goves over max energy. If so set the player's energy to max
         else currentEnergy += amount;                                               // Else add the specified amount to the player's energy
@@ -101,20 +103,23 @@ public class PlayerState : MonoBehaviour
 
     public void TakeDamage(AttackDetails attackDetails)             // Method for reducing the player's health by enemies
     {
-        if (!shield.shieldActive)                                   // When the shield is not active, the player will take damage 
+        if (!isShielded)                                   // When the shield is not active, the player will take damage 
         {
             if (currentHealth - attackDetails.damageAmount >= 0)    // As long as the amount of damage dealt to the player's current health is above 0, they will take damage
             {
-                currentHealth -= (int)attackDetails.damageAmount;
+                currentHealth -= attackDetails.damageAmount;
             }
         }
     }
 
     public void TakeDamage(float damageAmount)                      // Method for reducing the player's health by any other means
     {
-        if (currentHealth - damageAmount >= 0)                      // As long as the amount of damage dealt to the player's current health is above 0, they will take damage
+        if (!isShielded)
         {
-            currentHealth -= (int)damageAmount;
+            if (currentHealth - damageAmount >= 0)                      // As long as the amount of damage dealt to the player's current health is above 0, they will take damage
+            {
+                currentHealth -= damageAmount;
+            }
         }
     }
 
