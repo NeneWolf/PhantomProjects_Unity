@@ -4,52 +4,40 @@ using UnityEngine;
 
 public class PlayerWeapon : MonoBehaviour
 {
-	[Header("Player Weapon")]
+	[Header("Player Weapon - Pistol")]
 	[Space]
-	[SerializeField] Transform firePoint;
-	[SerializeField] GameObject weaponProjectilePrefab;                       // Load projectile sprite
-	[SerializeField] LayerMask whatIsPlayerProjectile;
-	[SerializeField] public float weaponDamage { get; private set; } = 20;
-	[SerializeField] float attackInterval = 1f;                               // Time before next projectile is spawned 
-	float attackTimer = 0;
+	[SerializeField] public float pistolDamage = 20f;
+	[SerializeField] public float pistolAttackInterval = 1f;                               // Time before next projectile is spawned 
+	[SerializeField] float pistolMinimumAttackInterval = 0.5f;
+	[SerializeField] Transform weaponPosition;
 
-	private void Update()
+	[Header("Player Weapon - Demon Laser")]
+	[Space]
+	[SerializeField] public Sprite demonLaserSprite;
+	[SerializeField] public float laserDamage;
+	[SerializeField] public float laserAttackInterval;
+	[SerializeField] public float laserMinimumAttackInterval;
+
+    private void Awake()
+    {
+		transform.position = weaponPosition.position;
+    }
+
+    #region Upgrade Methods
+
+    public void WeaponDamageIncrease(float amount)                                    // Upgrade (Increase) the player's weapon damage
 	{
-		if (attackTimer <= 0)
+		pistolDamage += amount;
+	}
+
+	public void FireRateIncrease(float amount)
+    {
+		if (pistolAttackInterval - amount <= pistolMinimumAttackInterval)
 		{
-			attackTimer = 0;                                                    // Set attack timer to 0 instead of going into negatives
-			Attack();                                                           // Player Attack Method
+			pistolAttackInterval = pistolMinimumAttackInterval;
 		}
-		else
-		{
-			attackTimer -= Time.deltaTime;                                      // Recude attack timer every second so the next attack can be peformed
-		}
-	}
-
-    #region Weapon Methods
-
-    private void Attack()
-	{
-		if (Input.GetMouseButtonDown(0))
-		{
-			Shoot();
-			attackTimer = attackInterval;                                       // Reset timer between each attack to prevent continous attack inputs
-		}
-	}
-
-	void Shoot()
-	{
-		Instantiate(weaponProjectilePrefab, firePoint.position, firePoint.rotation);
-	}
-
-	#endregion
-
-	#region Damage Upgrade Method
-
-	public void WeaponDamageIncrease(float amount)                                    // Upgrade (Increase) the player's weapon damage
-	{
-		weaponDamage += amount;
-	}
+		else pistolAttackInterval -= amount;
+    }
 
 	#endregion
 }

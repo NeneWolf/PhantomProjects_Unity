@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     public Animator animator;
 
     [SerializeField] float speed = 40f;
+    [SerializeField] float minimumVelocity = 20f;
 
     float horizontalMove;
     float currentSpeed;
@@ -43,13 +44,13 @@ public class PlayerMovement : MonoBehaviour
 
     public void ReduceSpeed(float amount)
     {
-        if (currentSpeed - amount > 25)
+        if (currentSpeed - amount > minimumVelocity)
         {
             currentSpeed -= amount;
         }
-        else if (currentSpeed - amount <= 25)
+        else if (currentSpeed - amount <= minimumVelocity)
         {
-            currentSpeed = 25;
+            currentSpeed = minimumVelocity;
         }
     }
     

@@ -99,6 +99,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3af5d9a536681734da4c515d4498cbdb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  whatIsPlayerProjectile:
+    serializedVersion: 2
+    m_Bits: 512
   speed: 20
 --- !u!50 &1985919831809672464
 Rigidbody2D:
