@@ -30,8 +30,11 @@ public class RangeAttackState : AttackState
     {
         base.DoChecks();
         this.useProjectile = stateData.useProjectile;
+
         this.useLazer = stateData.useLazer;
+
         this.useFireBall = stateData.useFireBall;
+
         this.minRange = stateData.minRange;
         this.maxRange = stateData.maxRange;
     }

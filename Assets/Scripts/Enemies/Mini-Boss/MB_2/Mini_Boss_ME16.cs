@@ -22,7 +22,7 @@ public class Mini_Boss_ME16 : Entity
 
     [Header("Attacks")]
     [Space]
-    [SerializeField] private Transform RangeAttackPosition;
+    [SerializeField] private Transform rangeAttackPosition;
 
     public override void Start()
     {
@@ -33,7 +33,7 @@ public class Mini_Boss_ME16 : Entity
         playerDetectedState = new MB_2_PlayerDetectedState(stateMachine, this, "playerDetected", playerDetectedStateData, this);
         lookForPlayerState = new MB_2_LookForPlayerState(stateMachine, this, "lookForPlayer", lookForPlayerStateData, this);
         deadState = new MB_2_DeadState(stateMachine, this, "dead", deadStateData, this);
-        rangeAttackState = new MB_2_RangeAttackState(stateMachine, this, "rangeAttack", RangeAttackPosition, rangeAttackStateData, this);
+        rangeAttackState = new MB_2_RangeAttackState(stateMachine, this, "rangeAttack", rangeAttackPosition, rangeAttackStateData, this);
 
         stateMachine.Initialize(moveState);
     }

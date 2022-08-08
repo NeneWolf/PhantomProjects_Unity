@@ -12,8 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5225852a6d785f94b9e570b8d6991399, type: 3}
   m_Name: MB_2_RangeAttackStateData
   m_EditorClassIdentifier: 
+  useProjectile: 0
   projectile: {fileID: 0}
   projectileDamage: 10
   projectileSpeed: 12
   useLazer: 1
   lazer: {fileID: 4867997639881995114, guid: 8f6075ec11829ee4395a4514b2fbcedd, type: 3}
+  useFireBall: 0
+  fireBall: {fileID: 0}
+  minRange: 0
+  maxRange: 0
