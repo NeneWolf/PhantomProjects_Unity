@@ -23,6 +23,22 @@ public class PlayerWeapon : MonoBehaviour
 		transform.position = weaponPosition.position;
     }
 
+    private void Update()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+			Debug.Log("Pistol Shot");
+        }
+		if (Input.GetKeyDown(KeyCode.R))
+        {
+			Debug.Log("Demon Laser");
+        }
+		if (Input.GetMouseButtonDown(1))
+        {
+			Debug.Log("Unstable Charge - Laser");
+        }
+    }
+
     #region Upgrade Methods
 
     public void WeaponDamageIncrease(float amount)                                    // Upgrade (Increase) the player's weapon damage

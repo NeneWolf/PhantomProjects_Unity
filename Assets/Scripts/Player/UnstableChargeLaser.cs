@@ -2,14 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DemonLaser : MonoBehaviour
+public class UnstableChargeLaser : MonoBehaviour
 {
     [Header("Laser Stats")]
     [Space]
     [SerializeField] float rayDistance = 10;                                    // How far the laser will travel
-    [SerializeField] float laserDuration = 10.5f;                               // How long the laser will stay active for
+    [SerializeField] float laserDuration = 3.5f;                               // How long the laser will stay active for
     [SerializeField] float laserTickRate = 0.2f;                                // How often the laser will be dealing damage
-    [SerializeField] float laserCooldown = 30.5f;                               // Cooldown for the laser
+    [SerializeField] float laserCooldown = 5.5f;                               // Cooldown for the laser
 
     public Transform laserFirePoint;                                            // The position the laser will be firing from
     public LineRenderer lineRenderer;                                         // Line that will be acting as the laser
@@ -20,14 +20,13 @@ public class DemonLaser : MonoBehaviour
     bool laserReady = true;                                                     // Check to see if laser is ready
     bool laserActive = false;                                                   // Check to see if the laser is currently active
 
-
     [Header("Target")]
     [Space]
     [SerializeField] LayerMask whatIsEnemy;                                     // Identify what an enemy is
 
     private void Awake()
     {
-        damage = GetComponentInParent<PlayerWeapon>().laserDamage;
+        damage = GetComponentInParent<PlayerAbilities>().unstableChargeDamage;
     }
 
     private void Start()
@@ -44,7 +43,7 @@ public class DemonLaser : MonoBehaviour
 
     public void ShootLaser()
     {
-        if (laserReady && Input.GetKeyDown(KeyCode.R))                                                     // Check to see if the laser is ready to be used
+        if (laserReady && Input.GetMouseButtonDown(1))                     // Check to see if the laser is ready to be used
         {
             lineRenderer.enabled = true;                                  // Enable the line that will act as the laser
             laserActive = true;                                             // Set laser active check to true as laser is currently active
@@ -88,21 +87,11 @@ public class DemonLaser : MonoBehaviour
     private void LaserDurationTimer()
     {
         laserDurationCounter -= Time.deltaTime;                                 // Reduce the laser duration timer by real time seconds
-        FixValues(laserDurationCounter);                                        // Adjust timer to not go below 0 using the fix values method
     }
 
     private void LaserCooldownTimer()
     {
         laserCooldownCounter -= Time.deltaTime;                                 // Reduce the laser cooldown timer by real time seconds
-        FixValues(laserCooldownCounter);                                        // Adjust timer to not go below 0 using the fix values method
-    }
-
-    private void FixValues(float timer)
-    {
-        if (timer < 0)                                                          // If the timer passed through this method goes below 0 set the timer to 0 to avoid negative numbers
-        {
-            timer = 0;
-        }
     }
 
     void DealDamage()
@@ -129,7 +118,7 @@ public class DemonLaser : MonoBehaviour
 
     void AdjustLaserPosition()                                                  // Method to adjust the laser's directionality
     {
-        if (lineRenderer.transform.position.x < laserFirePoint.position.x)                    // If the laser's position is greater than the firepoint...
+        if (lineRenderer.transform.position.x > laserFirePoint.position.x)                    // If the laser's position is greater than the firepoint...
         {
             Draw2DRay(laserFirePoint.position, new Vector2(laserFirePoint.position.x + rayDistance, laserFirePoint.position.y));            // Shoot the laser to the right
         }

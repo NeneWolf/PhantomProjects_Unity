@@ -5,9 +5,6 @@ using UnityEngine;
 
 public class PlayerAbilities : MonoBehaviour
 {
-    [SerializeField] CharacterController2D controller;
-    [SerializeField] PlayerState ps;
-
     //Shield Ability
     [Header("Ability 1: Shield")]
     [Space]
@@ -21,12 +18,19 @@ public class PlayerAbilities : MonoBehaviour
 
     [Header("Ability 2: Unstable Charge")]
     [Space]
-    [SerializeField] Transform firePoint;
+    //[SerializeField] Transform firePoint;
     [SerializeField] GameObject energyProjectilePrefab;                         // Get the enery projectile sprite
     [SerializeField] public float unstableChargeDamage { get; private set; } = 35;
     [SerializeField] float attackInterval = 0.5f;                               // Time before each attack
     int chargeEnergyCost;                                                       // Cost for using this ability
     float attackTimer = 0;
+
+    PlayerState ps;
+
+    private void Awake()
+    {
+        ps = GetComponentInParent<PlayerState>();
+    }
 
     private void Start()
     {
@@ -61,16 +65,18 @@ public class PlayerAbilities : MonoBehaviour
 
         if (Input.GetMouseButtonDown(1) && ps.CanConsumeEnergy(chargeEnergyCost))           // Check to see if the player has enough energy to use the ability and the appropriate mouse button has been pressed
         {
-            Shoot();
+            //Shoot();
             ps.ConsumeEnergy(chargeEnergyCost);
             attackTimer = attackInterval;                                       // Reset attack timer so the player has to wait before using the attack again
         }
     }
 
+    /*
     void Shoot()
     {
         Instantiate(energyProjectilePrefab, firePoint.position, firePoint.rotation);
     }
+    */
 
     #endregion
 

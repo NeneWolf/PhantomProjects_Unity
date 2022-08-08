@@ -8,11 +8,14 @@ public class UnstableChargeProjectileController : MonoBehaviour
     public float speed = 10f;
     float projectileDamage;
     Rigidbody2D rb;
+    private void Awake()
+    {
+        projectileDamage = GameObject.Find("Abilities").GetComponent<PlayerAbilities>().unstableChargeDamage;
+    }
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        projectileDamage = GameObject.Find("Player").GetComponent<PlayerAbilities>().unstableChargeDamage;
         rb.velocity = transform.right * speed;
     }
 
@@ -28,6 +31,5 @@ public class UnstableChargeProjectileController : MonoBehaviour
         {
             Destroy(gameObject);
         }
-    }
-    */
+    }*/
 }

@@ -40,7 +40,7 @@ public class PlayerState : MonoBehaviour
     void Update()
     {
         IsDead();                                                   // Method to check if the player has run out of health
-        isShielded = this.transform.GetComponent<PlayerAbilities>().shieldActive;
+        isShielded = GetComponentInChildren<PlayerAbilities>().shieldActive;  
     }
 
     #region Methods
