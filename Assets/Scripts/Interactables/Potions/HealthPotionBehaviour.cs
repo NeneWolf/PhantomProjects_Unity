@@ -2,8 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace PhantomProjects.Core
-{
+
     public class HealthPotionBehaviour : MonoBehaviour
     {
 
@@ -13,10 +12,9 @@ namespace PhantomProjects.Core
         {
             if (collision.gameObject.tag == "Player")
             {
-                collision.gameObject.GetComponent<PlayerStats>().AddHealth(recoverAmount);
+               collision.gameObject.GetComponent<PlayerStats>().IncreaseHealth(recoverAmount);
 
                 Destroy(this.gameObject);
             }
         }
     }
-}

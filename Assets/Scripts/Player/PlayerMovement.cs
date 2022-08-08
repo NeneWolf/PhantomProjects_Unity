@@ -2,102 +2,61 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace PhantomProjects.Core
-{
     public class PlayerMovement : MonoBehaviour
     {
-        #region Serializables
-        [Header("Controls of the Movement")]
-        [Space]
-        //Get other scripts within the player
-        PlayerControls playerControls;
-        PlayerStats playerStats;
+        public Animator animator;
 
-        //Movement fields
-        float horizontalMove = 0f;
-        [SerializeField] float runSpeed = 60f;                                 //Player speed
+        [SerializeField] float speed = 40f;
+        [SerializeField] float minimumVelocity = 20f;
 
+        float horizontalMove;
         float currentSpeed;
 
-        bool isDead = false;
+        PlayerControls controller;
+        Rigidbody2D rb;
 
-        public bool IsPlayerDead { get { return isDead; } }
-
-        [SerializeField] GameObject bullet;
-        [SerializeField] Transform bulletPoint;
-        #endregion
-
-        // Start is called before the first frame update
-        void Awake()
+        private void Start()
         {
-            playerControls = GetComponent<PlayerControls>();
-            playerStats = GetComponent<PlayerStats>();
-            currentSpeed = runSpeed;
+            rb = GetComponent<Rigidbody2D>();
+            currentSpeed = speed;
+            controller = GetComponent<PlayerControls>();
         }
 
-        // Update is called once per frame
         void Update()
         {
-            CheckHealth();
+            animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
 
-            if (!isDead)
+            if (Input.GetButtonDown("Jump"))
             {
-                PCControlsMovement();
-
-                if (Input.GetButtonDown("Jump"))
-                {
-                    playerControls.CanJump(true);
-                }
-
-                ////TO REMOVE
-                //if (Input.GetKeyDown(KeyCode.P))
-                //{
-                //    Instantiate(bullet, bulletPoint);
-                //}
+                controller.CanJump(true);
             }
         }
 
         private void FixedUpdate()
         {
+            PCControls();
         }
 
-        void PCControlsMovement()
+        void PCControls()
         {
-            //Takes defaul input values and multiply by the runSpeed - Speed of the player
             horizontalMove = Input.GetAxisRaw("Horizontal") * currentSpeed;
-            playerControls.Move(horizontalMove * Time.fixedDeltaTime);
-        }
-
-        void InteractionWithObjects()
-        {
-            //Add the controls to interact with
-            // - Doors
-            // - KeyCards
-        }
-
-        void CheckHealth()
-        {
-            if (playerStats.ReportHealth() <= 0)
-            {
-                isDead = true;
-            }
+            controller.Move(horizontalMove * Time.fixedDeltaTime);            // Player movements
         }
 
         public void ReduceSpeed(float amount)
         {
-            if(currentSpeed - amount > 25)
+            if (currentSpeed - amount > minimumVelocity)
             {
                 currentSpeed -= amount;
             }
-            else if(currentSpeed - amount <= 25)
+            else if (currentSpeed - amount <= minimumVelocity)
             {
-                currentSpeed = 25;
+                currentSpeed = minimumVelocity;
             }
         }
 
         public void ResetSpeed()
         {
-            currentSpeed = runSpeed;
+            currentSpeed = speed;
         }
     }
-}

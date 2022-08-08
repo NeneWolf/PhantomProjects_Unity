@@ -1019,7 +1019,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -189809349
-  m_SortingLayer: 4
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -8318,6 +8318,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1680461133611440498, guid: 3bbced9551748fc40bcb3b355d144f7b, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4762539371473924646, guid: 3bbced9551748fc40bcb3b355d144f7b, type: 3}
       propertyPath: m_LocalPosition.y
       value: -1.372
@@ -8388,10 +8392,33 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4762539371514925233, guid: 3bbced9551748fc40bcb3b355d144f7b, type: 3}
       propertyPath: m_Name
-      value: PlayerTest
+      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3bbced9551748fc40bcb3b355d144f7b, type: 3}
+--- !u!1 &4762539371724657694 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4762539371514925233, guid: 3bbced9551748fc40bcb3b355d144f7b, type: 3}
+  m_PrefabInstance: {fileID: 4762539371724657693}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4762539371724657695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4762539371724657694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 882727161823be141b5e5dd24f4a6967, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shield: {fileID: 0}
+  shieldDuration: 5.5
+  shieldCooldown: 20.5
+  unstableChargeDamage: 10
+  laserTickRate: 0.7
+  laserCooldown: 10.5
 --- !u!1001 &5975787296795727821
 PrefabInstance:
   m_ObjectHideFlags: 0

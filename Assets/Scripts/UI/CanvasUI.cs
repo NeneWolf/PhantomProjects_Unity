@@ -2,10 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using PhantomProjects.Manager;
 
-namespace PhantomProjects.Core
-{
     public class CanvasUI : MonoBehaviour
     {
 
@@ -62,7 +59,7 @@ namespace PhantomProjects.Core
         {
             if (player != null)
             {
-                isDead = player.GetComponent<PlayerMovement>().IsPlayerDead;
+                isDead = player.GetComponent<PlayerStats>().IsPlayerDead;
                 UpdateDisplay();
             }
 
@@ -106,5 +103,4 @@ namespace PhantomProjects.Core
         
         // Add other functionalites for the menus
     }
-}
 
