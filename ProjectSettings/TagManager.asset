@@ -60,6 +60,12 @@ TagManager:
   - name: Enemy
     uniqueID: 1838932657
     locked: 0
+  - name: Fog
+    uniqueID: 4004125949
+    locked: 0
+  - name: B_Decoration
+    uniqueID: 2340192031
+    locked: 0
   - name: Ground
     uniqueID: 4105157947
     locked: 0
