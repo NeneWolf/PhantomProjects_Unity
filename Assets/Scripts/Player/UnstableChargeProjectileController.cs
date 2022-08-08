@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class UnstableChargeProjectileController : MonoBehaviour
 {
+    /*
     public float speed = 10f;
     float projectileDamage;
     Rigidbody2D rb;
@@ -28,4 +29,5 @@ public class UnstableChargeProjectileController : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    */
 }

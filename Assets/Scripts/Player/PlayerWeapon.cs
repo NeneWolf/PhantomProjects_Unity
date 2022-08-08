@@ -14,7 +14,7 @@ public class PlayerWeapon : MonoBehaviour
 	[Header("Player Weapon - Demon Laser")]
 	[Space]
 	[SerializeField] public Sprite demonLaserSprite;
-	[SerializeField] public float laserDamage;
+	[SerializeField] public float laserDamage = 5;
 	[SerializeField] public float laserAttackInterval;
 	[SerializeField] public float laserMinimumAttackInterval;
 

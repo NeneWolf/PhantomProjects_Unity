@@ -70,7 +70,6 @@ namespace PhantomProjects.Core
             if (jump)
             {
                 Jump();
-
             }
         }
 

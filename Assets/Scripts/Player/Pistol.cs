@@ -37,7 +37,7 @@ public class Pistol : MonoBehaviour
 		if (Input.GetMouseButtonDown(0))
 		{
 			Shoot();
-			attackTimer = weapon.pistolAttackInterval;                                       // Reset timer between each attack to prevent continous attack inputs
+			attackTimer = weapon.pistolAttackInterval;                          // Reset timer between each attack to prevent continous attack inputs
 		}
 	}
 

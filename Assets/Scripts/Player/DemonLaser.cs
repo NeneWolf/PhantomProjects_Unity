@@ -2,15 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Laser : MonoBehaviour
+public class DemonLaser : MonoBehaviour
 {
     [Header("Laser Stats")]
     [Space]
-    [SerializeField] int laserDamage = 5;                                       // Damage the laser will be dealing
     [SerializeField] float rayDistance = 10;                                    // How far the laser will travel
     [SerializeField] float laserDuration = 10.5f;                               // How long the laser will stay active for
     [SerializeField] float laserTickRate = 0.2f;                                // How often the laser will be dealing damage
     [SerializeField] float laserCooldown = 30.5f;                               // Cooldown for the laser
+    float damage;
 
     float laserDurationCounter;                                                 // Variable to hold timer for the laser's duration
     float laserTickRateCounter;                                                 // Variable to hold timer for laser's tick rate
@@ -24,6 +24,11 @@ public class Laser : MonoBehaviour
     [Space]
     [SerializeField] LayerMask whatIsEnemy;                                     // Identify what an enemy is
 
+    private void Awake()
+    {
+        damage = GetComponentInParent<PlayerWeapon>().laserDamage;
+    }
+
     private void Start()
     {
         laserDurationCounter = laserDuration;                                   // Set Timer
@@ -33,28 +38,26 @@ public class Laser : MonoBehaviour
 
     private void Update()
     {
-        ShootLaser();                                                           // Method to fire laser
+        ShootLaser();
     }
 
-    void ShootLaser()
+    public void ShootLaser()
     {
-        if (laserReady)                                                         // Check to see if the laser is ready to be used
+        if (laserReady && Input.GetKeyDown(KeyCode.R))                                                     // Check to see if the laser is ready to be used
         {
-            if (Input.GetKeyDown(KeyCode.R))                                    // If the specified key is pressed, activate the laser
-            {
-                m_lineRenderer.enabled = true;                                  // Enable the line that will act as the laser
-                laserActive = true;                                             // Set laser active check to true as laser is currently active
-                laserReady = false;                                             // Set laser ready check to false as we don't want repeated activations of the laser
+            m_lineRenderer.enabled = true;                                  // Enable the line that will act as the laser
+            laserActive = true;                                             // Set laser active check to true as laser is currently active
+            laserReady = false;                                             // Set laser ready check to false as we don't want repeated activations of the laser
 
-                StartCoroutine(LaserDuration());                                // Start the duration for the laser
-            }
-            else if (!laserReady && !laserActive)                               // Once the laser is no longer activate start its cooldown period
+            StartCoroutine(LaserDuration());                                // Start the duration for the laser
+
+            if (!laserReady && !laserActive)                                // Once the laser is no longer activate start its cooldown period
             {
-                LaserCooldownTimer();                                           // Method for the laser's cooldown
+                LaserCooldownTimer();                                       // Method for the laser's cooldown
             }
         }
 
-        if (laserActive)                                                        // If the laser is currently active carry out the following methods
+        if (laserActive)                                                    // If the laser is currently active carry out the following methods
         {
             AdjustLaserPosition();                                              // Adjust the direction of the laser
             DealDamage();                                                       // Deal damage with the laser whilst it's active
@@ -113,7 +116,7 @@ public class Laser : MonoBehaviour
         if (enemyHit & laserTickRateCounter == 0)                               // If the raycast hits an object and the tick rate is 0
         {
             laserTickRateCounter = laserTickRate;                               // Reset the tick rate counter to prevent damage from occuring continously 
-            enemyHit.collider.transform.parent.GetComponent<Entity>().Damage(laserDamage);                  // Deal the laser's damage to the object hit if it's an enemy
+            enemyHit.collider.transform.parent.GetComponent<Entity>().Damage(damage);                  // Deal the laser's damage to the object hit if it's an enemy
         }
     }
 
