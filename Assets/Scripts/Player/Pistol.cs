@@ -11,6 +11,7 @@ public class Pistol : MonoBehaviour
 
 	PlayerWeapon weapon;
 	float attackTimer = 0;
+	bool canShoot;
 
     private void Awake()
     {
@@ -19,31 +20,27 @@ public class Pistol : MonoBehaviour
 
     private void Update()
 	{
-		if (attackTimer <= 0)
+		if (!canShoot)
 		{
-			attackTimer = 0;                                                    // Set attack timer to 0 instead of going into negatives
-			Attack();                                                           // Player Attack Method
+			attackTimer -= Time.deltaTime;
 		}
-		else
-		{
-			attackTimer -= Time.deltaTime;                                      // Recude attack timer every second so the next attack can be peformed
-		}
+		if (attackTimer < 0)
+        {
+			attackTimer = 0;
+			canShoot = true;
+        }
 	}
 
     #region Weapon Methods
 
-    public void Attack()
+	public void Shoot()
 	{
-		if (Input.GetMouseButtonDown(0))
-		{
-			Shoot();
-			attackTimer = weapon.pistolAttackInterval;                          // Reset timer between each attack to prevent continous attack inputs
+		if (canShoot)
+        {
+			Instantiate(weaponProjectilePrefab, firePoint.position, firePoint.rotation);
+			canShoot = false;
+			attackTimer = weapon.pistolAttackInterval;
 		}
-	}
-
-	void Shoot()
-	{
-		Instantiate(weaponProjectilePrefab, firePoint.position, firePoint.rotation);
 	}
 
 	#endregion

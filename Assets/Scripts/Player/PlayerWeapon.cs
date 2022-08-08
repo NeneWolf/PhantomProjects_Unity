@@ -18,25 +18,28 @@ public class PlayerWeapon : MonoBehaviour
 	[SerializeField] public float laserAttackInterval;
 	[SerializeField] public float laserMinimumAttackInterval;
 
+	UnstableChargeLaser unstableChargeLaser;
+
     private void Awake()
     {
 		transform.position = weaponPosition.position;
-    }
+		unstableChargeLaser = GameObject.Find("UnstableCharge").GetComponent<UnstableChargeLaser>();
+	}
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+		if (Input.GetMouseButtonDown(0))
         {
-			Debug.Log("Pistol Shot");
+			GetComponentInChildren<Pistol>().Shoot();
         }
 		if (Input.GetKeyDown(KeyCode.R))
         {
-			Debug.Log("Demon Laser");
-        }
+			GetComponentInChildren<DemonLaser>().ShootLaser();
+		}
 		if (Input.GetMouseButtonDown(1))
         {
-			Debug.Log("Unstable Charge - Laser");
-        }
+			unstableChargeLaser.ShootLaser();
+		}
     }
 
     #region Upgrade Methods

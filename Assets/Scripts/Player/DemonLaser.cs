@@ -12,13 +12,15 @@ public class DemonLaser : MonoBehaviour
     [SerializeField] float laserCooldown = 30.5f;                               // Cooldown for the laser
 
     public Transform laserFirePoint;                                            // The position the laser will be firing from
-    public LineRenderer lineRenderer;                                         // Line that will be acting as the laser
+    public LineRenderer lineRenderer;                                           // Line that will be acting as the laser
     float damage;
     float laserDurationCounter;                                                 // Variable to hold timer for the laser's duration
     float laserTickRateCounter;                                                 // Variable to hold timer for laser's tick rate
     float laserCooldownCounter;                                                 // Variable to hold timer for laser's cooldown
     bool laserReady = true;                                                     // Check to see if laser is ready
     bool laserActive = false;                                                   // Check to see if the laser is currently active
+
+    CharacterController2D playerDirection;
 
 
     [Header("Target")]
@@ -28,6 +30,7 @@ public class DemonLaser : MonoBehaviour
     private void Awake()
     {
         damage = GetComponentInParent<PlayerWeapon>().laserDamage;
+        playerDirection = GameObject.Find("Player").GetComponent<CharacterController2D>();
     }
 
     private void Start()
@@ -39,30 +42,49 @@ public class DemonLaser : MonoBehaviour
 
     private void Update()
     {
-        ShootLaser();
+        if (laserActive)                                                        // If the laser is currently active carry out the following methods
+        {
+            SetupLaser();
+        }
     }
 
     public void ShootLaser()
     {
-        if (laserReady && Input.GetKeyDown(KeyCode.R))                                                     // Check to see if the laser is ready to be used
+        if (laserReady)
         {
-            lineRenderer.enabled = true;                                  // Enable the line that will act as the laser
-            laserActive = true;                                             // Set laser active check to true as laser is currently active
-            laserReady = false;                                             // Set laser ready check to false as we don't want repeated activations of the laser
+            lineRenderer.enabled = true;
+            laserActive = true;
+            laserReady = false;
 
-            StartCoroutine(LaserDuration());                                // Start the duration for the laser
+            StartCoroutine(LaserDuration());
 
             if (!laserReady && !laserActive)                                // Once the laser is no longer activate start its cooldown period
             {
                 LaserCooldownTimer();                                       // Method for the laser's cooldown
             }
         }
+    }
 
-        if (laserActive)                                                    // If the laser is currently active carry out the following methods
+    void SetupLaser()
+    {
+        AdjustLaserPosition();                                              // Adjust the direction of the laser
+        DealDamage();                                                       // Deal damage with the laser whilst it's active
+        LaserDurationTimer();                                               // Start the timer for the laser's duration
+    }
+
+    void DealDamage()
+    {
+        RaycastHit2D enemyHit = Physics2D.Raycast(laserFirePoint.position, transform.right, rayDistance, whatIsEnemy);                  // Create a raycast to shoot forward an invisible laser to detect if an enemy is being hit
+
+        laserTickRateCounter -= Time.deltaTime;                                 // Reduce the tick rate timer by real time seconds
+
+        if (laserTickRateCounter < 0)                                           // Adjust timer to not go below 0 using the fix values method
+            laserTickRateCounter = 0;
+
+        if (enemyHit & laserTickRateCounter == 0)                               // If the raycast hits an object and the tick rate is 0
         {
-            AdjustLaserPosition();                                              // Adjust the direction of the laser
-            DealDamage();                                                       // Deal damage with the laser whilst it's active
-            LaserDurationTimer();                                               // Start the timer for the laser's duration
+            laserTickRateCounter = laserTickRate;                               // Reset the tick rate counter to prevent damage from occuring continously 
+            enemyHit.collider.transform.parent.GetComponent<Entity>().Damage(damage);                  // Deal the laser's damage to the object hit if it's an enemy
         }
     }
 
@@ -88,37 +110,11 @@ public class DemonLaser : MonoBehaviour
     private void LaserDurationTimer()
     {
         laserDurationCounter -= Time.deltaTime;                                 // Reduce the laser duration timer by real time seconds
-        FixValues(laserDurationCounter);                                        // Adjust timer to not go below 0 using the fix values method
     }
 
     private void LaserCooldownTimer()
     {
         laserCooldownCounter -= Time.deltaTime;                                 // Reduce the laser cooldown timer by real time seconds
-        FixValues(laserCooldownCounter);                                        // Adjust timer to not go below 0 using the fix values method
-    }
-
-    private void FixValues(float timer)
-    {
-        if (timer < 0)                                                          // If the timer passed through this method goes below 0 set the timer to 0 to avoid negative numbers
-        {
-            timer = 0;
-        }
-    }
-
-    void DealDamage()
-    {
-        RaycastHit2D enemyHit = Physics2D.Raycast(laserFirePoint.position, transform.right, rayDistance, whatIsEnemy);                  // Create a raycast to shoot forward an invisible laser to detect if an enemy is being hit
-
-        laserTickRateCounter -= Time.deltaTime;                                 // Reduce the tick rate timer by real time seconds
-
-        if (laserTickRateCounter < 0)                                           // Adjust timer to not go below 0 using the fix values method
-            laserTickRateCounter = 0;
-
-        if (enemyHit & laserTickRateCounter == 0)                               // If the raycast hits an object and the tick rate is 0
-        {
-            laserTickRateCounter = laserTickRate;                               // Reset the tick rate counter to prevent damage from occuring continously 
-            enemyHit.collider.transform.parent.GetComponent<Entity>().Damage(damage);                  // Deal the laser's damage to the object hit if it's an enemy
-        }
     }
 
     void Draw2DRay(Vector2 startPos, Vector2 endPos)                            // Method to draw the laser
@@ -129,7 +125,7 @@ public class DemonLaser : MonoBehaviour
 
     void AdjustLaserPosition()                                                  // Method to adjust the laser's directionality
     {
-        if (lineRenderer.transform.position.x < laserFirePoint.position.x)                    // If the laser's position is greater than the firepoint...
+        if (playerDirection.facingRight)                    // If the laser's position is greater than the firepoint...
         {
             Draw2DRay(laserFirePoint.position, new Vector2(laserFirePoint.position.x + rayDistance, laserFirePoint.position.y));            // Shoot the laser to the right
         }

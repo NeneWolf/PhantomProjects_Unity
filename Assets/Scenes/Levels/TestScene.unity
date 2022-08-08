@@ -651,8 +651,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rayDistance: 10
   laserDuration: 3.5
-  laserTickRate: 0.2
-  laserCooldown: 5.5
   laserFirePoint: {fileID: 1460167905}
   lineRenderer: {fileID: 217677889}
   whatIsEnemy:
@@ -8972,8 +8970,9 @@ MonoBehaviour:
   shield: {fileID: 2317611941190429062}
   shieldDuration: 5.5
   shieldCooldown: 20.5
-  energyProjectilePrefab: {fileID: 585653256439993513, guid: 52f2f5efff6370541961bd8e175f2cc8, type: 3}
-  attackInterval: 0.5
+  unstableChargeDamage: 10
+  laserTickRate: 1
+  laserCooldown: 10.5
 --- !u!1 &1506800213
 GameObject:
   m_ObjectHideFlags: 0

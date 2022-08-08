@@ -66,7 +66,7 @@ public class PlayerState : MonoBehaviour
         else currentEnergy += amount;                                               // Else add the specified amount to the player's energy
     }
 
-    public void ConsumeEnergy(int amount)                           // Method to use energy
+    public void ConsumeEnergy(float amount)                           // Method to use energy
     {
         if (currentEnergy - amount == 0)                            // If the player has no energy and they attemp to consume energy, keep their current energy at 0 instead of going into negatives.
         {
