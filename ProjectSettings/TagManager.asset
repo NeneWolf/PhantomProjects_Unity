@@ -14,6 +14,7 @@ TagManager:
   - SceneManager
   - PBullet
   - Boss
+  - PWeapon
   layers:
   - Default
   - TransparentFX

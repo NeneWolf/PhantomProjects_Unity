@@ -17,10 +17,20 @@ public class PlayerAbilities : MonoBehaviour
 
     [Header("Ability 2: Unstable Charge Laser")]
     [Space]
-    [SerializeField] public float unstableChargeDamage = 10;
-    [SerializeField] public float laserTickRate = 0.7f;
-    [SerializeField] public float laserCooldown = 10.5f;
+    [SerializeField] int percentageCost;
+    [SerializeField] GameObject unstableCharge;
+    [SerializeField] float nextFire = 1f;                               // Time before next projectile is spawned 
+    [SerializeField] float fireDelay = 0.5f;
 
+    bool shootWeapon;
+    public bool abilityLaser;
+    GameObject player;
+
+    private void Awake()
+    {
+        abilityLaser = false;
+        player = GameObject.FindGameObjectWithTag("Player");
+    }
 
     private void Start()
     {
@@ -31,6 +41,25 @@ public class PlayerAbilities : MonoBehaviour
     private void Update()
     {
         ActivateShield();
+        ActivateUnstableCharge();
+    }
+
+    void ActivateUnstableCharge()
+    {
+        shootWeapon = GameObject.FindGameObjectWithTag("PWeapon").GetComponent<PlayerWeapon>().shootWeapon;
+        var cost = player.GetComponent<PlayerStats>().maxEnergy / percentageCost;
+        if (!shootWeapon && Input.GetMouseButtonDown(1) && Time.time > nextFire && player.GetComponent<PlayerStats>().currentEnergy >= cost)
+        {
+            player.GetComponent<PlayerStats>().ConsumeEnergy(cost);
+            abilityLaser = true;
+            UnstableCharge();
+        }
+    }
+
+    void UnstableCharge()
+    {
+        unstableCharge.GetComponent<UnstableCharge>().ShootLaser();
+        nextFire = Time.time + fireDelay;
     }
 
     void ActivateShield()
@@ -50,6 +79,16 @@ public class PlayerAbilities : MonoBehaviour
         }
     }
 
+    private void ShieldDurationTimer()                                      // Method for shield duration timer
+    {
+        shieldDurationCounter -= Time.deltaTime;
+    }
+
+    private void ShieldCooldownTimer()                                      // Method for shield duration timer
+    {
+        shieldCooldownCounter -= Time.deltaTime;
+    }
+
     IEnumerator ShieldDuration()                                            // Method to keep shield active for the specified duration
     {
         yield return new WaitForSecondsRealtime(shieldDuration);            // How long the shield will stay up for in seconds
@@ -61,16 +100,6 @@ public class PlayerAbilities : MonoBehaviour
         StartCoroutine(ShieldCooldown());                                   // Method to start shield cooldown
     }
 
-    private void ShieldDurationTimer()                                      // Method for shield duration timer
-    {
-        shieldDurationCounter -= Time.deltaTime;
-    }
-
-    private void ShieldCooldownTimer()                                      // Method for shield duration timer
-    {
-        shieldCooldownCounter -= Time.deltaTime;
-    }
-
     IEnumerator ShieldCooldown()                                            // Method to prepare shield for next use after cooldown period
     {
         yield return new WaitForSecondsRealtime(shieldCooldown);            // How long before the next shield activation
@@ -78,7 +107,6 @@ public class PlayerAbilities : MonoBehaviour
         shieldReady = true;                                                 // Set shield ready to be true so the player will be able to activate it again
         shieldDurationCounter = shieldDuration;                             // Set shield duration counter
     }
-
 
     public void ShieldDurationIncrease(float amount)                        // Method for upgrading (increasing) the duration of the shield (how long it will be up for).
     {
@@ -90,8 +118,4 @@ public class PlayerAbilities : MonoBehaviour
         shieldCooldown -= amount;
     }
 
-    public void UnstableChargeDamageIncrease(float amount)                  // Upgrade (Increase) the player's ability damage
-    {
-        unstableChargeDamage += amount;
-    } 
 }
