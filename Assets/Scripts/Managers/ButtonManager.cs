@@ -2,32 +2,61 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ButtonManager : MonoBehaviour
+namespace PhantomProjects.Managers
 {
-    [SerializeField] GameObject[] menus; // 0 - Main Menu //1 - Select Slot // 2 - Mode
-    [SerializeField] GameObject pCapsule;
-
-    public void MoveToSelectMenu()
+    public class ButtonManager : MonoBehaviour
     {
-        menus[1].SetActive(true);
-        menus[0].SetActive(false);
-        pCapsule.GetComponent<Capsule>().TurnOnFog();
-    }
+        // 0 - Main Menu //1 - Select Slot // 2 - Mode
+        [SerializeField] GameObject[] menus; 
 
-    public void MoveToModeMenu()
-    {
-        menus[2].SetActive(true);
-        menus[1].SetActive(false);
-    }
+        //Background Effect
+        [SerializeField] GameObject pCapsule;
 
-    public void ReturnToMainMenu()
-    {
-        pCapsule.GetComponent<Capsule>().TurnOffFog();
-        foreach (var menu in menus)
+        int difficultyLevel;
+
+        public void MoveToSelectMenu()
         {
-            menu.SetActive(false);
+            menus[1].SetActive(true);
+            menus[0].SetActive(false);
+            pCapsule.GetComponent<Capsule>().TurnOnFog();
         }
 
-        menus[0].SetActive(true);
+        public void MoveToModeMenu()
+        {
+            menus[2].SetActive(true);
+            menus[1].SetActive(false);
+        }
+
+        public void DisableDifficultyMenu(int difficultyLevel)
+        {
+            this.difficultyLevel = difficultyLevel;
+            menus[2].SetActive(false);
+            StartCoroutine(TheBreak());
+        }
+
+        public void ReturnToMainMenu()
+        {
+            pCapsule.GetComponent<Capsule>().TurnOffFog();
+
+            foreach (var menu in menus)
+            {
+                menu.SetActive(false);
+            }
+
+            menus[0].SetActive(true);
+        }
+
+        void DifficultySelected(int difficultyLevel)
+        {
+            FindObjectOfType<DifficultyManager>().SetDifficulty(difficultyLevel);
+            FindObjectOfType<ScenesManager>().BringNextScene("CharacterSelection");
+        }
+
+        IEnumerator TheBreak()
+        {
+            FindObjectOfType<Capsule>().PlayAnimationCrack();
+            yield return new WaitForSeconds(2f);
+            DifficultySelected(difficultyLevel);
+        }
     }
 }
