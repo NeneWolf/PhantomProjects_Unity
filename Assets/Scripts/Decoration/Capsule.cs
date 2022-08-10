@@ -11,28 +11,19 @@ public class Capsule : MonoBehaviour
     bool canCrack = false;
     SpriteRenderer sprite;
 
-    //public bool Test;
+    Animator animator;
 
     void Start()
     {
         sprite = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
         sprite.sprite = spriteOff;
     }
 
-    //private void Update()
-    //{
-    //    if (Test)
-    //    {
-    //        TurnOnFog();
-    //    }
-    //    else
-    //        TurnOffFog();
-    //}
-
-    public void PlayAnimationCrack(bool On)
+    public void PlayAnimationCrack()
     {
-        canCrack = On;
-        //TODO : Add animation
+        canCrack = true;
+        animator.SetBool("canCrack", canCrack);
     }
 
     public void TurnOnFog()

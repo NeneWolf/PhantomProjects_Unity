@@ -15,6 +15,8 @@ TagManager:
   - PBullet
   - Boss
   - PWeapon
+  - Canvas
+  - Fader
   layers:
   - Default
   - TransparentFX

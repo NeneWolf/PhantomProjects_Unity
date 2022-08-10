@@ -37,7 +37,6 @@ using TMPro;
 
         private void Start()
         {
-            currentMutationPoints = GameObject.FindGameObjectWithTag("SceneManager").GetComponent<SceneManager>().ReturnMutationPoints();
             player = GameObject.FindGameObjectWithTag("Player");
             sceneManager = GameObject.FindGameObjectWithTag("SceneManager");
 
@@ -87,7 +86,6 @@ using TMPro;
         public void MutationPointsCollection(int points)
         {
             currentMutationPoints += points;
-            sceneManager.GetComponent<SceneManager>().SaveMutationPoints(currentMutationPoints);
         }
 
         // To allow the player to move to the next Level if meet the requirements
