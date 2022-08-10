@@ -20,6 +20,7 @@ public class Entity : MonoBehaviour
 
     public int facingDirection { get; private set; }
     public Rigidbody2D rb2d { get; private set; }
+    public BoxCollider2D bc2d { get; private set; }
     public Animator animator { get; private set; }
     public GameObject aliveGO { get; private set; }
     public AnimationToStateMachine atsm { get; private set; }
@@ -53,6 +54,7 @@ public class Entity : MonoBehaviour
         facingDirection = 1;
         aliveGO = transform.Find("Alive").gameObject;
         rb2d = aliveGO.GetComponent<Rigidbody2D>();
+        bc2d = aliveGO.GetComponent<BoxCollider2D>();
         animator = aliveGO.GetComponent<Animator>();
         atsm = aliveGO.GetComponent<AnimationToStateMachine>();
         ui = GameObject.FindObjectOfType<CanvasUI>();
@@ -80,6 +82,12 @@ public class Entity : MonoBehaviour
                 SpawnMinions();
                 hasSpawnMinions = true;
             }
+        }
+
+        if (isDead)
+        {
+            rb2d.gravityScale = 0f;
+            bc2d.enabled = false;
         }
     }
 
@@ -147,23 +155,26 @@ public class Entity : MonoBehaviour
 
     public virtual void Damage(float dmg) 
     {
-        //Optional
-        //DamageHop(entityData.damageHopSpeed);
-        hasBeenDamage = true;
-
-        currentHealth -= dmg;
-
-        Instantiate(entityData.hitParticle, aliveGO.transform.position, Quaternion.Euler(0f, 0f, Random.Range(0, 360f)));
-
-        if (currentHealth <= 0)
+        if (!isDead)
         {
-            isDead = true;
 
-            if (canGiveReward)
+            if(currentHealth - dmg >= 0)
             {
-                GiveRewards(mutationPoints);
-                canGiveReward = false;
-            } 
+                hasBeenDamage = true;
+                currentHealth -= dmg;
+                Instantiate(entityData.hitParticle, aliveGO.transform.position, Quaternion.Euler(0f, 0f, Random.Range(0, 360f)));
+            }
+
+            if (currentHealth <= 0)
+            {
+                isDead = true;
+
+                if (canGiveReward)
+                {
+                    GiveRewards(mutationPoints);
+                    canGiveReward = false;
+                }
+            }
         }
     }
 
