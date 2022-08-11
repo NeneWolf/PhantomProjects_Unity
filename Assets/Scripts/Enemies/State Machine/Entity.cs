@@ -162,6 +162,7 @@ public class Entity : MonoBehaviour
 
     public virtual void Damage(float dmg) 
     {
+        print("Enemy HP: " + currentHealth);
         hasBeenDamage = true;
 
         currentHealth -= dmg;
