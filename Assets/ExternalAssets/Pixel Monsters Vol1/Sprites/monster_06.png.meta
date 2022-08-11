@@ -1386,7 +1386,6 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      monster_06_50: -3937380218144579811
       monster_06_5: -5868284718776219787
       monster_06_37: 3923084733181636727
       monster_06_3: 2434080012368280024
@@ -1432,6 +1431,7 @@ TextureImporter:
       monster_06_9: -6173161006512102278
       monster_06_49: -5835665920411852311
       monster_06_6: 7883240324285249267
+      monster_06_50: -3937380218144579811
       monster_06_4: 2956078264598448056
       monster_06_38: -4189109274912231623
       monster_06_27: -6374474361935966989

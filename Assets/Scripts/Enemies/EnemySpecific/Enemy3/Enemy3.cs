@@ -32,6 +32,8 @@ public class Enemy3 : Entity
     {
         base.Start();
 
+        dropPondDead = true;
+
         moveState = new E3_MoveState(stateMachine, this, "move", moveStateData, this);
         idleState = new E3_IdleState(stateMachine, this, "idle", idleStateData, this);
         playerDetectedState = new E3_PlayerDetectedState(stateMachine, this, "playerDetected", playerDetectedStateData, this);
@@ -49,6 +51,7 @@ public class Enemy3 : Entity
 
         if (isDead)
         {
+            rb2d.gravityScale = 1f;
             stateMachine.ChangeState(deadState);
             StartCoroutine("WaitToDisable");
         }
@@ -68,7 +71,7 @@ public class Enemy3 : Entity
 
     private IEnumerator WaitToDisable()
     {
-        yield return new WaitForSeconds(4f);
+        yield return new WaitForSeconds(2f);
         gameObject.SetActive(false);
     }
 }

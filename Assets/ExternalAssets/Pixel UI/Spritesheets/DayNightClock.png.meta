@@ -3946,20 +3946,19 @@ TextureImporter:
       DayNightClock_96: 21300192
       DayNightClock_40: 21300080
       DayNightClock_125: 21300250
-      DayNightClock_132: 21300264
-      DayNightClock_74: 21300148
+      DayNightClock_138: 21300276
+      DayNightClock_121: 21300242
       DayNightClock_78: 21300156
       DayNightClock_56: 21300112
-      DayNightClock_121: 21300242
-      DayNightClock_26: 21300052
+      DayNightClock_132: 21300264
       DayNightClock_155: 21300310
-      DayNightClock_138: 21300276
       DayNightClock_142: 21300284
       DayNightClock_158: 21300316
       DayNightClock_154: 21300308
       DayNightClock_89: 21300178
       DayNightClock_27: 21300054
       DayNightClock_32: 21300064
+      DayNightClock_6: 21300012
       DayNightClock_68: 21300136
       DayNightClock_150: 21300300
       DayNightClock_16: 21300032
@@ -3967,6 +3966,7 @@ TextureImporter:
       DayNightClock_17: 21300034
       DayNightClock_112: 21300224
       DayNightClock_37: 21300074
+      DayNightClock_74: 21300148
       DayNightClock_58: 21300116
       DayNightClock_38: 21300076
       DayNightClock_35: 21300070
@@ -4020,13 +4020,13 @@ TextureImporter:
       DayNightClock_79: 21300158
       DayNightClock_67: 21300134
       DayNightClock_72: 21300144
-      DayNightClock_30: 21300060
-      DayNightClock_85: 21300170
-      DayNightClock_114: 21300228
       DayNightClock_106: 21300212
-      DayNightClock_87: 21300174
-      DayNightClock_105: 21300210
+      DayNightClock_30: 21300060
+      DayNightClock_114: 21300228
       DayNightClock_137: 21300274
+      DayNightClock_87: 21300174
+      DayNightClock_85: 21300170
+      DayNightClock_105: 21300210
       DayNightClock_23: 21300046
       DayNightClock_80: 21300160
       DayNightClock_48: 21300096
@@ -4101,7 +4101,7 @@ TextureImporter:
       DayNightClock_66: 21300132
       DayNightClock_129: 21300258
       DayNightClock_12: 21300024
-      DayNightClock_6: 21300012
+      DayNightClock_26: 21300052
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

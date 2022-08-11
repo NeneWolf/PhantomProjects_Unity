@@ -20,7 +20,7 @@ public class Entity : MonoBehaviour
 
     public int facingDirection { get; private set; }
     public Rigidbody2D rb2d { get; private set; }
-    public BoxCollider2D bc2d { get; private set; }
+    public CapsuleCollider2D bc2d { get; private set; }
     public Animator animator { get; private set; }
     public GameObject aliveGO { get; private set; }
     public AnimationToStateMachine atsm { get; private set; }
@@ -45,6 +45,7 @@ public class Entity : MonoBehaviour
     private bool hasSpawnMinions;
 
     public float currentHealth { get; private set; }
+    protected bool dropPondDead = false;
     protected bool isDead;
     
     Vector2 velocityWorkspace;
@@ -54,7 +55,7 @@ public class Entity : MonoBehaviour
         facingDirection = 1;
         aliveGO = transform.Find("Alive").gameObject;
         rb2d = aliveGO.GetComponent<Rigidbody2D>();
-        bc2d = aliveGO.GetComponent<BoxCollider2D>();
+        bc2d = aliveGO.GetComponent<CapsuleCollider2D>();
         animator = aliveGO.GetComponent<Animator>();
         atsm = aliveGO.GetComponent<AnimationToStateMachine>();
         ui = GameObject.FindObjectOfType<CanvasUI>();
@@ -84,11 +85,18 @@ public class Entity : MonoBehaviour
             }
         }
 
-        if (isDead)
+        if (isDead && dropPondDead)
+        {
+            rb2d.gravityScale = 0.5f;
+            bc2d.enabled = false;
+        }
+        else if(isDead && !dropPondDead)
         {
             rb2d.gravityScale = 0f;
             bc2d.enabled = false;
         }
+
+
     }
 
     public virtual void FixedUpdate()
@@ -155,25 +163,21 @@ public class Entity : MonoBehaviour
 
     public virtual void Damage(float dmg) 
     {
-        if (!isDead)
+        hasBeenDamage = true;
+
+        currentHealth -= dmg;
+
+        if(!isDead)
+            Instantiate(entityData.hitParticle, aliveGO.transform.position, Quaternion.Euler(0f, 0f, Random.Range(0, 360f)));
+
+        if (currentHealth <= 0)
         {
+            isDead = true;
 
-            if(currentHealth - dmg >= 0)
+            if (canGiveReward)
             {
-                hasBeenDamage = true;
-                currentHealth -= dmg;
-                Instantiate(entityData.hitParticle, aliveGO.transform.position, Quaternion.Euler(0f, 0f, Random.Range(0, 360f)));
-            }
-
-            if (currentHealth <= 0)
-            {
-                isDead = true;
-
-                if (canGiveReward)
-                {
-                    GiveRewards(mutationPoints);
-                    canGiveReward = false;
-                }
+                GiveRewards(mutationPoints);
+                canGiveReward = false;
             }
         }
     }

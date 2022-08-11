@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c553bad63f2ec6b41a45ce96b7318ca5, type: 3}
   m_Name: Enemy3
   m_EditorClassIdentifier: 
-  maxHealth: 30
+  maxHealth: 40
   damageHopSpeed: 3
   wallCheckDistance: 1
   ledgeCheckDistance: 2

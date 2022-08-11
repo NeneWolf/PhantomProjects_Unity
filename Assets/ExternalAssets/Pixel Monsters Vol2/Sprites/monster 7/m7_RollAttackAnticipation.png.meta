@@ -847,7 +847,7 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       m7_RollAttackAnticipation_5: -6903576357339210042
-      m7_RollAttackAnticipation_12: -7436776596202851920
+      m7_RollAttackAnticipation_2: 6265273112476227385
       m7_RollAttackAnticipation_10: 3908939394063893707
       m7_RollAttackAnticipation_29: -8232246652369948865
       m7_RollAttackAnticipation_26: -6941959599798030006
@@ -874,8 +874,8 @@ TextureImporter:
       m7_RollAttackAnticipation_0: -4680354442879027963
       m7_RollAttackAnticipation_14: -2844948830953796257
       m7_RollAttackAnticipation_13: -1640610552582685513
-      m7_RollAttackAnticipation_2: 6265273112476227385
       m7_RollAttackAnticipation_3: 8889641054211591256
+      m7_RollAttackAnticipation_12: -7436776596202851920
       m7_RollAttackAnticipation_20: 2360962823991777561
   spritePackingTag: 
   pSDRemoveMatte: 0
