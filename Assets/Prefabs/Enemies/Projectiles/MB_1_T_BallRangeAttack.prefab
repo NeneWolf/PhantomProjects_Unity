@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6019009070115416632}
   - component: {fileID: 4376648192841088339}
   - component: {fileID: -6316682869688532165}
+  - component: {fileID: 1016887723}
   m_Layer: 0
   m_Name: MB_1_T_BallRangeAttack
   m_TagString: Untagged
@@ -28,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 6979054895036708118}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 8.957989, y: 8.957989, z: 8.957989}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1784055776404534248}
@@ -76,9 +77,9 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0.6792453, g: 0.18198645, b: 0.18198645, a: 1}
-  m_FlipX: 0
+  m_Sprite: {fileID: 5928975950948713370, guid: 5bb31f9be8b29a04bb3c4b6a0b9131cd, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1, y: 1}
@@ -128,6 +129,27 @@ MonoBehaviour:
     m_Bits: 128
   damagePosition: {fileID: 1784055776404534248}
   damageRadius: 0.5
+  hasAnimation: 1
+--- !u!95 &1016887723
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6979054895036708118}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0c7e3e9abd2a86c4999686a1505cc2e4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &8149779454603349886
 GameObject:
   m_ObjectHideFlags: 0
@@ -152,7 +174,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8149779454603349886}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.022, y: -0.006, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

@@ -15,12 +15,19 @@ public class Projectile : MonoBehaviour
     [SerializeField] LayerMask whatIsPlayer;
     [SerializeField] Transform damagePosition;
     [SerializeField] float damageRadius;
+    [SerializeField] bool hasAnimation = false;
+
+    Animator animation;
 
     private void Start()
     {
         rigidbody2 = GetComponent<Rigidbody2D>();
+        animation = GetComponent<Animator>();
         rigidbody2.gravityScale = 0.0f;
         rigidbody2.velocity = transform.right * speed;
+
+        if (hasAnimation)
+            StartCoroutine(TimeToDestroy());
     }
 
     private void Update()
@@ -58,5 +65,12 @@ public class Projectile : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.DrawWireSphere(damagePosition.position, damageRadius);
+    }
+
+    IEnumerator TimeToDestroy()
+    {
+        yield return new WaitForSeconds(0.1f);
+        animation.SetBool("explode", true);
+
     }
 }

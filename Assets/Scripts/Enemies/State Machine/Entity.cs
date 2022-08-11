@@ -37,7 +37,6 @@ public class Entity : MonoBehaviour
     [SerializeField] private bool spawnAfterDead = false;
     [SerializeField] private int spawnCount;
     [SerializeField] private Transform spawnPosition;
-    [SerializeField] private Transform enemiesLocation;
     [SerializeField] private GameObject enemySpawn;
 
     public bool hasBeenDamage { get; private set; }
@@ -218,7 +217,7 @@ public class Entity : MonoBehaviour
         for(int i = 0; i < spawnCount; i++)
         {
             //TODO: Change this...
-            Instantiate(enemySpawn, new Vector3(spawnPosition.transform.position.x + Random.Range(-10.0f,10.0f), spawnPosition.transform.position.y, 0f), Quaternion.identity, enemiesLocation.transform);
+            Instantiate(enemySpawn, new Vector3(spawnPosition.transform.position.x + Random.Range(-10.0f,10.0f), spawnPosition.transform.position.y, 0f), Quaternion.identity);
         }
     }
 

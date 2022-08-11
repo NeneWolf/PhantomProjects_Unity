@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6148322108881915939}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.161, y: -0.26, z: 0}
+  m_LocalPosition: {x: 0.023000032, y: -0.1663, z: 0}
   m_LocalScale: {x: 0.23817673, y: 0.23817673, z: 0.23817673}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -55,7 +55,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6148322109687615318}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.005, y: -0.264, z: 0}
+  m_LocalPosition: {x: -0.041, y: -0.235, z: 0}
   m_LocalScale: {x: 0.23817673, y: 0.23817673, z: 0.23817673}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -86,7 +86,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6148322109834220654}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.044, y: -0.027, z: 0}
+  m_LocalPosition: {x: -0.023, y: -0.068, z: 0}
   m_LocalScale: {x: 0.23817673, y: 0.23817673, z: 0.23817673}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -117,7 +117,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6148322109853209570}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.193, y: -0.22, z: 0}
+  m_LocalPosition: {x: 0.09000003, y: -0.099, z: 0}
   m_LocalScale: {x: 0.23817673, y: 0.23817673, z: 0.23817673}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -148,7 +148,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6148322109906260133}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.232, y: -0.099, z: 0}
+  m_LocalPosition: {x: 0.12900002, y: -0.099, z: 0}
   m_LocalScale: {x: 0.4950035, y: 0.4950035, z: 0.4950035}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -179,7 +179,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6148322110082663766}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.194, y: -0.099, z: 0}
+  m_LocalPosition: {x: 0.091, y: -0.099, z: 0}
   m_LocalScale: {x: 0.4950035, y: 0.4950035, z: 0.4950035}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -212,7 +212,7 @@ Transform:
   m_GameObject: {fileID: 6148322110492450051}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 27.5, y: 5.44, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.2475, y: 1.2475, z: 1.2475}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6148322110978241306}
@@ -231,8 +231,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d6b09d00ee41d946a03e1eac3941ea2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: 
-  mutationPoints: 50
+  name: The Eye
+  mutationPoints: 125
   entityData: {fileID: 11400000, guid: 75e66275d06fd184284ed4c7c98b6dd5, type: 2}
   wallCheck: {fileID: 6148322109853209573}
   ledgeCheck: {fileID: 6148322108881915938}
@@ -242,7 +242,6 @@ MonoBehaviour:
   spawnAfterDead: 1
   spawnCount: 3
   spawnPosition: {fileID: 6148322110919607713}
-  enemiesLocation: {fileID: 0}
   enemySpawn: {fileID: 3232583526800357565, guid: 4b384c195ff47a34bb6c9881d8ff1345, type: 3}
   idleStateData: {fileID: 11400000, guid: 74fccdcb684a2674585eaf63df8f1abc, type: 2}
   moveStateData: {fileID: 11400000, guid: 65761cb15bdb534429e2fb56773350d2, type: 2}
@@ -277,7 +276,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6148322110919607726}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.048, y: -0.112, z: 0}
+  m_LocalPosition: {x: -0.031, y: -0.083, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -295,7 +294,7 @@ GameObject:
   - component: {fileID: 6148322110978241306}
   - component: {fileID: 6148322110978241311}
   - component: {fileID: 6148322110978241308}
-  - component: {fileID: 6148322110978241309}
+  - component: {fileID: 1043907805}
   - component: {fileID: 6148322110978241310}
   - component: {fileID: 6148322110978241297}
   m_Layer: 6
@@ -366,11 +365,11 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1838932657
-  m_SortingLayer: 5
+  m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2a7ea480fec63874c8c0e6fa231236a7, type: 3}
+  m_Sprite: {fileID: -662902435344139210, guid: d86a3de7b11430248b0bcbeea8956f12, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1, y: 1}
@@ -400,8 +399,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!61 &6148322110978241309
-BoxCollider2D:
+--- !u!70 &1043907805
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -413,19 +412,9 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.019188955, y: -0.13986528}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.49948224, y: 0.24090344}
-  m_EdgeRadius: 0
+  m_Offset: {x: -0.05000001, y: -0.097082615}
+  m_Size: {x: 0.23999995, y: 0.27416515}
+  m_Direction: 0
 --- !u!95 &6148322110978241310
 Animator:
   serializedVersion: 4
