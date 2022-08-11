@@ -1,0 +1,1866 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 563747bf02184ce4ea14006d97b0c701, type: 3}
+  m_Name: Tutorial
+  m_EditorClassIdentifier: 
+  treeName: Tutorial
+  talents:
+  - {fileID: 114636871312559884}
+  - {fileID: 114364123007031474}
+  - {fileID: 114637473408626332}
+  - {fileID: 114977434895301672}
+  - {fileID: 114603055955657850}
+  - {fileID: 114916752846072386}
+  - {fileID: 114819342512552322}
+  - {fileID: 114288867395171392}
+  - {fileID: 114560963925848790}
+  - {fileID: 114380215007960564}
+  - {fileID: 114022216032201348}
+  - {fileID: 114714411034923370}
+  - {fileID: 114042169298632844}
+  - {fileID: 114498721642822682}
+  - {fileID: 114251446808286046}
+  - {fileID: 114609565367477674}
+  - {fileID: 114837622005133346}
+  - {fileID: 114691046029530060}
+  connections:
+  - {fileID: 114114268543263562}
+  - {fileID: 114837764056472444}
+  - {fileID: 114580018794931834}
+  - {fileID: 114214602163054820}
+  - {fileID: 114290164103698844}
+  - {fileID: 114291277010881702}
+  - {fileID: 114703197165473194}
+  - {fileID: 114443461925088908}
+  - {fileID: 114615602846929800}
+  - {fileID: 114570634626697540}
+  - {fileID: 114142176868384982}
+  - {fileID: 114913484266305158}
+  - {fileID: 114063376499167704}
+  - {fileID: 114008228578158502}
+  - {fileID: 114488380066915152}
+  - {fileID: 114534218471203392}
+  - {fileID: 114942799212032308}
+  - {fileID: 114292148457713738}
+  - {fileID: 114480064318129032}
+  tiers:
+  - {fileID: 114889074984854906}
+  - {fileID: 114054478879358488}
+  - {fileID: 114653628685981742}
+  selectedNode: {fileID: 0}
+  selectedConnection: {fileID: 0}
+  wantsConnection: 0
+  connectionNode: {fileID: 114837622005133346}
+  showProperties: 0
+  PanX: -33
+  PanY: -21
+  mouseOverProperties: 0
+  propertyWidth: 483.25
+  PointsToAssign: 2
+--- !u!114 &114002515378908058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f33da2dfabdea48bfd7bb631388197, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ConditionType: 0
+  Value: 1
+  Description: Bewitched Influence must be active.
+--- !u!114 &114002798862316512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75df8525b622e5843ade7cf6f3703b93, type: 3}
+  m_Name: Default Cost
+  m_EditorClassIdentifier: 
+  Cost: 5
+  Bought: 0
+  WillBuy: 0
+  Description: 5 skill points are needed for this base skill level.
+--- !u!114 &114008228578158502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef7559b44c1dfd4993445312a298f30, type: 3}
+  m_Name: BewitchedInfluence_GhostPirate
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  fromNode: {fileID: 114364123007031474}
+  toNode: {fileID: 114251446808286046}
+  curvePoints:
+  - {x: 458, y: 217, z: 0}
+  - {x: 472.356, y: 238.53198, z: 0}
+  - {x: 485.60797, y: 296.976, z: 0}
+  - {x: 498.032, y: 383.104, z: 0}
+  - {x: 509.90405, y: 487.68805, z: 0}
+  - {x: 521.5, y: 601.5, z: 0}
+  - {x: 533.09595, y: 715.312, z: 0}
+  - {x: 544.968, y: 819.896, z: 0}
+  - {x: 557.39197, y: 906.024, z: 0}
+  - {x: 585, y: 986, z: 0}
+  curGraph: {fileID: 11400000}
+  Name: 
+  Conditions:
+  - {fileID: 114977227098260670}
+  connectionType: 0
+--- !u!114 &114022216032201348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98f9ce8f8d72a2c468f63aec748721cc, type: 3}
+  m_Name: Vital Replanish
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  nodeRect:
+    serializedVersion: 2
+    x: 762
+    y: 772
+    width: 96
+    height: 112
+  parentTree: {fileID: 11400000}
+  nodeType: 0
+  Image: {fileID: 2800000, guid: bca92e124313ecd4bb5145b8bb4e6291, type: 3}
+  DisabledImage: {fileID: 0}
+  isValid: 0
+  description: Nothing is as powerfull as an newly replenshed vitality.
+  explanation: 
+  isInResearch: 0
+  tier: {fileID: 114889074984854906}
+  cost:
+  - {fileID: 114319314875474740}
+--- !u!114 &114037607859765182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f33da2dfabdea48bfd7bb631388197, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ConditionType: 1
+  Value: 1
+  Description: Magic Supreme is maxed out.
+--- !u!114 &114042169298632844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98f9ce8f8d72a2c468f63aec748721cc, type: 3}
+  m_Name: Plague Spread
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  nodeRect:
+    serializedVersion: 2
+    x: 128
+    y: 926
+    width: 96
+    height: 112
+  parentTree: {fileID: 11400000}
+  nodeType: 0
+  Image: {fileID: 2800000, guid: 26b6aaf903021dc499fe7174b655a9b4, type: 3}
+  DisabledImage: {fileID: 0}
+  isValid: 1
+  description: Just helping mother Nature a hand.
+  explanation: 
+  isInResearch: 0
+  tier: {fileID: 114054478879358488}
+  cost:
+  - {fileID: 114514853500753312}
+--- !u!114 &114054478879358488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18962e5781387be42968e80823f11f33, type: 3}
+  m_Name: Necromancy
+  m_EditorClassIdentifier: 
+  parentTree: {fileID: 11400000}
+  editorColor: {r: 0, g: 1, b: 0, a: 1}
+  description: Necromancy
+--- !u!114 &114054954141586378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f33da2dfabdea48bfd7bb631388197, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ConditionType: 0
+  Value: 1
+  Description: Phantom Invade must be active.
+--- !u!114 &114063376499167704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef7559b44c1dfd4993445312a298f30, type: 3}
+  m_Name: PhantomInvade_GhostPirate
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  fromNode: {fileID: 114498721642822682}
+  toNode: {fileID: 114251446808286046}
+  curvePoints:
+  - {x: 450, y: 983, z: 0}
+  - {x: 464.58, y: 983.084, z: 0}
+  - {x: 478.44, y: 983.3121, z: 0}
+  - {x: 491.75998, y: 983.648, z: 0}
+  - {x: 504.72003, y: 984.05615, z: 0}
+  - {x: 517.5, y: 984.5, z: 0}
+  - {x: 530.27997, y: 984.944, z: 0}
+  - {x: 543.24, y: 985.352, z: 0}
+  - {x: 556.56, y: 985.688, z: 0}
+  - {x: 585, y: 986, z: 0}
+  curGraph: {fileID: 11400000}
+  Name: 
+  Conditions:
+  - {fileID: 114054954141586378}
+  connectionType: 0
+--- !u!114 &114114268543263562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef7559b44c1dfd4993445312a298f30, type: 3}
+  m_Name: MagicTraining_BewitchedInfluence
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  fromNode: {fileID: 114636871312559884}
+  toNode: {fileID: 114364123007031474}
+  curvePoints:
+  - {x: 230, y: 381, z: 0}
+  - {x: 244.49597, y: 376.408, z: 0}
+  - {x: 258.128, y: 363.944, z: 0}
+  - {x: 271.112, y: 345.576, z: 0}
+  - {x: 283.66403, y: 323.27203, z: 0}
+  - {x: 296, y: 299, z: 0}
+  - {x: 308.336, y: 274.728, z: 0}
+  - {x: 320.888, y: 252.42401, z: 0}
+  - {x: 333.872, y: 234.056, z: 0}
+  - {x: 362, y: 217, z: 0}
+  curGraph: {fileID: 11400000}
+  Name: 
+  Conditions:
+  - {fileID: 114292760181478078}
+  connectionType: 0
+--- !u!114 &114121854799252798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75df8525b622e5843ade7cf6f3703b93, type: 3}
+  m_Name: Default Cost
+  m_EditorClassIdentifier: 
+  Cost: 4
+  Bought: 0
+  WillBuy: 1
+  Description: 
+--- !u!114 &114142176868384982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef7559b44c1dfd4993445312a298f30, type: 3}
+  m_Name: ElementErosion_ElementMastery
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  fromNode: {fileID: 114819342512552322}
+  toNode: {fileID: 114714411034923370}
+  curvePoints:
+  - {x: 907, y: 576, z: 0}
+  - {x: 919.6199, y: 575.6359, z: 0}
+  - {x: 928.1601, y: 574.6481, z: 0}
+  - {x: 933.63995, y: 573.19196, z: 0}
+  - {x: 937.0801, y: 571.4241, z: 0}
+  - {x: 939.5, y: 569.5, z: 0}
+  - {x: 941.92, y: 567.576, z: 0}
+  - {x: 945.36, y: 565.808, z: 0}
+  - {x: 950.8401, y: 564.352, z: 0}
+  - {x: 972, y: 563, z: 0}
+  curGraph: {fileID: 11400000}
+  Name: 
+  Conditions:
+  - {fileID: 114885862103119252}
+  connectionType: 0
+--- !u!114 &114144295107634738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f33da2dfabdea48bfd7bb631388197, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ConditionType: 0
+  Value: 1
+  Description: Plague Spread must be active.
+--- !u!114 &114153851082020650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f33da2dfabdea48bfd7bb631388197, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ConditionType: 0
+  Value: 1
+  Description: Magic Training must be active.
+--- !u!114 &114207920615503828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f33da2dfabdea48bfd7bb631388197, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ConditionType: 0
+  Value: 1
+  Description: EarthQuake must be active.
+--- !u!114 &114214602163054820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef7559b44c1dfd4993445312a298f30, type: 3}
+  m_Name: ManaEnchant_MagicSupreme
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  fromNode: {fileID: 114977434895301672}
+  toNode: {fileID: 114603055955657850}
+  curvePoints:
+  - {x: 458, y: 381, z: 0}
+  - {x: 472.776, y: 380.83197, z: 0}
+  - {x: 487.16797, y: 380.376, z: 0}
+  - {x: 501.27203, y: 379.70398, z: 0}
+  - {x: 515.184, y: 378.88803, z: 0}
+  - {x: 529, y: 378, z: 0}
+  - {x: 542.81604, y: 377.112, z: 0}
+  - {x: 556.728, y: 376.29602, z: 0}
+  - {x: 570.83203, y: 375.62396, z: 0}
+  - {x: 600, y: 375, z: 0}
+  curGraph: {fileID: 11400000}
+  Name: 
+  Conditions:
+  - {fileID: 114732333478867998}
+  connectionType: 0
+--- !u!114 &114251446808286046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98f9ce8f8d72a2c468f63aec748721cc, type: 3}
+  m_Name: Ghost Pirate
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  nodeRect:
+    serializedVersion: 2
+    x: 585
+    y: 930
+    width: 96
+    height: 112
+  parentTree: {fileID: 11400000}
+  nodeType: 0
+  Image: {fileID: 2800000, guid: 8d179291512b3dc40a812f134ebda589, type: 3}
+  DisabledImage: {fileID: 0}
+  isValid: 0
+  description: Humans are like vessels, they can be hijacked.
+  explanation: You must have then Bewitched Influence and Phantom Invade skills.
+  isInResearch: 0
+  tier: {fileID: 114054478879358488}
+  cost:
+  - {fileID: 114974134884130404}
+--- !u!114 &114260120249978100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75df8525b622e5843ade7cf6f3703b93, type: 3}
+  m_Name: Default Cost
+  m_EditorClassIdentifier: 
+  Cost: 2
+  Bought: 0
+  WillBuy: 0
+  Description: 
+--- !u!114 &114288867395171392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98f9ce8f8d72a2c468f63aec748721cc, type: 3}
+  m_Name: Quick Meditation
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  nodeRect:
+    serializedVersion: 2
+    x: 362
+    y: 625
+    width: 96
+    height: 112
+  parentTree: {fileID: 11400000}
+  nodeType: 0
+  Image: {fileID: 2800000, guid: 3bb60149a99518a4c83c36a917522a38, type: 3}
+  DisabledImage: {fileID: 0}
+  isValid: 1
+  description: First thing one should learn is how to heal.
+  explanation: 
+  isInResearch: 0
+  tier: {fileID: 114889074984854906}
+  cost:
+  - {fileID: 114779259919562310}
+--- !u!114 &114290164103698844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef7559b44c1dfd4993445312a298f30, type: 3}
+  m_Name: ManaEnchant_EarthQuake
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  fromNode: {fileID: 114977434895301672}
+  toNode: {fileID: 114916752846072386}
+  curvePoints:
+  - {x: 458, y: 381, z: 0}
+  - {x: 472.71997, y: 385.00397, z: 0}
+  - {x: 486.96, y: 395.872, z: 0}
+  - {x: 500.84003, y: 411.888, z: 0}
+  - {x: 514.48004, y: 431.33606, z: 0}
+  - {x: 528, y: 452.5, z: 0}
+  - {x: 541.52, y: 473.66403, z: 0}
+  - {x: 555.16003, y: 493.112, z: 0}
+  - {x: 569.04, y: 509.12802, z: 0}
+  - {x: 598, y: 524, z: 0}
+  curGraph: {fileID: 11400000}
+  Name: 
+  Conditions:
+  - {fileID: 114717523754356078}
+  connectionType: 0
+--- !u!114 &114291277010881702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef7559b44c1dfd4993445312a298f30, type: 3}
+  m_Name: EarthQuake_ElementErosion
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  fromNode: {fileID: 114916752846072386}
+  toNode: {fileID: 114819342512552322}
+  curvePoints:
+  - {x: 694, y: 524, z: 0}
+  - {x: 708.07587, y: 525.45593, z: 0}
+  - {x: 720.56805, y: 529.408, z: 0}
+  - {x: 731.87195, y: 535.232, z: 0}
+  - {x: 742.38403, y: 542.304, z: 0}
+  - {x: 752.5, y: 550, z: 0}
+  - {x: 762.616, y: 557.69604, z: 0}
+  - {x: 773.12805, y: 564.768, z: 0}
+  - {x: 784.432, y: 570.59204, z: 0}
+  - {x: 811, y: 576, z: 0}
+  curGraph: {fileID: 11400000}
+  Name: 
+  Conditions:
+  - {fileID: 114207920615503828}
+  connectionType: 0
+--- !u!114 &114292148457713738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef7559b44c1dfd4993445312a298f30, type: 3}
+  m_Name: ElementMastery_SecretOfLive
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  fromNode: {fileID: 114714411034923370}
+  toNode: {fileID: 114691046029530060}
+  curvePoints:
+  - {x: 1068, y: 563, z: 0}
+  - {x: 1080.48, y: 568.516, z: 0}
+  - {x: 1088.6401, y: 583.48804, z: 0}
+  - {x: 1093.56, y: 605.552, z: 0}
+  - {x: 1096.3202, y: 632.34406, z: 0}
+  - {x: 1098, y: 661.5, z: 0}
+  - {x: 1099.68, y: 690.656, z: 0}
+  - {x: 1102.4401, y: 717.448, z: 0}
+  - {x: 1107.3601, y: 739.51196, z: 0}
+  - {x: 1128, y: 760, z: 0}
+  curGraph: {fileID: 11400000}
+  Name: 
+  Conditions:
+  - {fileID: 114743747322711314}
+  connectionType: 0
+--- !u!114 &114292760181478078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f33da2dfabdea48bfd7bb631388197, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ConditionType: 0
+  Value: 1
+  Description: Magic Training must be active.
+--- !u!114 &114319314875474740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75df8525b622e5843ade7cf6f3703b93, type: 3}
+  m_Name: Default Cost
+  m_EditorClassIdentifier: 
+  Cost: 3
+  Bought: 0
+  WillBuy: 0
+  Description: 
+--- !u!114 &114364123007031474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98f9ce8f8d72a2c468f63aec748721cc, type: 3}
+  m_Name: Bewitched Influence
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  nodeRect:
+    serializedVersion: 2
+    x: 362
+    y: 161
+    width: 96
+    height: 112
+  parentTree: {fileID: 11400000}
+  nodeType: 0
+  Image: {fileID: 2800000, guid: 73651bc31aea9d04ba07ff88b25a9e76, type: 3}
+  DisabledImage: {fileID: 0}
+  isValid: 1
+  description: Always nice someone else is doing the dirty work, isn't it?
+  explanation: You must own the Magic Training skill.
+  isInResearch: 0
+  tier: {fileID: 114889074984854906}
+  cost:
+  - {fileID: 114582043730846348}
+--- !u!114 &114380215007960564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98f9ce8f8d72a2c468f63aec748721cc, type: 3}
+  m_Name: Vital Shot
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  nodeRect:
+    serializedVersion: 2
+    x: 588
+    y: 771
+    width: 96
+    height: 112
+  parentTree: {fileID: 11400000}
+  nodeType: 0
+  Image: {fileID: 2800000, guid: 11a7699684273ea4794ce4377f2336dc, type: 3}
+  DisabledImage: {fileID: 0}
+  isValid: 1
+  description: Vital shot comes in handy whenever you feel like it.
+  explanation: 
+  isInResearch: 0
+  tier: {fileID: 114889074984854906}
+  cost:
+  - {fileID: 114260120249978100}
+--- !u!114 &114399367216956634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f33da2dfabdea48bfd7bb631388197, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ConditionType: 0
+  Value: 1
+  Description: Quick Meditation must be active.
+--- !u!114 &114408362455560000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75df8525b622e5843ade7cf6f3703b93, type: 3}
+  m_Name: Default Cost
+  m_EditorClassIdentifier: 
+  Cost: 5
+  Bought: 0
+  WillBuy: 0
+  Description: 
+--- !u!114 &114431498094503818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75df8525b622e5843ade7cf6f3703b93, type: 3}
+  m_Name: Default Cost
+  m_EditorClassIdentifier: 
+  Cost: 3
+  Bought: 0
+  WillBuy: 0
+  Description: 
+--- !u!114 &114443461925088908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef7559b44c1dfd4993445312a298f30, type: 3}
+  m_Name: QuickMeditation_ForbiddenMagicField
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  fromNode: {fileID: 114288867395171392}
+  toNode: {fileID: 114560963925848790}
+  curvePoints:
+  - {x: 458, y: 681, z: 0}
+  - {x: 472.524, y: 681.0279, z: 0}
+  - {x: 486.232, y: 681.104, z: 0}
+  - {x: 499.328, y: 681.21594, z: 0}
+  - {x: 512.01605, y: 681.35205, z: 0}
+  - {x: 524.5, y: 681.5, z: 0}
+  - {x: 536.984, y: 681.648, z: 0}
+  - {x: 549.672, y: 681.78406, z: 0}
+  - {x: 562.768, y: 681.896, z: 0}
+  - {x: 591, y: 682, z: 0}
+  curGraph: {fileID: 11400000}
+  Name: 
+  Conditions:
+  - {fileID: 114399367216956634}
+  connectionType: 0
+--- !u!114 &114458504246654458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f33da2dfabdea48bfd7bb631388197, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ConditionType: 0
+  Value: 1
+  Description: Quick Meditation must be active.
+--- !u!114 &114477588105720054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f33da2dfabdea48bfd7bb631388197, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ConditionType: 0
+  Value: 1
+  Description: Magic Training must be active.
+--- !u!114 &114480064318129032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef7559b44c1dfd4993445312a298f30, type: 3}
+  m_Name: TearInjury_SecretOfLive
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  fromNode: {fileID: 114837622005133346}
+  toNode: {fileID: 114691046029530060}
+  curvePoints:
+  - {x: 1027, y: 984, z: 0}
+  - {x: 1040.628, y: 977.72797, z: 0}
+  - {x: 1051.904, y: 960.7041, z: 0}
+  - {x: 1061.416, y: 935.61597, z: 0}
+  - {x: 1069.7521, y: 905.1521, z: 0}
+  - {x: 1077.5, y: 872, z: 0}
+  - {x: 1085.248, y: 838.848, z: 0}
+  - {x: 1093.584, y: 808.38403, z: 0}
+  - {x: 1103.096, y: 783.29596, z: 0}
+  - {x: 1128, y: 760, z: 0}
+  curGraph: {fileID: 11400000}
+  Name: 
+  Conditions:
+  - {fileID: 114809405939375994}
+  connectionType: 0
+--- !u!114 &114486596166228348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75df8525b622e5843ade7cf6f3703b93, type: 3}
+  m_Name: Default Cost
+  m_EditorClassIdentifier: 
+  Cost: 2
+  Bought: 0
+  WillBuy: 0
+  Description: 
+--- !u!114 &114488380066915152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef7559b44c1dfd4993445312a298f30, type: 3}
+  m_Name: GhostPirate_Hiddenskills
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  fromNode: {fileID: 114251446808286046}
+  toNode: {fileID: 114609565367477674}
+  curvePoints:
+  - {x: 681, y: 986, z: 0}
+  - {x: 694.06793, y: 985.9719, z: 0}
+  - {x: 703.824, y: 985.896, z: 0}
+  - {x: 711.09595, y: 985.78406, z: 0}
+  - {x: 716.71204, y: 985.648, z: 0}
+  - {x: 721.5, y: 985.5, z: 0}
+  - {x: 726.28796, y: 985.3519, z: 0}
+  - {x: 731.904, y: 985.216, z: 0}
+  - {x: 739.176, y: 985.104, z: 0}
+  - {x: 762, y: 985, z: 0}
+  curGraph: {fileID: 11400000}
+  Name: 
+  Conditions:
+  - {fileID: 114853358534747888}
+  connectionType: 0
+--- !u!114 &114498721642822682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98f9ce8f8d72a2c468f63aec748721cc, type: 3}
+  m_Name: Phantom Invade
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  nodeRect:
+    serializedVersion: 2
+    x: 354
+    y: 927
+    width: 96
+    height: 112
+  parentTree: {fileID: 11400000}
+  nodeType: 0
+  Image: {fileID: 2800000, guid: 4a6a3fb790c41924ca8f4a8b824ebf70, type: 3}
+  DisabledImage: {fileID: 0}
+  isValid: 1
+  description: It wouldn't be the first time a whole city went crazy!
+  explanation: 
+  isInResearch: 0
+  tier: {fileID: 114054478879358488}
+  cost:
+  - {fileID: 114613398061261404}
+--- !u!114 &114512848132349242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75df8525b622e5843ade7cf6f3703b93, type: 3}
+  m_Name: Default Cost
+  m_EditorClassIdentifier: 
+  Cost: 1
+  Bought: 1
+  WillBuy: 0
+  Description: 
+--- !u!114 &114514853500753312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75df8525b622e5843ade7cf6f3703b93, type: 3}
+  m_Name: Default Cost
+  m_EditorClassIdentifier: 
+  Cost: 1
+  Bought: 1
+  WillBuy: 0
+  Description: 
+--- !u!114 &114534218471203392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef7559b44c1dfd4993445312a298f30, type: 3}
+  m_Name: MagicSupreme_Hiddenskills
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  fromNode: {fileID: 114603055955657850}
+  toNode: {fileID: 114609565367477674}
+  curvePoints:
+  - {x: 696, y: 375, z: 0}
+  - {x: 708.64795, y: 392.08, z: 0}
+  - {x: 717.26404, y: 438.44, z: 0}
+  - {x: 722.85596, y: 506.76, z: 0}
+  - {x: 726.43207, y: 589.72003, z: 0}
+  - {x: 729, y: 680, z: 0}
+  - {x: 731.568, y: 770.27997, z: 0}
+  - {x: 735.144, y: 853.24, z: 0}
+  - {x: 740.736, y: 921.56006, z: 0}
+  - {x: 762, y: 985, z: 0}
+  curGraph: {fileID: 11400000}
+  Name: 
+  Conditions:
+  - {fileID: 114037607859765182}
+  connectionType: 0
+--- !u!114 &114560918816739034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75df8525b622e5843ade7cf6f3703b93, type: 3}
+  m_Name: Level 2 cost
+  m_EditorClassIdentifier: 
+  Cost: 4
+  Bought: 0
+  WillBuy: 0
+  Description: 
+--- !u!114 &114560963925848790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98f9ce8f8d72a2c468f63aec748721cc, type: 3}
+  m_Name: Forbidden Magic Field
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  nodeRect:
+    serializedVersion: 2
+    x: 591
+    y: 626
+    width: 96
+    height: 112
+  parentTree: {fileID: 11400000}
+  nodeType: 0
+  Image: {fileID: 2800000, guid: 30eb432a70fcc36449ca32d026eefd60, type: 3}
+  DisabledImage: {fileID: 0}
+  isValid: 1
+  description: This will keep them save ... but at what expense?
+  explanation: 
+  isInResearch: 0
+  tier: {fileID: 114889074984854906}
+  cost:
+  - {fileID: 114121854799252798}
+--- !u!114 &114570634626697540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef7559b44c1dfd4993445312a298f30, type: 3}
+  m_Name: VitalShot_VitalReplanish
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  fromNode: {fileID: 114380215007960564}
+  toNode: {fileID: 114022216032201348}
+  curvePoints:
+  - {x: 684, y: 827, z: 0}
+  - {x: 696.98395, y: 827.028, z: 0}
+  - {x: 706.512, y: 827.1041, z: 0}
+  - {x: 713.44794, y: 827.216, z: 0}
+  - {x: 718.65607, y: 827.3521, z: 0}
+  - {x: 723, y: 827.5, z: 0}
+  - {x: 727.344, y: 827.6481, z: 0}
+  - {x: 732.552, y: 827.784, z: 0}
+  - {x: 739.48804, y: 827.896, z: 0}
+  - {x: 762, y: 828, z: 0}
+  curGraph: {fileID: 11400000}
+  Name: 
+  Conditions:
+  - {fileID: 114948067144229874}
+  connectionType: 0
+--- !u!114 &114580018794931834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef7559b44c1dfd4993445312a298f30, type: 3}
+  m_Name: MagicTraining_ManaEnchant
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  fromNode: {fileID: 114636871312559884}
+  toNode: {fileID: 114977434895301672}
+  curvePoints:
+  - {x: 230, y: 381, z: 0}
+  - {x: 244.49597, y: 380.99997, z: 0}
+  - {x: 258.128, y: 381, z: 0}
+  - {x: 271.112, y: 380.99997, z: 0}
+  - {x: 283.66403, y: 381.00003, z: 0}
+  - {x: 296, y: 381, z: 0}
+  - {x: 308.336, y: 381, z: 0}
+  - {x: 320.888, y: 381, z: 0}
+  - {x: 333.872, y: 381, z: 0}
+  - {x: 362, y: 381, z: 0}
+  curGraph: {fileID: 11400000}
+  Name: 
+  Conditions:
+  - {fileID: 114153851082020650}
+  connectionType: 0
+--- !u!114 &114582043730846348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75df8525b622e5843ade7cf6f3703b93, type: 3}
+  m_Name: Default Cost
+  m_EditorClassIdentifier: 
+  Cost: 2
+  Bought: 0
+  WillBuy: 1
+  Description: 
+--- !u!114 &114588659099370598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75df8525b622e5843ade7cf6f3703b93, type: 3}
+  m_Name: Default Cost
+  m_EditorClassIdentifier: 
+  Cost: 5
+  Bought: 0
+  WillBuy: 0
+  Description: 
+--- !u!114 &114603055955657850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98f9ce8f8d72a2c468f63aec748721cc, type: 3}
+  m_Name: Magic Supreme
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  nodeRect:
+    serializedVersion: 2
+    x: 600
+    y: 319
+    width: 96
+    height: 112
+  parentTree: {fileID: 11400000}
+  nodeType: 0
+  Image: {fileID: 2800000, guid: 89c5acfbe7a968c4e87b2607ae5cc6f5, type: 3}
+  DisabledImage: {fileID: 0}
+  isValid: 0
+  description: Well, there seems nothing more that can be learned.
+  explanation: You must own Mana Enchant before you can obtain this skill.
+  isInResearch: 0
+  tier: {fileID: 114889074984854906}
+  cost:
+  - {fileID: 114002798862316512}
+  - {fileID: 114624156805787850}
+--- !u!114 &114609565367477674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98f9ce8f8d72a2c468f63aec748721cc, type: 3}
+  m_Name: Hidden skills
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  nodeRect:
+    serializedVersion: 2
+    x: 762
+    y: 929
+    width: 96
+    height: 112
+  parentTree: {fileID: 11400000}
+  nodeType: 0
+  Image: {fileID: 2800000, guid: 6329d43cf8e69b14a9ac696994d461b5, type: 3}
+  DisabledImage: {fileID: 0}
+  isValid: 0
+  description: Not everything has to be visible for the naked eye!
+  explanation: 
+  isInResearch: 0
+  tier: {fileID: 114054478879358488}
+  cost:
+  - {fileID: 114765666855069306}
+--- !u!114 &114613398061261404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75df8525b622e5843ade7cf6f3703b93, type: 3}
+  m_Name: Default Cost
+  m_EditorClassIdentifier: 
+  Cost: 2
+  Bought: 0
+  WillBuy: 0
+  Description: 
+--- !u!114 &114615602846929800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef7559b44c1dfd4993445312a298f30, type: 3}
+  m_Name: QuickMeditation_VitalShot
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  fromNode: {fileID: 114288867395171392}
+  toNode: {fileID: 114380215007960564}
+  curvePoints:
+  - {x: 458, y: 681, z: 0}
+  - {x: 472.44, y: 685.0879, z: 0}
+  - {x: 485.92, y: 696.1841, z: 0}
+  - {x: 498.68002, y: 712.5359, z: 0}
+  - {x: 510.96005, y: 732.392, z: 0}
+  - {x: 523, y: 754, z: 0}
+  - {x: 535.04, y: 775.60803, z: 0}
+  - {x: 547.32, y: 795.464, z: 0}
+  - {x: 560.07996, y: 811.81604, z: 0}
+  - {x: 588, y: 827, z: 0}
+  curGraph: {fileID: 11400000}
+  Name: 
+  Conditions:
+  - {fileID: 114458504246654458}
+  connectionType: 0
+--- !u!114 &114624156805787850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75df8525b622e5843ade7cf6f3703b93, type: 3}
+  m_Name: Level 2 cost
+  m_EditorClassIdentifier: 
+  Cost: 3
+  Bought: 0
+  WillBuy: 0
+  Description: With spending 3 extra skill points you'll reach level 2 of this skill.
+--- !u!114 &114636871312559884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98f9ce8f8d72a2c468f63aec748721cc, type: 3}
+  m_Name: Magic Training
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  nodeRect:
+    serializedVersion: 2
+    x: 134
+    y: 325
+    width: 96
+    height: 112
+  parentTree: {fileID: 11400000}
+  nodeType: 0
+  Image: {fileID: 2800000, guid: 7f8784f1bee35624a86234b984d3537b, type: 3}
+  DisabledImage: {fileID: 0}
+  isValid: 1
+  description: Get yourself involved in the secrets of magic.
+  explanation: 
+  isInResearch: 0
+  tier: {fileID: 114889074984854906}
+  cost:
+  - {fileID: 114941143350250506}
+--- !u!114 &114637473408626332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98f9ce8f8d72a2c468f63aec748721cc, type: 3}
+  m_Name: Deterrent
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  nodeRect:
+    serializedVersion: 2
+    x: 602
+    y: 160
+    width: 96
+    height: 112
+  parentTree: {fileID: 11400000}
+  nodeType: 0
+  Image: {fileID: 2800000, guid: c55057c3ab86e874580dda4de2bcf502, type: 3}
+  DisabledImage: {fileID: 0}
+  isValid: 0
+  description: No free will for the wicked!
+  explanation: You must own the Bewitched Influence skill.
+  isInResearch: 0
+  tier: {fileID: 114889074984854906}
+  cost:
+  - {fileID: 114779855082611914}
+--- !u!114 &114653628685981742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18962e5781387be42968e80823f11f33, type: 3}
+  m_Name: Mastery
+  m_EditorClassIdentifier: 
+  parentTree: {fileID: 11400000}
+  editorColor: {r: 1, g: 0, b: 0, a: 1}
+  description: The cream the-la cream
+--- !u!114 &114691046029530060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98f9ce8f8d72a2c468f63aec748721cc, type: 3}
+  m_Name: Secret Of Live
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  nodeRect:
+    serializedVersion: 2
+    x: 1128
+    y: 704
+    width: 96
+    height: 112
+  parentTree: {fileID: 11400000}
+  nodeType: 0
+  Image: {fileID: 2800000, guid: a3cc3244790a33544a1de15cb4e13813, type: 3}
+  DisabledImage: {fileID: 0}
+  isValid: 0
+  description: Life itself is at your feed, you decide who lives and dies.
+  explanation: 
+  isInResearch: 0
+  tier: {fileID: 114653628685981742}
+  cost:
+  - {fileID: 114408362455560000}
+--- !u!114 &114703197165473194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef7559b44c1dfd4993445312a298f30, type: 3}
+  m_Name: MagicTraining_QuickMeditation
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  fromNode: {fileID: 114636871312559884}
+  toNode: {fileID: 114288867395171392}
+  curvePoints:
+  - {x: 230, y: 381, z: 0}
+  - {x: 244.49597, y: 389.39996, z: 0}
+  - {x: 258.128, y: 412.2, z: 0}
+  - {x: 271.112, y: 445.79996, z: 0}
+  - {x: 283.66403, y: 486.59998, z: 0}
+  - {x: 296, y: 531, z: 0}
+  - {x: 308.336, y: 575.4, z: 0}
+  - {x: 320.888, y: 616.19995, z: 0}
+  - {x: 333.872, y: 649.8, z: 0}
+  - {x: 362, y: 681, z: 0}
+  curGraph: {fileID: 11400000}
+  Name: 
+  Conditions:
+  - {fileID: 114477588105720054}
+  connectionType: 0
+--- !u!114 &114714411034923370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98f9ce8f8d72a2c468f63aec748721cc, type: 3}
+  m_Name: Element Mastery
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  nodeRect:
+    serializedVersion: 2
+    x: 972
+    y: 507
+    width: 96
+    height: 112
+  parentTree: {fileID: 11400000}
+  nodeType: 0
+  Image: {fileID: 2800000, guid: a162c9b26eddeb24e8a278001eb90b86, type: 3}
+  DisabledImage: {fileID: 0}
+  isValid: 0
+  description: The elements don't have any secrets for you.
+  explanation: 
+  isInResearch: 0
+  tier: {fileID: 114889074984854906}
+  cost:
+  - {fileID: 114588659099370598}
+--- !u!114 &114717523754356078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f33da2dfabdea48bfd7bb631388197, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ConditionType: 0
+  Value: 1
+  Description: Mana Enchant must be active.
+--- !u!114 &114732333478867998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f33da2dfabdea48bfd7bb631388197, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ConditionType: 0
+  Value: 1
+  Description: Mana Enchant must be active.
+--- !u!114 &114743747322711314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f33da2dfabdea48bfd7bb631388197, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ConditionType: 2
+  Value: 0
+  Description: All the skills in the Magic branch/tier are maxed out.
+--- !u!114 &114765666855069306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75df8525b622e5843ade7cf6f3703b93, type: 3}
+  m_Name: Default Cost
+  m_EditorClassIdentifier: 
+  Cost: 2
+  Bought: 0
+  WillBuy: 0
+  Description: 
+--- !u!114 &114779259919562310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75df8525b622e5843ade7cf6f3703b93, type: 3}
+  m_Name: Default Cost
+  m_EditorClassIdentifier: 
+  Cost: 2
+  Bought: 0
+  WillBuy: 1
+  Description: 
+--- !u!114 &114779855082611914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75df8525b622e5843ade7cf6f3703b93, type: 3}
+  m_Name: Default Cost
+  m_EditorClassIdentifier: 
+  Cost: 5
+  Bought: 0
+  WillBuy: 0
+  Description: 
+--- !u!114 &114809405939375994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f33da2dfabdea48bfd7bb631388197, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ConditionType: 2
+  Value: 0
+  Description: All the Necromancy skills are maxed out.
+--- !u!114 &114810476874618706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75df8525b622e5843ade7cf6f3703b93, type: 3}
+  m_Name: Level 3 cost
+  m_EditorClassIdentifier: 
+  Cost: 5
+  Bought: 0
+  WillBuy: 0
+  Description: 
+--- !u!114 &114819342512552322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98f9ce8f8d72a2c468f63aec748721cc, type: 3}
+  m_Name: Element Erosion
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  nodeRect:
+    serializedVersion: 2
+    x: 811
+    y: 520
+    width: 96
+    height: 112
+  parentTree: {fileID: 11400000}
+  nodeType: 0
+  Image: {fileID: 2800000, guid: e379ecca95e0ea64ca21ede78a3ed146, type: 3}
+  DisabledImage: {fileID: 0}
+  isValid: 0
+  description: Bend everything to you will.
+  explanation: 
+  isInResearch: 0
+  tier: {fileID: 114889074984854906}
+  cost:
+  - {fileID: 114431498094503818}
+  - {fileID: 114560918816739034}
+  - {fileID: 114810476874618706}
+--- !u!114 &114837622005133346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98f9ce8f8d72a2c468f63aec748721cc, type: 3}
+  m_Name: Tear Injury
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  nodeRect:
+    serializedVersion: 2
+    x: 931
+    y: 928
+    width: 96
+    height: 112
+  parentTree: {fileID: 11400000}
+  nodeType: 0
+  Image: {fileID: 2800000, guid: e15098e4a8a1dc24cba4e703ad9e7c56, type: 3}
+  DisabledImage: {fileID: 0}
+  isValid: 0
+  description: It's all a mindset, things between the ears.
+  explanation: 
+  isInResearch: 0
+  tier: {fileID: 114054478879358488}
+  cost:
+  - {fileID: 114486596166228348}
+--- !u!114 &114837764056472444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef7559b44c1dfd4993445312a298f30, type: 3}
+  m_Name: BewitchedInfluence_Deterrent
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  fromNode: {fileID: 114364123007031474}
+  toNode: {fileID: 114637473408626332}
+  curvePoints:
+  - {x: 458, y: 217, z: 0}
+  - {x: 472.83197, y: 216.972, z: 0}
+  - {x: 487.376, y: 216.896, z: 0}
+  - {x: 501.704, y: 216.784, z: 0}
+  - {x: 515.88806, y: 216.64804, z: 0}
+  - {x: 530, y: 216.5, z: 0}
+  - {x: 544.11194, y: 216.352, z: 0}
+  - {x: 558.296, y: 216.216, z: 0}
+  - {x: 572.624, y: 216.104, z: 0}
+  - {x: 602, y: 216, z: 0}
+  curGraph: {fileID: 11400000}
+  Name: 
+  Conditions:
+  - {fileID: 114002515378908058}
+  connectionType: 0
+--- !u!114 &114853358534747888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f33da2dfabdea48bfd7bb631388197, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ConditionType: 0
+  Value: 1
+  Description: Ghost Pirate must be active.
+--- !u!114 &114868742220374528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f33da2dfabdea48bfd7bb631388197, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ConditionType: 0
+  Value: 1
+  Description: Hidden skills must be active.
+--- !u!114 &114885862103119252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f33da2dfabdea48bfd7bb631388197, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ConditionType: 1
+  Value: 1
+  Description: Element Erosion is maxed out.
+--- !u!114 &114889074984854906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18962e5781387be42968e80823f11f33, type: 3}
+  m_Name: Magic
+  m_EditorClassIdentifier: 
+  parentTree: {fileID: 11400000}
+  editorColor: {r: 0, g: 0, b: 1, a: 1}
+  description: Magic
+--- !u!114 &114896352534382994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75df8525b622e5843ade7cf6f3703b93, type: 3}
+  m_Name: Default Cost
+  m_EditorClassIdentifier: 
+  Cost: 1
+  Bought: 1
+  WillBuy: 0
+  Description: 
+--- !u!114 &114913484266305158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef7559b44c1dfd4993445312a298f30, type: 3}
+  m_Name: PlagueSpread_PhantomInvade
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  fromNode: {fileID: 114042169298632844}
+  toNode: {fileID: 114498721642822682}
+  curvePoints:
+  - {x: 224, y: 982, z: 0}
+  - {x: 238.44, y: 982.028, z: 0}
+  - {x: 251.92001, y: 982.1041, z: 0}
+  - {x: 264.68002, y: 982.21594, z: 0}
+  - {x: 276.96002, y: 982.35205, z: 0}
+  - {x: 289, y: 982.5, z: 0}
+  - {x: 301.04, y: 982.64795, z: 0}
+  - {x: 313.32, y: 982.78406, z: 0}
+  - {x: 326.08002, y: 982.896, z: 0}
+  - {x: 354, y: 983, z: 0}
+  curGraph: {fileID: 11400000}
+  Name: 
+  Conditions:
+  - {fileID: 114144295107634738}
+  connectionType: 0
+--- !u!114 &114916752846072386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98f9ce8f8d72a2c468f63aec748721cc, type: 3}
+  m_Name: EarthQuake
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  nodeRect:
+    serializedVersion: 2
+    x: 598
+    y: 468
+    width: 96
+    height: 112
+  parentTree: {fileID: 11400000}
+  nodeType: 0
+  Image: {fileID: 2800000, guid: 82d5c62bf5ea03140add221dc8e785f2, type: 3}
+  DisabledImage: {fileID: 0}
+  isValid: 1
+  description: Let's shake it!
+  explanation: 
+  isInResearch: 0
+  tier: {fileID: 114889074984854906}
+  cost:
+  - {fileID: 114512848132349242}
+--- !u!114 &114941143350250506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75df8525b622e5843ade7cf6f3703b93, type: 3}
+  m_Name: Default Cost
+  m_EditorClassIdentifier: 
+  Cost: 1
+  Bought: 1
+  WillBuy: 0
+  Description: 
+--- !u!114 &114942799212032308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef7559b44c1dfd4993445312a298f30, type: 3}
+  m_Name: Hiddenskills_TearInjury
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  fromNode: {fileID: 114609565367477674}
+  toNode: {fileID: 114837622005133346}
+  curvePoints:
+  - {x: 858, y: 985, z: 0}
+  - {x: 870.84393, y: 984.9719, z: 0}
+  - {x: 879.9921, y: 984.89606, z: 0}
+  - {x: 886.368, y: 984.784, z: 0}
+  - {x: 890.8961, y: 984.6481, z: 0}
+  - {x: 894.5, y: 984.5, z: 0}
+  - {x: 898.10394, y: 984.352, z: 0}
+  - {x: 902.632, y: 984.21594, z: 0}
+  - {x: 909.00806, y: 984.10394, z: 0}
+  - {x: 931, y: 984, z: 0}
+  curGraph: {fileID: 11400000}
+  Name: 
+  Conditions:
+  - {fileID: 114868742220374528}
+  connectionType: 0
+--- !u!114 &114948067144229874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f33da2dfabdea48bfd7bb631388197, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ConditionType: 0
+  Value: 1
+  Description: Vital Shot must be active.
+--- !u!114 &114974134884130404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75df8525b622e5843ade7cf6f3703b93, type: 3}
+  m_Name: Default Cost
+  m_EditorClassIdentifier: 
+  Cost: 2
+  Bought: 0
+  WillBuy: 0
+  Description: 
+--- !u!114 &114977227098260670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f33da2dfabdea48bfd7bb631388197, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ConditionType: 0
+  Value: 1
+  Description: Bewitched Influence must be active.
+--- !u!114 &114977434895301672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98f9ce8f8d72a2c468f63aec748721cc, type: 3}
+  m_Name: Mana Enchant
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  nodeRect:
+    serializedVersion: 2
+    x: 362
+    y: 325
+    width: 96
+    height: 112
+  parentTree: {fileID: 11400000}
+  nodeType: 0
+  Image: {fileID: 2800000, guid: 5360d537fa3ce9743ba066f726afcb41, type: 3}
+  DisabledImage: {fileID: 0}
+  isValid: 1
+  description: You learned how to harvest mana.
+  explanation: 
+  isInResearch: 0
+  tier: {fileID: 114889074984854906}
+  cost:
+  - {fileID: 114896352534382994}

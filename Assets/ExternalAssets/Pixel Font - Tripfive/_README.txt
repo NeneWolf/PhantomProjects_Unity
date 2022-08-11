@@ -1,9 +1,13 @@
+Thank you for purchasing PIXEL FONTS MEGAPACK! 
+
+
 INSTRUCTIONS
 
-Drag the "Sample Textmesh" prefab onto your scene.
+To see all fonts in use, either load the “Demo Scene” located inside the root folder or drag the “Cheatsheet” prefab onto your scene.
 
-To resize font in Textmesh, use the "Character Size" attribute.
-To resize font in UI, use "Scale".
+Pixel fonts may be loaded in a “Text” object within a “UI > Canvas” or inside a “Text Mesh” component in an empty gameobject. 
+Examples are included in your asset folder called “Sample Canvas” and “Sample Textmesh” respectively. 
+Color can be changed with both of these methods.
 
 
 STYLES
@@ -16,11 +20,11 @@ HS = Hard Shadow
 
 LINKS
 
+If you like this package, please help me out and leave a rating here:
+http://u3d.as/w4v
+
 Need support?
 https://twitter.com/pixelmush_
 
-If you like this package, please help me out and leave a rating here:
-http://u3d.as/v5t
-
-Want more fonts?
-http://u3d.as/w4v
+To see more packages visit:
+https://www.assetstore.unity3d.com/en/#!/search/page=1/sortby=popularity/query=publisher:17384

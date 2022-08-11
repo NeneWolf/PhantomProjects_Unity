@@ -1,0 +1,3161 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 563747bf02184ce4ea14006d97b0c701, type: 3}
+  m_Name: TripleTree
+  m_EditorClassIdentifier: 
+  treeName: TripleTree
+  talents:
+  - {fileID: 114873498078064612}
+  - {fileID: 114663373307678734}
+  - {fileID: 114288397618378012}
+  - {fileID: 114217608094367330}
+  - {fileID: 114033137622881124}
+  - {fileID: 114760343194187644}
+  - {fileID: 114739687196344020}
+  - {fileID: 114441129140120350}
+  - {fileID: 114154376307502498}
+  - {fileID: 114288938871491578}
+  - {fileID: 114695026730153928}
+  - {fileID: 114673724610059898}
+  - {fileID: 114381210268443946}
+  - {fileID: 114488357039352682}
+  - {fileID: 114577241287501928}
+  - {fileID: 114772099199625424}
+  - {fileID: 114795064497974766}
+  - {fileID: 114474860981441610}
+  - {fileID: 114585626173334172}
+  - {fileID: 114589199564201668}
+  - {fileID: 114896057475340924}
+  - {fileID: 114118316818166302}
+  - {fileID: 114778086364624070}
+  - {fileID: 114004400027221682}
+  - {fileID: 114142903920741672}
+  - {fileID: 114751849836228286}
+  - {fileID: 114538852709959948}
+  - {fileID: 114284801554659266}
+  - {fileID: 114578320096945206}
+  connections:
+  - {fileID: 114976751243635856}
+  - {fileID: 114215135065839244}
+  - {fileID: 114713846351924474}
+  - {fileID: 114687893018933692}
+  - {fileID: 114998241287851562}
+  - {fileID: 114187754329629036}
+  - {fileID: 114279149804593148}
+  - {fileID: 114682985956766930}
+  - {fileID: 114550918117873038}
+  - {fileID: 114698089333678024}
+  - {fileID: 114400876191465786}
+  - {fileID: 114720068173761680}
+  - {fileID: 114855063059632936}
+  - {fileID: 114439865804817594}
+  - {fileID: 114677575336445980}
+  - {fileID: 114103390260267838}
+  - {fileID: 114554797813671426}
+  - {fileID: 114908774821636006}
+  - {fileID: 114661227234518930}
+  - {fileID: 114472402889921536}
+  - {fileID: 114625379557904124}
+  - {fileID: 114872964853069318}
+  - {fileID: 114987034956385388}
+  - {fileID: 114680660524740118}
+  - {fileID: 114078631444900776}
+  - {fileID: 114436033017348278}
+  - {fileID: 114522834236244678}
+  - {fileID: 114801493690750618}
+  - {fileID: 114083968358622924}
+  - {fileID: 114103563577969534}
+  - {fileID: 114851636129270264}
+  - {fileID: 114718206768036480}
+  - {fileID: 114254050701613926}
+  - {fileID: 114983041285509774}
+  - {fileID: 114394515639174784}
+  - {fileID: 114212316685368922}
+  tiers:
+  - {fileID: 114463332620402592}
+  - {fileID: 114174141379732096}
+  - {fileID: 114722174694080936}
+  selectedNode: {fileID: 0}
+  selectedConnection: {fileID: 0}
+  wantsConnection: 0
+  connectionNode: {fileID: 114284801554659266}
+  showProperties: 0
+  PanX: 0
+  PanY: 52
+  mouseOverProperties: 0
+  propertyWidth: 509
+  PointsToAssign: 3
+--- !u!114 &114004400027221682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98f9ce8f8d72a2c468f63aec748721cc, type: 3}
+  m_Name: Illusionist
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  nodeRect:
+    serializedVersion: 2
+    x: 1072
+    y: 571
+    width: 96
+    height: 112
+  parentTree: {fileID: 11400000}
+  nodeType: 0
+  Image: {fileID: 2800000, guid: cb16a666a23ef7944a2671747a0dbd28, type: 3}
+  DisabledImage: {fileID: 0}
+  isValid: 1
+  description: 
+  explanation: 
+  isInResearch: 0
+  tier: {fileID: 114174141379732096}
+  cost:
+  - {fileID: 114603568925314614}
+--- !u!114 &114023705947452548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75df8525b622e5843ade7cf6f3703b93, type: 3}
+  m_Name: Default Cost
+  m_EditorClassIdentifier: 
+  Cost: 1
+  Bought: 0
+  WillBuy: 1
+  Description: 
+--- !u!114 &114033137622881124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98f9ce8f8d72a2c468f63aec748721cc, type: 3}
+  m_Name: Assassin
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  nodeRect:
+    serializedVersion: 2
+    x: 728
+    y: 317
+    width: 96
+    height: 112
+  parentTree: {fileID: 11400000}
+  nodeType: 0
+  Image: {fileID: 2800000, guid: cb16a666a23ef7944a2671747a0dbd28, type: 3}
+  DisabledImage: {fileID: 0}
+  isValid: 1
+  description: 
+  explanation: 
+  isInResearch: 0
+  tier: {fileID: 114463332620402592}
+  cost:
+  - {fileID: 114081783551833956}
+--- !u!114 &114061268775972046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75df8525b622e5843ade7cf6f3703b93, type: 3}
+  m_Name: Default Cost
+  m_EditorClassIdentifier: 
+  Cost: 1
+  Bought: 0
+  WillBuy: 1
+  Description: 
+--- !u!114 &114069097929915736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75df8525b622e5843ade7cf6f3703b93, type: 3}
+  m_Name: Default Cost
+  m_EditorClassIdentifier: 
+  Cost: 1
+  Bought: 0
+  WillBuy: 0
+  Description: 
+--- !u!114 &114070373469412138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f33da2dfabdea48bfd7bb631388197, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ConditionType: 0
+  Value: 1
+  Description: Rogue must be active.
+--- !u!114 &114078631444900776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef7559b44c1dfd4993445312a298f30, type: 3}
+  m_Name: Mage_BlueMage
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  fromNode: {fileID: 114288397618378012}
+  toNode: {fileID: 114118316818166302}
+  curvePoints:
+  - {x: 826, y: 653, z: 0}
+  - {x: 839.0399, y: 656.416, z: 0}
+  - {x: 848.72003, y: 665.68805, z: 0}
+  - {x: 855.88, y: 679.352, z: 0}
+  - {x: 861.3601, y: 695.94403, z: 0}
+  - {x: 866, y: 714, z: 0}
+  - {x: 870.64, y: 732.056, z: 0}
+  - {x: 876.12006, y: 748.648, z: 0}
+  - {x: 883.28, y: 762.312, z: 0}
+  - {x: 906, y: 775, z: 0}
+  curGraph: {fileID: 11400000}
+  Name: 
+  Conditions:
+  - {fileID: 114975620852407720}
+  connectionType: 0
+--- !u!114 &114081783551833956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75df8525b622e5843ade7cf6f3703b93, type: 3}
+  m_Name: Default Cost
+  m_EditorClassIdentifier: 
+  Cost: 1
+  Bought: 0
+  WillBuy: 0
+  Description: 
+--- !u!114 &114083968358622924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef7559b44c1dfd4993445312a298f30, type: 3}
+  m_Name: Illusionist_Necromancer
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  fromNode: {fileID: 114004400027221682}
+  toNode: {fileID: 114142903920741672}
+  curvePoints:
+  - {x: 1168, y: 627, z: 0}
+  - {x: 1180.34, y: 624.816, z: 0}
+  - {x: 1188.1201, y: 618.888, z: 0}
+  - {x: 1192.4799, y: 610.152, z: 0}
+  - {x: 1194.56, y: 599.544, z: 0}
+  - {x: 1195.5, y: 588, z: 0}
+  - {x: 1196.4401, y: 576.456, z: 0}
+  - {x: 1198.52, y: 565.848, z: 0}
+  - {x: 1202.88, y: 557.112, z: 0}
+  - {x: 1223, y: 549, z: 0}
+  curGraph: {fileID: 11400000}
+  Name: 
+  Conditions:
+  - {fileID: 114260444611094254}
+  connectionType: 0
+--- !u!114 &114103390260267838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef7559b44c1dfd4993445312a298f30, type: 3}
+  m_Name: Knight_DarkKnight
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  fromNode: {fileID: 114577241287501928}
+  toNode: {fileID: 114772099199625424}
+  curvePoints:
+  - {x: 296, y: 630, z: 0}
+  - {x: 303.944, y: 635.88, z: 0}
+  - {x: 299.79202, y: 651.84, z: 0}
+  - {x: 286.568, y: 675.36, z: 0}
+  - {x: 267.296, y: 703.92004, z: 0}
+  - {x: 245, y: 735, z: 0}
+  - {x: 222.704, y: 766.08, z: 0}
+  - {x: 203.432, y: 794.64, z: 0}
+  - {x: 190.20798, y: 818.16003, z: 0}
+  - {x: 194, y: 840, z: 0}
+  curGraph: {fileID: 11400000}
+  Name: 
+  Conditions:
+  - {fileID: 114954141775004306}
+  connectionType: 0
+--- !u!114 &114103563577969534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef7559b44c1dfd4993445312a298f30, type: 3}
+  m_Name: BlueMage_Druid
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  fromNode: {fileID: 114118316818166302}
+  toNode: {fileID: 114751849836228286}
+  curvePoints:
+  - {x: 1002, y: 775, z: 0}
+  - {x: 1014.7879, y: 775, z: 0}
+  - {x: 1023.78406, y: 775.00006, z: 0}
+  - {x: 1029.9359, y: 774.99994, z: 0}
+  - {x: 1034.1921, y: 775.00006, z: 0}
+  - {x: 1037.5, y: 775, z: 0}
+  - {x: 1040.8081, y: 774.99994, z: 0}
+  - {x: 1045.064, y: 775, z: 0}
+  - {x: 1051.2161, y: 775, z: 0}
+  - {x: 1073, y: 775, z: 0}
+  curGraph: {fileID: 11400000}
+  Name: 
+  Conditions:
+  - {fileID: 114558874030877044}
+  connectionType: 0
+--- !u!114 &114118316818166302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98f9ce8f8d72a2c468f63aec748721cc, type: 3}
+  m_Name: Blue Mage
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  nodeRect:
+    serializedVersion: 2
+    x: 906
+    y: 719
+    width: 96
+    height: 112
+  parentTree: {fileID: 11400000}
+  nodeType: 0
+  Image: {fileID: 2800000, guid: cb16a666a23ef7944a2671747a0dbd28, type: 3}
+  DisabledImage: {fileID: 0}
+  isValid: 1
+  description: 
+  explanation: 
+  isInResearch: 0
+  tier: {fileID: 114174141379732096}
+  cost:
+  - {fileID: 114253294739302314}
+--- !u!114 &114123169278988244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f33da2dfabdea48bfd7bb631388197, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ConditionType: 0
+  Value: 1
+  Description: Shadow must be active.
+--- !u!114 &114132332282311364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f33da2dfabdea48bfd7bb631388197, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ConditionType: 0
+  Value: 1
+  Description: Summoner must be active.
+--- !u!114 &114142903920741672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98f9ce8f8d72a2c468f63aec748721cc, type: 3}
+  m_Name: Necromancer
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  nodeRect:
+    serializedVersion: 2
+    x: 1223
+    y: 493
+    width: 96
+    height: 112
+  parentTree: {fileID: 11400000}
+  nodeType: 0
+  Image: {fileID: 2800000, guid: cb16a666a23ef7944a2671747a0dbd28, type: 3}
+  DisabledImage: {fileID: 0}
+  isValid: 1
+  description: 
+  explanation: 
+  isInResearch: 0
+  tier: {fileID: 114174141379732096}
+  cost:
+  - {fileID: 114023705947452548}
+--- !u!114 &114143033881792154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75df8525b622e5843ade7cf6f3703b93, type: 3}
+  m_Name: Default Cost
+  m_EditorClassIdentifier: 
+  Cost: 1
+  Bought: 0
+  WillBuy: 0
+  Description: 
+--- !u!114 &114145134455483196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f33da2dfabdea48bfd7bb631388197, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ConditionType: 0
+  Value: 1
+  Description: Thief must be active.
+--- !u!114 &114150741180271266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75df8525b622e5843ade7cf6f3703b93, type: 3}
+  m_Name: Default Cost
+  m_EditorClassIdentifier: 
+  Cost: 1
+  Bought: 0
+  WillBuy: 0
+  Description: 
+--- !u!114 &114154376307502498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98f9ce8f8d72a2c468f63aec748721cc, type: 3}
+  m_Name: Scout
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  nodeRect:
+    serializedVersion: 2
+    x: 811
+    y: 168
+    width: 96
+    height: 112
+  parentTree: {fileID: 11400000}
+  nodeType: 0
+  Image: {fileID: 2800000, guid: cb16a666a23ef7944a2671747a0dbd28, type: 3}
+  DisabledImage: {fileID: 0}
+  isValid: 0
+  description: 
+  explanation: 
+  isInResearch: 0
+  tier: {fileID: 114463332620402592}
+  cost:
+  - {fileID: 114953816595460952}
+--- !u!114 &114174141379732096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18962e5781387be42968e80823f11f33, type: 3}
+  m_Name: Mage
+  m_EditorClassIdentifier: 
+  parentTree: {fileID: 11400000}
+  editorColor: {r: 0, g: 1, b: 0, a: 1}
+  description: 
+--- !u!114 &114181664816606806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f33da2dfabdea48bfd7bb631388197, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ConditionType: 0
+  Value: 1
+  Description: Mage must be active.
+--- !u!114 &114187754329629036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef7559b44c1dfd4993445312a298f30, type: 3}
+  m_Name: Bandit_Pirate
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  fromNode: {fileID: 114739687196344020}
+  toNode: {fileID: 114441129140120350}
+  curvePoints:
+  - {x: 599, y: 224, z: 0}
+  - {x: 611.4799, y: 223.91599, z: 0}
+  - {x: 619.64, y: 223.68802, z: 0}
+  - {x: 624.56, y: 223.35199, z: 0}
+  - {x: 627.3201, y: 222.94402, z: 0}
+  - {x: 629, y: 222.5, z: 0}
+  - {x: 630.68005, y: 222.05598, z: 0}
+  - {x: 633.44, y: 221.648, z: 0}
+  - {x: 638.36, y: 221.312, z: 0}
+  - {x: 659, y: 221, z: 0}
+  curGraph: {fileID: 11400000}
+  Name: 
+  Conditions:
+  - {fileID: 114688661605760598}
+  connectionType: 0
+--- !u!114 &114205493206424764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f33da2dfabdea48bfd7bb631388197, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ConditionType: 0
+  Value: 1
+  Description: Necromancer must be active.
+--- !u!114 &114212316685368922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef7559b44c1dfd4993445312a298f30, type: 3}
+  m_Name: Shaman_Theurgist
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  fromNode: {fileID: 114284801554659266}
+  toNode: {fileID: 114578320096945206}
+  curvePoints:
+  - {x: 1318, y: 716, z: 0}
+  - {x: 1330.116, y: 713.6199, z: 0}
+  - {x: 1337.2881, y: 707.16, z: 0}
+  - {x: 1340.752, y: 697.63995, z: 0}
+  - {x: 1341.7441, y: 686.0801, z: 0}
+  - {x: 1341.5, y: 673.5, z: 0}
+  - {x: 1341.256, y: 660.92, z: 0}
+  - {x: 1342.248, y: 649.36, z: 0}
+  - {x: 1345.7119, y: 639.83997, z: 0}
+  - {x: 1365, y: 631, z: 0}
+  curGraph: {fileID: 11400000}
+  Name: 
+  Conditions:
+  - {fileID: 114281060058588532}
+  connectionType: 0
+--- !u!114 &114215135065839244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef7559b44c1dfd4993445312a298f30, type: 3}
+  m_Name: Rogue_Thief
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  fromNode: {fileID: 114873498078064612}
+  toNode: {fileID: 114217608094367330}
+  curvePoints:
+  - {x: 714, y: 521, z: 0}
+  - {x: 719.33997, y: 516.66, z: 0}
+  - {x: 708.12006, y: 504.8801, z: 0}
+  - {x: 684.48, y: 487.52, z: 0}
+  - {x: 652.5601, y: 466.44006, z: 0}
+  - {x: 616.5, y: 443.5, z: 0}
+  - {x: 580.44, y: 420.56, z: 0}
+  - {x: 548.52, y: 399.48, z: 0}
+  - {x: 524.88, y: 382.12, z: 0}
+  - {x: 519, y: 366, z: 0}
+  curGraph: {fileID: 11400000}
+  Name: 
+  Conditions:
+  - {fileID: 114717081575652008}
+  connectionType: 0
+--- !u!114 &114217608094367330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98f9ce8f8d72a2c468f63aec748721cc, type: 3}
+  m_Name: Thief
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  nodeRect:
+    serializedVersion: 2
+    x: 519
+    y: 310
+    width: 96
+    height: 112
+  parentTree: {fileID: 11400000}
+  nodeType: 0
+  Image: {fileID: 2800000, guid: cb16a666a23ef7944a2671747a0dbd28, type: 3}
+  DisabledImage: {fileID: 0}
+  isValid: 1
+  description: 
+  explanation: 
+  isInResearch: 0
+  tier: {fileID: 114463332620402592}
+  cost:
+  - {fileID: 114622203153448912}
+--- !u!114 &114220035011873730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75df8525b622e5843ade7cf6f3703b93, type: 3}
+  m_Name: Default Cost
+  m_EditorClassIdentifier: 
+  Cost: 1
+  Bought: 0
+  WillBuy: 0
+  Description: 
+--- !u!114 &114235040165947450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f33da2dfabdea48bfd7bb631388197, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ConditionType: 0
+  Value: 1
+  Description: Rogue must be active.
+--- !u!114 &114247517837559572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75df8525b622e5843ade7cf6f3703b93, type: 3}
+  m_Name: Default Cost
+  m_EditorClassIdentifier: 
+  Cost: 1
+  Bought: 0
+  WillBuy: 0
+  Description: 
+--- !u!114 &114253294739302314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75df8525b622e5843ade7cf6f3703b93, type: 3}
+  m_Name: Default Cost
+  m_EditorClassIdentifier: 
+  Cost: 1
+  Bought: 0
+  WillBuy: 0
+  Description: 
+--- !u!114 &114254050701613926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef7559b44c1dfd4993445312a298f30, type: 3}
+  m_Name: Elementalist_Shaman
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  fromNode: {fileID: 114538852709959948}
+  toNode: {fileID: 114284801554659266}
+  curvePoints:
+  - {x: 1169, y: 915, z: 0}
+  - {x: 1181.284, y: 909.428, z: 0}
+  - {x: 1188.912, y: 894.30414, z: 0}
+  - {x: 1193.048, y: 872.016, z: 0}
+  - {x: 1194.8561, y: 844.952, z: 0}
+  - {x: 1195.5, y: 815.5, z: 0}
+  - {x: 1196.144, y: 786.048, z: 0}
+  - {x: 1197.952, y: 758.984, z: 0}
+  - {x: 1202.0879, y: 736.69604, z: 0}
+  - {x: 1222, y: 716, z: 0}
+  curGraph: {fileID: 11400000}
+  Name: 
+  Conditions:
+  - {fileID: 114283210528781048}
+  connectionType: 0
+--- !u!114 &114260444611094254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f33da2dfabdea48bfd7bb631388197, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ConditionType: 0
+  Value: 1
+  Description: Illusionist must be active.
+--- !u!114 &114261784348518160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75df8525b622e5843ade7cf6f3703b93, type: 3}
+  m_Name: Default Cost
+  m_EditorClassIdentifier: 
+  Cost: 1
+  Bought: 0
+  WillBuy: 0
+  Description: 
+--- !u!114 &114270448467117846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f33da2dfabdea48bfd7bb631388197, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ConditionType: 0
+  Value: 1
+  Description: Cavalier must be active.
+--- !u!114 &114279149804593148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef7559b44c1dfd4993445312a298f30, type: 3}
+  m_Name: Scout_Pirate
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  fromNode: {fileID: 114154376307502498}
+  toNode: {fileID: 114441129140120350}
+  curvePoints:
+  - {x: 907, y: 224, z: 0}
+  - {x: 910.8559, y: 223.91599, z: 0}
+  - {x: 895.60803, y: 223.68802, z: 0}
+  - {x: 866.032, y: 223.35199, z: 0}
+  - {x: 826.9041, y: 222.94402, z: 0}
+  - {x: 783, y: 222.5, z: 0}
+  - {x: 739.09595, y: 222.05598, z: 0}
+  - {x: 699.968, y: 221.648, z: 0}
+  - {x: 670.39197, y: 221.312, z: 0}
+  - {x: 659, y: 221, z: 0}
+  curGraph: {fileID: 11400000}
+  Name: 
+  Conditions:
+  - {fileID: 114775930701198968}
+  connectionType: 0
+--- !u!114 &114281060058588532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f33da2dfabdea48bfd7bb631388197, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ConditionType: 0
+  Value: 1
+  Description: Shaman must be active.
+--- !u!114 &114283210528781048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f33da2dfabdea48bfd7bb631388197, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ConditionType: 0
+  Value: 1
+  Description: Elementalist must be active.
+--- !u!114 &114284801554659266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98f9ce8f8d72a2c468f63aec748721cc, type: 3}
+  m_Name: Shaman
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  nodeRect:
+    serializedVersion: 2
+    x: 1222
+    y: 660
+    width: 96
+    height: 112
+  parentTree: {fileID: 11400000}
+  nodeType: 0
+  Image: {fileID: 2800000, guid: cb16a666a23ef7944a2671747a0dbd28, type: 3}
+  DisabledImage: {fileID: 0}
+  isValid: 0
+  description: 
+  explanation: 
+  isInResearch: 0
+  tier: {fileID: 114174141379732096}
+  cost:
+  - {fileID: 114449902859293408}
+--- !u!114 &114288397618378012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98f9ce8f8d72a2c468f63aec748721cc, type: 3}
+  m_Name: Mage
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  nodeRect:
+    serializedVersion: 2
+    x: 730
+    y: 597
+    width: 96
+    height: 112
+  parentTree: {fileID: 11400000}
+  nodeType: 0
+  Image: {fileID: 2800000, guid: cb16a666a23ef7944a2671747a0dbd28, type: 3}
+  DisabledImage: {fileID: 0}
+  isValid: 1
+  description: 
+  explanation: 
+  isInResearch: 0
+  tier: {fileID: 114174141379732096}
+  cost:
+  - {fileID: 114587237104042746}
+--- !u!114 &114288938871491578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98f9ce8f8d72a2c468f63aec748721cc, type: 3}
+  m_Name: Shadow
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  nodeRect:
+    serializedVersion: 2
+    x: 968
+    y: 168
+    width: 96
+    height: 112
+  parentTree: {fileID: 11400000}
+  nodeType: 0
+  Image: {fileID: 2800000, guid: cb16a666a23ef7944a2671747a0dbd28, type: 3}
+  DisabledImage: {fileID: 0}
+  isValid: 0
+  description: 
+  explanation: 
+  isInResearch: 0
+  tier: {fileID: 114463332620402592}
+  cost:
+  - {fileID: 114795388595493806}
+--- !u!114 &114304582644805564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75df8525b622e5843ade7cf6f3703b93, type: 3}
+  m_Name: Default Cost
+  m_EditorClassIdentifier: 
+  Cost: 1
+  Bought: 0
+  WillBuy: 0
+  Description: 
+--- !u!114 &114333466326682006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75df8525b622e5843ade7cf6f3703b93, type: 3}
+  m_Name: Default Cost
+  m_EditorClassIdentifier: 
+  Cost: 1
+  Bought: 0
+  WillBuy: 0
+  Description: 
+--- !u!114 &114336602018090170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75df8525b622e5843ade7cf6f3703b93, type: 3}
+  m_Name: Default Cost
+  m_EditorClassIdentifier: 
+  Cost: 1
+  Bought: 0
+  WillBuy: 1
+  Description: 
+--- !u!114 &114353282695995036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75df8525b622e5843ade7cf6f3703b93, type: 3}
+  m_Name: Default Cost
+  m_EditorClassIdentifier: 
+  Cost: 1
+  Bought: 0
+  WillBuy: 1
+  Description: 
+--- !u!114 &114381210268443946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98f9ce8f8d72a2c468f63aec748721cc, type: 3}
+  m_Name: Barbarian
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  nodeRect:
+    serializedVersion: 2
+    x: 348
+    y: 731
+    width: 96
+    height: 112
+  parentTree: {fileID: 11400000}
+  nodeType: 0
+  Image: {fileID: 2800000, guid: cb16a666a23ef7944a2671747a0dbd28, type: 3}
+  DisabledImage: {fileID: 0}
+  isValid: 1
+  description: 
+  explanation: 
+  isInResearch: 0
+  tier: {fileID: 114722174694080936}
+  cost:
+  - {fileID: 114143033881792154}
+--- !u!114 &114390105299688634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75df8525b622e5843ade7cf6f3703b93, type: 3}
+  m_Name: Default Cost
+  m_EditorClassIdentifier: 
+  Cost: 1
+  Bought: 0
+  WillBuy: 1
+  Description: 
+--- !u!114 &114394515639174784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef7559b44c1dfd4993445312a298f30, type: 3}
+  m_Name: Necromancer_Theurgist
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  fromNode: {fileID: 114142903920741672}
+  toNode: {fileID: 114578320096945206}
+  curvePoints:
+  - {x: 1319, y: 549, z: 0}
+  - {x: 1331.0879, y: 551.29596, z: 0}
+  - {x: 1338.1842, y: 557.528, z: 0}
+  - {x: 1341.536, y: 566.7119, z: 0}
+  - {x: 1342.3922, y: 577.86414, z: 0}
+  - {x: 1342, y: 590, z: 0}
+  - {x: 1341.608, y: 602.136, z: 0}
+  - {x: 1342.464, y: 613.28796, z: 0}
+  - {x: 1345.8159, y: 622.472, z: 0}
+  - {x: 1365, y: 631, z: 0}
+  curGraph: {fileID: 11400000}
+  Name: 
+  Conditions:
+  - {fileID: 114205493206424764}
+  connectionType: 0
+--- !u!114 &114400876191465786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef7559b44c1dfd4993445312a298f30, type: 3}
+  m_Name: Fighter_Paladin
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  fromNode: {fileID: 114663373307678734}
+  toNode: {fileID: 114673724610059898}
+  curvePoints:
+  - {x: 598, y: 650, z: 0}
+  - {x: 601.772, y: 648.068, z: 0}
+  - {x: 586.2961, y: 642.82404, z: 0}
+  - {x: 556.38403, y: 635.09607, z: 0}
+  - {x: 516.848, y: 625.7121, z: 0}
+  - {x: 472.5, y: 615.5, z: 0}
+  - {x: 428.15198, y: 605.28796, z: 0}
+  - {x: 388.616, y: 595.904, z: 0}
+  - {x: 358.70398, y: 588.176, z: 0}
+  - {x: 347, y: 581, z: 0}
+  curGraph: {fileID: 11400000}
+  Name: 
+  Conditions:
+  - {fileID: 114478148614383094}
+  connectionType: 0
+--- !u!114 &114408914637933374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f33da2dfabdea48bfd7bb631388197, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ConditionType: 0
+  Value: 1
+  Description: Red Mage must be active.
+--- !u!114 &114423239359411840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f33da2dfabdea48bfd7bb631388197, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ConditionType: 0
+  Value: 1
+  Description: Paladin must be active.
+--- !u!114 &114436033017348278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef7559b44c1dfd4993445312a298f30, type: 3}
+  m_Name: RedMage_Summoner
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  fromNode: {fileID: 114896057475340924}
+  toNode: {fileID: 114778086364624070}
+  curvePoints:
+  - {x: 1008, y: 573, z: 0}
+  - {x: 1020.5639, y: 570.2, z: 0}
+  - {x: 1028.9521, y: 562.60004, z: 0}
+  - {x: 1034.208, y: 551.4, z: 0}
+  - {x: 1037.3761, y: 537.80005, z: 0}
+  - {x: 1039.5, y: 523, z: 0}
+  - {x: 1041.624, y: 508.2, z: 0}
+  - {x: 1044.792, y: 494.59998, z: 0}
+  - {x: 1050.048, y: 483.39996, z: 0}
+  - {x: 1071, y: 473, z: 0}
+  curGraph: {fileID: 11400000}
+  Name: 
+  Conditions:
+  - {fileID: 114535165978507670}
+  connectionType: 0
+--- !u!114 &114439865804817594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef7559b44c1dfd4993445312a298f30, type: 3}
+  m_Name: Paladin_Knight
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  fromNode: {fileID: 114673724610059898}
+  toNode: {fileID: 114577241287501928}
+  curvePoints:
+  - {x: 443, y: 581, z: 0}
+  - {x: 446.99597, y: 582.37195, z: 0}
+  - {x: 432.128, y: 586.096, z: 0}
+  - {x: 403.11203, y: 591.584, z: 0}
+  - {x: 364.66403, y: 598.24805, z: 0}
+  - {x: 321.5, y: 605.5, z: 0}
+  - {x: 278.33597, y: 612.75195, z: 0}
+  - {x: 239.888, y: 619.416, z: 0}
+  - {x: 210.872, y: 624.90405, z: 0}
+  - {x: 200, y: 630, z: 0}
+  curGraph: {fileID: 11400000}
+  Name: 
+  Conditions:
+  - {fileID: 114688631367844418}
+  connectionType: 0
+--- !u!114 &114441129140120350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98f9ce8f8d72a2c468f63aec748721cc, type: 3}
+  m_Name: Pirate
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  nodeRect:
+    serializedVersion: 2
+    x: 659
+    y: 165
+    width: 96
+    height: 112
+  parentTree: {fileID: 11400000}
+  nodeType: 0
+  Image: {fileID: 2800000, guid: cb16a666a23ef7944a2671747a0dbd28, type: 3}
+  DisabledImage: {fileID: 0}
+  isValid: 0
+  description: 
+  explanation: 
+  isInResearch: 0
+  tier: {fileID: 114463332620402592}
+  cost:
+  - {fileID: 114220035011873730}
+--- !u!114 &114449902859293408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75df8525b622e5843ade7cf6f3703b93, type: 3}
+  m_Name: Default Cost
+  m_EditorClassIdentifier: 
+  Cost: 1
+  Bought: 0
+  WillBuy: 0
+  Description: 
+--- !u!114 &114463332620402592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18962e5781387be42968e80823f11f33, type: 3}
+  m_Name: Rogue
+  m_EditorClassIdentifier: 
+  parentTree: {fileID: 11400000}
+  editorColor: {r: 0, g: 0, b: 1, a: 1}
+  description: 
+--- !u!114 &114472402889921536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef7559b44c1dfd4993445312a298f30, type: 3}
+  m_Name: DarkKnight_Warlord
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  fromNode: {fileID: 114772099199625424}
+  toNode: {fileID: 114585626173334172}
+  curvePoints:
+  - {x: 290, y: 840, z: 0}
+  - {x: 294.304, y: 842.2399, z: 0}
+  - {x: 280.272, y: 848.32007, z: 0}
+  - {x: 252.48799, y: 857.28, z: 0}
+  - {x: 215.53603, y: 868.16003, z: 0}
+  - {x: 174, y: 880, z: 0}
+  - {x: 132.46399, y: 891.84, z: 0}
+  - {x: 95.51201, y: 902.72, z: 0}
+  - {x: 67.728, y: 911.68, z: 0}
+  - {x: 58, y: 920, z: 0}
+  curGraph: {fileID: 11400000}
+  Name: 
+  Conditions:
+  - {fileID: 114571136394403298}
+  connectionType: 0
+--- !u!114 &114474860981441610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98f9ce8f8d72a2c468f63aec748721cc, type: 3}
+  m_Name: Samurai
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  nodeRect:
+    serializedVersion: 2
+    x: 60
+    y: 480
+    width: 96
+    height: 112
+  parentTree: {fileID: 11400000}
+  nodeType: 0
+  Image: {fileID: 2800000, guid: cb16a666a23ef7944a2671747a0dbd28, type: 3}
+  DisabledImage: {fileID: 0}
+  isValid: 0
+  description: 
+  explanation: 
+  isInResearch: 0
+  tier: {fileID: 114722174694080936}
+  cost:
+  - {fileID: 114069097929915736}
+--- !u!114 &114478148614383094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f33da2dfabdea48bfd7bb631388197, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ConditionType: 0
+  Value: 1
+  Description: Fighter must be active.
+--- !u!114 &114488357039352682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98f9ce8f8d72a2c468f63aec748721cc, type: 3}
+  m_Name: Cavalier
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  nodeRect:
+    serializedVersion: 2
+    x: 200
+    y: 405
+    width: 96
+    height: 112
+  parentTree: {fileID: 11400000}
+  nodeType: 0
+  Image: {fileID: 2800000, guid: cb16a666a23ef7944a2671747a0dbd28, type: 3}
+  DisabledImage: {fileID: 0}
+  isValid: 0
+  description: 
+  explanation: 
+  isInResearch: 0
+  tier: {fileID: 114722174694080936}
+  cost:
+  - {fileID: 114816514942733448}
+--- !u!114 &114522834236244678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef7559b44c1dfd4993445312a298f30, type: 3}
+  m_Name: RedMage_Illusionist
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  fromNode: {fileID: 114896057475340924}
+  toNode: {fileID: 114004400027221682}
+  curvePoints:
+  - {x: 1008, y: 573, z: 0}
+  - {x: 1020.5919, y: 574.512, z: 0}
+  - {x: 1029.0562, y: 578.616, z: 0}
+  - {x: 1034.4241, y: 584.664, z: 0}
+  - {x: 1037.7281, y: 592.00806, z: 0}
+  - {x: 1040, y: 600, z: 0}
+  - {x: 1042.272, y: 607.992, z: 0}
+  - {x: 1045.5759, y: 615.336, z: 0}
+  - {x: 1050.9441, y: 621.38403, z: 0}
+  - {x: 1072, y: 627, z: 0}
+  curGraph: {fileID: 11400000}
+  Name: 
+  Conditions:
+  - {fileID: 114408914637933374}
+  connectionType: 0
+--- !u!114 &114528436342097668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f33da2dfabdea48bfd7bb631388197, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ConditionType: 0
+  Value: 1
+  Description: Thief must be active.
+--- !u!114 &114535165978507670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f33da2dfabdea48bfd7bb631388197, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ConditionType: 0
+  Value: 1
+  Description: Red Mage must be active.
+--- !u!114 &114538852709959948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98f9ce8f8d72a2c468f63aec748721cc, type: 3}
+  m_Name: Elementalist
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  nodeRect:
+    serializedVersion: 2
+    x: 1073
+    y: 859
+    width: 96
+    height: 112
+  parentTree: {fileID: 11400000}
+  nodeType: 0
+  Image: {fileID: 2800000, guid: cb16a666a23ef7944a2671747a0dbd28, type: 3}
+  DisabledImage: {fileID: 0}
+  isValid: 0
+  description: 
+  explanation: 
+  isInResearch: 0
+  tier: {fileID: 114174141379732096}
+  cost:
+  - {fileID: 114928360784660936}
+--- !u!114 &114550918117873038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef7559b44c1dfd4993445312a298f30, type: 3}
+  m_Name: Shadow_Ninja
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  fromNode: {fileID: 114288938871491578}
+  toNode: {fileID: 114695026730153928}
+  curvePoints:
+  - {x: 1064, y: 224, z: 0}
+  - {x: 1063.4039, y: 219.716, z: 0}
+  - {x: 1036.072, y: 208.088, z: 0}
+  - {x: 988.688, y: 190.95201, z: 0}
+  - {x: 927.93604, y: 170.14403, z: 0}
+  - {x: 860.5, y: 147.5, z: 0}
+  - {x: 793.06396, y: 124.85599, z: 0}
+  - {x: 732.312, y: 104.048004, z: 0}
+  - {x: 684.928, y: 86.912, z: 0}
+  - {x: 657, y: 71, z: 0}
+  curGraph: {fileID: 11400000}
+  Name: 
+  Conditions:
+  - {fileID: 114123169278988244}
+  connectionType: 0
+--- !u!114 &114554520301788040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f33da2dfabdea48bfd7bb631388197, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ConditionType: 0
+  Value: 1
+  Description: Barbarian must be active.
+--- !u!114 &114554797813671426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef7559b44c1dfd4993445312a298f30, type: 3}
+  m_Name: Barbarian_MonsterKnight
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  fromNode: {fileID: 114381210268443946}
+  toNode: {fileID: 114795064497974766}
+  curvePoints:
+  - {x: 444, y: 787, z: 0}
+  - {x: 447.77194, y: 792.71204, z: 0}
+  - {x: 432.29602, y: 808.216, z: 0}
+  - {x: 402.384, y: 831.06396, z: 0}
+  - {x: 362.84802, y: 858.80804, z: 0}
+  - {x: 318.5, y: 889, z: 0}
+  - {x: 274.15198, y: 919.192, z: 0}
+  - {x: 234.61601, y: 946.93604, z: 0}
+  - {x: 204.704, y: 969.78394, z: 0}
+  - {x: 193, y: 991, z: 0}
+  curGraph: {fileID: 11400000}
+  Name: 
+  Conditions:
+  - {fileID: 114554520301788040}
+  connectionType: 0
+--- !u!114 &114558874030877044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f33da2dfabdea48bfd7bb631388197, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ConditionType: 0
+  Value: 1
+  Description: Blue Mage must be active.
+--- !u!114 &114571136394403298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f33da2dfabdea48bfd7bb631388197, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ConditionType: 0
+  Value: 1
+  Description: Dark Knight must be active.
+--- !u!114 &114577241287501928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98f9ce8f8d72a2c468f63aec748721cc, type: 3}
+  m_Name: Knight
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  nodeRect:
+    serializedVersion: 2
+    x: 200
+    y: 574
+    width: 96
+    height: 112
+  parentTree: {fileID: 11400000}
+  nodeType: 0
+  Image: {fileID: 2800000, guid: cb16a666a23ef7944a2671747a0dbd28, type: 3}
+  DisabledImage: {fileID: 0}
+  isValid: 0
+  description: 
+  explanation: 
+  isInResearch: 0
+  tier: {fileID: 114722174694080936}
+  cost:
+  - {fileID: 114247517837559572}
+--- !u!114 &114578320096945206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98f9ce8f8d72a2c468f63aec748721cc, type: 3}
+  m_Name: Theurgist
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  nodeRect:
+    serializedVersion: 2
+    x: 1365
+    y: 575
+    width: 96
+    height: 112
+  parentTree: {fileID: 11400000}
+  nodeType: 0
+  Image: {fileID: 2800000, guid: cb16a666a23ef7944a2671747a0dbd28, type: 3}
+  DisabledImage: {fileID: 0}
+  isValid: 0
+  description: 
+  explanation: 
+  isInResearch: 0
+  tier: {fileID: 114174141379732096}
+  cost:
+  - {fileID: 114333466326682006}
+--- !u!114 &114585626173334172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98f9ce8f8d72a2c468f63aec748721cc, type: 3}
+  m_Name: Warlord
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  nodeRect:
+    serializedVersion: 2
+    x: 58
+    y: 864
+    width: 96
+    height: 112
+  parentTree: {fileID: 11400000}
+  nodeType: 0
+  Image: {fileID: 2800000, guid: cb16a666a23ef7944a2671747a0dbd28, type: 3}
+  DisabledImage: {fileID: 0}
+  isValid: 0
+  description: 
+  explanation: 
+  isInResearch: 0
+  tier: {fileID: 114722174694080936}
+  cost:
+  - {fileID: 114785251745590622}
+--- !u!114 &114587237104042746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75df8525b622e5843ade7cf6f3703b93, type: 3}
+  m_Name: Default Cost
+  m_EditorClassIdentifier: 
+  Cost: 1
+  Bought: 0
+  WillBuy: 1
+  Description: 
+--- !u!114 &114589199564201668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98f9ce8f8d72a2c468f63aec748721cc, type: 3}
+  m_Name: Hero
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  nodeRect:
+    serializedVersion: 2
+    x: 56
+    y: 676
+    width: 96
+    height: 112
+  parentTree: {fileID: 11400000}
+  nodeType: 0
+  Image: {fileID: 2800000, guid: cb16a666a23ef7944a2671747a0dbd28, type: 3}
+  DisabledImage: {fileID: 0}
+  isValid: 0
+  description: 
+  explanation: 
+  isInResearch: 0
+  tier: {fileID: 114722174694080936}
+  cost:
+  - {fileID: 114702176368010552}
+--- !u!114 &114603568925314614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75df8525b622e5843ade7cf6f3703b93, type: 3}
+  m_Name: Default Cost
+  m_EditorClassIdentifier: 
+  Cost: 1
+  Bought: 0
+  WillBuy: 1
+  Description: 
+--- !u!114 &114622203153448912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75df8525b622e5843ade7cf6f3703b93, type: 3}
+  m_Name: Default Cost
+  m_EditorClassIdentifier: 
+  Cost: 1
+  Bought: 0
+  WillBuy: 0
+  Description: 
+--- !u!114 &114625379557904124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef7559b44c1dfd4993445312a298f30, type: 3}
+  m_Name: MonsterKnight_Warlord
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  fromNode: {fileID: 114795064497974766}
+  toNode: {fileID: 114585626173334172}
+  curvePoints:
+  - {x: 289, y: 991, z: 0}
+  - {x: 293.332, y: 989.01196, z: 0}
+  - {x: 279.376, y: 983.616, z: 0}
+  - {x: 251.704, y: 975.664, z: 0}
+  - {x: 214.88803, y: 966.00806, z: 0}
+  - {x: 173.5, y: 955.5, z: 0}
+  - {x: 132.112, y: 944.992, z: 0}
+  - {x: 95.296, y: 935.336, z: 0}
+  - {x: 67.62399, y: 927.38403, z: 0}
+  - {x: 58, y: 920, z: 0}
+  curGraph: {fileID: 11400000}
+  Name: 
+  Conditions:
+  - {fileID: 114885037480167068}
+  connectionType: 0
+--- !u!114 &114628203729855952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f33da2dfabdea48bfd7bb631388197, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ConditionType: 0
+  Value: 1
+  Description: Assassin must be active.
+--- !u!114 &114629194145155094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f33da2dfabdea48bfd7bb631388197, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ConditionType: 0
+  Value: 1
+  Description: Samurai must be active.
+--- !u!114 &114661227234518930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef7559b44c1dfd4993445312a298f30, type: 3}
+  m_Name: Cavalier_Samurai
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  fromNode: {fileID: 114488357039352682}
+  toNode: {fileID: 114474860981441610}
+  curvePoints:
+  - {x: 296, y: 461, z: 0}
+  - {x: 300.192, y: 463.1, z: 0}
+  - {x: 285.85602, y: 468.80002, z: 0}
+  - {x: 257.624, y: 477.19998, z: 0}
+  - {x: 220.128, y: 487.40002, z: 0}
+  - {x: 178, y: 498.5, z: 0}
+  - {x: 135.87198, y: 509.6, z: 0}
+  - {x: 98.37601, y: 519.80005, z: 0}
+  - {x: 70.144, y: 528.2, z: 0}
+  - {x: 60, y: 536, z: 0}
+  curGraph: {fileID: 11400000}
+  Name: 
+  Conditions:
+  - {fileID: 114270448467117846}
+  connectionType: 0
+--- !u!114 &114663373307678734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98f9ce8f8d72a2c468f63aec748721cc, type: 3}
+  m_Name: Fighter
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  nodeRect:
+    serializedVersion: 2
+    x: 502
+    y: 594
+    width: 96
+    height: 112
+  parentTree: {fileID: 11400000}
+  nodeType: 0
+  Image: {fileID: 2800000, guid: cb16a666a23ef7944a2671747a0dbd28, type: 3}
+  DisabledImage: {fileID: 0}
+  isValid: 1
+  description: 
+  explanation: 
+  isInResearch: 0
+  tier: {fileID: 114722174694080936}
+  cost:
+  - {fileID: 114353282695995036}
+--- !u!114 &114668330234538392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f33da2dfabdea48bfd7bb631388197, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ConditionType: 0
+  Value: 1
+  Description: Fighter must be active.
+--- !u!114 &114673724610059898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98f9ce8f8d72a2c468f63aec748721cc, type: 3}
+  m_Name: Paladin
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  nodeRect:
+    serializedVersion: 2
+    x: 347
+    y: 525
+    width: 96
+    height: 112
+  parentTree: {fileID: 11400000}
+  nodeType: 0
+  Image: {fileID: 2800000, guid: cb16a666a23ef7944a2671747a0dbd28, type: 3}
+  DisabledImage: {fileID: 0}
+  isValid: 1
+  description: 
+  explanation: 
+  isInResearch: 0
+  tier: {fileID: 114722174694080936}
+  cost:
+  - {fileID: 114807816117975146}
+--- !u!114 &114677575336445980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef7559b44c1dfd4993445312a298f30, type: 3}
+  m_Name: Barbarian_DarkKnight
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  fromNode: {fileID: 114381210268443946}
+  toNode: {fileID: 114772099199625424}
+  curvePoints:
+  - {x: 444, y: 787, z: 0}
+  - {x: 447.79996, y: 788.484, z: 0}
+  - {x: 432.40002, y: 792.512, z: 0}
+  - {x: 402.6, y: 798.44794, z: 0}
+  - {x: 363.20004, y: 805.656, z: 0}
+  - {x: 319, y: 813.5, z: 0}
+  - {x: 274.8, y: 821.34393, z: 0}
+  - {x: 235.40002, y: 828.552, z: 0}
+  - {x: 205.59998, y: 834.48804, z: 0}
+  - {x: 194, y: 840, z: 0}
+  curGraph: {fileID: 11400000}
+  Name: 
+  Conditions:
+  - {fileID: 114751934929800990}
+  connectionType: 0
+--- !u!114 &114680660524740118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef7559b44c1dfd4993445312a298f30, type: 3}
+  m_Name: Mage_RedMage
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  fromNode: {fileID: 114288397618378012}
+  toNode: {fileID: 114896057475340924}
+  curvePoints:
+  - {x: 826, y: 653, z: 0}
+  - {x: 839.2079, y: 650.76, z: 0}
+  - {x: 849.34406, y: 644.68, z: 0}
+  - {x: 857.176, y: 635.72003, z: 0}
+  - {x: 863.4721, y: 624.8401, z: 0}
+  - {x: 869, y: 613, z: 0}
+  - {x: 874.528, y: 601.16, z: 0}
+  - {x: 880.82404, y: 590.28, z: 0}
+  - {x: 888.656, y: 581.31995, z: 0}
+  - {x: 912, y: 573, z: 0}
+  curGraph: {fileID: 11400000}
+  Name: 
+  Conditions:
+  - {fileID: 114181664816606806}
+  connectionType: 0
+--- !u!114 &114682483593542582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f33da2dfabdea48bfd7bb631388197, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ConditionType: 0
+  Value: 1
+  Description: Rogue must be active.
+--- !u!114 &114682985956766930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef7559b44c1dfd4993445312a298f30, type: 3}
+  m_Name: Assassin_Shadow
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  fromNode: {fileID: 114033137622881124}
+  toNode: {fileID: 114288938871491578}
+  curvePoints:
+  - {x: 824, y: 373, z: 0}
+  - {x: 838.8319, y: 368.82797, z: 0}
+  - {x: 853.37604, y: 357.504, z: 0}
+  - {x: 867.704, y: 340.816, z: 0}
+  - {x: 881.88806, y: 320.55203, z: 0}
+  - {x: 896, y: 298.5, z: 0}
+  - {x: 910.11194, y: 276.448, z: 0}
+  - {x: 924.296, y: 256.18402, z: 0}
+  - {x: 938.62396, y: 239.496, z: 0}
+  - {x: 968, y: 224, z: 0}
+  curGraph: {fileID: 11400000}
+  Name: 
+  Conditions:
+  - {fileID: 114827953270435338}
+  connectionType: 0
+--- !u!114 &114687893018933692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef7559b44c1dfd4993445312a298f30, type: 3}
+  m_Name: Thief_Bandit
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  fromNode: {fileID: 114217608094367330}
+  toNode: {fileID: 114739687196344020}
+  curvePoints:
+  - {x: 615, y: 366, z: 0}
+  - {x: 622.664, y: 362.02402, z: 0}
+  - {x: 617.75195, y: 351.23203, z: 0}
+  - {x: 603.408, y: 335.32797, z: 0}
+  - {x: 582.77606, y: 316.01605, z: 0}
+  - {x: 559, y: 295, z: 0}
+  - {x: 535.224, y: 273.984, z: 0}
+  - {x: 514.59204, y: 254.67201, z: 0}
+  - {x: 500.248, y: 238.76799, z: 0}
+  - {x: 503, y: 224, z: 0}
+  curGraph: {fileID: 11400000}
+  Name: 
+  Conditions:
+  - {fileID: 114528436342097668}
+  connectionType: 0
+--- !u!114 &114688631367844418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f33da2dfabdea48bfd7bb631388197, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ConditionType: 0
+  Value: 1
+  Description: Paladin must be active.
+--- !u!114 &114688661605760598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f33da2dfabdea48bfd7bb631388197, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ConditionType: 0
+  Value: 1
+  Description: Bandit must be active.
+--- !u!114 &114695026730153928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98f9ce8f8d72a2c468f63aec748721cc, type: 3}
+  m_Name: Ninja
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  nodeRect:
+    serializedVersion: 2
+    x: 657
+    y: 15
+    width: 96
+    height: 112
+  parentTree: {fileID: 11400000}
+  nodeType: 0
+  Image: {fileID: 2800000, guid: cb16a666a23ef7944a2671747a0dbd28, type: 3}
+  DisabledImage: {fileID: 0}
+  isValid: 0
+  description: 
+  explanation: 
+  isInResearch: 0
+  tier: {fileID: 114463332620402592}
+  cost:
+  - {fileID: 114261784348518160}
+--- !u!114 &114698089333678024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef7559b44c1dfd4993445312a298f30, type: 3}
+  m_Name: Pirate_Ninja
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  fromNode: {fileID: 114441129140120350}
+  toNode: {fileID: 114695026730153928}
+  curvePoints:
+  - {x: 755, y: 221, z: 0}
+  - {x: 763.0559, y: 216.79999, z: 0}
+  - {x: 759.208, y: 205.39998, z: 0}
+  - {x: 746.432, y: 188.6, z: 0}
+  - {x: 727.704, y: 168.20001, z: 0}
+  - {x: 706, y: 146, z: 0}
+  - {x: 684.2959, y: 123.8, z: 0}
+  - {x: 665.568, y: 103.399994, z: 0}
+  - {x: 652.792, y: 86.600006, z: 0}
+  - {x: 657, y: 71, z: 0}
+  curGraph: {fileID: 11400000}
+  Name: 
+  Conditions:
+  - {fileID: 114964690669962592}
+  connectionType: 0
+--- !u!114 &114702176368010552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75df8525b622e5843ade7cf6f3703b93, type: 3}
+  m_Name: Default Cost
+  m_EditorClassIdentifier: 
+  Cost: 1
+  Bought: 0
+  WillBuy: 0
+  Description: 
+--- !u!114 &114713846351924474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef7559b44c1dfd4993445312a298f30, type: 3}
+  m_Name: Thief_Gambler
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  fromNode: {fileID: 114217608094367330}
+  toNode: {fileID: 114760343194187644}
+  curvePoints:
+  - {x: 615, y: 366, z: 0}
+  - {x: 618.54803, y: 362.02402, z: 0}
+  - {x: 602.464, y: 351.23203, z: 0}
+  - {x: 571.656, y: 335.32797, z: 0}
+  - {x: 531.03204, y: 316.01605, z: 0}
+  - {x: 485.5, y: 295, z: 0}
+  - {x: 439.96796, y: 273.984, z: 0}
+  - {x: 399.34402, y: 254.67201, z: 0}
+  - {x: 368.536, y: 238.76799, z: 0}
+  - {x: 356, y: 224, z: 0}
+  curGraph: {fileID: 11400000}
+  Name: 
+  Conditions:
+  - {fileID: 114145134455483196}
+  connectionType: 0
+--- !u!114 &114717081575652008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f33da2dfabdea48bfd7bb631388197, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ConditionType: 0
+  Value: 1
+  Description: Rogue must be active.
+--- !u!114 &114718206768036480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef7559b44c1dfd4993445312a298f30, type: 3}
+  m_Name: Summoner_Shaman
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  fromNode: {fileID: 114778086364624070}
+  toNode: {fileID: 114284801554659266}
+  curvePoints:
+  - {x: 1167, y: 473, z: 0}
+  - {x: 1179.34, y: 479.80396, z: 0}
+  - {x: 1187.1201, y: 498.272, z: 0}
+  - {x: 1191.4799, y: 525.48804, z: 0}
+  - {x: 1193.56, y: 558.536, z: 0}
+  - {x: 1194.5, y: 594.5, z: 0}
+  - {x: 1195.44, y: 630.464, z: 0}
+  - {x: 1197.52, y: 663.51196, z: 0}
+  - {x: 1201.8799, y: 690.728, z: 0}
+  - {x: 1222, y: 716, z: 0}
+  curGraph: {fileID: 11400000}
+  Name: 
+  Conditions:
+  - {fileID: 114988774168152658}
+  connectionType: 0
+--- !u!114 &114720068173761680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef7559b44c1dfd4993445312a298f30, type: 3}
+  m_Name: Fighter_Barbarian
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  fromNode: {fileID: 114663373307678734}
+  toNode: {fileID: 114381210268443946}
+  curvePoints:
+  - {x: 598, y: 650, z: 0}
+  - {x: 601.80005, y: 653.836, z: 0}
+  - {x: 586.4001, y: 664.24805, z: 0}
+  - {x: 556.6, y: 679.59204, z: 0}
+  - {x: 517.2, y: 698.22406, z: 0}
+  - {x: 473, y: 718.5, z: 0}
+  - {x: 428.79996, y: 738.776, z: 0}
+  - {x: 389.4, y: 757.408, z: 0}
+  - {x: 359.59998, y: 772.752, z: 0}
+  - {x: 348, y: 787, z: 0}
+  curGraph: {fileID: 11400000}
+  Name: 
+  Conditions:
+  - {fileID: 114668330234538392}
+  connectionType: 0
+--- !u!114 &114722174694080936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18962e5781387be42968e80823f11f33, type: 3}
+  m_Name: Fighter
+  m_EditorClassIdentifier: 
+  parentTree: {fileID: 11400000}
+  editorColor: {r: 1, g: 0, b: 0, a: 1}
+  description: 
+--- !u!114 &114732046221980630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75df8525b622e5843ade7cf6f3703b93, type: 3}
+  m_Name: Default Cost
+  m_EditorClassIdentifier: 
+  Cost: 1
+  Bought: 0
+  WillBuy: 0
+  Description: 
+--- !u!114 &114739687196344020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98f9ce8f8d72a2c468f63aec748721cc, type: 3}
+  m_Name: Bandit
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  nodeRect:
+    serializedVersion: 2
+    x: 503
+    y: 168
+    width: 96
+    height: 112
+  parentTree: {fileID: 11400000}
+  nodeType: 0
+  Image: {fileID: 2800000, guid: cb16a666a23ef7944a2671747a0dbd28, type: 3}
+  DisabledImage: {fileID: 0}
+  isValid: 0
+  description: 
+  explanation: 
+  isInResearch: 0
+  tier: {fileID: 114463332620402592}
+  cost:
+  - {fileID: 114304582644805564}
+--- !u!114 &114751849836228286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98f9ce8f8d72a2c468f63aec748721cc, type: 3}
+  m_Name: Druid
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  nodeRect:
+    serializedVersion: 2
+    x: 1073
+    y: 719
+    width: 96
+    height: 112
+  parentTree: {fileID: 11400000}
+  nodeType: 0
+  Image: {fileID: 2800000, guid: cb16a666a23ef7944a2671747a0dbd28, type: 3}
+  DisabledImage: {fileID: 0}
+  isValid: 0
+  description: 
+  explanation: 
+  isInResearch: 0
+  tier: {fileID: 114174141379732096}
+  cost:
+  - {fileID: 114886780035288586}
+--- !u!114 &114751934929800990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f33da2dfabdea48bfd7bb631388197, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ConditionType: 0
+  Value: 1
+  Description: Barbarian must be active.
+--- !u!114 &114755416964249664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f33da2dfabdea48bfd7bb631388197, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ConditionType: 0
+  Value: 1
+  Description: Knight must be active.
+--- !u!114 &114760343194187644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98f9ce8f8d72a2c468f63aec748721cc, type: 3}
+  m_Name: Gambler
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  nodeRect:
+    serializedVersion: 2
+    x: 356
+    y: 168
+    width: 96
+    height: 112
+  parentTree: {fileID: 11400000}
+  nodeType: 0
+  Image: {fileID: 2800000, guid: cb16a666a23ef7944a2671747a0dbd28, type: 3}
+  DisabledImage: {fileID: 0}
+  isValid: 0
+  description: 
+  explanation: 
+  isInResearch: 0
+  tier: {fileID: 114463332620402592}
+  cost:
+  - {fileID: 114150741180271266}
+--- !u!114 &114772099199625424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98f9ce8f8d72a2c468f63aec748721cc, type: 3}
+  m_Name: Dark Knight
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  nodeRect:
+    serializedVersion: 2
+    x: 194
+    y: 784
+    width: 96
+    height: 112
+  parentTree: {fileID: 11400000}
+  nodeType: 0
+  Image: {fileID: 2800000, guid: cb16a666a23ef7944a2671747a0dbd28, type: 3}
+  DisabledImage: {fileID: 0}
+  isValid: 0
+  description: 
+  explanation: 
+  isInResearch: 0
+  tier: {fileID: 114722174694080936}
+  cost:
+  - {fileID: 114732046221980630}
+--- !u!114 &114775930701198968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f33da2dfabdea48bfd7bb631388197, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ConditionType: 0
+  Value: 1
+  Description: Scout must be active.
+--- !u!114 &114778086364624070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98f9ce8f8d72a2c468f63aec748721cc, type: 3}
+  m_Name: Summoner
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  nodeRect:
+    serializedVersion: 2
+    x: 1071
+    y: 417
+    width: 96
+    height: 112
+  parentTree: {fileID: 11400000}
+  nodeType: 0
+  Image: {fileID: 2800000, guid: cb16a666a23ef7944a2671747a0dbd28, type: 3}
+  DisabledImage: {fileID: 0}
+  isValid: 1
+  description: 
+  explanation: 
+  isInResearch: 0
+  tier: {fileID: 114174141379732096}
+  cost:
+  - {fileID: 114061268775972046}
+--- !u!114 &114780829945879986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f33da2dfabdea48bfd7bb631388197, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ConditionType: 0
+  Value: 1
+  Description: Druid must be active.
+--- !u!114 &114785251745590622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75df8525b622e5843ade7cf6f3703b93, type: 3}
+  m_Name: Default Cost
+  m_EditorClassIdentifier: 
+  Cost: 1
+  Bought: 0
+  WillBuy: 0
+  Description: 
+--- !u!114 &114795064497974766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98f9ce8f8d72a2c468f63aec748721cc, type: 3}
+  m_Name: Monster Knight
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  nodeRect:
+    serializedVersion: 2
+    x: 193
+    y: 935
+    width: 96
+    height: 112
+  parentTree: {fileID: 11400000}
+  nodeType: 0
+  Image: {fileID: 2800000, guid: cb16a666a23ef7944a2671747a0dbd28, type: 3}
+  DisabledImage: {fileID: 0}
+  isValid: 0
+  description: 
+  explanation: 
+  isInResearch: 0
+  tier: {fileID: 114722174694080936}
+  cost:
+  - {fileID: 114955076268421422}
+--- !u!114 &114795388595493806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75df8525b622e5843ade7cf6f3703b93, type: 3}
+  m_Name: Default Cost
+  m_EditorClassIdentifier: 
+  Cost: 1
+  Bought: 0
+  WillBuy: 0
+  Description: 
+--- !u!114 &114801493690750618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef7559b44c1dfd4993445312a298f30, type: 3}
+  m_Name: Summoner_Necromancer
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  fromNode: {fileID: 114778086364624070}
+  toNode: {fileID: 114142903920741672}
+  curvePoints:
+  - {x: 1167, y: 473, z: 0}
+  - {x: 1179.3679, y: 475.12796, z: 0}
+  - {x: 1187.2242, y: 480.90402, z: 0}
+  - {x: 1191.6959, y: 489.41602, z: 0}
+  - {x: 1193.9121, y: 499.752, z: 0}
+  - {x: 1195, y: 511, z: 0}
+  - {x: 1196.088, y: 522.248, z: 0}
+  - {x: 1198.304, y: 532.584, z: 0}
+  - {x: 1202.776, y: 541.09595, z: 0}
+  - {x: 1223, y: 549, z: 0}
+  curGraph: {fileID: 11400000}
+  Name: 
+  Conditions:
+  - {fileID: 114132332282311364}
+  connectionType: 0
+--- !u!114 &114807816117975146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75df8525b622e5843ade7cf6f3703b93, type: 3}
+  m_Name: Default Cost
+  m_EditorClassIdentifier: 
+  Cost: 1
+  Bought: 0
+  WillBuy: 0
+  Description: 
+--- !u!114 &114816514942733448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75df8525b622e5843ade7cf6f3703b93, type: 3}
+  m_Name: Default Cost
+  m_EditorClassIdentifier: 
+  Cost: 1
+  Bought: 0
+  WillBuy: 0
+  Description: 
+--- !u!114 &114827953270435338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f33da2dfabdea48bfd7bb631388197, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ConditionType: 0
+  Value: 1
+  Description: Assassin must be active.
+--- !u!114 &114835681537188566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f33da2dfabdea48bfd7bb631388197, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ConditionType: 0
+  Value: 1
+  Description: Warlord must be active.
+--- !u!114 &114851636129270264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef7559b44c1dfd4993445312a298f30, type: 3}
+  m_Name: BlueMage_Elementalist
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  fromNode: {fileID: 114118316818166302}
+  toNode: {fileID: 114538852709959948}
+  curvePoints:
+  - {x: 1002, y: 775, z: 0}
+  - {x: 1014.7879, y: 778.92, z: 0}
+  - {x: 1023.78406, y: 789.56006, z: 0}
+  - {x: 1029.9359, y: 805.24, z: 0}
+  - {x: 1034.1921, y: 824.2801, z: 0}
+  - {x: 1037.5, y: 845, z: 0}
+  - {x: 1040.8081, y: 865.7199, z: 0}
+  - {x: 1045.064, y: 884.76, z: 0}
+  - {x: 1051.2161, y: 900.44, z: 0}
+  - {x: 1073, y: 915, z: 0}
+  curGraph: {fileID: 11400000}
+  Name: 
+  Conditions:
+  - {fileID: 114955426495389592}
+  connectionType: 0
+--- !u!114 &114855063059632936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef7559b44c1dfd4993445312a298f30, type: 3}
+  m_Name: Paladin_Cavalier
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  fromNode: {fileID: 114673724610059898}
+  toNode: {fileID: 114488357039352682}
+  curvePoints:
+  - {x: 443, y: 581, z: 0}
+  - {x: 446.99597, y: 577.63995, z: 0}
+  - {x: 432.128, y: 568.52, z: 0}
+  - {x: 403.11203, y: 555.08, z: 0}
+  - {x: 364.66403, y: 538.7601, z: 0}
+  - {x: 321.5, y: 521, z: 0}
+  - {x: 278.33597, y: 503.24, z: 0}
+  - {x: 239.888, y: 486.91998, z: 0}
+  - {x: 210.872, y: 473.48004, z: 0}
+  - {x: 200, y: 461, z: 0}
+  curGraph: {fileID: 11400000}
+  Name: 
+  Conditions:
+  - {fileID: 114423239359411840}
+  connectionType: 0
+--- !u!114 &114872964853069318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef7559b44c1dfd4993445312a298f30, type: 3}
+  m_Name: Samurai_Hero
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  fromNode: {fileID: 114474860981441610}
+  toNode: {fileID: 114589199564201668}
+  curvePoints:
+  - {x: 156, y: 536, z: 0}
+  - {x: 163.99998, y: 541.4879, z: 0}
+  - {x: 160.00002, y: 556.38403, z: 0}
+  - {x: 147, y: 578.336, z: 0}
+  - {x: 128.00002, y: 604.99207, z: 0}
+  - {x: 106, y: 634, z: 0}
+  - {x: 83.99999, y: 663.008, z: 0}
+  - {x: 65, y: 689.66394, z: 0}
+  - {x: 51.999996, y: 711.616, z: 0}
+  - {x: 56, y: 732, z: 0}
+  curGraph: {fileID: 11400000}
+  Name: 
+  Conditions:
+  - {fileID: 114629194145155094}
+  connectionType: 0
+--- !u!114 &114873498078064612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98f9ce8f8d72a2c468f63aec748721cc, type: 3}
+  m_Name: Rogue
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  nodeRect:
+    serializedVersion: 2
+    x: 618
+    y: 465
+    width: 96
+    height: 112
+  parentTree: {fileID: 11400000}
+  nodeType: 0
+  Image: {fileID: 2800000, guid: cb16a666a23ef7944a2671747a0dbd28, type: 3}
+  DisabledImage: {fileID: 0}
+  isValid: 1
+  description: 
+  explanation: 
+  isInResearch: 0
+  tier: {fileID: 114463332620402592}
+  cost:
+  - {fileID: 114336602018090170}
+--- !u!114 &114885037480167068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f33da2dfabdea48bfd7bb631388197, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ConditionType: 0
+  Value: 1
+  Description: Monster Knight must be active.
+--- !u!114 &114886780035288586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75df8525b622e5843ade7cf6f3703b93, type: 3}
+  m_Name: Default Cost
+  m_EditorClassIdentifier: 
+  Cost: 1
+  Bought: 0
+  WillBuy: 0
+  Description: 
+--- !u!114 &114896057475340924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98f9ce8f8d72a2c468f63aec748721cc, type: 3}
+  m_Name: Red Mage
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  nodeRect:
+    serializedVersion: 2
+    x: 912
+    y: 517
+    width: 96
+    height: 112
+  parentTree: {fileID: 11400000}
+  nodeType: 0
+  Image: {fileID: 2800000, guid: cb16a666a23ef7944a2671747a0dbd28, type: 3}
+  DisabledImage: {fileID: 0}
+  isValid: 1
+  description: 
+  explanation: 
+  isInResearch: 0
+  tier: {fileID: 114174141379732096}
+  cost:
+  - {fileID: 114390105299688634}
+--- !u!114 &114908774821636006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef7559b44c1dfd4993445312a298f30, type: 3}
+  m_Name: Knight_Samurai
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  fromNode: {fileID: 114577241287501928}
+  toNode: {fileID: 114474860981441610}
+  curvePoints:
+  - {x: 296, y: 630, z: 0}
+  - {x: 300.192, y: 627.368, z: 0}
+  - {x: 285.85602, y: 620.22406, z: 0}
+  - {x: 257.624, y: 609.696, z: 0}
+  - {x: 220.128, y: 596.91205, z: 0}
+  - {x: 178, y: 583, z: 0}
+  - {x: 135.87198, y: 569.088, z: 0}
+  - {x: 98.37601, y: 556.30396, z: 0}
+  - {x: 70.144, y: 545.776, z: 0}
+  - {x: 60, y: 536, z: 0}
+  curGraph: {fileID: 11400000}
+  Name: 
+  Conditions:
+  - {fileID: 114755416964249664}
+  connectionType: 0
+--- !u!114 &114928360784660936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75df8525b622e5843ade7cf6f3703b93, type: 3}
+  m_Name: Default Cost
+  m_EditorClassIdentifier: 
+  Cost: 1
+  Bought: 0
+  WillBuy: 0
+  Description: 
+--- !u!114 &114953816595460952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75df8525b622e5843ade7cf6f3703b93, type: 3}
+  m_Name: Default Cost
+  m_EditorClassIdentifier: 
+  Cost: 1
+  Bought: 0
+  WillBuy: 0
+  Description: 
+--- !u!114 &114954141775004306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f33da2dfabdea48bfd7bb631388197, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ConditionType: 0
+  Value: 1
+  Description: Knight must be active.
+--- !u!114 &114955076268421422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75df8525b622e5843ade7cf6f3703b93, type: 3}
+  m_Name: Default Cost
+  m_EditorClassIdentifier: 
+  Cost: 1
+  Bought: 0
+  WillBuy: 0
+  Description: 
+--- !u!114 &114955426495389592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f33da2dfabdea48bfd7bb631388197, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ConditionType: 0
+  Value: 1
+  Description: Blue Mage must be active.
+--- !u!114 &114964690669962592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f33da2dfabdea48bfd7bb631388197, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ConditionType: 0
+  Value: 1
+  Description: Pirate must be active.
+--- !u!114 &114975620852407720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f33da2dfabdea48bfd7bb631388197, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ConditionType: 0
+  Value: 1
+  Description: Mage must be active.
+--- !u!114 &114976751243635856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef7559b44c1dfd4993445312a298f30, type: 3}
+  m_Name: Rogue_Assassin
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  fromNode: {fileID: 114873498078064612}
+  toNode: {fileID: 114033137622881124}
+  curvePoints:
+  - {x: 714, y: 521, z: 0}
+  - {x: 725.192, y: 516.85596, z: 0}
+  - {x: 729.8561, y: 505.6081, z: 0}
+  - {x: 729.624, y: 489.032, z: 0}
+  - {x: 726.12805, y: 468.90405, z: 0}
+  - {x: 721, y: 447, z: 0}
+  - {x: 715.87195, y: 425.096, z: 0}
+  - {x: 712.376, y: 404.96802, z: 0}
+  - {x: 712.144, y: 388.39197, z: 0}
+  - {x: 728, y: 373, z: 0}
+  curGraph: {fileID: 11400000}
+  Name: 
+  Conditions:
+  - {fileID: 114682483593542582}
+  connectionType: 0
+--- !u!114 &114983041285509774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef7559b44c1dfd4993445312a298f30, type: 3}
+  m_Name: Druid_Shaman
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  fromNode: {fileID: 114751849836228286}
+  toNode: {fileID: 114284801554659266}
+  curvePoints:
+  - {x: 1169, y: 775, z: 0}
+  - {x: 1181.284, y: 773.34796, z: 0}
+  - {x: 1188.912, y: 768.8641, z: 0}
+  - {x: 1193.048, y: 762.256, z: 0}
+  - {x: 1194.8561, y: 754.23206, z: 0}
+  - {x: 1195.5, y: 745.5, z: 0}
+  - {x: 1196.144, y: 736.76794, z: 0}
+  - {x: 1197.952, y: 728.744, z: 0}
+  - {x: 1202.0879, y: 722.136, z: 0}
+  - {x: 1222, y: 716, z: 0}
+  curGraph: {fileID: 11400000}
+  Name: 
+  Conditions:
+  - {fileID: 114780829945879986}
+  connectionType: 0
+--- !u!114 &114987034956385388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef7559b44c1dfd4993445312a298f30, type: 3}
+  m_Name: Warlord_Hero
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  fromNode: {fileID: 114585626173334172}
+  toNode: {fileID: 114589199564201668}
+  curvePoints:
+  - {x: 154, y: 920, z: 0}
+  - {x: 162.05598, y: 914.7359, z: 0}
+  - {x: 158.20801, y: 900.44806, z: 0}
+  - {x: 145.432, y: 879.392, z: 0}
+  - {x: 126.70401, y: 853.8241, z: 0}
+  - {x: 105, y: 826, z: 0}
+  - {x: 83.29599, y: 798.17596, z: 0}
+  - {x: 64.568, y: 772.608, z: 0}
+  - {x: 51.792, y: 751.552, z: 0}
+  - {x: 56, y: 732, z: 0}
+  curGraph: {fileID: 11400000}
+  Name: 
+  Conditions:
+  - {fileID: 114835681537188566}
+  connectionType: 0
+--- !u!114 &114988774168152658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f33da2dfabdea48bfd7bb631388197, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ConditionType: 0
+  Value: 1
+  Description: Summoner must be active.
+--- !u!114 &114998241287851562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef7559b44c1dfd4993445312a298f30, type: 3}
+  m_Name: Assassin_Scout
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  fromNode: {fileID: 114033137622881124}
+  toNode: {fileID: 114154376307502498}
+  curvePoints:
+  - {x: 824, y: 373, z: 0}
+  - {x: 834.43585, y: 368.82797, z: 0}
+  - {x: 837.04803, y: 357.504, z: 0}
+  - {x: 833.792, y: 340.816, z: 0}
+  - {x: 826.62396, y: 320.55203, z: 0}
+  - {x: 817.5, y: 298.5, z: 0}
+  - {x: 808.376, y: 276.448, z: 0}
+  - {x: 801.208, y: 256.18402, z: 0}
+  - {x: 797.95197, y: 239.496, z: 0}
+  - {x: 811, y: 224, z: 0}
+  curGraph: {fileID: 11400000}
+  Name: 
+  Conditions:
+  - {fileID: 114628203729855952}
+  connectionType: 0

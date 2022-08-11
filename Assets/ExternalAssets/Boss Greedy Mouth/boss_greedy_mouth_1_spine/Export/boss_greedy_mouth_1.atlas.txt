@@ -1,0 +1,304 @@
+
+boss_greedy_mouth_1.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+attendant_1
+  rotate: false
+  xy: 918, 313
+  size: 100, 107
+  orig: 100, 107
+  offset: 0, 0
+  index: -1
+attendant_2
+  rotate: true
+  xy: 652, 28
+  size: 105, 113
+  orig: 105, 113
+  offset: 0, 0
+  index: -1
+body
+  rotate: false
+  xy: 610, 710
+  size: 335, 310
+  orig: 335, 310
+  offset: 0, 0
+  index: -1
+eye_1
+  rotate: false
+  xy: 789, 151
+  size: 122, 142
+  orig: 122, 142
+  offset: 0, 0
+  index: -1
+eye_2
+  rotate: false
+  xy: 882, 566
+  size: 122, 142
+  orig: 122, 142
+  offset: 0, 0
+  index: -1
+eye_3
+  rotate: true
+  xy: 774, 295
+  size: 122, 142
+  orig: 122, 142
+  offset: 0, 0
+  index: -1
+head_1
+  rotate: false
+  xy: 881, 422
+  size: 122, 142
+  orig: 122, 142
+  offset: 0, 0
+  index: -1
+head_2
+  rotate: false
+  xy: 2, 2
+  size: 102, 77
+  orig: 102, 77
+  offset: 0, 0
+  index: -1
+mouth_l_1
+  rotate: true
+  xy: 774, 419
+  size: 152, 105
+  orig: 152, 105
+  offset: 0, 0
+  index: -1
+mouth_l_2
+  rotate: true
+  xy: 947, 897
+  size: 123, 75
+  orig: 123, 75
+  offset: 0, 0
+  index: -1
+mouth_m_1
+  rotate: true
+  xy: 652, 289
+  size: 282, 120
+  orig: 282, 120
+  offset: 0, 0
+  index: -1
+mouth_m_2
+  rotate: false
+  xy: 610, 573
+  size: 270, 135
+  orig: 270, 135
+  offset: 0, 0
+  index: -1
+mouth_r_1
+  rotate: false
+  xy: 610, 513
+  size: 35, 58
+  orig: 35, 58
+  offset: 0, 0
+  index: -1
+mouth_r_2
+  rotate: false
+  xy: 947, 850
+  size: 32, 45
+  orig: 32, 45
+  offset: 0, 0
+  index: -1
+neck
+  rotate: false
+  xy: 652, 135
+  size: 135, 152
+  orig: 135, 152
+  offset: 0, 0
+  index: -1
+skill1_1
+  rotate: false
+  xy: 2, 510
+  size: 606, 510
+  orig: 606, 510
+  offset: 0, 0
+  index: -1
+tentacle_1
+  rotate: false
+  xy: 2, 81
+  size: 648, 427
+  orig: 648, 427
+  offset: 0, 0
+  index: -1
+
+boss_greedy_mouth_12.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+skill1_2
+  rotate: false
+  xy: 2, 431
+  size: 606, 510
+  orig: 606, 510
+  offset: 0, 0
+  index: -1
+tentacle_2
+  rotate: false
+  xy: 2, 2
+  size: 648, 427
+  orig: 648, 427
+  offset: 0, 0
+  index: -1
+
+boss_greedy_mouth_13.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+skill1_3
+  rotate: false
+  xy: 2, 431
+  size: 606, 510
+  orig: 606, 510
+  offset: 0, 0
+  index: -1
+tentacle_3
+  rotate: false
+  xy: 2, 2
+  size: 648, 427
+  orig: 648, 427
+  offset: 0, 0
+  index: -1
+
+boss_greedy_mouth_14.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+skill2_1
+  rotate: false
+  xy: 2, 431
+  size: 561, 523
+  orig: 561, 523
+  offset: 0, 0
+  index: -1
+tentacle_4
+  rotate: false
+  xy: 2, 2
+  size: 648, 427
+  orig: 648, 427
+  offset: 0, 0
+  index: -1
+
+boss_greedy_mouth_15.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+skill2_2
+  rotate: false
+  xy: 2, 431
+  size: 561, 523
+  orig: 561, 523
+  offset: 0, 0
+  index: -1
+tentacle_5
+  rotate: false
+  xy: 2, 2
+  size: 648, 427
+  orig: 648, 427
+  offset: 0, 0
+  index: -1
+
+boss_greedy_mouth_16.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+skill2_3
+  rotate: false
+  xy: 2, 431
+  size: 561, 523
+  orig: 561, 523
+  offset: 0, 0
+  index: -1
+tentacle_6
+  rotate: false
+  xy: 2, 2
+  size: 648, 427
+  orig: 648, 427
+  offset: 0, 0
+  index: -1
+
+boss_greedy_mouth_17.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+skill2_4
+  rotate: false
+  xy: 2, 431
+  size: 561, 523
+  orig: 561, 523
+  offset: 0, 0
+  index: -1
+tentacle_7
+  rotate: false
+  xy: 2, 2
+  size: 648, 427
+  orig: 648, 427
+  offset: 0, 0
+  index: -1
+
+boss_greedy_mouth_18.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+skill2_5
+  rotate: false
+  xy: 2, 431
+  size: 561, 523
+  orig: 561, 523
+  offset: 0, 0
+  index: -1
+tentacle_8
+  rotate: false
+  xy: 2, 2
+  size: 648, 427
+  orig: 648, 427
+  offset: 0, 0
+  index: -1
+
+boss_greedy_mouth_19.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+skill2_6
+  rotate: false
+  xy: 2, 2
+  size: 561, 523
+  orig: 561, 523
+  offset: 0, 0
+  index: -1
+
+boss_greedy_mouth_110.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+skill2_7
+  rotate: false
+  xy: 2, 2
+  size: 561, 523
+  orig: 561, 523
+  offset: 0, 0
+  index: -1
+
+boss_greedy_mouth_111.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+skill2_8
+  rotate: false
+  xy: 2, 2
+  size: 561, 523
+  orig: 561, 523
+  offset: 0, 0
+  index: -1

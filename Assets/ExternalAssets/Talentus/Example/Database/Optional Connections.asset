@@ -1,0 +1,1954 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 563747bf02184ce4ea14006d97b0c701, type: 3}
+  m_Name: Optional Connections
+  m_EditorClassIdentifier: 
+  treeName: Optional Connections
+  talents:
+  - {fileID: 114396520596829202}
+  - {fileID: 114749816706371988}
+  - {fileID: 114343832294438398}
+  - {fileID: 114423004575848686}
+  - {fileID: 114638598253506714}
+  - {fileID: 114711882827667182}
+  - {fileID: 114270921079028674}
+  - {fileID: 114092282395284768}
+  - {fileID: 114278608803720512}
+  - {fileID: 114573691611418214}
+  - {fileID: 114282626192497494}
+  - {fileID: 114704505731144994}
+  - {fileID: 114931794373650562}
+  - {fileID: 114278557321013344}
+  - {fileID: 114486524169732512}
+  - {fileID: 114307369075968740}
+  - {fileID: 114220084749222670}
+  - {fileID: 114887864500589444}
+  - {fileID: 114710535494961048}
+  connections:
+  - {fileID: 114846044647341282}
+  - {fileID: 114957123200558852}
+  - {fileID: 114559598638031012}
+  - {fileID: 114991813509337622}
+  - {fileID: 114411812832394578}
+  - {fileID: 114403959582505368}
+  - {fileID: 114155981429423686}
+  - {fileID: 114771828012985072}
+  - {fileID: 114760717373283476}
+  - {fileID: 114665532834350870}
+  - {fileID: 114055989258694926}
+  - {fileID: 114768694597752246}
+  - {fileID: 114397891566500570}
+  - {fileID: 114233450153273016}
+  - {fileID: 114629737041060218}
+  - {fileID: 114313103876098694}
+  - {fileID: 114231823520881002}
+  - {fileID: 114090084680060224}
+  - {fileID: 114092181046175028}
+  - {fileID: 114683652408882506}
+  - {fileID: 114273720408574690}
+  tiers:
+  - {fileID: 114208578110036822}
+  selectedNode: {fileID: 0}
+  selectedConnection: {fileID: 0}
+  wantsConnection: 0
+  connectionNode: {fileID: 114710535494961048}
+  showProperties: 0
+  PanX: -80
+  PanY: -116
+  mouseOverProperties: 0
+  propertyWidth: 483.25
+  PointsToAssign: 7
+--- !u!114 &114043510636080828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f33da2dfabdea48bfd7bb631388197, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ConditionType: 0
+  Value: 1
+  Description: TalentL must be active.
+--- !u!114 &114055989258694926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef7559b44c1dfd4993445312a298f30, type: 3}
+  m_Name: TalentM_TalentL
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  fromNode: {fileID: 114931794373650562}
+  toNode: {fileID: 114704505731144994}
+  curvePoints:
+  - {x: 1144, y: 965, z: 0}
+  - {x: 1147.4639, y: 961.4719, z: 0}
+  - {x: 1131.1522, y: 951.89606, z: 0}
+  - {x: 1100.008, y: 937.7841, z: 0}
+  - {x: 1058.9761, y: 920.648, z: 0}
+  - {x: 1013, y: 902, z: 0}
+  - {x: 967.024, y: 883.3519, z: 0}
+  - {x: 925.99194, y: 866.216, z: 0}
+  - {x: 894.848, y: 852.104, z: 0}
+  - {x: 882, y: 839, z: 0}
+  curGraph: {fileID: 11400000}
+  Name: 
+  Conditions:
+  - {fileID: 114786006722755528}
+  connectionType: 1
+--- !u!114 &114088999162552256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f33da2dfabdea48bfd7bb631388197, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ConditionType: 0
+  Value: 1
+  Description: TalentK must be active.
+--- !u!114 &114089778313472654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f33da2dfabdea48bfd7bb631388197, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ConditionType: 0
+  Value: 1
+  Description: TalentH must be active.
+--- !u!114 &114090084680060224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef7559b44c1dfd4993445312a298f30, type: 3}
+  m_Name: TalentP_TalentM
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  fromNode: {fileID: 114307369075968740}
+  toNode: {fileID: 114931794373650562}
+  curvePoints:
+  - {x: 1336, y: 965, z: 0}
+  - {x: 1338.7361, y: 964.99994, z: 0}
+  - {x: 1320.4481, y: 965.00006, z: 0}
+  - {x: 1286.3922, y: 965.00006, z: 0}
+  - {x: 1241.8242, y: 965, z: 0}
+  - {x: 1192, y: 965, z: 0}
+  - {x: 1142.176, y: 964.99994, z: 0}
+  - {x: 1097.608, y: 965, z: 0}
+  - {x: 1063.552, y: 965, z: 0}
+  - {x: 1048, y: 965, z: 0}
+  curGraph: {fileID: 11400000}
+  Name: 
+  Conditions:
+  - {fileID: 114519159986231462}
+  connectionType: 1
+--- !u!114 &114092181046175028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef7559b44c1dfd4993445312a298f30, type: 3}
+  m_Name: TalentQ_TalentR
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  fromNode: {fileID: 114220084749222670}
+  toNode: {fileID: 114887864500589444}
+  curvePoints:
+  - {x: 1289, y: 383, z: 0}
+  - {x: 1301.704, y: 386.89197, z: 0}
+  - {x: 1310.472, y: 397.45596, z: 0}
+  - {x: 1316.288, y: 413.02405, z: 0}
+  - {x: 1320.1361, y: 431.928, z: 0}
+  - {x: 1323, y: 452.5, z: 0}
+  - {x: 1325.864, y: 473.07202, z: 0}
+  - {x: 1329.7119, y: 491.97598, z: 0}
+  - {x: 1335.5281, y: 507.544, z: 0}
+  - {x: 1357, y: 522, z: 0}
+  curGraph: {fileID: 11400000}
+  Name: 
+  Conditions:
+  - {fileID: 114749360353250064}
+  connectionType: 1
+--- !u!114 &114092282395284768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98f9ce8f8d72a2c468f63aec748721cc, type: 3}
+  m_Name: TalentG
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  nodeRect:
+    serializedVersion: 2
+    x: 581
+    y: 331
+    width: 96
+    height: 112
+  parentTree: {fileID: 11400000}
+  nodeType: 0
+  Image: {fileID: 2800000, guid: e379ecca95e0ea64ca21ede78a3ed146, type: 3}
+  DisabledImage: {fileID: 0}
+  isValid: 1
+  description: 
+  explanation: 
+  isInResearch: 0
+  tier: {fileID: 114208578110036822}
+  cost:
+  - {fileID: 114725083482605966}
+--- !u!114 &114094689509897432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75df8525b622e5843ade7cf6f3703b93, type: 3}
+  m_Name: Default Cost
+  m_EditorClassIdentifier: 
+  Cost: 1
+  Bought: 0
+  WillBuy: 0
+  Description: 
+--- !u!114 &114107851618149974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75df8525b622e5843ade7cf6f3703b93, type: 3}
+  m_Name: Default Cost
+  m_EditorClassIdentifier: 
+  Cost: 1
+  Bought: 0
+  WillBuy: 0
+  Description: 
+--- !u!114 &114126811845290910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75df8525b622e5843ade7cf6f3703b93, type: 3}
+  m_Name: Default Cost
+  m_EditorClassIdentifier: 
+  Cost: 1
+  Bought: 0
+  WillBuy: 0
+  Description: 
+--- !u!114 &114134985421762598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75df8525b622e5843ade7cf6f3703b93, type: 3}
+  m_Name: Default Cost
+  m_EditorClassIdentifier: 
+  Cost: 1
+  Bought: 0
+  WillBuy: 0
+  Description: 
+--- !u!114 &114154242063703672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f33da2dfabdea48bfd7bb631388197, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ConditionType: 0
+  Value: 1
+  Description: TalentL must be active.
+--- !u!114 &114155981429423686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef7559b44c1dfd4993445312a298f30, type: 3}
+  m_Name: TalentI_TalentJ
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  fromNode: {fileID: 114278608803720512}
+  toNode: {fileID: 114573691611418214}
+  curvePoints:
+  - {x: 669, y: 643, z: 0}
+  - {x: 682.20795, y: 639.668, z: 0}
+  - {x: 692.344, y: 630.6241, z: 0}
+  - {x: 700.176, y: 617.296, z: 0}
+  - {x: 706.4721, y: 601.11206, z: 0}
+  - {x: 712, y: 583.5, z: 0}
+  - {x: 717.528, y: 565.888, z: 0}
+  - {x: 723.824, y: 549.70404, z: 0}
+  - {x: 731.656, y: 536.37604, z: 0}
+  - {x: 755, y: 524, z: 0}
+  curGraph: {fileID: 11400000}
+  Name: 
+  Conditions:
+  - {fileID: 114776196741982146}
+  connectionType: 1
+--- !u!114 &114204647705334858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f33da2dfabdea48bfd7bb631388197, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ConditionType: 0
+  Value: 1
+  Description: TalentB must be active.
+--- !u!114 &114208578110036822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18962e5781387be42968e80823f11f33, type: 3}
+  m_Name: Tier 1
+  m_EditorClassIdentifier: 
+  parentTree: {fileID: 11400000}
+  editorColor: {r: 0, g: 0, b: 1, a: 1}
+  description: 
+--- !u!114 &114209323108207550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f33da2dfabdea48bfd7bb631388197, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ConditionType: 0
+  Value: 1
+  Description: TalentO must be active.
+--- !u!114 &114209995568949102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75df8525b622e5843ade7cf6f3703b93, type: 3}
+  m_Name: Default Cost
+  m_EditorClassIdentifier: 
+  Cost: 1
+  Bought: 0
+  WillBuy: 0
+  Description: 
+--- !u!114 &114220084749222670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98f9ce8f8d72a2c468f63aec748721cc, type: 3}
+  m_Name: TalentQ
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  nodeRect:
+    serializedVersion: 2
+    x: 1193
+    y: 327
+    width: 96
+    height: 112
+  parentTree: {fileID: 11400000}
+  nodeType: 0
+  Image: {fileID: 2800000, guid: e15098e4a8a1dc24cba4e703ad9e7c56, type: 3}
+  DisabledImage: {fileID: 0}
+  isValid: 0
+  description: 
+  explanation: 
+  isInResearch: 0
+  tier: {fileID: 114208578110036822}
+  cost:
+  - {fileID: 114736048930031822}
+--- !u!114 &114231823520881002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef7559b44c1dfd4993445312a298f30, type: 3}
+  m_Name: TalentJ_TalentL
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  fromNode: {fileID: 114573691611418214}
+  toNode: {fileID: 114704505731144994}
+  curvePoints:
+  - {x: 851, y: 524, z: 0}
+  - {x: 862.6679, y: 532.81995, z: 0}
+  - {x: 868.6241, y: 556.76, z: 0}
+  - {x: 870.2961, y: 592.04, z: 0}
+  - {x: 869.11206, y: 634.88007, z: 0}
+  - {x: 866.5, y: 681.5, z: 0}
+  - {x: 863.888, y: 728.12, z: 0}
+  - {x: 862.704, y: 770.95996, z: 0}
+  - {x: 864.376, y: 806.24, z: 0}
+  - {x: 882, y: 839, z: 0}
+  curGraph: {fileID: 11400000}
+  Name: 
+  Conditions:
+  - {fileID: 114757487112581164}
+  connectionType: 1
+--- !u!114 &114233450153273016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef7559b44c1dfd4993445312a298f30, type: 3}
+  m_Name: TalentM_TalentN
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  fromNode: {fileID: 114931794373650562}
+  toNode: {fileID: 114278557321013344}
+  curvePoints:
+  - {x: 1144, y: 965, z: 0}
+  - {x: 1147.2959, y: 968.38794, z: 0}
+  - {x: 1130.5282, y: 977.58405, z: 0}
+  - {x: 1098.712, y: 991.1361, z: 0}
+  - {x: 1056.864, y: 1007.59204, z: 0}
+  - {x: 1010, y: 1025.5, z: 0}
+  - {x: 963.136, y: 1043.408, z: 0}
+  - {x: 921.2881, y: 1059.864, z: 0}
+  - {x: 889.47205, y: 1073.416, z: 0}
+  - {x: 876, y: 1086, z: 0}
+  curGraph: {fileID: 11400000}
+  Name: 
+  Conditions:
+  - {fileID: 114354277629959132}
+  connectionType: 1
+--- !u!114 &114270249162404608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f33da2dfabdea48bfd7bb631388197, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ConditionType: 0
+  Value: 1
+  Description: TalentN must be active.
+--- !u!114 &114270921079028674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98f9ce8f8d72a2c468f63aec748721cc, type: 3}
+  m_Name: TalentH
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  nodeRect:
+    serializedVersion: 2
+    x: 577
+    y: 460
+    width: 96
+    height: 112
+  parentTree: {fileID: 11400000}
+  nodeType: 0
+  Image: {fileID: 2800000, guid: a162c9b26eddeb24e8a278001eb90b86, type: 3}
+  DisabledImage: {fileID: 0}
+  isValid: 1
+  description: 
+  explanation: 
+  isInResearch: 0
+  tier: {fileID: 114208578110036822}
+  cost:
+  - {fileID: 114616408217694022}
+--- !u!114 &114273720408574690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef7559b44c1dfd4993445312a298f30, type: 3}
+  m_Name: TalentS_TalentQ
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  fromNode: {fileID: 114710535494961048}
+  toNode: {fileID: 114220084749222670}
+  curvePoints:
+  - {x: 1106, y: 382, z: 0}
+  - {x: 1119.2358, y: 382.02795, z: 0}
+  - {x: 1129.448, y: 382.10403, z: 0}
+  - {x: 1137.3921, y: 382.216, z: 0}
+  - {x: 1143.8242, y: 382.35202, z: 0}
+  - {x: 1149.5, y: 382.5, z: 0}
+  - {x: 1155.176, y: 382.64798, z: 0}
+  - {x: 1161.608, y: 382.784, z: 0}
+  - {x: 1169.552, y: 382.896, z: 0}
+  - {x: 1193, y: 383, z: 0}
+  curGraph: {fileID: 11400000}
+  Name: 
+  Conditions:
+  - {fileID: 114817230750343286}
+  connectionType: 1
+--- !u!114 &114278557321013344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98f9ce8f8d72a2c468f63aec748721cc, type: 3}
+  m_Name: TalentN
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  nodeRect:
+    serializedVersion: 2
+    x: 876
+    y: 1030
+    width: 96
+    height: 112
+  parentTree: {fileID: 11400000}
+  nodeType: 0
+  Image: {fileID: 2800000, guid: 4a6a3fb790c41924ca8f4a8b824ebf70, type: 3}
+  DisabledImage: {fileID: 0}
+  isValid: 0
+  description: 
+  explanation: 
+  isInResearch: 0
+  tier: {fileID: 114208578110036822}
+  cost:
+  - {fileID: 114094689509897432}
+--- !u!114 &114278608803720512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98f9ce8f8d72a2c468f63aec748721cc, type: 3}
+  m_Name: TalentI
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  nodeRect:
+    serializedVersion: 2
+    x: 573
+    y: 587
+    width: 96
+    height: 112
+  parentTree: {fileID: 11400000}
+  nodeType: 0
+  Image: {fileID: 2800000, guid: 3bb60149a99518a4c83c36a917522a38, type: 3}
+  DisabledImage: {fileID: 0}
+  isValid: 1
+  description: 
+  explanation: 
+  isInResearch: 0
+  tier: {fileID: 114208578110036822}
+  cost:
+  - {fileID: 114682281690651140}
+--- !u!114 &114282626192497494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98f9ce8f8d72a2c468f63aec748721cc, type: 3}
+  m_Name: TalentK
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  nodeRect:
+    serializedVersion: 2
+    x: 716
+    y: 901
+    width: 96
+    height: 112
+  parentTree: {fileID: 11400000}
+  nodeType: 0
+  Image: {fileID: 2800000, guid: 11a7699684273ea4794ce4377f2336dc, type: 3}
+  DisabledImage: {fileID: 0}
+  isValid: 0
+  description: 
+  explanation: 
+  isInResearch: 0
+  tier: {fileID: 114208578110036822}
+  cost:
+  - {fileID: 114304202591728250}
+--- !u!114 &114304202591728250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75df8525b622e5843ade7cf6f3703b93, type: 3}
+  m_Name: Default Cost
+  m_EditorClassIdentifier: 
+  Cost: 1
+  Bought: 0
+  WillBuy: 0
+  Description: 
+--- !u!114 &114307369075968740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98f9ce8f8d72a2c468f63aec748721cc, type: 3}
+  m_Name: TalentP
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  nodeRect:
+    serializedVersion: 2
+    x: 1240
+    y: 909
+    width: 96
+    height: 112
+  parentTree: {fileID: 11400000}
+  nodeType: 0
+  Image: {fileID: 2800000, guid: 6329d43cf8e69b14a9ac696994d461b5, type: 3}
+  DisabledImage: {fileID: 0}
+  isValid: 1
+  description: 
+  explanation: 
+  isInResearch: 0
+  tier: {fileID: 114208578110036822}
+  cost:
+  - {fileID: 114812936924191676}
+--- !u!114 &114311554298622904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75df8525b622e5843ade7cf6f3703b93, type: 3}
+  m_Name: Default Cost
+  m_EditorClassIdentifier: 
+  Cost: 1
+  Bought: 0
+  WillBuy: 1
+  Description: 
+--- !u!114 &114313103876098694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef7559b44c1dfd4993445312a298f30, type: 3}
+  m_Name: TalentN_TalentK
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  fromNode: {fileID: 114278557321013344}
+  toNode: {fileID: 114282626192497494}
+  curvePoints:
+  - {x: 972, y: 1086, z: 0}
+  - {x: 975.63196, y: 1082.388, z: 0}
+  - {x: 959.77606, y: 1072.584, z: 0}
+  - {x: 929.30396, y: 1058.1361, z: 0}
+  - {x: 889.088, y: 1040.5922, z: 0}
+  - {x: 844, y: 1021.5, z: 0}
+  - {x: 798.912, y: 1002.4081, z: 0}
+  - {x: 758.69604, y: 984.864, z: 0}
+  - {x: 728.224, y: 970.416, z: 0}
+  - {x: 716, y: 957, z: 0}
+  curGraph: {fileID: 11400000}
+  Name: 
+  Conditions:
+  - {fileID: 114987199159544300}
+  connectionType: 1
+--- !u!114 &114336642329000172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f33da2dfabdea48bfd7bb631388197, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ConditionType: 0
+  Value: 1
+  Description: TalentE must be active.
+--- !u!114 &114343832294438398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98f9ce8f8d72a2c468f63aec748721cc, type: 3}
+  m_Name: TalentC
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  nodeRect:
+    serializedVersion: 2
+    x: 382
+    y: 266
+    width: 96
+    height: 112
+  parentTree: {fileID: 11400000}
+  nodeType: 0
+  Image: {fileID: 2800000, guid: c55057c3ab86e874580dda4de2bcf502, type: 3}
+  DisabledImage: {fileID: 0}
+  isValid: 1
+  description: 
+  explanation: 
+  isInResearch: 0
+  tier: {fileID: 114208578110036822}
+  cost:
+  - {fileID: 114939622572958662}
+--- !u!114 &114354277629959132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f33da2dfabdea48bfd7bb631388197, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ConditionType: 0
+  Value: 1
+  Description: TalentM must be active.
+--- !u!114 &114360808000745284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f33da2dfabdea48bfd7bb631388197, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ConditionType: 0
+  Value: 1
+  Description: TalentA must be active.
+--- !u!114 &114372914196042234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f33da2dfabdea48bfd7bb631388197, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ConditionType: 0
+  Value: 1
+  Description: TalentR must be active.
+--- !u!114 &114396520596829202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98f9ce8f8d72a2c468f63aec748721cc, type: 3}
+  m_Name: TalentA
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  nodeRect:
+    serializedVersion: 2
+    x: 216
+    y: 189
+    width: 96
+    height: 112
+  parentTree: {fileID: 11400000}
+  nodeType: 0
+  Image: {fileID: 2800000, guid: 7f8784f1bee35624a86234b984d3537b, type: 3}
+  DisabledImage: {fileID: 0}
+  isValid: 1
+  description: 
+  explanation: 
+  isInResearch: 0
+  tier: {fileID: 114208578110036822}
+  cost:
+  - {fileID: 114311554298622904}
+--- !u!114 &114397891566500570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef7559b44c1dfd4993445312a298f30, type: 3}
+  m_Name: TalentN_TalentM
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  fromNode: {fileID: 114278557321013344}
+  toNode: {fileID: 114931794373650562}
+  curvePoints:
+  - {x: 972, y: 1086, z: 0}
+  - {x: 984.9279, y: 1082.6119, z: 0}
+  - {x: 994.304, y: 1073.4159, z: 0}
+  - {x: 1001.0159, y: 1059.8641, z: 0}
+  - {x: 1005.9521, y: 1043.4081, z: 0}
+  - {x: 1010, y: 1025.5, z: 0}
+  - {x: 1014.0481, y: 1007.592, z: 0}
+  - {x: 1018.984, y: 991.13605, z: 0}
+  - {x: 1025.696, y: 977.584, z: 0}
+  - {x: 1048, y: 965, z: 0}
+  curGraph: {fileID: 11400000}
+  Name: 
+  Conditions:
+  - {fileID: 114861040662606126}
+  connectionType: 1
+--- !u!114 &114403959582505368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef7559b44c1dfd4993445312a298f30, type: 3}
+  m_Name: TalentH_TalentJ
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  fromNode: {fileID: 114270921079028674}
+  toNode: {fileID: 114573691611418214}
+  curvePoints:
+  - {x: 673, y: 516, z: 0}
+  - {x: 686.096, y: 516.22394, z: 0}
+  - {x: 695.928, y: 516.83203, z: 0}
+  - {x: 703.312, y: 517.728, z: 0}
+  - {x: 709.0641, y: 518.81604, z: 0}
+  - {x: 714, y: 520, z: 0}
+  - {x: 718.936, y: 521.184, z: 0}
+  - {x: 724.688, y: 522.272, z: 0}
+  - {x: 732.072, y: 523.168, z: 0}
+  - {x: 755, y: 524, z: 0}
+  curGraph: {fileID: 11400000}
+  Name: 
+  Conditions:
+  - {fileID: 114089778313472654}
+  connectionType: 1
+--- !u!114 &114411812832394578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef7559b44c1dfd4993445312a298f30, type: 3}
+  m_Name: TalentG_TalentJ
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  fromNode: {fileID: 114092282395284768}
+  toNode: {fileID: 114573691611418214}
+  curvePoints:
+  - {x: 677, y: 387, z: 0}
+  - {x: 689.98395, y: 390.83594, z: 0}
+  - {x: 699.512, y: 401.24802, z: 0}
+  - {x: 706.448, y: 416.592, z: 0}
+  - {x: 711.65607, y: 435.22406, z: 0}
+  - {x: 716, y: 455.5, z: 0}
+  - {x: 720.344, y: 475.776, z: 0}
+  - {x: 725.552, y: 494.40802, z: 0}
+  - {x: 732.48804, y: 509.752, z: 0}
+  - {x: 755, y: 524, z: 0}
+  curGraph: {fileID: 11400000}
+  Name: 
+  Conditions:
+  - {fileID: 114581628999992420}
+  connectionType: 0
+--- !u!114 &114423004575848686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98f9ce8f8d72a2c468f63aec748721cc, type: 3}
+  m_Name: TalentD
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  nodeRect:
+    serializedVersion: 2
+    x: 218
+    y: 520
+    width: 96
+    height: 112
+  parentTree: {fileID: 11400000}
+  nodeType: 0
+  Image: {fileID: 2800000, guid: 5360d537fa3ce9743ba066f726afcb41, type: 3}
+  DisabledImage: {fileID: 0}
+  isValid: 1
+  description: 
+  explanation: 
+  isInResearch: 0
+  tier: {fileID: 114208578110036822}
+  cost:
+  - {fileID: 114995376210689418}
+--- !u!114 &114430530086704940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75df8525b622e5843ade7cf6f3703b93, type: 3}
+  m_Name: Default Cost
+  m_EditorClassIdentifier: 
+  Cost: 1
+  Bought: 0
+  WillBuy: 0
+  Description: 
+--- !u!114 &114486524169732512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98f9ce8f8d72a2c468f63aec748721cc, type: 3}
+  m_Name: TalentO
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  nodeRect:
+    serializedVersion: 2
+    x: 515
+    y: 902
+    width: 96
+    height: 112
+  parentTree: {fileID: 11400000}
+  nodeType: 0
+  Image: {fileID: 2800000, guid: 8d179291512b3dc40a812f134ebda589, type: 3}
+  DisabledImage: {fileID: 0}
+  isValid: 1
+  description: 
+  explanation: 
+  isInResearch: 0
+  tier: {fileID: 114208578110036822}
+  cost:
+  - {fileID: 114634419996590454}
+--- !u!114 &114519159986231462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f33da2dfabdea48bfd7bb631388197, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ConditionType: 0
+  Value: 1
+  Description: TalentP must be active.
+--- !u!114 &114559598638031012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef7559b44c1dfd4993445312a298f30, type: 3}
+  m_Name: TalentD_TalentF
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  fromNode: {fileID: 114423004575848686}
+  toNode: {fileID: 114711882827667182}
+  curvePoints:
+  - {x: 314, y: 576, z: 0}
+  - {x: 327.57196, y: 578.18396, z: 0}
+  - {x: 338.69598, y: 584.11206, z: 0}
+  - {x: 347.984, y: 592.848, z: 0}
+  - {x: 356.04803, y: 603.4561, z: 0}
+  - {x: 363.5, y: 615, z: 0}
+  - {x: 370.952, y: 626.544, z: 0}
+  - {x: 379.016, y: 637.15204, z: 0}
+  - {x: 388.30402, y: 645.888, z: 0}
+  - {x: 413, y: 654, z: 0}
+  curGraph: {fileID: 11400000}
+  Name: 
+  Conditions:
+  - {fileID: 114820005700953688}
+  connectionType: 1
+--- !u!114 &114573691611418214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98f9ce8f8d72a2c468f63aec748721cc, type: 3}
+  m_Name: TalentJ
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  nodeRect:
+    serializedVersion: 2
+    x: 755
+    y: 468
+    width: 96
+    height: 112
+  parentTree: {fileID: 11400000}
+  nodeType: 0
+  Image: {fileID: 2800000, guid: 30eb432a70fcc36449ca32d026eefd60, type: 3}
+  DisabledImage: {fileID: 0}
+  isValid: 0
+  description: 
+  explanation: 
+  isInResearch: 0
+  tier: {fileID: 114208578110036822}
+  cost:
+  - {fileID: 114126811845290910}
+--- !u!114 &114579670466408736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f33da2dfabdea48bfd7bb631388197, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ConditionType: 0
+  Value: 1
+  Description: TalentK must be active.
+--- !u!114 &114581628999992420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f33da2dfabdea48bfd7bb631388197, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ConditionType: 0
+  Value: 1
+  Description: TalentG must be active.
+--- !u!114 &114616408217694022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75df8525b622e5843ade7cf6f3703b93, type: 3}
+  m_Name: Default Cost
+  m_EditorClassIdentifier: 
+  Cost: 1
+  Bought: 0
+  WillBuy: 0
+  Description: 
+--- !u!114 &114629737041060218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef7559b44c1dfd4993445312a298f30, type: 3}
+  m_Name: TalentO_TalentK
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  fromNode: {fileID: 114486524169732512}
+  toNode: {fileID: 114282626192497494}
+  curvePoints:
+  - {x: 611, y: 958, z: 0}
+  - {x: 624.7399, y: 957.97186, z: 0}
+  - {x: 636.32, y: 957.8961, z: 0}
+  - {x: 646.28, y: 957.78406, z: 0}
+  - {x: 655.16003, y: 957.648, z: 0}
+  - {x: 663.5, y: 957.5, z: 0}
+  - {x: 671.83997, y: 957.35205, z: 0}
+  - {x: 680.72, y: 957.21594, z: 0}
+  - {x: 690.68005, y: 957.104, z: 0}
+  - {x: 716, y: 957, z: 0}
+  curGraph: {fileID: 11400000}
+  Name: 
+  Conditions:
+  - {fileID: 114209323108207550}
+  connectionType: 0
+--- !u!114 &114634419996590454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75df8525b622e5843ade7cf6f3703b93, type: 3}
+  m_Name: Default Cost
+  m_EditorClassIdentifier: 
+  Cost: 1
+  Bought: 0
+  WillBuy: 0
+  Description: 
+--- !u!114 &114638598253506714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98f9ce8f8d72a2c468f63aec748721cc, type: 3}
+  m_Name: TalentE
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  nodeRect:
+    serializedVersion: 2
+    x: 218
+    y: 662
+    width: 96
+    height: 112
+  parentTree: {fileID: 11400000}
+  nodeType: 0
+  Image: {fileID: 2800000, guid: 89c5acfbe7a968c4e87b2607ae5cc6f5, type: 3}
+  DisabledImage: {fileID: 0}
+  isValid: 1
+  description: 
+  explanation: 
+  isInResearch: 0
+  tier: {fileID: 114208578110036822}
+  cost:
+  - {fileID: 114430530086704940}
+--- !u!114 &114653472245736914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75df8525b622e5843ade7cf6f3703b93, type: 3}
+  m_Name: Default Cost
+  m_EditorClassIdentifier: 
+  Cost: 1
+  Bought: 0
+  WillBuy: 0
+  Description: 
+--- !u!114 &114655360545390072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f33da2dfabdea48bfd7bb631388197, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ConditionType: 0
+  Value: 1
+  Description: TalentS must be active.
+--- !u!114 &114664786046271656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75df8525b622e5843ade7cf6f3703b93, type: 3}
+  m_Name: Default Cost
+  m_EditorClassIdentifier: 
+  Cost: 1
+  Bought: 0
+  WillBuy: 0
+  Description: 
+--- !u!114 &114665532834350870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef7559b44c1dfd4993445312a298f30, type: 3}
+  m_Name: TalentL_TalentM
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  fromNode: {fileID: 114704505731144994}
+  toNode: {fileID: 114931794373650562}
+  curvePoints:
+  - {x: 978, y: 839, z: 0}
+  - {x: 990.7598, y: 842.528, z: 0}
+  - {x: 999.68005, y: 852.104, z: 0}
+  - {x: 1005.72003, y: 866.216, z: 0}
+  - {x: 1009.84015, y: 883.3522, z: 0}
+  - {x: 1013, y: 902, z: 0}
+  - {x: 1016.16003, y: 920.648, z: 0}
+  - {x: 1020.28, y: 937.784, z: 0}
+  - {x: 1026.3201, y: 951.896, z: 0}
+  - {x: 1048, y: 965, z: 0}
+  curGraph: {fileID: 11400000}
+  Name: 
+  Conditions:
+  - {fileID: 114043510636080828}
+  connectionType: 1
+--- !u!114 &114682281690651140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75df8525b622e5843ade7cf6f3703b93, type: 3}
+  m_Name: Default Cost
+  m_EditorClassIdentifier: 
+  Cost: 1
+  Bought: 0
+  WillBuy: 0
+  Description: 
+--- !u!114 &114683652408882506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef7559b44c1dfd4993445312a298f30, type: 3}
+  m_Name: TalentR_TalentQ
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  fromNode: {fileID: 114887864500589444}
+  toNode: {fileID: 114220084749222670}
+  curvePoints:
+  - {x: 1453, y: 522, z: 0}
+  - {x: 1456.5199, y: 518.108, z: 0}
+  - {x: 1440.3601, y: 507.544, z: 0}
+  - {x: 1409.44, y: 491.976, z: 0}
+  - {x: 1368.6803, y: 473.07205, z: 0}
+  - {x: 1323, y: 452.5, z: 0}
+  - {x: 1277.3201, y: 431.92795, z: 0}
+  - {x: 1236.56, y: 413.024, z: 0}
+  - {x: 1205.64, y: 397.456, z: 0}
+  - {x: 1193, y: 383, z: 0}
+  curGraph: {fileID: 11400000}
+  Name: 
+  Conditions:
+  - {fileID: 114372914196042234}
+  connectionType: 1
+--- !u!114 &114704505731144994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98f9ce8f8d72a2c468f63aec748721cc, type: 3}
+  m_Name: TalentL
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  nodeRect:
+    serializedVersion: 2
+    x: 882
+    y: 783
+    width: 96
+    height: 112
+  parentTree: {fileID: 11400000}
+  nodeType: 0
+  Image: {fileID: 2800000, guid: bca92e124313ecd4bb5145b8bb4e6291, type: 3}
+  DisabledImage: {fileID: 0}
+  isValid: 0
+  description: 
+  explanation: 
+  isInResearch: 0
+  tier: {fileID: 114208578110036822}
+  cost:
+  - {fileID: 114134985421762598}
+--- !u!114 &114710535494961048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98f9ce8f8d72a2c468f63aec748721cc, type: 3}
+  m_Name: TalentS
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  nodeRect:
+    serializedVersion: 2
+    x: 1010
+    y: 326
+    width: 96
+    height: 112
+  parentTree: {fileID: 11400000}
+  nodeType: 0
+  Image: {fileID: 2800000, guid: f7259c98b7e9fa94f970682e1024f890, type: 3}
+  DisabledImage: {fileID: 0}
+  isValid: 1
+  description: 
+  explanation: 
+  isInResearch: 0
+  tier: {fileID: 114208578110036822}
+  cost:
+  - {fileID: 114209995568949102}
+--- !u!114 &114711882827667182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98f9ce8f8d72a2c468f63aec748721cc, type: 3}
+  m_Name: TalentF
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  nodeRect:
+    serializedVersion: 2
+    x: 413
+    y: 598
+    width: 96
+    height: 112
+  parentTree: {fileID: 11400000}
+  nodeType: 0
+  Image: {fileID: 2800000, guid: 82d5c62bf5ea03140add221dc8e785f2, type: 3}
+  DisabledImage: {fileID: 0}
+  isValid: 0
+  description: 
+  explanation: 
+  isInResearch: 0
+  tier: {fileID: 114208578110036822}
+  cost:
+  - {fileID: 114653472245736914}
+--- !u!114 &114725083482605966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75df8525b622e5843ade7cf6f3703b93, type: 3}
+  m_Name: Default Cost
+  m_EditorClassIdentifier: 
+  Cost: 1
+  Bought: 0
+  WillBuy: 0
+  Description: 
+--- !u!114 &114736048930031822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75df8525b622e5843ade7cf6f3703b93, type: 3}
+  m_Name: Default Cost
+  m_EditorClassIdentifier: 
+  Cost: 1
+  Bought: 0
+  WillBuy: 0
+  Description: 
+--- !u!114 &114749360353250064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f33da2dfabdea48bfd7bb631388197, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ConditionType: 0
+  Value: 1
+  Description: TalentQ must be active.
+--- !u!114 &114749816706371988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98f9ce8f8d72a2c468f63aec748721cc, type: 3}
+  m_Name: TalentB
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  nodeRect:
+    serializedVersion: 2
+    x: 217
+    y: 355
+    width: 96
+    height: 112
+  parentTree: {fileID: 11400000}
+  nodeType: 0
+  Image: {fileID: 2800000, guid: 73651bc31aea9d04ba07ff88b25a9e76, type: 3}
+  DisabledImage: {fileID: 0}
+  isValid: 1
+  description: 
+  explanation: 
+  isInResearch: 0
+  tier: {fileID: 114208578110036822}
+  cost:
+  - {fileID: 114752129858806610}
+--- !u!114 &114752129858806610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75df8525b622e5843ade7cf6f3703b93, type: 3}
+  m_Name: Default Cost
+  m_EditorClassIdentifier: 
+  Cost: 1
+  Bought: 0
+  WillBuy: 1
+  Description: 
+--- !u!114 &114757487112581164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f33da2dfabdea48bfd7bb631388197, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ConditionType: 0
+  Value: 1
+  Description: TalentJ must be active.
+--- !u!114 &114760717373283476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef7559b44c1dfd4993445312a298f30, type: 3}
+  m_Name: TalentL_TalentK
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  fromNode: {fileID: 114704505731144994}
+  toNode: {fileID: 114282626192497494}
+  curvePoints:
+  - {x: 978, y: 839, z: 0}
+  - {x: 981.46387, y: 842.30396, z: 0}
+  - {x: 965.1521, y: 851.27203, z: 0}
+  - {x: 934.00806, y: 864.48804, z: 0}
+  - {x: 892.9761, y: 880.5361, z: 0}
+  - {x: 847, y: 898, z: 0}
+  - {x: 801.024, y: 915.46405, z: 0}
+  - {x: 759.99207, y: 931.51196, z: 0}
+  - {x: 728.848, y: 944.728, z: 0}
+  - {x: 716, y: 957, z: 0}
+  curGraph: {fileID: 11400000}
+  Name: 
+  Conditions:
+  - {fileID: 114154242063703672}
+  connectionType: 1
+--- !u!114 &114768694597752246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef7559b44c1dfd4993445312a298f30, type: 3}
+  m_Name: TalentK_TalentN
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  fromNode: {fileID: 114282626192497494}
+  toNode: {fileID: 114278557321013344}
+  curvePoints:
+  - {x: 812, y: 957, z: 0}
+  - {x: 824.5919, y: 960.612, z: 0}
+  - {x: 833.0561, y: 970.416, z: 0}
+  - {x: 838.42395, y: 984.864, z: 0}
+  - {x: 841.7281, y: 1002.4081, z: 0}
+  - {x: 844, y: 1021.5, z: 0}
+  - {x: 846.2721, y: 1040.592, z: 0}
+  - {x: 849.57605, y: 1058.1361, z: 0}
+  - {x: 854.94403, y: 1072.584, z: 0}
+  - {x: 876, y: 1086, z: 0}
+  curGraph: {fileID: 11400000}
+  Name: 
+  Conditions:
+  - {fileID: 114088999162552256}
+  connectionType: 1
+--- !u!114 &114771828012985072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef7559b44c1dfd4993445312a298f30, type: 3}
+  m_Name: TalentK_TalentL
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  fromNode: {fileID: 114282626192497494}
+  toNode: {fileID: 114704505731144994}
+  curvePoints:
+  - {x: 812, y: 957, z: 0}
+  - {x: 824.75995, y: 953.696, z: 0}
+  - {x: 833.6801, y: 944.728, z: 0}
+  - {x: 839.72003, y: 931.512, z: 0}
+  - {x: 843.8401, y: 915.46405, z: 0}
+  - {x: 847, y: 898, z: 0}
+  - {x: 850.16, y: 880.536, z: 0}
+  - {x: 854.2799, y: 864.488, z: 0}
+  - {x: 860.32, y: 851.272, z: 0}
+  - {x: 882, y: 839, z: 0}
+  curGraph: {fileID: 11400000}
+  Name: 
+  Conditions:
+  - {fileID: 114579670466408736}
+  connectionType: 1
+--- !u!114 &114776196741982146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f33da2dfabdea48bfd7bb631388197, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ConditionType: 0
+  Value: 1
+  Description: TalentI must be active.
+--- !u!114 &114786006722755528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f33da2dfabdea48bfd7bb631388197, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ConditionType: 0
+  Value: 1
+  Description: TalentM must be active.
+--- !u!114 &114812936924191676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75df8525b622e5843ade7cf6f3703b93, type: 3}
+  m_Name: Default Cost
+  m_EditorClassIdentifier: 
+  Cost: 1
+  Bought: 0
+  WillBuy: 0
+  Description: 
+--- !u!114 &114817230750343286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f33da2dfabdea48bfd7bb631388197, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ConditionType: 0
+  Value: 1
+  Description: TalentS must be active.
+--- !u!114 &114820005700953688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f33da2dfabdea48bfd7bb631388197, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ConditionType: 0
+  Value: 1
+  Description: TalentD must be active.
+--- !u!114 &114846044647341282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef7559b44c1dfd4993445312a298f30, type: 3}
+  m_Name: TalentA_TalentC
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  fromNode: {fileID: 114396520596829202}
+  toNode: {fileID: 114343832294438398}
+  curvePoints:
+  - {x: 312, y: 245, z: 0}
+  - {x: 324.75995, y: 247.15599, z: 0}
+  - {x: 333.68002, y: 253.00801, z: 0}
+  - {x: 339.72, y: 261.632, z: 0}
+  - {x: 343.84003, y: 272.104, z: 0}
+  - {x: 347, y: 283.5, z: 0}
+  - {x: 350.16, y: 294.896, z: 0}
+  - {x: 354.28, y: 305.36798, z: 0}
+  - {x: 360.32, y: 313.992, z: 0}
+  - {x: 382, y: 322, z: 0}
+  curGraph: {fileID: 11400000}
+  Name: 
+  Conditions:
+  - {fileID: 114360808000745284}
+  connectionType: 0
+--- !u!114 &114861040662606126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f33da2dfabdea48bfd7bb631388197, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ConditionType: 0
+  Value: 1
+  Description: TalentN must be active.
+--- !u!114 &114887864500589444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98f9ce8f8d72a2c468f63aec748721cc, type: 3}
+  m_Name: TalentR
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  nodeRect:
+    serializedVersion: 2
+    x: 1357
+    y: 466
+    width: 96
+    height: 112
+  parentTree: {fileID: 11400000}
+  nodeType: 0
+  Image: {fileID: 2800000, guid: a3cc3244790a33544a1de15cb4e13813, type: 3}
+  DisabledImage: {fileID: 0}
+  isValid: 0
+  description: 
+  explanation: 
+  isInResearch: 0
+  tier: {fileID: 114208578110036822}
+  cost:
+  - {fileID: 114107851618149974}
+--- !u!114 &114931794373650562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98f9ce8f8d72a2c468f63aec748721cc, type: 3}
+  m_Name: TalentM
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  nodeRect:
+    serializedVersion: 2
+    x: 1048
+    y: 909
+    width: 96
+    height: 112
+  parentTree: {fileID: 11400000}
+  nodeType: 0
+  Image: {fileID: 2800000, guid: 26b6aaf903021dc499fe7174b655a9b4, type: 3}
+  DisabledImage: {fileID: 0}
+  isValid: 0
+  description: 
+  explanation: 
+  isInResearch: 0
+  tier: {fileID: 114208578110036822}
+  cost:
+  - {fileID: 114664786046271656}
+--- !u!114 &114939622572958662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75df8525b622e5843ade7cf6f3703b93, type: 3}
+  m_Name: Default Cost
+  m_EditorClassIdentifier: 
+  Cost: 1
+  Bought: 0
+  WillBuy: 1
+  Description: 
+--- !u!114 &114957123200558852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef7559b44c1dfd4993445312a298f30, type: 3}
+  m_Name: TalentB_TalentC
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  fromNode: {fileID: 114749816706371988}
+  toNode: {fileID: 114343832294438398}
+  curvePoints:
+  - {x: 313, y: 411, z: 0}
+  - {x: 325.73196, y: 408.50793, z: 0}
+  - {x: 334.57602, y: 401.744, z: 0}
+  - {x: 340.504, y: 391.776, z: 0}
+  - {x: 344.48804, y: 379.67203, z: 0}
+  - {x: 347.5, y: 366.5, z: 0}
+  - {x: 350.51202, y: 353.328, z: 0}
+  - {x: 354.49597, y: 341.224, z: 0}
+  - {x: 360.424, y: 331.25598, z: 0}
+  - {x: 382, y: 322, z: 0}
+  curGraph: {fileID: 11400000}
+  Name: 
+  Conditions:
+  - {fileID: 114204647705334858}
+  connectionType: 0
+--- !u!114 &114987199159544300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f33da2dfabdea48bfd7bb631388197, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ConditionType: 0
+  Value: 1
+  Description: TalentN must be active.
+--- !u!114 &114991813509337622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef7559b44c1dfd4993445312a298f30, type: 3}
+  m_Name: TalentE_TalentF
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  fromNode: {fileID: 114638598253506714}
+  toNode: {fileID: 114711882827667182}
+  curvePoints:
+  - {x: 314, y: 718, z: 0}
+  - {x: 327.57196, y: 716.208, z: 0}
+  - {x: 338.69598, y: 711.34406, z: 0}
+  - {x: 347.984, y: 704.176, z: 0}
+  - {x: 356.04803, y: 695.4721, z: 0}
+  - {x: 363.5, y: 686, z: 0}
+  - {x: 370.952, y: 676.528, z: 0}
+  - {x: 379.016, y: 667.824, z: 0}
+  - {x: 388.30402, y: 660.656, z: 0}
+  - {x: 413, y: 654, z: 0}
+  curGraph: {fileID: 11400000}
+  Name: 
+  Conditions:
+  - {fileID: 114336642329000172}
+  connectionType: 1
+--- !u!114 &114995376210689418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75df8525b622e5843ade7cf6f3703b93, type: 3}
+  m_Name: Default Cost
+  m_EditorClassIdentifier: 
+  Cost: 1
+  Bought: 0
+  WillBuy: 0
+  Description: 
