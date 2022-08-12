@@ -5,25 +5,19 @@ using UnityEngine;
 
 public class LaserBehaviour : MonoBehaviour
 {
-    private AttackDetails attackDetails;
-
-    //[SerializeField] GameObject boss;
-    [SerializeField] private float defDistanceRay = 100;
+    Transform rayPosition;
+    [SerializeField] Transform laserSpawnPoint;
+    [SerializeField] private float defDistanceRay = 25f;
     [SerializeField] private float damage = 5f;
     [SerializeField] private LayerMask whatIsPlayer;
-    public LineRenderer line;
+    [SerializeField] LineRenderer line;
 
-    Transform lazerFirePoint;
- 
     GameObject target;
 
     private void Awake()
     {
-        lazerFirePoint = GameObject.Find("Mini_Boss_2").transform.Find("Alive").Find("RangeAttackPosition").transform;
-    }
-
-    void Start()
-    {
+        transform.position = GameObject.Find("/Mini_Boss_ME16/Alive/RangeAttackPosition").transform.position;
+        rayPosition = GameObject.Find("/Mini_Boss_ME16/Alive/PlayerCheck").transform;
         target = GameObject.FindGameObjectWithTag("Player");
 
         ShootLaser();
@@ -31,22 +25,27 @@ public class LaserBehaviour : MonoBehaviour
 
     void ShootLaser()
     {
-        RaycastHit2D damageHit = Physics2D.Raycast(lazerFirePoint.position, transform.right, defDistanceRay, whatIsPlayer);
+        RaycastHit2D damageHit = Physics2D.Raycast(rayPosition.position, transform.right, defDistanceRay, whatIsPlayer);
 
         if (damageHit)
         {
-            if(lazerFirePoint.position.x > damageHit.point.x)
-                Draw2DRay(lazerFirePoint.position, new Vector2(damageHit.point.x * -defDistanceRay, damageHit.point.y));
+            if (transform.position.x > damageHit.point.x)
+                Draw2DRay(transform.position, target.transform.position);
             else
-                Draw2DRay(lazerFirePoint.position, new Vector2(damageHit.point.x * defDistanceRay, damageHit.point.y));
+                Draw2DRay(transform.position, target.transform.position);
 
-            attackDetails.damageAmount = damage;
             StartCoroutine(TakeDamageAndDestroy());
         }
         else
         {
-            Destroy(this.gameObject);
+            StartCoroutine(Destroy());
         }
+    }
+
+    IEnumerator Destroy()
+    {
+        yield return new WaitForSeconds(0.2f);
+        Destroy(this.gameObject);
     }
 
     void Draw2DRay(Vector2 startPos, Vector2 endPos)
@@ -57,8 +56,8 @@ public class LaserBehaviour : MonoBehaviour
 
     IEnumerator TakeDamageAndDestroy()
     {
-        target.GetComponent<PlayerStats>().TakeDamage(attackDetails);
-        yield return new WaitForSeconds(0.1f);
+        target.GetComponent<PlayerStats>().TakeDamage(damage);
+        yield return new WaitForSeconds(0.2f);
         Destroy(this.gameObject);
     }
 }

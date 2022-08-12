@@ -42,7 +42,7 @@ public class B2MinionToxicBall : MonoBehaviour
         if (groundHit && !hasSpawnPool)
         {
             hasSpawnPool = true;
-            GameObject.Instantiate(toxicpool, new Vector3(transform.position.x, transform.position.y - 0.5f, transform.position.z),toxicpool.transform.rotation);
+            GameObject.Instantiate(toxicpool, new Vector3(transform.position.x, transform.position.y+0.2f, transform.position.z),toxicpool.transform.rotation);
             Destroy(this.gameObject);
         }
     }

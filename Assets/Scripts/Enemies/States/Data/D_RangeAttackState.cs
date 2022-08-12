@@ -12,8 +12,8 @@ public class D_RangeAttackState : ScriptableObject
     public float projectileSpeed = 12f;
 
     [Header("Lazer")]
-    public bool useLazer = false;
-    public GameObject lazer;
+    public bool useLaser = false;
+    public GameObject laser;
 
     [Header("Fire Ball spawn")]
     public bool useFireBall = false;

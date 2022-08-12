@@ -7,17 +7,14 @@ public class RangeAttackState : AttackState
     protected D_RangeAttackState stateData;
 
     //Projectile
-    protected bool useProjectile;
     protected GameObject projectile;
     protected Projectile projectileScript;
 
     //Lazer
-    protected GameObject lazer;
-    protected bool useLazer;
+    protected GameObject laser;
 
     //Fireball
     protected GameObject fireBall;
-    protected bool useFireBall;
     protected float minRange;
     protected float maxRange;
 
@@ -29,12 +26,6 @@ public class RangeAttackState : AttackState
     public override void DoChecks()
     {
         base.DoChecks();
-        this.useProjectile = stateData.useProjectile;
-
-        this.useLazer = stateData.useLazer;
-
-        this.useFireBall = stateData.useFireBall;
-
         this.minRange = stateData.minRange;
         this.maxRange = stateData.maxRange;
     }
@@ -68,17 +59,17 @@ public class RangeAttackState : AttackState
     {
         base.TriggerAttack();
 
-        if (useProjectile)
+        if (stateData.useProjectile)
         {
             projectile = GameObject.Instantiate(stateData.projectile, attackPosition.position, attackPosition.rotation);
             projectileScript = projectile.GetComponent<Projectile>();
             projectileScript.FireProjectile(stateData.projectileSpeed, stateData.projectileDamage);
         }
-        else if(useLazer)
+        else if(stateData.useLaser)
         {
-            lazer = GameObject.Instantiate(stateData.lazer, attackPosition.position, attackPosition.rotation);
+            laser = GameObject.Instantiate(stateData.laser, attackPosition.position, attackPosition.rotation);
         }
-        else if (useFireBall)
+        else if (stateData.useFireBall)
         {
             fireBall = GameObject.Instantiate(stateData.fireBall, 
                 new Vector3(Random.Range(attackPosition.position.x - minRange, 
