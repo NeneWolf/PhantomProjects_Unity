@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1089667949584564412}
   - component: {fileID: 7859856338873886990}
   - component: {fileID: -7560455799789598567}
+  - component: {fileID: 3441220700428328787}
   m_Layer: 6
   m_Name: Turret_Bullet
   m_TagString: Untagged
@@ -29,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 2106420017863790262}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 34.58756, y: 9.920813, z: 0}
-  m_LocalScale: {x: 0.48189864, y: 0.48189864, z: 0.48189864}
+  m_LocalScale: {x: 1.295914, y: 1.295914, z: 1.295914}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -76,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_Sprite: {fileID: -1107401481, guid: 11f9e73cbb5b2c94f8cad9689c71019b, type: 3}
   m_Color: {r: 0.745283, g: 0.47168422, b: 0.19264857, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -102,7 +103,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.15
 --- !u!50 &7859856338873886990
 Rigidbody2D:
   serializedVersion: 4
@@ -139,8 +140,28 @@ MonoBehaviour:
   damage: 10
   whatIsGround:
     serializedVersion: 2
-    m_Bits: 1032
+    m_Bits: 8
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 128
-  damageRadius: 0.25
+  damageRadius: 0.2
+--- !u!95 &3441220700428328787
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2106420017863790262}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 21bc949e9e08ec9478071af73574851e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

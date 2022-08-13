@@ -8,6 +8,7 @@ public class B2Minion1Behaviour : MonoBehaviour
     [SerializeField] float maxHealth;
     float currentHealth;
     public bool isDead { get; private set; }
+    [SerializeField] ParticleSystem bloodEffect;
 
     [Header("Parent || Child")]
     [SerializeField] GameObject boss;
@@ -17,21 +18,22 @@ public class B2Minion1Behaviour : MonoBehaviour
     [SerializeField] float warningTime;
     [SerializeField] float speed;
     float timeStamp;
-    //public Vector3 originalAngle { get; private set;}
+
     Vector3 currentAngle;
-
     Vector3 targetAngle = new Vector3(0f, 0f, -65f);
-
     bool hasShoot = false;
+
+    Animator animation;
 
     private void Awake()
     {
         currentHealth = maxHealth;
+        animation = GetComponent<Animator>();
     }
 
     void Update()
     {
-        if (boss.GetComponent<Entity>().CheckPlayerInMinAgroRange() && !isDead)
+        if (!isDead)
         {
             currentAngle = transform.eulerAngles;
             RotateToAttack();
@@ -42,7 +44,6 @@ public class B2Minion1Behaviour : MonoBehaviour
     {
         if (!hasShoot)
         {
-            //print("Go Down");
             var step = speed * Time.deltaTime;
 
             if (boss.GetComponent<Entity>().facingDirection == 1)
@@ -85,12 +86,13 @@ public class B2Minion1Behaviour : MonoBehaviour
 
     public void TakeDamage(float dmg)
     {
-        if(currentHealth - dmg <= 0)
+        GameObject.Instantiate(bloodEffect, transform.position, Quaternion.identity);
+
+        if (currentHealth - dmg <= 0)
         {
             currentHealth = 0;
             isDead = true;
             this.gameObject.SetActive(false);
-
         }
         else
         {

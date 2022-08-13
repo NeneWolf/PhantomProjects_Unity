@@ -15,8 +15,6 @@ public class RangeAttackState : AttackState
 
     //Fireball
     protected GameObject fireBall;
-    protected float minRange;
-    protected float maxRange;
 
     public RangeAttackState(FiniteStateMachine stateMachine, Entity entity, string animBoolName, Transform attackPosition, D_RangeAttackState stateData) : base(stateMachine, entity, animBoolName, attackPosition)
     {
@@ -26,8 +24,6 @@ public class RangeAttackState : AttackState
     public override void DoChecks()
     {
         base.DoChecks();
-        this.minRange = stateData.minRange;
-        this.maxRange = stateData.maxRange;
     }
 
     public override void Enter()
@@ -72,8 +68,13 @@ public class RangeAttackState : AttackState
         else if (stateData.useFireBall)
         {
             fireBall = GameObject.Instantiate(stateData.fireBall, 
-                new Vector3(Random.Range(attackPosition.position.x - minRange, 
-                attackPosition.position.x + maxRange), Random.Range(attackPosition.position.y - 0.5f, attackPosition.position.y + 0.5f), 0f), 
+                new Vector3(Random.Range(attackPosition.position.x - stateData.minRange, 
+                attackPosition.position.x + stateData.maxRange), Random.Range(attackPosition.position.y - 0.5f, attackPosition.position.y + 0.5f), 0f), 
+                attackPosition.rotation);
+
+            fireBall = GameObject.Instantiate(stateData.fireBall,
+                new Vector3(Random.Range(attackPosition.position.x - stateData.minRange,
+                attackPosition.position.x + stateData.maxRange), Random.Range(attackPosition.position.y - 0.5f, attackPosition.position.y + 0.5f), 0f),
                 attackPosition.rotation);
         }
     }

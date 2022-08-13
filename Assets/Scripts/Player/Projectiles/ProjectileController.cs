@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class ProjectileController : MonoBehaviour
 {
-    [SerializeField] float damage = 20f;
+    [SerializeField] public float damage { get; private set; }
+    [SerializeField] float damageP;
     [SerializeField] float speed = 20f;
     [SerializeField] float damageRadius;
 
@@ -19,6 +20,7 @@ public class ProjectileController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         rb.velocity = transform.right * speed;
+        damage = damageP;
     }
 
 
@@ -29,7 +31,11 @@ public class ProjectileController : MonoBehaviour
 
         if (damageHit)
         {
-            damageHit.gameObject.GetComponentInParent<Entity>().Damage(damage);
+            if (damageHit.tag == "Enemy")
+                damageHit.gameObject.GetComponentInParent<Entity>().Damage(damage);
+            else if (damageHit.tag == "BMinion")
+                damageHit.gameObject.GetComponentInParent<MinionsControls>().TakeMinionDamage(damageHit.gameObject.name, damage);
+
             Destroy(this.gameObject);
         }
 

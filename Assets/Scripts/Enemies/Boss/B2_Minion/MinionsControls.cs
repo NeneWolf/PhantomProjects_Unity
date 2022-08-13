@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MinionsControls : MonoBehaviour
 {
-    
+    [SerializeField] GameObject boss;
     [SerializeField] GameObject[] differentMinions;
     [SerializeField] GameObject laser;
 
@@ -20,40 +20,41 @@ public class MinionsControls : MonoBehaviour
     private float nextSpit = 0.15f;
     [SerializeField] float spitDelay = 10f;
 
-    int totalNumber;
+    bool startShooting = false;
 
-    private void Awake()
-    {
-        totalNumber = differentMinions.Length;
-    }
-
+    int totalDisabled;
+    
     void Update()
     {
-        if (!differentMinions[0].GetComponent<B2Minion1Behaviour>().isDead && Time.time > nextShot)
-        {
-            UpdateMinion1();
-        }
+        if (!startShooting)
+            startShooting = boss.GetComponent<Entity>().CheckPlayerInMinAgroRange();
 
-        if (!differentMinions[1].GetComponent<B2Minion2Behaviour>().isDead && Time.time > nextHeal)
+        if (startShooting)
         {
-            UpdateMinion2();
-        }
-
-        if (!differentMinions[2].GetComponent<B2Minion3Behaviour>().isDead && Time.time > nextSpit)
-        {
-            UpdateMinion3();
-        }
-
-        
-        foreach(var differentMinion in differentMinions)
-        {
-            if(differentMinion.activeInHierarchy == false)
+            if (!differentMinions[0].GetComponent<B2Minion1Behaviour>().isDead && Time.time > nextShot)
             {
-                totalNumber--;
+                UpdateMinion1();
+            }
+
+            if (!differentMinions[1].GetComponent<B2Minion2Behaviour>().isDead && Time.time > nextHeal)
+            {
+                UpdateMinion2();
+            }
+
+            if (!differentMinions[2].GetComponent<B2Minion3Behaviour>().isDead && Time.time > nextSpit)
+            {
+                UpdateMinion3();
             }
         }
 
-        if(totalNumber <= 0)
+
+        CheckLife();
+    }
+
+    void CheckLife()
+    {
+        if(differentMinions[0].GetComponent<B2Minion1Behaviour>().isDead && differentMinions[1].GetComponent<B2Minion2Behaviour>().isDead &&
+            differentMinions[2].GetComponent<B2Minion3Behaviour>().isDead)
         {
             this.gameObject.SetActive(false);
         }
@@ -76,5 +77,15 @@ public class MinionsControls : MonoBehaviour
     {
         differentMinions[2].GetComponent<B2Minion3Behaviour>().FireToxicSpit();
         nextSpit = Time.time + spitDelay;
+    }
+
+    public void TakeMinionDamage(string name, float damage)
+    {
+        if (name == differentMinions[0].name)
+            differentMinions[0].GetComponent<B2Minion1Behaviour>().TakeDamage(damage);
+        else if (name == differentMinions[1].name)
+            differentMinions[1].GetComponent<B2Minion2Behaviour>().TakeDamage(damage);
+        else if (name == differentMinions[2].name)
+            differentMinions[2].GetComponent<B2Minion3Behaviour>().TakeDamage(damage);
     }
 }

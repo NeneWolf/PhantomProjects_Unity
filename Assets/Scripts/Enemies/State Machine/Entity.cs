@@ -94,8 +94,6 @@ public class Entity : MonoBehaviour
             rb2d.gravityScale = 0f;
             bc2d.enabled = false;
         }
-
-
     }
 
     public virtual void FixedUpdate()

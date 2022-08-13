@@ -26,6 +26,15 @@ public class B2Minion3ToxicPool : MonoBehaviour
             target.GetComponent<PlayerMovement>().ReduceSpeed(reduceVelocity);
             StartCoroutine(ReduceTimer());
         }
+        else
+        {
+            StartCoroutine(Destroy());
+        }
+    }
+    IEnumerator Destroy()
+    {
+        yield return new WaitForSeconds(cooldownToDisable);
+        Destroy(this.gameObject);
     }
 
     IEnumerator ReduceTimer()

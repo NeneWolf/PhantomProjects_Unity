@@ -62,6 +62,7 @@ public class B2_Fetiddeviation : Entity
 
         if (isDead)
         {
+            minionsGroup.SetActive(false);
             stateMachine.ChangeState(deadState);
             StartCoroutine("WaitToDisable");
         }

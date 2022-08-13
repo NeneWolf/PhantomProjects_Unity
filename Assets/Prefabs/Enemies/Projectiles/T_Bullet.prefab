@@ -105,8 +105,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1838932657
-  m_SortingLayer: 2
-  m_SortingOrder: 0
+  m_SortingLayer: 6
+  m_SortingOrder: 20
   m_Sprite: {fileID: 21300000, guid: 3cf0a76010a866247a2d74bcefa159e1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -159,3 +159,4 @@ MonoBehaviour:
     m_Bits: 128
   damagePosition: {fileID: 5084578888670446306}
   damageRadius: 0.12
+  hasAnimation: 0

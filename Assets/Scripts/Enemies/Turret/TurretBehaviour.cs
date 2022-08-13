@@ -6,6 +6,7 @@ public class TurretBehaviour : MonoBehaviour
 {
     [Header("Properties")]
     [Space]
+    [SerializeField] GameObject playerCheck;
     [SerializeField] GameObject turretHead;
     [SerializeField] GameObject shootPoint;
     [SerializeField] GameObject bullet;
@@ -23,28 +24,24 @@ public class TurretBehaviour : MonoBehaviour
 
     Transform target;
     Vector2 direction;
+    GameObject BulletIns;
 
-
-
-    // Start is called before the first frame update
     void Start()
     {
         target = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
-    // Update is called once per frame
     void Update()
     {
         Vector2 targetPos = target.position;
         direction = targetPos - (Vector2)transform.position;
 
-        RaycastHit2D rayInfo = Physics2D.Raycast(transform.position, direction, agrooRange, whatIsPlayer);
+        RaycastHit2D rayInfo = Physics2D.Raycast(playerCheck.transform.position, direction, agrooRange, whatIsPlayer);
 
         if (rayInfo)
         {
             if(targetPos.y < transform.position.y)
             {
-                //playerDetected = true;
                 turretHead.transform.up = direction;
 
                 if (Time.time > nextTimeToFire)
@@ -58,12 +55,12 @@ public class TurretBehaviour : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        Gizmos.DrawWireSphere(transform.position, agrooRange);
+        //Gizmos.DrawWireSphere(playerCheck.transform.position, agrooRange);
     }
 
     void ShootTarget()
     {
-        GameObject BulletIns = Instantiate(bullet, shootPoint.transform.position, Quaternion.identity);
+        BulletIns = GameObject.Instantiate(bullet, shootPoint.transform.position, Quaternion.identity);
         BulletIns.GetComponent<Rigidbody2D>().AddForce(direction * force);
     }
 }

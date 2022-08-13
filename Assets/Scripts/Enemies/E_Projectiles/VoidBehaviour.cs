@@ -7,8 +7,8 @@ public class VoidBehaviour : MonoBehaviour
     [SerializeField] GameObject fireBall;
     [SerializeField] float interval; // between spawning the void and shooting the ball;
 
-    // Start is called before the first frame update
-    void Start()
+
+    void Awake()
     {
         StartCoroutine(ActivatetFireBall());
     }

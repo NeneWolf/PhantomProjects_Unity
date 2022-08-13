@@ -25,7 +25,7 @@ public class B2MinionToxicBall : MonoBehaviour
 
     void Update()
     {
-        transform.Translate(transform.right * diff * Time.deltaTime);
+        transform.Translate(transform.right * (diff - 2.5f) * Time.deltaTime);
     }
 
     private void FixedUpdate()

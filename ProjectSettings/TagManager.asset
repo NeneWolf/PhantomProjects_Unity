@@ -17,6 +17,7 @@ TagManager:
   - PWeapon
   - Canvas
   - Fader
+  - BMinion
   layers:
   - Default
   - TransparentFX
@@ -32,7 +33,7 @@ TagManager:
   - PProjectiles
   - Traps
   - Boss
-  - 
+  - Platforms
   - 
   - 
   - 
@@ -54,24 +55,24 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Player
-    uniqueID: 2593170335
+  - name: B_Decoration
+    uniqueID: 2340192031
     locked: 0
   - name: Toxic Lake
     uniqueID: 3443667225
-    locked: 0
-  - name: Enemy
-    uniqueID: 1838932657
-    locked: 0
-  - name: Fog
-    uniqueID: 4004125949
-    locked: 0
-  - name: B_Decoration
-    uniqueID: 2340192031
     locked: 0
   - name: Ground
     uniqueID: 4105157947
     locked: 0
   - name: Toxic Pool
     uniqueID: 1607114165
+    locked: 0
+  - name: Player
+    uniqueID: 2593170335
+    locked: 0
+  - name: Enemy
+    uniqueID: 1838932657
+    locked: 0
+  - name: Fog
+    uniqueID: 4004125949
     locked: 0

@@ -32,12 +32,18 @@ public class TurrentProjectiles : MonoBehaviour
 
         if (groundHit)
         {
-            Destroy(this.gameObject);
+            StartCoroutine(FlameOut());
         }
     }
 
     private void OnDrawGizmos()
     {
         Gizmos.DrawWireSphere(transform.position, damageRadius);
+    }
+
+    IEnumerator FlameOut()
+    {
+        yield return new WaitForSeconds(0.5f);
+        Destroy(this.gameObject);
     }
 }

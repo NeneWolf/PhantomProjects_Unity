@@ -8,6 +8,7 @@ public class B2Minion2Behaviour : MonoBehaviour
     [SerializeField] float maxHealth;
     float currentHealth;
     public bool isDead { get; private set; }
+    [SerializeField] ParticleSystem bloodEffect;
 
     [Header("Healing")]
     [SerializeField] GameObject boss;
@@ -22,7 +23,7 @@ public class B2Minion2Behaviour : MonoBehaviour
 
     public void healBoss()
     {
-        if (boss.GetComponent<Entity>().CheckPlayerInMinAgroRange() && !isDead)
+        if (!isDead)
         {
             if(boss.GetComponent<Entity>().currentHealth < boss.GetComponent<Entity>().entityData.maxHealth)
             {
@@ -40,12 +41,12 @@ public class B2Minion2Behaviour : MonoBehaviour
 
     public void TakeDamage(float dmg)
     {
+        GameObject.Instantiate(bloodEffect, transform.position, Quaternion.identity);
         if (currentHealth - dmg <= 0)
         {
             currentHealth = 0;
             isDead = true;
             this.gameObject.SetActive(false);
-
         }
         else
         {

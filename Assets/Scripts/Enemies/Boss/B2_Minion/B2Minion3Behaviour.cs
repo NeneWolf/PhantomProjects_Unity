@@ -8,11 +8,14 @@ public class B2Minion3Behaviour : MonoBehaviour
     [SerializeField] float maxHealth;
     float currentHealth;
     public bool isDead { get; private set; }
+    [SerializeField] ParticleSystem bloodEffect;
 
     [Header("Shooting")]
     [SerializeField] GameObject boss;
     [SerializeField] Transform shootingPoint;
     [SerializeField] GameObject toxicSpit;
+
+
 
     private void Awake()
     {
@@ -20,9 +23,10 @@ public class B2Minion3Behaviour : MonoBehaviour
         isDead = false;
     }
 
+
     public void FireToxicSpit()
     {
-        if (boss.GetComponent<Entity>().CheckPlayerInMinAgroRange() && !isDead)
+        if (!isDead)
         {
             GameObject.Instantiate(toxicSpit, shootingPoint.transform.position, Quaternion.identity);
         }
@@ -30,12 +34,13 @@ public class B2Minion3Behaviour : MonoBehaviour
 
     public void TakeDamage(float dmg)
     {
+        GameObject.Instantiate(bloodEffect, transform.position, Quaternion.identity);
+
         if (currentHealth - dmg <= 0)
         {
             currentHealth = 0;
             isDead = true;
             this.gameObject.SetActive(false);
-
         }
         else
         {
