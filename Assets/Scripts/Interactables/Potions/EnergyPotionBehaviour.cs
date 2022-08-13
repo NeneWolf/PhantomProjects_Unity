@@ -5,15 +5,16 @@ using UnityEngine;
 
 public class EnergyPotionBehaviour : MonoBehaviour
 {
-
     [SerializeField] int recoverAmount;
+    [SerializeField] LayerMask whatIsPlayer;
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void Update()
     {
-        if (collision.gameObject.tag == "Player")
-        {
-            collision.gameObject.GetComponent<PlayerStats>().IncreaseEnergy(recoverAmount);
+        Collider2D playerCollider = Physics2D.OverlapCircle(transform.position, transform.localScale.x);
 
+        if(playerCollider && Input.GetKeyDown(KeyCode.F))
+        {
+            playerCollider.GetComponent<PlayerStats>().IncreaseEnergy(recoverAmount);
             Destroy(this.gameObject);
         }
     }

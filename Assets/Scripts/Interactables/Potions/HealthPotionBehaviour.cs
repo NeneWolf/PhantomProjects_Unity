@@ -3,18 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-    public class HealthPotionBehaviour : MonoBehaviour
+public class HealthPotionBehaviour : MonoBehaviour
+{
+    [SerializeField] int recoverAmount;
+    [SerializeField] LayerMask whatIsPlayer;
+
+    private void Update()
     {
+        Collider2D playerCollider = Physics2D.OverlapCircle(transform.position, transform.localScale.x);
 
-        [SerializeField] int recoverAmount;
-
-        private void OnCollisionEnter2D(Collision2D collision)
+        if (playerCollider && Input.GetKeyDown(KeyCode.F))
         {
-            if (collision.gameObject.tag == "Player")
-            {
-               collision.gameObject.GetComponent<PlayerStats>().IncreaseHealth(recoverAmount);
-
-                Destroy(this.gameObject);
-            }
+            playerCollider.GetComponent<PlayerStats>().IncreaseHealth(recoverAmount);
+            Destroy(this.gameObject);
         }
     }
+}

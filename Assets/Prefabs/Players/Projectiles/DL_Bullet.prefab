@@ -10,9 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 8456512587707761461}
   - component: {fileID: 8456512587707761460}
+  - component: {fileID: -7320292323946328418}
   - component: {fileID: 8456512587707761463}
   - component: {fileID: 3523232878139743029}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: DL_Bullet
   m_TagString: PBullet
   m_Icon: {fileID: 0}
@@ -73,12 +74,12 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1701796961
-  m_SortingLayer: 1
+  m_SortingLayer: 6
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 3cf0a76010a866247a2d74bcefa159e1, type: 3}
-  m_Color: {r: 0.16746168, g: 0.7924528, b: 0.25090253, a: 1}
+  m_Sprite: {fileID: 21300000, guid: e533067c9c875e84f91933359d6a0531, type: 3}
+  m_Color: {r: 0.18187074, g: 0.6320754, b: 0.20771645, a: 1}
   m_FlipX: 0
-  m_FlipY: 0
+  m_FlipY: 1
   m_DrawMode: 0
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
@@ -86,6 +87,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!58 &-7320292323946328418
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8456512587707761462}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.00052420876, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.058583558
 --- !u!50 &8456512587707761463
 Rigidbody2D:
   serializedVersion: 4
@@ -119,7 +136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e65efec0ef3824d449f1de1563d2d70c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 20
+  damageP: 35
   speed: 20
   damageRadius: 0.12
   whatIsGround:

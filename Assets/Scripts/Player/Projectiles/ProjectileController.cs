@@ -12,7 +12,6 @@ public class ProjectileController : MonoBehaviour
     [Header("Other Details")]
     [SerializeField] LayerMask whatIsGround;
     [SerializeField] LayerMask whatIsEnemy;
-    //[SerializeField] GameObject weaponG;
     float projectileDamage;
     Rigidbody2D rb;
 

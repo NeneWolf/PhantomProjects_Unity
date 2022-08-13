@@ -32,8 +32,8 @@ public class SecretBlock : MonoBehaviour
 
         if (damageHit)
         {
-            Destroy(damageHit.gameObject);
             ReduceBlock();
+            Destroy(damageHit.gameObject);
         }
 
     }

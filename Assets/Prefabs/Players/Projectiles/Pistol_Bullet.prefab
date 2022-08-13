@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 8456512587707761461}
   - component: {fileID: 8456512587707761460}
   - component: {fileID: 8456512587707761463}
+  - component: {fileID: 296833238318356169}
   - component: {fileID: 3523232878139743029}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Pistol_Bullet
   m_TagString: PBullet
   m_Icon: {fileID: 0}
@@ -73,12 +74,12 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1701796961
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 3cf0a76010a866247a2d74bcefa159e1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e533067c9c875e84f91933359d6a0531, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
-  m_FlipY: 0
+  m_FlipY: 1
   m_DrawMode: 0
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
@@ -107,6 +108,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!58 &296833238318356169
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8456512587707761462}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.00052420876, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.058583558
 --- !u!114 &3523232878139743029
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -55,6 +55,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Grid_Background
+    uniqueID: 1832128873
+    locked: 0
   - name: B_Decoration
     uniqueID: 2340192031
     locked: 0
@@ -72,6 +75,9 @@ TagManager:
     locked: 0
   - name: Enemy
     uniqueID: 1838932657
+    locked: 0
+  - name: Interactables
+    uniqueID: 3409396557
     locked: 0
   - name: Fog
     uniqueID: 4004125949
