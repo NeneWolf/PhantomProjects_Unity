@@ -9,8 +9,7 @@ namespace PhantomProjects.Managers
         [Header("Game Difficulty Setting")]
         // 0- easy // 1-normal // 2-hard
         public bool[] difficulty;
-        public int difficultyLevel;
-
+        int difficultyLevel;
         public float difficultyMultiplier;
 
         // Start is called before the first frame update
@@ -22,7 +21,7 @@ namespace PhantomProjects.Managers
 
         private void Update()
         {
-            
+            FindObjectOfType<GameManager>().difficultyMultiplier = difficultyMultiplier;
         }
 
         public void SetDifficulty(int number)

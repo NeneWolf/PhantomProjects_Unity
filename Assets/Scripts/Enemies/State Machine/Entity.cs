@@ -1,4 +1,5 @@
 using PhantomProjects.Core;
+using PhantomProjects.Managers;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,7 +11,7 @@ public class Entity : MonoBehaviour
 
     //Rewards
     [Header ("Rewards")]
-    CanvasUI ui;
+    UIManager ui;
     public int mutationPoints;
     protected bool canGiveReward = true;
 
@@ -57,7 +58,7 @@ public class Entity : MonoBehaviour
         bc2d = aliveGO.GetComponent<CapsuleCollider2D>();
         animator = aliveGO.GetComponent<Animator>();
         atsm = aliveGO.GetComponent<AnimationToStateMachine>();
-        ui = GameObject.FindObjectOfType<CanvasUI>();
+        ui = GameObject.FindObjectOfType<UIManager>();
         currentHealth = entityData.maxHealth;
         hasBeenDamage = false;
 

@@ -9,38 +9,36 @@ namespace PhantomProjects.Managers
 {
     public class ScenesManager : MonoBehaviour
     {
+        public int currentScene { get; private set; }
+
         int sceneNumber;
         string sceneName;
-        bool isDead;
 
         float waitingToSwitchScene = 2f;
 
-        Scene currentScene;
-        GameObject canvas;
        [SerializeField] GameObject fader;
 
         GameObject player;
+        GameManager gameManager;
+
         private void Awake()
         {
+            gameManager = FindObjectOfType<GameManager>();
             fader = findChildFromParent("Canvas", "Fader");
         }
 
         private void Update()
         {
-            player = GameObject.FindGameObjectWithTag("Player");
+            currentScene = SceneManager.GetActiveScene().buildIndex;
 
-            if (player != null)
+            //Send Daddy Game Manager Info and retrieve
+            gameManager.currentSceneIndex = currentScene;
+            player = gameManager.player;
+
+            if (player.GetComponent<PlayerStats>().IsPlayerDead)
             {
-                isDead = player.GetComponent<PlayerStats>().IsPlayerDead;
                 BringNextScene("EndGame");
             }
-        }
-
-        GameObject findChildFromParent(string parentName, string childNameToFind)
-        {
-            string childLocation = "/" + parentName + "/" + childNameToFind;
-            GameObject childObject = GameObject.Find(childLocation);
-            return childObject;
         }
 
         //By Name
@@ -63,7 +61,12 @@ namespace PhantomProjects.Managers
             StartCoroutine(LoadScenebyNumber());
         }
 
-
+        GameObject findChildFromParent(string parentName, string childNameToFind)
+        {
+            string childLocation = "/" + parentName + "/" + childNameToFind;
+            GameObject childObject = GameObject.Find(childLocation);
+            return childObject;
+        }
 
         IEnumerator LoadScenebyName()
         {
@@ -72,8 +75,6 @@ namespace PhantomProjects.Managers
             SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
             yield return null;
         }
-
-
         IEnumerator LoadScenebyNumber()
         {
             FindFaderAndTurnOn();
@@ -81,7 +82,6 @@ namespace PhantomProjects.Managers
             SceneManager.LoadScene(sceneNumber, LoadSceneMode.Single);
             yield return null;
         }
-
         void FindFaderAndTurnOn()
         {
             fader.SetActive(true);

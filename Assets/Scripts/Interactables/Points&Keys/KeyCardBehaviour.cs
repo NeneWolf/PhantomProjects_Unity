@@ -1,16 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using PhantomProjects.Managers;
 
 namespace PhantomProjects.Core
 {
     public class KeyCardBehaviour : MonoBehaviour
     {
-        CanvasUI ui;
+        UIManager ui;
 
         private void Start()
         {
-            ui = GameObject.FindObjectOfType<CanvasUI>();
+            ui = GameObject.FindObjectOfType<UIManager>();
         }
 
         private void OnCollisionEnter2D(Collision2D collision)

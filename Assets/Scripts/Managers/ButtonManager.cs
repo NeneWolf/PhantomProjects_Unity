@@ -6,6 +6,7 @@ namespace PhantomProjects.Managers
 {
     public class ButtonManager : MonoBehaviour
     {
+        #region MainMenu
         // 0 - Main Menu //1 - Select Slot // 2 - Mode
         [SerializeField] GameObject[] menus; 
 
@@ -49,6 +50,7 @@ namespace PhantomProjects.Managers
         void DifficultySelected(int difficultyLevel)
         {
             FindObjectOfType<DifficultyManager>().SetDifficulty(difficultyLevel);
+            FindObjectOfType<GameManager>().gameDifficulty = difficultyLevel;
             FindObjectOfType<ScenesManager>().BringNextScene("CharacterSelection");
         }
 
@@ -58,5 +60,25 @@ namespace PhantomProjects.Managers
             yield return new WaitForSeconds(2f);
             DifficultySelected(difficultyLevel);
         }
+        #endregion
+
+        #region Save and Load Button Functions
+        // Saving & Loading
+        public void OnNewGameClicked()
+        {
+            DataPersistanceManager.instance.NewGame();
+        }
+
+        public void OnLoadGameClicked()
+        {
+            DataPersistanceManager.instance.LoadGame();
+        }
+
+        public void OnSaveGameClicked()
+        {
+            DataPersistanceManager.instance.SaveGame();
+        }
+
+        #endregion
     }
 }
