@@ -14,9 +14,9 @@ public class FileDataHandler
         this.dataFileName = dataFileName;
     }
 
-    public GameData Load()
+    public GameData Load(string profileId)
     {
-        string fullPath = Path.Combine(dataDirPath, dataFileName);
+        string fullPath = Path.Combine(dataDirPath,profileId, dataFileName);
 
         GameData loadData = null;
 
@@ -43,9 +43,39 @@ public class FileDataHandler
         return loadData;
     }
 
-    public void Save(GameData data)
+
+    public Dictionary<string, GameData> LoadAllProfiles()
     {
-        string fullPath = Path.Combine(dataDirPath, dataFileName);
+        Dictionary<string, GameData> profileDictionary = new Dictionary<string, GameData>();
+
+        IEnumerable<DirectoryInfo> dirInfo = new DirectoryInfo(dataDirPath).EnumerateDirectories();
+        foreach (DirectoryInfo dir in dirInfo)
+        {
+            string profileId = dir.Name;
+            string fullPath = Path.Combine(dataDirPath, profileId, dataFileName);
+            if (!File.Exists(fullPath))
+            {
+                Debug.LogWarning("Skipped directory when loading all profiles because it does not contain data:" + profileId);
+                continue;
+            }
+
+            GameData profileData = Load(profileId);
+
+            if(profileData != null)
+            {
+                profileDictionary.Add(profileId, profileData);
+            }
+            else
+            {
+                Debug.LogError("Tried to load profile but something went wrong. ProfileId:" + profileId);
+            }
+        }
+        return profileDictionary;
+    }
+
+    public void Save(GameData data, string profileId)
+    {
+        string fullPath = Path.Combine(dataDirPath, profileId,dataFileName);
 
         try
         {
@@ -64,6 +94,31 @@ public class FileDataHandler
         catch(Exception e)
         {
             Debug.LogError("Error occured when trying to save data to file" + fullPath + "\n" + e);
+        }
+    }
+
+    public void Delete(string profileId)
+    {
+        if(profileId == null)
+        {
+            return;
+        }
+        string fullPath = Path.Combine(dataDirPath, profileId,dataFileName);
+
+        try
+        {
+            if (File.Exists(fullPath))
+            {
+                Directory.Delete(Path.GetDirectoryName(fullPath), true);
+            }
+            else
+            {
+                Debug.LogWarning("Tried to delete profile data, but data was not found at path: " + fullPath);
+            }
+        }
+        catch(Exception e)
+        {
+            Debug.LogError("Failed to delete profile data for profileId: " + profileId + " at path: " + fullPath);
         }
     }
 

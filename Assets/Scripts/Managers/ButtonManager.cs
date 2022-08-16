@@ -63,6 +63,7 @@ namespace PhantomProjects.Managers
         #endregion
 
         #region Save and Load Button Functions
+
         // Saving & Loading
         public void OnNewGameClicked()
         {
@@ -78,6 +79,7 @@ namespace PhantomProjects.Managers
         {
             DataPersistanceManager.instance.SaveGame();
         }
+
 
         #endregion
     }

@@ -60,6 +60,5 @@ namespace PhantomProjects.Managers
             currentMutationPoints += points;
             gameManager.GetComponent<GameManager>().mutationPointsCollected = currentMutationPoints;
         }
-
     }
 }

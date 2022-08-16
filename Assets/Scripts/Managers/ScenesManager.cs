@@ -27,6 +27,14 @@ namespace PhantomProjects.Managers
             fader = findChildFromParent("Canvas", "Fader");
         }
 
+        private void FixedUpdate()
+        {
+            if (fader == null)
+            {
+                fader = findChildFromParent("Canvas", "Fader");
+            }
+        }
+
         private void Update()
         {
             currentScene = SceneManager.GetActiveScene().buildIndex;
@@ -36,6 +44,7 @@ namespace PhantomProjects.Managers
 
             if (gameManager.inStartLevel)
             {
+
                 player = gameManager.player;
 
                 if (player.GetComponent<PlayerStats>().IsPlayerDead)

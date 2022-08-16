@@ -7,6 +7,10 @@ namespace PhantomProjects.Managers
 {
     public class CharacterSelectionManager : MonoBehaviour
     {
+        GameManager gameManager;
+        ButtonManager buttonManager;
+        ScenesManager sceneManager;
+
         public GameObject spawnPosition;
         public GameObject[] characters;
 
@@ -16,6 +20,13 @@ namespace PhantomProjects.Managers
         int indexSelected;
 
         int index;
+
+        private void Awake()
+        {
+            gameManager = FindObjectOfType<GameManager>();
+            buttonManager = FindObjectOfType<ButtonManager>();
+            sceneManager = FindObjectOfType<ScenesManager>();
+        }
 
         public void CharacterSelection()
         {
@@ -57,7 +68,10 @@ namespace PhantomProjects.Managers
 
         public void ConfirmSelected()
         {
-            FindObjectOfType<GameManager>().charactersIndex = indexSelected;
+            gameManager.charactersIndex = indexSelected;
+            buttonManager.OnNewGameClicked();
+            sceneManager.BringNextScene("SampleScene");
+
         }
     }
 }

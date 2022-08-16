@@ -39,7 +39,7 @@ namespace PhantomProjects.Managers
 
         private void Update()
         {
-            if(currentSceneIndex == level0Index)
+            if(currentSceneIndex >= level0Index)
             {
                 inStartLevel = true;
             }
@@ -58,36 +58,26 @@ namespace PhantomProjects.Managers
         {
             playerCurrentHealth = player.GetComponent<PlayerStats>().currentHealth;
             playerCurrentEnergy = player.GetComponent<PlayerStats>().currentEnergy;
-
         }
 
         public void LoadData(GameData data)
         {
             this.charactersIndex = data.characterSelected;
-
             this.gameDifficulty = data.modeSelected;
-
             this.currentSceneIndex = data.currentLevelIndex;
-
             this.playerCurrentHealth = data.currentHealth;
             this.playerCurrentEnergy = data.currentEnergy;
             this.mutationPointsCollected = data.mutationPoints;
 
-            // Send the saved data into the respective managers
-            difficultyManager.difficultyLevel = gameDifficulty;
-            scenesManager.currentScene = currentSceneIndex;
-            player.GetComponent<PlayerStats>().SetHealthEnergyOnLoad(playerCurrentHealth,playerCurrentEnergy);
-            uiManager.currentMutationPoints = mutationPointsCollected;
-        }
+         }
 
-        public void SaveData(ref GameData data)
+        public void SaveData(GameData data)
         {
             data.characterSelected = this.charactersIndex;
 
             data.modeSelected = this.gameDifficulty;
 
             data.currentLevelIndex = this.currentSceneIndex;
-
             data.currentHealth = this.playerCurrentHealth;
             data.currentEnergy = this.playerCurrentEnergy;
             data.mutationPoints = this.mutationPointsCollected;

@@ -15,6 +15,8 @@ public class DataPersistanceManager : MonoBehaviour
 
     public static DataPersistanceManager instance { get; private set; }
 
+    private string selectedProfileId = "";
+
     private void Awake()
     {
         instance = this;
@@ -53,7 +55,7 @@ public class DataPersistanceManager : MonoBehaviour
     public void LoadGame()
     {
         //Load any saved data from a file using the data handler
-        this.gameData = dataHandler.Load();
+        this.gameData = dataHandler.Load(selectedProfileId);
 
         // if no data can be loaded, initialize to a new game
         if (this.gameData == null)
@@ -71,11 +73,23 @@ public class DataPersistanceManager : MonoBehaviour
     {
         foreach (IDataPersistance dataPersistanceObj in dataPersistanceObjects)
         {
-            dataPersistanceObj.SaveData(ref gameData);
+            dataPersistanceObj.SaveData(gameData);
         }
 
-        dataHandler.Save(gameData);
+        dataHandler.Save(gameData, selectedProfileId);
     }
+
+    public void DeleteProfileData(string profileId)
+    {
+        dataHandler.Delete(profileId);
+    }
+
+    public void ChangeSelectedProfileId(string newProfileId)
+    {
+        this.selectedProfileId = newProfileId;
+        LoadGame();
+    }
+
 
     private void OnApplicationQuit()
     {
@@ -87,5 +101,10 @@ public class DataPersistanceManager : MonoBehaviour
         IEnumerable<IDataPersistance> dataPersistanceObjects = FindObjectsOfType<MonoBehaviour>().OfType<IDataPersistance>();
 
         return new List<IDataPersistance>(dataPersistanceObjects);
+    }
+
+    public Dictionary<string, GameData> GetAllProfileGameData()
+    {
+        return dataHandler.LoadAllProfiles();
     }
 }
