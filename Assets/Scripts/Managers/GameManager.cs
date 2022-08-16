@@ -7,6 +7,11 @@ namespace PhantomProjects.Managers
 {
     public class GameManager : MonoBehaviour, IDataPersistance
     {
+        GameObject sceneManager;
+        DifficultyManager difficultyManager;
+
+        Transform spawnPlayerPosition;
+
         // Data To Save
         public GameObject[] Characters;
         public int charactersIndex; // Character Select Manager
@@ -26,31 +31,31 @@ namespace PhantomProjects.Managers
 
         // 
         public GameObject player;
-        UIManager uiManager;
-        DifficultyManager difficultyManager;
-        ScenesManager scenesManager;
 
         private void Awake()
-        { 
-            uiManager = GetComponent<UIManager>();
-            difficultyManager = GetComponent<DifficultyManager>();
-            scenesManager = GetComponent<ScenesManager>();
+        {
+            sceneManager = GameObject.Find("SceneManager");
+            difficultyManager = FindObjectOfType<DifficultyManager>();
         }
 
         private void Update()
         {
-            if(currentSceneIndex >= level0Index)
+            if (sceneManager.GetComponent<ScenesManager>().currentScene >= level0Index)
             {
                 inStartLevel = true;
             }
 
+            if (sceneManager.GetComponent<ScenesManager>().currentScene == 6 && player == null)
+            {
+                spawnPlayerPosition = GameObject.Find("PlayerSpawnPosition").transform;
+                GameObject.Instantiate(Characters[charactersIndex],spawnPlayerPosition.transform.position, Quaternion.identity);
+                player = GameObject.FindGameObjectWithTag("Player");
+                PlayerDetails();
+            }
+
             if (inStartLevel)
             {
-                if (GameObject.FindGameObjectWithTag("Player") != null)
-                {
-                    player = GameObject.FindGameObjectWithTag("Player");
-                    PlayerDetails();
-                }
+                PlayerDetails();
             }
         }
 
@@ -68,20 +73,19 @@ namespace PhantomProjects.Managers
             this.playerCurrentHealth = data.currentHealth;
             this.playerCurrentEnergy = data.currentEnergy;
             this.mutationPointsCollected = data.mutationPoints;
-
          }
 
         public void SaveData(GameData data)
         {
             data.characterSelected = this.charactersIndex;
 
-            data.modeSelected = this.gameDifficulty;
+            data.modeSelected = difficultyManager.difficultyLevel;
 
-            data.currentLevelIndex = this.currentSceneIndex;
+            data.currentLevelIndex = sceneManager.GetComponent<ScenesManager>().currentScene;
+
             data.currentHealth = this.playerCurrentHealth;
             data.currentEnergy = this.playerCurrentEnergy;
             data.mutationPoints = this.mutationPointsCollected;
-
         }
     }
 }

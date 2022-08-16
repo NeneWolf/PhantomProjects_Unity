@@ -3,9 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 using UnityEngine.SceneManagement;
+using PhantomProjects.Managers;
 
 public class DataPersistanceManager : MonoBehaviour
 {
+    GameObject sceneManager;
+    public int lastLevelIndex { get; private set; }
+
     [Header("File Storage Config")]
     [SerializeField] private string fileName;
 
@@ -20,20 +24,15 @@ public class DataPersistanceManager : MonoBehaviour
     private void Awake()
     {
         instance = this;
-
+        sceneManager = GameObject.Find("SceneManager");
         this.dataHandler = new FileDataHandler(Application.persistentDataPath, fileName);
     }
 
+    // Saves on every loaded scene
     private void OnEnable()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
         SceneManager.sceneUnloaded += OnSceneUnloaded;
-    }
-
-    private void OnDisable()
-    {
-        SceneManager.sceneLoaded -= OnSceneLoaded;
-        SceneManager.sceneUnloaded -= OnSceneUnloaded;
     }
 
     public void OnSceneLoaded(Scene scene, LoadSceneMode mode)
@@ -44,6 +43,7 @@ public class DataPersistanceManager : MonoBehaviour
 
     public void OnSceneUnloaded(Scene scene)
     {
+        print("Saved Game");
         SaveGame();
     }
 
@@ -66,6 +66,9 @@ public class DataPersistanceManager : MonoBehaviour
         {
             dataPersistanceObj.LoadData(gameData);
         }
+        
+        lastLevelIndex = gameData.currentLevelIndex;
+
     }
 
 
@@ -88,12 +91,6 @@ public class DataPersistanceManager : MonoBehaviour
     {
         this.selectedProfileId = newProfileId;
         LoadGame();
-    }
-
-
-    private void OnApplicationQuit()
-    {
-        //SaveGame();
     }
 
     private List<IDataPersistance> FindAllDataPersistanceObjects()

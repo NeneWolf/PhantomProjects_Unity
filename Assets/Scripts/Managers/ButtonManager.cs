@@ -6,6 +6,10 @@ namespace PhantomProjects.Managers
 {
     public class ButtonManager : MonoBehaviour
     {
+        ScenesManager scenesManager;
+        GameObject SavingManager;
+
+        int SceneToTp;
         #region MainMenu
         // 0 - Main Menu //1 - Select Slot // 2 - Mode
         [SerializeField] GameObject[] menus; 
@@ -14,6 +18,12 @@ namespace PhantomProjects.Managers
         [SerializeField] GameObject pCapsule;
 
         int difficultyLevel;
+
+        private void Awake()
+        {
+            scenesManager = FindObjectOfType<ScenesManager>();
+            SavingManager = GameObject.Find("SavingManager");
+        }
 
         public void MoveToSelectMenu()
         {
@@ -51,7 +61,7 @@ namespace PhantomProjects.Managers
         {
             FindObjectOfType<DifficultyManager>().SetDifficulty(difficultyLevel);
             FindObjectOfType<GameManager>().gameDifficulty = difficultyLevel;
-            FindObjectOfType<ScenesManager>().BringNextScene("CharacterSelection");
+            scenesManager.BringNextScene("CharacterSelection");
         }
 
         IEnumerator TheBreak()
@@ -75,12 +85,16 @@ namespace PhantomProjects.Managers
             DataPersistanceManager.instance.LoadGame();
         }
 
+
         public void OnSaveGameClicked()
         {
             DataPersistanceManager.instance.SaveGame();
         }
 
-
+        public void LoadSavedScene()
+        {
+            scenesManager.LoadScene(SavingManager.GetComponent<DataPersistanceManager>().lastLevelIndex);
+        }
         #endregion
     }
 }

@@ -2,7 +2,6 @@ using PhantomProjects.Managers;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class DoorBehaviour : MonoBehaviour
 {
@@ -10,7 +9,7 @@ public class DoorBehaviour : MonoBehaviour
     [SerializeField] int requiredNumberOfKeys;
     [SerializeField] LayerMask whatIsPlayer;
 
-    ScenesManager sceneManager;
+    GameObject sceneManager;
     GameManager gameManager;
     UIManager uiManager;
 
@@ -19,22 +18,22 @@ public class DoorBehaviour : MonoBehaviour
 
     private void Awake()
     {
-        sceneManager = GetComponent<ScenesManager>();
-        gameManager = GetComponent<GameManager>();
-        uiManager = GetComponent<UIManager>();
+        sceneManager = GameObject.Find("SceneManager");
+        //gameManager = GetComponent<GameManager>();
+        //uiManager = GetComponent<UIManager>();
     }
 
     void Update()
     {
         Collider2D playerCollider = Physics2D.OverlapBox(transform.position, transform.localScale, transform.rotation.x ,whatIsPlayer);
 
-        if (nextScene && playerCollider && Input.GetKeyDown(KeyCode.F) && uiManager.currentKeycards == requiredNumberOfKeys)
+        if (playerCollider && Input.GetKeyDown(KeyCode.F))
         {
-            sceneManager.BringNextSchene();
+            sceneManager.GetComponent<ScenesManager>().BringNextSchene();
         }
-        else if (previousScene && playerCollider && Input.GetKeyDown(KeyCode.F))
-        {
-            sceneManager.ReturnToPreviousScene();
-        }
+        //else if (previousScene && playerCollider && Input.GetKeyDown(KeyCode.F))
+        //{
+        //    sceneManager.ReturnToPreviousScene();
+        //}
     }
 }

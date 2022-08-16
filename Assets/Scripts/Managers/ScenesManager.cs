@@ -9,6 +9,8 @@ namespace PhantomProjects.Managers
 {
     public class ScenesManager : MonoBehaviour
     {
+        GameObject dataManager;
+
         public int currentScene;
 
         int sceneNumber;
@@ -24,32 +26,28 @@ namespace PhantomProjects.Managers
         private void Awake()
         {
             gameManager = FindObjectOfType<GameManager>();
-            fader = findChildFromParent("Canvas", "Fader");
-        }
-
-        private void FixedUpdate()
-        {
-            if (fader == null)
-            {
-                fader = findChildFromParent("Canvas", "Fader");
-            }
+            dataManager = GameObject.Find("SavingManager");
         }
 
         private void Update()
         {
             currentScene = SceneManager.GetActiveScene().buildIndex;
 
-            //Send Daddy Game Manager Info and retrieve
-            gameManager.currentSceneIndex = currentScene;
+            if (fader == null)
+            {
+                fader = findChildFromParent("Canvas", "Fader");
+            }
 
             if (gameManager.inStartLevel)
             {
+                player = GameObject.FindGameObjectWithTag("Player");
 
-                player = gameManager.player;
-
-                if (player.GetComponent<PlayerStats>().IsPlayerDead)
+                if(player != null)
                 {
-                    BringNextScene("EndGame");
+                    if (player.GetComponent<PlayerStats>().IsPlayerDead)
+                    {
+                        BringNextScene("EndGame");
+                    }
                 }
             }
         }
@@ -71,6 +69,12 @@ namespace PhantomProjects.Managers
         public void ReturnToPreviousScene()
         {
             sceneNumber = SceneManager.GetActiveScene().buildIndex - 1;
+            StartCoroutine(LoadScenebyNumber());
+        }
+
+        public void LoadScene(int sceneIndex)
+        {
+            sceneNumber = sceneIndex;
             StartCoroutine(LoadScenebyNumber());
         }
 
@@ -100,8 +104,11 @@ namespace PhantomProjects.Managers
 
         void FindFaderAndTurnOn()
         {
-            fader.SetActive(true);
-            fader.GetComponent<Fader>().FadeOutOn();
+            if(fader != null)
+            {
+                fader.SetActive(true);
+                fader.GetComponent<Fader>().FadeOutOn();
+            }
         }
     }
 }

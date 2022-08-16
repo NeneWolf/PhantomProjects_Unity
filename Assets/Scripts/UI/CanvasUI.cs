@@ -30,13 +30,25 @@ public class CanvasUI : MonoBehaviour
     [Space]
     [SerializeField] GameObject bossHealthBar;
     GameObject boss;
-    bool bossLevel;
+    bool bossLevel = false;
 
     private void Update()
     {
-        updateSliders();
+        player = GameObject.FindGameObjectWithTag("Player");
+        boss = GameObject.FindGameObjectWithTag("Boss");
+
+        if(player != null)
+        {
+            healthBarSlider.maxValue = player.GetComponent<PlayerStats>().maxHealth;
+            energyBarSlider.maxValue = player.GetComponent<PlayerStats>().maxHealth;
+
+            updateSliders();
+        }
+
+        if(boss != null)
+            BossUI();
     }
-    
+
     //Player Sliders
     void updateSliders()
     {
@@ -59,21 +71,11 @@ public class CanvasUI : MonoBehaviour
         }
     }
 
-    public void updateCanvasUI(GameObject player, GameObject boss, Sprite characterProfile, bool isBossLevel)
+    public void updateCanvasUI(Sprite characterProfile, bool isBossLevel)
     {
-        this.player = player;
-        this.boss = boss;
         this.bossLevel = isBossLevel;
 
         characterImage.GetComponent<Image>().sprite = characterProfile;
-
-        if (player != null)
-        {
-            healthBarSlider.maxValue = player.GetComponent<PlayerStats>().maxHealth;
-            energyBarSlider.maxValue = player.GetComponent<PlayerStats>().maxHealth;
-        }
-
-        BossUI();
     }
 
     public void UpdatePlayerUI(int keys, int mutationPoints)

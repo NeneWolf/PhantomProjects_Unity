@@ -13,12 +13,6 @@ namespace PhantomProjects.Managers
         public int difficultyLevel;
         public float difficultyMultiplier;
 
-        private void Update()
-        {
-            FindObjectOfType<GameManager>().difficultyMultiplier = difficultyMultiplier;
-            SetDifficultyMultiplier();
-        }
-
         public void SetDifficulty(int number)
         {
             for(int i = 0; i < difficulty.Length; i++)
@@ -32,8 +26,8 @@ namespace PhantomProjects.Managers
                 {
                     difficulty.SetValue(false, i);
                 }
-
             }
+            SetDifficultyMultiplier();
         }
 
         void SetDifficultyMultiplier()
@@ -54,6 +48,8 @@ namespace PhantomProjects.Managers
                     break;
 
             }
+
+            FindObjectOfType<GameManager>().difficultyMultiplier = difficultyMultiplier;
         }
     }
 }
