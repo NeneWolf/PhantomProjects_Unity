@@ -9,7 +9,7 @@ namespace PhantomProjects.Managers
 {
     public class ScenesManager : MonoBehaviour
     {
-        public int currentScene { get; private set; }
+        public int currentScene;
 
         int sceneNumber;
         string sceneName;
@@ -33,11 +33,15 @@ namespace PhantomProjects.Managers
 
             //Send Daddy Game Manager Info and retrieve
             gameManager.currentSceneIndex = currentScene;
-            player = gameManager.player;
 
-            if (player.GetComponent<PlayerStats>().IsPlayerDead)
+            if (gameManager.inStartLevel)
             {
-                BringNextScene("EndGame");
+                player = gameManager.player;
+
+                if (player.GetComponent<PlayerStats>().IsPlayerDead)
+                {
+                    BringNextScene("EndGame");
+                }
             }
         }
 
@@ -68,6 +72,7 @@ namespace PhantomProjects.Managers
             return childObject;
         }
 
+        //Fader
         IEnumerator LoadScenebyName()
         {
             FindFaderAndTurnOn();
@@ -75,6 +80,7 @@ namespace PhantomProjects.Managers
             SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
             yield return null;
         }
+
         IEnumerator LoadScenebyNumber()
         {
             FindFaderAndTurnOn();
@@ -82,6 +88,7 @@ namespace PhantomProjects.Managers
             SceneManager.LoadScene(sceneNumber, LoadSceneMode.Single);
             yield return null;
         }
+
         void FindFaderAndTurnOn()
         {
             fader.SetActive(true);

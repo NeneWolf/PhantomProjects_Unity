@@ -5,15 +5,11 @@ using UnityEngine;
 [System.Serializable]
 public class GameData
 {
-    //PlayerData
+    
     public int characterSelected;
 
-    public float maxHealth;
     public float currentHealth;
-
-    public float maxEnergy;
     public float currentEnergy;
-
     public int mutationPoints;
 
     //Level

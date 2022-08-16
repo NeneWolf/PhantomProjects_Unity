@@ -15,6 +15,7 @@ public class CanvasUI : MonoBehaviour
     [SerializeField] TextMeshProUGUI mutationPointsTextDisplay;
     [SerializeField] TextMeshProUGUI bossName;
 
+    [Header("Player UI")]
     public Slider healthBarSlider;
     public Slider energyBarSlider;
 
@@ -25,31 +26,32 @@ public class CanvasUI : MonoBehaviour
     GameObject player;
     bool isDead;
 
-    [Header("Boss")]
+    [Header("Boss UI")]
     [Space]
     [SerializeField] GameObject bossHealthBar;
     GameObject boss;
     bool bossLevel;
 
-    GameObject sceneManager;
-
-
-    public void updateCanvasUI(GameObject player, GameObject boss, Sprite characterProfile)
+    private void Update()
     {
-        this.player = player;
-        this.boss = boss;
+        updateSliders();
+    }
+    
+    //Player Sliders
+    void updateSliders()
+    {
+        healthBarSlider.value = player.GetComponent<PlayerStats>().currentHealth;
+        energyBarSlider.value = player.GetComponent<PlayerStats>().currentEnergy;
+    }
 
-        characterImage.GetComponent<Image>().sprite = characterProfile;
-
-        if (boss != null)
+    void BossUI()
+    {
+        //Boss
+        if (bossLevel)
         {
-            bossLevel = true;
             bossName.text = boss.GetComponent<Entity>().name.ToString();
-
             bossHealthBar.SetActive(bossLevel);
-        }
-        else
-        {
+
             if (boss.GetComponent<Entity>().currentHealth <= 0 || boss == null)
             {
                 bossHealthBar.SetActive(false);
@@ -57,15 +59,21 @@ public class CanvasUI : MonoBehaviour
         }
     }
 
-    void updateSliders()
+    public void updateCanvasUI(GameObject player, GameObject boss, Sprite characterProfile, bool isBossLevel)
     {
+        this.player = player;
+        this.boss = boss;
+        this.bossLevel = isBossLevel;
 
-        healthBarSlider.maxValue = player.GetComponent<PlayerStats>().maxHealth;
-        healthBarSlider.value = player.GetComponent<PlayerStats>().currentHealth;
+        characterImage.GetComponent<Image>().sprite = characterProfile;
 
-        energyBarSlider.maxValue = player.GetComponent<PlayerStats>().maxHealth;
-        energyBarSlider.value = player.GetComponent<PlayerStats>().currentHealth;
+        if (player != null)
+        {
+            healthBarSlider.maxValue = player.GetComponent<PlayerStats>().maxHealth;
+            energyBarSlider.maxValue = player.GetComponent<PlayerStats>().maxHealth;
+        }
 
+        BossUI();
     }
 
     public void UpdatePlayerUI(int keys, int mutationPoints)

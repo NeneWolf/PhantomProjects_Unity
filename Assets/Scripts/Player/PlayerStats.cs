@@ -122,5 +122,11 @@ using UnityEngine;
             }
         }
 
+        public void SetHealthEnergyOnLoad(float health, float energy)
+        {
+            currentHealth = health;
+            currentEnergy = energy; 
+        }
+
         #endregion
     }

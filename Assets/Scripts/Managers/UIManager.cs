@@ -7,23 +7,21 @@ namespace PhantomProjects.Managers
 {
     public class UIManager : MonoBehaviour
     {
-        [SerializeField] int level0Index = 6;
-        int currentLevelIndex;
+        GameManager gameManager;
+        GameObject boss;
+        CanvasUI canvas;
 
         //Player
         GameObject player;
         int playerIndex;
         public Sprite[] characterSprite;
 
-        GameObject boss;
-        CanvasUI canvas;
-
         public bool isBossLevel { get; private set; } = false;
 
         public int currentKeycards { get; private set; } = 0;
-        public int currentMutationPoints { get; private set; } = 0;
+        public int currentMutationPoints = 0;
 
-        GameManager gameManager;
+        
 
         private void Awake()
         {
@@ -32,10 +30,7 @@ namespace PhantomProjects.Managers
 
         void Update()
         {
-            currentLevelIndex = FindObjectOfType<ScenesManager>().currentScene;
-
-            //Fetch player and other ui information after the current scene index is 6 or above ( Level 0 > )
-            if (currentLevelIndex >= level0Index)
+            if (gameManager.inStartLevel)
             {
                 canvas = GameObject.Find("/Core/Canvas").gameObject.GetComponent<CanvasUI>();
                 levelUIManager();
@@ -51,7 +46,7 @@ namespace PhantomProjects.Managers
             if (boss != null)
                 isBossLevel = true;
 
-            canvas.updateCanvasUI(player, boss, characterSprite[playerIndex]);
+            canvas.updateCanvasUI(player, boss, characterSprite[playerIndex], gameManager.inStartLevel);
             canvas.UpdatePlayerUI(currentKeycards, currentMutationPoints);
         }
 
@@ -63,6 +58,7 @@ namespace PhantomProjects.Managers
         public void MutationPointsCollection(int points)
         {
             currentMutationPoints += points;
+            gameManager.GetComponent<GameManager>().mutationPointsCollected = currentMutationPoints;
         }
 
     }
