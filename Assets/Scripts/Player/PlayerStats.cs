@@ -32,6 +32,8 @@ public class PlayerStats : MonoBehaviour
 
     void Start()
     {
+        currentHealth = maxHealth;
+        currentEnergy = maxEnergy;
         canUseEnergy = true;
     }
 
