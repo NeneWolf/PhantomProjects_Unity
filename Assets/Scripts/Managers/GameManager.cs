@@ -27,7 +27,10 @@ namespace PhantomProjects.Managers
         public int mutationPointsCollected; // UIManager
 
         [SerializeField] int level0Index = 6;
+
         public bool inStartLevel { get; private set; } = false;
+
+        public bool loadedPlayer = false;
 
         // 
         public GameObject player;
@@ -45,18 +48,18 @@ namespace PhantomProjects.Managers
                 inStartLevel = true;
             }
 
-            if (sceneManager.GetComponent<ScenesManager>().currentScene == 6 && player == null)
+            if (player == null && sceneManager.GetComponent<ScenesManager>().currentScene >= level0Index)
             {
                 spawnPlayerPosition = GameObject.Find("PlayerSpawnPosition").transform;
-                GameObject.Instantiate(Characters[charactersIndex],spawnPlayerPosition.transform.position, Quaternion.identity);
+                GameObject.Instantiate(Characters[charactersIndex], spawnPlayerPosition.transform.position, Quaternion.identity);
                 player = GameObject.FindGameObjectWithTag("Player");
-                PlayerDetails();
             }
 
-            if (inStartLevel)
+            if(player != null)
             {
                 PlayerDetails();
             }
+                
         }
 
         void PlayerDetails()
@@ -67,25 +70,25 @@ namespace PhantomProjects.Managers
 
         public void LoadData(GameData data)
         {
+            this.loadedPlayer = data.loadedPlayer;
             this.charactersIndex = data.characterSelected;
             this.gameDifficulty = data.modeSelected;
             this.currentSceneIndex = data.currentLevelIndex;
             this.playerCurrentHealth = data.currentHealth;
             this.playerCurrentEnergy = data.currentEnergy;
-            this.mutationPointsCollected = data.mutationPoints;
          }
 
         public void SaveData(GameData data)
         {
+            data.loadedPlayer = this.loadedPlayer;
+
             data.characterSelected = this.charactersIndex;
-
             data.modeSelected = difficultyManager.difficultyLevel;
-
-            data.currentLevelIndex = sceneManager.GetComponent<ScenesManager>().currentScene;
-
             data.currentHealth = this.playerCurrentHealth;
             data.currentEnergy = this.playerCurrentEnergy;
-            data.mutationPoints = this.mutationPointsCollected;
+
+            if (sceneManager.GetComponent<ScenesManager>().currentScene >= level0Index)
+                data.currentLevelIndex = sceneManager.GetComponent<ScenesManager>().currentScene + 1;
         }
     }
 }

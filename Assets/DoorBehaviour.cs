@@ -5,13 +5,13 @@ using UnityEngine;
 
 public class DoorBehaviour : MonoBehaviour
 {
-
     [SerializeField] int requiredNumberOfKeys;
     [SerializeField] LayerMask whatIsPlayer;
 
     GameObject sceneManager;
     GameManager gameManager;
     UIManager uiManager;
+    GameObject savingManager;
 
     [SerializeField] bool nextScene = false;
     [SerializeField] bool previousScene = false;
@@ -19,6 +19,7 @@ public class DoorBehaviour : MonoBehaviour
     private void Awake()
     {
         sceneManager = GameObject.Find("SceneManager");
+        savingManager = GameObject.Find("SavingManager");
         //gameManager = GetComponent<GameManager>();
         //uiManager = GetComponent<UIManager>();
     }
@@ -29,6 +30,7 @@ public class DoorBehaviour : MonoBehaviour
 
         if (playerCollider && Input.GetKeyDown(KeyCode.F))
         {
+            savingManager.GetComponent<DataPersistanceManager>().SaveGame();
             sceneManager.GetComponent<ScenesManager>().BringNextSchene();
         }
         //else if (previousScene && playerCollider && Input.GetKeyDown(KeyCode.F))

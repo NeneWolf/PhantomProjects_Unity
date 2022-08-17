@@ -118,7 +118,6 @@ MonoBehaviour:
   spawnAfterDead: 0
   spawnCount: 0
   spawnPosition: {fileID: 0}
-  enemiesLocation: {fileID: 0}
   enemySpawn: {fileID: 0}
   idleStateData: {fileID: 11400000, guid: acd36c051641f89439f5d534347e045f, type: 2}
   moveStateData: {fileID: 11400000, guid: 9f9a737cd97a59a4880d4cd0c3c789f5, type: 2}
@@ -170,9 +169,9 @@ GameObject:
   - component: {fileID: 5664139568120307048}
   - component: {fileID: 5664139568120307051}
   - component: {fileID: 5664139568120307053}
-  - component: {fileID: 5664139568120307050}
   - component: {fileID: 5664139568120307052}
   - component: {fileID: 5664139568120307055}
+  - component: {fileID: 7300822619385406171}
   m_Layer: 6
   m_Name: Alive
   m_TagString: Enemy
@@ -239,7 +238,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1838932657
-  m_SortingLayer: 2
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: d6aac5bcefee6a34b838975f4ad2eac3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -273,32 +272,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!61 &5664139568120307050
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5664139568120307049}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.011507429, y: -0.11507286}
-  m_SpriteTilingProperty:
-    border: {x: 0.06, y: 0.24, z: 0.26, w: 0.47}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.4772417, y: 0.2964116}
-  m_EdgeRadius: 0
 --- !u!95 &5664139568120307052
 Animator:
   serializedVersion: 4
@@ -331,6 +304,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e300bd43ba3b6d54293d48235b441f42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!70 &7300822619385406171
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5664139568120307049}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.003431335, y: -0.12561914}
+  m_Size: {x: 0.48533016, y: 0.26764065}
+  m_Direction: 1
 --- !u!1 &5664139568562167004
 GameObject:
   m_ObjectHideFlags: 0

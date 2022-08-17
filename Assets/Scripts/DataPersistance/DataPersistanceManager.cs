@@ -32,7 +32,7 @@ public class DataPersistanceManager : MonoBehaviour
     private void OnEnable()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
-        SceneManager.sceneUnloaded += OnSceneUnloaded;
+        SceneManager.sceneUnloaded -= OnSceneUnloaded;
     }
 
     public void OnSceneLoaded(Scene scene, LoadSceneMode mode)
@@ -43,7 +43,6 @@ public class DataPersistanceManager : MonoBehaviour
 
     public void OnSceneUnloaded(Scene scene)
     {
-        print("Saved Game");
         SaveGame();
     }
 

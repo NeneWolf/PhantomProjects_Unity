@@ -5,7 +5,7 @@ using UnityEngine;
 [System.Serializable]
 public class GameData
 {
-    
+    public bool loadedPlayer;
     public int characterSelected;
 
     public float currentHealth;

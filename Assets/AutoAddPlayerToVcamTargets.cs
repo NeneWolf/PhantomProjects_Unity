@@ -11,7 +11,14 @@ public class AutoAddPlayerToVcamTargets : MonoBehaviour
 
     void Update()
     {
-        if(tag != null)
+        StartCoroutine(WaitToFindPlayer());
+    }
+
+    IEnumerator WaitToFindPlayer()
+    {
+        yield return new WaitForSeconds(0.1f);
+
+        if (tag != null)
         {
             var targets = GameObject.FindGameObjectWithTag("Player");
             camera.Follow = targets.transform;

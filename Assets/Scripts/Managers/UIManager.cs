@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 namespace PhantomProjects.Managers
 {
-    public class UIManager : MonoBehaviour
+    public class UIManager : MonoBehaviour, IDataPersistance
     {
         GameManager gameManager;
         CanvasUI canvas;
@@ -50,6 +50,16 @@ namespace PhantomProjects.Managers
         {
             currentMutationPoints += points;
             gameManager.GetComponent<GameManager>().mutationPointsCollected = currentMutationPoints;
+        }
+
+        public void LoadData(GameData data)
+        {
+            this.currentMutationPoints = data.mutationPoints;
+        }
+
+        public void SaveData(GameData data)
+        {
+            data.mutationPoints = this.currentMutationPoints;
         }
     }
 }
