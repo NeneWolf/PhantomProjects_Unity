@@ -2,9 +2,9 @@ using PhantomProjects.Managers;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using PhantomProjects.Managers;
 
-
-public class PlayerStats : MonoBehaviour
+public class PlayerStats : MonoBehaviour, IDataPersistance
 {
     #region Variables
 
@@ -28,15 +28,36 @@ public class PlayerStats : MonoBehaviour
     bool isShielded;
     public bool loadedPlayer;
 
+    GameObject gameManager;
+
     #endregion
 
     void Start()
     {
+        if (!loadedPlayer)
+        {
+            gameManager = GameObject.FindObjectOfType<GameManager>().gameObject;
+
+            if(gameManager.GetComponent<GameManager>().playerCurrentHealth == null || gameManager.GetComponent<GameManager>().playerCurrentHealth == 0)
+            {
+                print("NO DATA HERE BITCH");
+                currentEnergy = maxEnergy;
+                currentHealth = maxHealth;
+            }
+            else
+            {
+                print("Maybe some here ?!");
+                currentEnergy = gameManager.GetComponent<GameManager>().playerCurrentEnergy;
+                currentHealth = gameManager.GetComponent<GameManager>().playerCurrentHealth;
+            }
+        }
+
         canUseEnergy = true;
     }
 
     void Update()
     {
+
         IsDead();                                                   // Method to check if the player has run out of health
         isShielded = GetComponentInChildren<PlayerAbilities>().shieldActive;
     }
@@ -125,6 +146,17 @@ public class PlayerStats : MonoBehaviour
     {
         currentHealth = health;
         currentEnergy = energy; 
+    }
+
+    public void LoadData(GameData data)
+    {
+       // throw new System.NotImplementedException();
+    }
+
+    public void SaveData(GameData data)
+    {
+        data.currentHealth = currentHealth;
+        data.currentEnergy = currentEnergy;
     }
 
     #endregion
