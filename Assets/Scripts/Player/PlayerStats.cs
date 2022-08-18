@@ -38,15 +38,15 @@ public class PlayerStats : MonoBehaviour, IDataPersistance
         {
             gameManager = GameObject.FindObjectOfType<GameManager>().gameObject;
 
-            if(gameManager.GetComponent<GameManager>().playerCurrentHealth == null || gameManager.GetComponent<GameManager>().playerCurrentHealth == 0)
+            if(gameManager.GetComponent<GameManager>().playerCurrentHealth == 0)
             {
-                print("NO DATA HERE BITCH");
+                print("NO DATA");
                 currentEnergy = maxEnergy;
                 currentHealth = maxHealth;
             }
             else
             {
-                print("Maybe some here ?!");
+                print("Bingo");
                 currentEnergy = gameManager.GetComponent<GameManager>().playerCurrentEnergy;
                 currentHealth = gameManager.GetComponent<GameManager>().playerCurrentHealth;
             }

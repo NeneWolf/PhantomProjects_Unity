@@ -53,13 +53,7 @@ namespace PhantomProjects.Managers
                 spawnPlayerPosition = GameObject.Find("PlayerSpawnPosition").transform;
                 GameObject.Instantiate(Characters[charactersIndex], spawnPlayerPosition.transform.position, Quaternion.identity);
                 player = GameObject.FindGameObjectWithTag("Player");
-            }
-
-            //if(player != null)
-            //{
-            //    PlayerDetails();
-            //}
-                
+            }               
         }
 
         public void LoadData(GameData data)
@@ -78,8 +72,12 @@ namespace PhantomProjects.Managers
 
             data.characterSelected = this.charactersIndex;
             data.modeSelected = difficultyManager.difficultyLevel;
-            data.currentHealth = player.GetComponent<PlayerStats>().currentHealth;
-            data.currentEnergy = player.GetComponent<PlayerStats>().currentEnergy;
+
+            if(player != null)
+            {
+                data.currentHealth = player.GetComponent<PlayerStats>().currentHealth;
+                data.currentEnergy = player.GetComponent<PlayerStats>().currentEnergy;
+            }
 
             if (sceneManager.GetComponent<ScenesManager>().currentScene >= level0Index)
                 data.currentLevelIndex = sceneManager.GetComponent<ScenesManager>().currentScene + 1;
