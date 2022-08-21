@@ -31,7 +31,7 @@ public class SaveSlot : MonoBehaviour
 
             levelCurrentlyIn.text = "Level " + data.currentLevelIndex;
 
-            switch (data.currentLevelIndex)
+            switch (data.modeSelected)
             {
                 case 0:
                     modeSelected = "Easy";

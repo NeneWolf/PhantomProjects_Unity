@@ -9,8 +9,8 @@ public class DoorBehaviour : MonoBehaviour
     [SerializeField] LayerMask whatIsPlayer;
 
     GameObject sceneManager;
-    GameManager gameManager;
-    UIManager uiManager;
+    GameObject gameManager;
+    GameObject uiManager;
     GameObject savingManager;
 
     [SerializeField] bool nextScene = false;
@@ -20,15 +20,15 @@ public class DoorBehaviour : MonoBehaviour
     {
         sceneManager = GameObject.Find("SceneManager");
         savingManager = GameObject.Find("SavingManager");
-        //gameManager = GetComponent<GameManager>();
-        //uiManager = GetComponent<UIManager>();
+        gameManager = GameObject.Find("GameManager");
+        uiManager = GameObject.Find("UIManager");
     }
 
     void Update()
     {
         Collider2D playerCollider = Physics2D.OverlapBox(transform.position, transform.localScale, transform.rotation.x ,whatIsPlayer);
 
-        if (playerCollider && Input.GetKeyDown(KeyCode.F))
+        if (playerCollider && Input.GetKeyDown(KeyCode.F) && uiManager.GetComponent<UIManager>().currentKeycards == requiredNumberOfKeys)
         {
             savingManager.GetComponent<DataPersistanceManager>().SaveGame();
             sceneManager.GetComponent<ScenesManager>().BringNextSchene();

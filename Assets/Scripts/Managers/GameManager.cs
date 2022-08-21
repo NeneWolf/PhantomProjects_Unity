@@ -72,8 +72,9 @@ namespace PhantomProjects.Managers
 
             data.characterSelected = this.charactersIndex;
             data.modeSelected = difficultyManager.difficultyLevel;
+            data.modeSelected = gameDifficulty;
 
-            if(player != null)
+            if (player != null)
             {
                 data.currentHealth = player.GetComponent<PlayerStats>().currentHealth;
                 data.currentEnergy = player.GetComponent<PlayerStats>().currentEnergy;

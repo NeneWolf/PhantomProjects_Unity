@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace PhantomProjects.Managers 
 { 
-    public class DifficultyManager : MonoBehaviour
+    public class DifficultyManager : MonoBehaviour,IDataPersistance
     {
         [Header("Game Difficulty Setting")]
         // 0- easy // 1-normal // 2-hard
@@ -50,6 +50,17 @@ namespace PhantomProjects.Managers
             }
 
             FindObjectOfType<GameManager>().difficultyMultiplier = difficultyMultiplier;
+        }
+
+        public void LoadData(GameData data)
+        {
+            this.difficultyLevel = data.modeSelected;
+            SetDifficultyMultiplier();
+        }
+
+        public void SaveData(GameData data)
+        {
+            //throw new System.NotImplementedException();
         }
     }
 }

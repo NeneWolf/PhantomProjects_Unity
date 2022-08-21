@@ -9,14 +9,17 @@ public class PlayerDontDestroy : MonoBehaviour
     PlayerStats stats;
     Transform spawnPosition;
 
-    private void OnEnable()
+    private void Update()
     {
-        this.transform.position = GameObject.Find("PlayerSpawnPosition").gameObject.transform.position;
+        FindOtherPlayers();       
+    }
 
+
+    void FindOtherPlayers()
+    {
         otherPlayers = GameObject.FindGameObjectsWithTag("Player");
-        stats = GetComponent<PlayerStats>();
 
-        if(otherPlayers.Length > 1)
+        if (otherPlayers.Length > 1)
         {
             Destroy(this.gameObject);
         }
