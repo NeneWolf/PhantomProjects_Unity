@@ -1,9 +1,9 @@
-﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
-public class Sensor_Prototype : MonoBehaviour {
-
-    //[SerializeField] LayerMask whatisGround;
+public class GroundSensor_Prototype : MonoBehaviour
+{
     private int m_ColCount = 0;
 
     private float m_DisableTimer;
@@ -22,14 +22,14 @@ public class Sensor_Prototype : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        //print(other.IsTouchingLayers(whatisGround));
-         if(other.name == "Ground" || other.tag =="Ground" || other.name == "Platform" || other.tag == "Platform")
+        print(other.name);
+        if(other.name == "Ground")
             m_ColCount++;
     }
 
     void OnTriggerExit2D(Collider2D other)
     {
-        if (other.name == "Ground" || other.tag == "Ground" || other.name == "Platform" || other.tag == "Platform")
+        if (other.name == "Ground")
             m_ColCount--;
     }
 

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
 
@@ -29,7 +30,7 @@ public class SaveSlot : MonoBehaviour
             noDataContent.SetActive(false);
             hasDataContent.SetActive(true);
 
-            levelCurrentlyIn.text = "Level " + data.currentLevelIndex;
+            levelCurrentlyIn.text = GetSceneNameFromBuildIndex(data.currentLevelIndex);
 
             switch (data.modeSelected)
             {
@@ -46,6 +47,14 @@ public class SaveSlot : MonoBehaviour
 
             modeAndTimerCurrentlyIn.text = modeSelected + " | " + "00:00 Time"; // TO BE WORKED ON ...
         }
+    }
+
+    static string GetSceneNameFromBuildIndex(int index)
+    {
+        string scenePath = SceneUtility.GetScenePathByBuildIndex(index);
+        string sceneName = System.IO.Path.GetFileNameWithoutExtension(scenePath);
+
+        return sceneName;
     }
 
     public string GetProfileId()

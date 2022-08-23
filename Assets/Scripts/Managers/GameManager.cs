@@ -82,6 +82,8 @@ namespace PhantomProjects.Managers
 
             if (sceneManager.GetComponent<ScenesManager>().currentScene >= level0Index)
                 data.currentLevelIndex = sceneManager.GetComponent<ScenesManager>().currentScene + 1;
+            else if (sceneManager.GetComponent<ScenesManager>().currentScene < level0Index && data.characterSelected != null)
+                data.currentLevelIndex = 6;
         }
     }
 }

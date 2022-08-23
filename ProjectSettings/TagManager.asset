@@ -18,6 +18,7 @@ TagManager:
   - Canvas
   - Fader
   - BMinion
+  - Ground
   layers:
   - Default
   - TransparentFX

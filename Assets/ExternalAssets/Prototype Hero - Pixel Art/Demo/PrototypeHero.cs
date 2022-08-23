@@ -166,6 +166,7 @@ public class PrototypeHero : MonoBehaviour {
 
                 if (ledge)
                 {
+                    print("Hold Ledge!");
                     m_ledgeGrab = true;
                     m_body2d.velocity = Vector2.zero;
                     m_body2d.gravityScale = 0;

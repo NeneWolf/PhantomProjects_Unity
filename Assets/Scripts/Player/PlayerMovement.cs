@@ -29,12 +29,12 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
+        //animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
 
-        if (Input.GetButtonDown("Jump"))
-        {
-            controller.CanJump(true);
-        }
+        //if (Input.GetButtonDown("Jump"))
+        //{
+        //    controller.CanJump(true);
+        //}
     }
 
     private void FixedUpdate()
@@ -44,8 +44,8 @@ public class PlayerMovement : MonoBehaviour
 
     void PCControls()
     {
-        horizontalMove = Input.GetAxisRaw("Horizontal") * currentSpeed;
-        controller.Move(horizontalMove * Time.fixedDeltaTime);            // Player movements
+        //horizontalMove = Input.GetAxisRaw("Horizontal") * currentSpeed;
+        ////controller.Move(horizontalMove * Time.fixedDeltaTime);            // Player movements
     }
 
     public void ReduceSpeed(float amount)
