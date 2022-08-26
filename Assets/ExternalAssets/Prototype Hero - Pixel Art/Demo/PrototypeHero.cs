@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 
 public class PrototypeHero : MonoBehaviour {
 
@@ -9,7 +10,7 @@ public class PrototypeHero : MonoBehaviour {
     public float      m_dodgeForce = 8.0f;
     public float      m_parryKnockbackForce = 4.0f; 
     public bool       m_noBlood = false;
-    public bool       m_hideSword = false;
+    public bool       m_SpecialGun = false;
 
     private Animator            m_animator;
     private Rigidbody2D         m_body2d;
@@ -19,16 +20,18 @@ public class PrototypeHero : MonoBehaviour {
     private Sensor_Prototype    m_wallSensorR2;
     private Sensor_Prototype    m_wallSensorL1;
     private Sensor_Prototype    m_wallSensorL2;
+    private PlayerStats         playerStats;
+    private float               inputX;
     private bool                m_grounded = false;
     private bool                m_moving = false;
-    private bool                m_dead = false;
+    private bool                m_dead;
     private bool                m_dodging = false;
     private bool                m_wallSlide = false;
     private bool                m_ledgeGrab = false;
     private bool                m_ledgeClimb = false;
     private bool                m_crouching = false;
     private Vector3             m_climbPosition;
-    private int                 m_facingDirection = 1;
+    public  int                 m_facingDirection { get; private set; } = 1;
     private float               m_disableMovementTimer = 0.0f;
     private float               m_parryTimer = 0.0f;
     private float               m_respawnTimer = 0.0f;
@@ -44,6 +47,7 @@ public class PrototypeHero : MonoBehaviour {
         m_animator = GetComponentInChildren<Animator>();
         m_body2d = GetComponent<Rigidbody2D>();
         m_SR = GetComponentInChildren<SpriteRenderer>();
+        playerStats = GetComponent<PlayerStats>();
         m_gravity = m_body2d.gravityScale;
 
         m_groundSensor = transform.Find("GroundSensor").GetComponent<Sensor_Prototype>();
@@ -56,6 +60,9 @@ public class PrototypeHero : MonoBehaviour {
     // Update is called once per frame
     void Update ()
     {
+        //Check if the player is dead
+        m_dead = playerStats.IsPlayerDead;
+
         // Decrease death respawn timer 
         m_respawnTimer -= Time.deltaTime;
 
@@ -68,12 +75,12 @@ public class PrototypeHero : MonoBehaviour {
         // Decrease timer that disables input movement. Used when attacking
         m_disableMovementTimer -= Time.deltaTime;
 
-        // Respawn Hero if dead
-        if (m_dead && m_respawnTimer < 0.0f)
-            RespawnHero();
+        //// Respawn Hero if dead
+        //if (m_dead && m_respawnTimer < 0.0f)
+        //    RespawnHero();
 
-        if (m_dead)
-            return;
+        //if (m_dead)
+        //    return;
 
         //Check if character just landed on the ground
         if (!m_grounded && m_groundSensor.State())
@@ -89,36 +96,11 @@ public class PrototypeHero : MonoBehaviour {
             m_animator.SetBool("Grounded", m_grounded);
         }
 
-        // -- Handle input and movement --
-        float inputX = 0.0f;
+        Movement();
 
-        if (m_disableMovementTimer < 0.0f)
-            inputX = Input.GetAxis("Horizontal");
-
-        // GetAxisRaw returns either -1, 0 or 1
-        float inputRaw = Input.GetAxisRaw("Horizontal");
-
-        // Check if character is currently moving
-        if (Mathf.Abs(inputRaw) > Mathf.Epsilon && Mathf.Sign(inputRaw) == m_facingDirection)
-            m_moving = true;
-        else
-            m_moving = false;
-
-        // Swap direction of sprite depending on move direction
-        if (inputRaw > 0 && !m_dodging && !m_wallSlide && !m_ledgeGrab && !m_ledgeClimb)
-        {
-            m_SR.flipX = false;
-            m_facingDirection = 1;
-        }
-            
-        else if (inputRaw < 0 && !m_dodging && !m_wallSlide && !m_ledgeGrab && !m_ledgeClimb)
-        {
-            m_SR.flipX = true;
-            m_facingDirection = -1;
-        }
-     
         // SlowDownSpeed helps decelerate the characters when stopping
         float SlowDownSpeed = m_moving ? 1.0f : 0.5f;
+
         // Set movement
         if(!m_dodging && !m_ledgeGrab && !m_ledgeClimb && !m_crouching && m_parryTimer < 0.0f)
             m_body2d.velocity = new Vector2(inputX * m_maxSpeed * SlowDownSpeed, m_body2d.velocity.y);
@@ -127,7 +109,7 @@ public class PrototypeHero : MonoBehaviour {
         m_animator.SetFloat("AirSpeedY", m_body2d.velocity.y);
 
         // Set Animation layer for hiding sword
-        int boolInt = m_hideSword ? 1 : 0;
+        int boolInt = m_SpecialGun ? 1 : 0;
         m_animator.SetLayerWeight(1, boolInt);
 
         // Check if all sensors are setup properly
@@ -185,110 +167,100 @@ public class PrototypeHero : MonoBehaviour {
 
         // -- Handle Animations --
         //Death
-        if (Input.GetKeyDown("e") && !m_dodging)
+        if (m_dead && !m_dodging)
         {
-            m_animator.SetBool("noBlood", m_noBlood);
+            //m_animator.SetBool("noBlood", m_noBlood);
             m_animator.SetTrigger("Death");
-            m_respawnTimer = 2.5f;
+            //m_respawnTimer = 2.5f;
             DisableWallSensors();
-            m_dead = true;
+            //m_dead = true;
         }
-        
-        //Hurt
-        else if (Input.GetKeyDown("q") && !m_dodging)
-        {
-            m_animator.SetTrigger("Hurt");
-            // Disable movement 
-            m_disableMovementTimer = 0.1f;
-            DisableWallSensors();
-        }
-
         // Parry & parry stance
-        else if (Input.GetMouseButtonDown(1) && !m_dodging && !m_ledgeGrab && !m_ledgeClimb && !m_crouching && m_grounded)
-        {
-            // Parry
-            // Used when you are in parry stance and something hits you
-            if (m_parryTimer > 0.0f)
-            {
-                m_animator.SetTrigger("Parry");
-                m_body2d.velocity = new Vector2(-m_facingDirection * m_parryKnockbackForce, m_body2d.velocity.y);
-            }
-                
-            // Parry Stance
-            // Ready to parry in case something hits you
-            else
-            {
-                m_animator.SetTrigger("ParryStance");
-                m_parryTimer = 7.0f / 12.0f;
-            }
-        }
+        //else if (Input.GetMouseButtonDown(1) && !m_dodging && !m_ledgeGrab && !m_ledgeClimb && !m_crouching && m_grounded)
+        //{
+        //    // Parry
+        //    // Used when you are in parry stance and something hits you
+        //    if (m_parryTimer > 0.0f)
+        //    {
+        //        m_animator.SetTrigger("Parry");
+        //        m_body2d.velocity = new Vector2(-m_facingDirection * m_parryKnockbackForce, m_body2d.velocity.y);
+        //    }
 
-        //Up Attack
-        else if (Input.GetMouseButtonDown(0) && Input.GetKey("w") && !m_dodging && !m_ledgeGrab && !m_ledgeClimb && !m_crouching && m_grounded && m_timeSinceAttack > 0.2f)
-        {
-            m_animator.SetTrigger("UpAttack");
+        //    // Parry Stance
+        //    // Ready to parry in case something hits you
+        //    else
+        //    {
+        //        m_animator.SetTrigger("ParryStance");
+        //        m_parryTimer = 7.0f / 12.0f;
+        //    }
+        //}
 
-            // Reset timer
-            m_timeSinceAttack = 0.0f;
+        ////Up Attack
+        //else if (Input.GetMouseButtonDown(0) && Input.GetKey("w") && !m_dodging && !m_ledgeGrab && !m_ledgeClimb && !m_crouching && m_grounded && m_timeSinceAttack > 0.2f)
+        //{
+        //    m_animator.SetTrigger("UpAttack");
 
-            // Disable movement 
-            m_disableMovementTimer = 0.35f;
-        }
+        //    // Reset timer
+        //    m_timeSinceAttack = 0.0f;
 
-        //Attack
-        else if (Input.GetMouseButtonDown(0) && !m_dodging && !m_ledgeGrab && !m_ledgeClimb && !m_crouching && m_grounded && m_timeSinceAttack > 0.2f)
-        {
-            // Reset timer
-            m_timeSinceAttack = 0.0f;
+        //    // Disable movement 
+        //    m_disableMovementTimer = 0.35f;
+        //}
 
-            m_currentAttack++;
+        ////Attack -- Being used to Shoot
+        //else if (Input.GetMouseButtonDown(0) && !m_dodging && !m_ledgeGrab && !m_ledgeClimb) //&& !m_crouching && m_grounded) //&& m_timeSinceAttack > 0.2f)
+        //{
+        //    // Reset timer
+        //    //m_timeSinceAttack = 0.0f;
 
-            // Loop back to one after second attack
-            if (m_currentAttack > 2)
-                m_currentAttack = 1;
+        //    //m_currentAttack++;
 
-            // Reset Attack combo if time since last attack is too large
-            if (m_timeSinceAttack > 1.0f)
-                m_currentAttack = 1;
+        //    //// Loop back to one after second attack
+        //    //if (m_currentAttack > 2)
+        //    //    m_currentAttack = 1;
 
-            // Call one of the two attack animations "Attack1" or "Attack2"
-            m_animator.SetTrigger("Attack" + m_currentAttack);
+        //    //// Reset Attack combo if time since last attack is too large
+        //    //if (m_timeSinceAttack > 1.0f)
+        //    //    m_currentAttack = 1;
 
-            // Disable movement 
-            m_disableMovementTimer = 0.35f;
-        }
+        //    // Call one of the two attack animations "Attack1" or "Attack2"
+        //    m_animator.SetTrigger("Attack1");
 
-        //Air Slam Attack
-        else if (Input.GetMouseButtonDown(0) && Input.GetKey("s") && !m_ledgeGrab && !m_ledgeClimb && !m_grounded)
-        {
-            m_animator.SetTrigger("AttackAirSlam");
-            m_body2d.velocity = new Vector2(0.0f, -m_jumpForce);
-            m_disableMovementTimer = 0.8f;
+        //    // Disable movement 
+        //    //m_disableMovementTimer = 0.35f;
+        //}
 
-            // Reset timer
-            m_timeSinceAttack = 0.0f;
-        }
+        ////Air Slam Attack
+        //else if (Input.GetMouseButtonDown(0) && Input.GetKey("s") && !m_ledgeGrab && !m_ledgeClimb && !m_grounded)
+        //{
+        //    m_animator.SetTrigger("AttackAirSlam");
+        //    m_body2d.velocity = new Vector2(0.0f, -m_jumpForce);
+        //    m_disableMovementTimer = 0.8f;
 
-        // Air Attack Up
-        else if (Input.GetMouseButtonDown(0) && Input.GetKey("w") && !m_dodging && !m_ledgeGrab && !m_ledgeClimb && !m_crouching && !m_grounded && m_timeSinceAttack > 0.2f)
-        {
-            Debug.Log("Air attack up");
-            m_animator.SetTrigger("AirAttackUp");
+        //    // Reset timer
+        //    m_timeSinceAttack = 0.0f;
+        //}
 
-            // Reset timer
-            m_timeSinceAttack = 0.0f;
-        }
+        //// Air Attack Up
+        //else if (Input.GetMouseButtonDown(0) && Input.GetKey("w") && !m_dodging && !m_ledgeGrab && !m_ledgeClimb && !m_crouching && !m_grounded && m_timeSinceAttack > 0.2f)
+        //{
+        //    Debug.Log("Air attack up");
+        //    m_animator.SetTrigger("AirAttackUp");
 
-        // Air Attack
-        else if (Input.GetMouseButtonDown(0) && !m_dodging && !m_ledgeGrab && !m_ledgeClimb && !m_crouching && !m_grounded && m_timeSinceAttack > 0.2f)
-        {
-            m_animator.SetTrigger("AirAttack");
+        //    // Reset timer
+        //    m_timeSinceAttack = 0.0f;
+        //}
 
-            // Reset timer
-            m_timeSinceAttack = 0.0f;
-        }
+        //// Air Attack
+        //else if (Input.GetMouseButtonDown(0) && !m_dodging && !m_ledgeGrab && !m_ledgeClimb && !m_crouching && !m_grounded && m_timeSinceAttack > 0.2f)
+        //{
+        //    m_animator.SetTrigger("AirAttack");
 
-        // Dodge
+        //    // Reset timer
+        //    m_timeSinceAttack = 0.0f;
+        //}
+
+        //Dodge
         else if (Input.GetKeyDown("left shift") && m_grounded && !m_dodging && !m_ledgeGrab && !m_ledgeClimb)
         {
             m_dodging = true;
@@ -298,14 +270,14 @@ public class PrototypeHero : MonoBehaviour {
             m_body2d.velocity = new Vector2(m_facingDirection * m_dodgeForce, m_body2d.velocity.y);
         }
 
-        // Throw
-        else if(Input.GetKeyDown("f") && m_grounded && !m_dodging && !m_ledgeGrab && !m_ledgeClimb)
-        {
-            m_animator.SetTrigger("Throw");
+        //// Throw
+        //else if(Input.GetKeyDown("f") && m_grounded && !m_dodging && !m_ledgeGrab && !m_ledgeClimb)
+        //{
+        //    m_animator.SetTrigger("Throw");
 
-            // Disable movement 
-            m_disableMovementTimer = 0.20f;
-        }
+        //    // Disable movement 
+        //    m_disableMovementTimer = 0.20f;
+        //}
 
         // Ledge Climb
         else if(Input.GetKeyDown("w") && m_ledgeGrab)
@@ -342,18 +314,18 @@ public class PrototypeHero : MonoBehaviour {
             m_groundSensor.Disable(0.2f);
         }
 
-        //Crouch / Stand up
-        else if (Input.GetKeyDown("s") && m_grounded && !m_dodging && !m_ledgeGrab && !m_ledgeClimb && m_parryTimer < 0.0f)
-        {
-            m_crouching = true;
-            m_animator.SetBool("Crouching", true);
-            m_body2d.velocity = new Vector2(m_body2d.velocity.x / 2.0f, m_body2d.velocity.y);
-        }
-        else if (Input.GetKeyUp("s") && m_crouching)
-        {
-            m_crouching = false;
-            m_animator.SetBool("Crouching", false);
-        }
+        ////Crouch / Stand up
+        //else if (Input.GetKeyDown("s") && m_grounded && !m_dodging && !m_ledgeGrab && !m_ledgeClimb && m_parryTimer < 0.0f)
+        //{
+        //    m_crouching = true;
+        //    m_animator.SetBool("Crouching", true);
+        //    m_body2d.velocity = new Vector2(m_body2d.velocity.x / 2.0f, m_body2d.velocity.y);
+        //}
+        //else if (Input.GetKeyUp("s") && m_crouching)
+        //{
+        //    m_crouching = false;
+        //    m_animator.SetBool("Crouching", false);
+        //}
         //Walk
         else if (m_moving && Input.GetKey(KeyCode.LeftControl))
         {
@@ -436,5 +408,48 @@ public class PrototypeHero : MonoBehaviour {
         transform.position = Vector3.zero;
         m_dead = false;
         m_animator.Rebind();
+    }
+
+    public void Hurt()
+    {
+        m_animator.SetTrigger("Hurt");
+        // Disable movement 
+        m_disableMovementTimer = 0.1f;
+        DisableWallSensors();
+    }
+
+    void Movement()
+    {
+        if (!m_dead)
+        {
+            // -- Handle input and movement --
+            inputX = 0.0f;
+
+            if (m_disableMovementTimer < 0.0f)
+                inputX = Input.GetAxis("Horizontal");
+
+            // GetAxisRaw returns either -1, 0 or 1
+            float inputRaw = Input.GetAxisRaw("Horizontal");
+
+            // Check if character is currently moving
+            if (Mathf.Abs(inputRaw) > Mathf.Epsilon && Mathf.Sign(inputRaw) == m_facingDirection)
+                m_moving = true;
+            else
+                m_moving = false;
+
+
+            // Swap direction of sprite depending on move direction
+            if (inputRaw > 0 && !m_dodging && !m_wallSlide && !m_ledgeGrab && !m_ledgeClimb)
+            {
+                m_SR.flipX = false;
+                m_facingDirection = 1;
+            }
+
+            else if (inputRaw < 0 && !m_dodging && !m_wallSlide && !m_ledgeGrab && !m_ledgeClimb)
+            {
+                m_SR.flipX = true;
+                m_facingDirection = -1;
+            }
+        }
     }
 }

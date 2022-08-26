@@ -19,13 +19,13 @@ public class DL_Laser : MonoBehaviour
     [Header("Target")]
     [Space]
     [SerializeField] LayerMask whatIsEnemy;                                     // Identify what an enemy is
-    
-    PlayerControls playerDirection;
+
+    GameObject controls;
 
 
     void Awake()
     {
-        playerDirection = GameObject.Find("Player").GetComponent<PlayerControls>();
+        controls = GameObject.FindGameObjectWithTag("Player");
         laserTickRateCounter = laserTickRate;                                   // Set Timer
     }
 
@@ -60,7 +60,7 @@ public class DL_Laser : MonoBehaviour
 
     void AdjustLaserPosition()                                                  // Method to adjust the laser's directionality
     {
-        if (playerDirection.facingRight)                    // If the laser's position is greater than the firepoint...
+        if (controls.GetComponent<PrototypeHero>().m_facingDirection == 1)                    // If the laser's position is greater than the firepoint...
         {
             Draw2DRay(laserFirePoint.position, new Vector2(laserFirePoint.position.x + rayDistance, laserFirePoint.position.y));            // Shoot the laser to the right
         }

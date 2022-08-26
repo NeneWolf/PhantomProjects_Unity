@@ -4,70 +4,45 @@ using UnityEngine;
 
 public class UnstableChargeLaser : MonoBehaviour
 {
-
-    [SerializeField] LineRenderer lineRenderer;                                   // Line that will be acting as the laser
-    [SerializeField] Transform laserFirePoint;                                   // The position the laser will be firing from
-
     [Header("Laser Stats")]
     [Space]
-    [SerializeField] float damage = 0.3f;
+    [SerializeField] float damage = 10f;
 
-    [SerializeField] float rayDistance = 10;                                    // How far the laser will travel
-    [SerializeField] float laserTickRate = 0.2f;                                // How often the laser will be dealing damage
+    Collider2D damageHit;
 
-    float laserTickRateCounter;                                                 // Variable to hold timer for laser's tick rate
-
-    [Header("Target")]
-    [Space]
-    [SerializeField] LayerMask whatIsEnemy;                                     // Identify what an enemy is
-
-    PlayerStats ps;
-    PlayerControls playerDirection;
-    PlayerAbilities abilities;
-
-    private void Awake()
-    {
-        playerDirection = GameObject.Find("Player").GetComponent<PlayerControls>();
-        laserTickRateCounter = laserTickRate;                                   // Set Timer
-    }
+    [SerializeField] GameObject laser;
+    [SerializeField] LayerMask whatIsEnemy;
 
     private void Update()
     {
-        DealDamage();
-        AdjustLaserPosition();
-    }
+        damageHit = Physics2D.OverlapBox(GetComponent<CapsuleCollider2D>().transform.position, new Vector2(5f, 0.5f), whatIsEnemy);
 
-    void DealDamage()
-    {
-        RaycastHit2D enemyHit = Physics2D.Raycast(laserFirePoint.position, transform.right, rayDistance, whatIsEnemy);                  // Create a raycast to shoot forward an invisible laser to detect if an enemy is being hit
-
-        laserTickRateCounter -= Time.deltaTime;                                     // Reduce the tick rate timer by real time seconds
-
-        if (laserTickRateCounter < 0)                                               // Adjust timer to not go below 0 using the fix values method
-            laserTickRateCounter = 0;
-
-        if (enemyHit & laserTickRateCounter == 0)                                   // If the raycast hits an object and the tick rate is 0
+        if (damageHit)
         {
-            //laserTickRateCounter = abilities.laserTickRate;                               // Reset the tick rate counter to prevent damage from occuring continously 
-            enemyHit.collider.transform.parent.GetComponent<Entity>().Damage(damage);     // Deal the laser's damage to the object hit if it's an enemy
+            if (damageHit.tag == "Enemy")
+            {
+                damageHit.gameObject.GetComponentInParent<Entity>().Damage(damage);
+                StartCoroutine(wait());
+            }
+            else if (damageHit.tag == "BMinion")
+            {
+                damageHit.gameObject.GetComponentInParent<MinionsControls>().TakeMinionDamage(damageHit.gameObject.name, damage);
+                StartCoroutine(wait());
+            }
+               
         }
+
     }
 
-    void Draw2DRay(Vector2 startPos, Vector2 endPos)                                // Method to draw the laser
+    IEnumerator wait()
     {
-        lineRenderer.SetPosition(0, startPos);                                      // Set the laser's start position
-        lineRenderer.SetPosition(1, endPos);                                        // Set the laser's end position
+        
+        yield return new WaitForSeconds(0.02f);
+        laser.SetActive(false);
+    }
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireCube(GetComponent<CapsuleCollider2D>().transform.position, new Vector2(5f, 0.5f));
     }
 
-    void AdjustLaserPosition()                                                      // Method to adjust the laser's directionality
-    {
-        if (playerDirection.facingRight)                                            // If the laser's position is greater than the firepoint...
-        {
-            Draw2DRay(laserFirePoint.position, new Vector2(laserFirePoint.position.x + rayDistance, laserFirePoint.position.y));            // Shoot the laser to the right
-        }
-        else
-        {
-            Draw2DRay(laserFirePoint.position, new Vector2(laserFirePoint.position.x - rayDistance, laserFirePoint.position.y));            // Else shoot the laser to the left
-        }
-    }
 }

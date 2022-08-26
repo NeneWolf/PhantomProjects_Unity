@@ -5,9 +5,9 @@ using UnityEngine;
 public class UnstableCharge : MonoBehaviour
 {
     [Header("Laser")]
-    [SerializeField] Transform handLocation;
+    //[SerializeField] Transform handLocation;
     [SerializeField] GameObject laser;
-    [SerializeField] float laserDuration = 3f;                               // How long the laser will stay active for
+    [SerializeField] float laserDuration = 0.05f;                               // How long the laser will stay active for
     GameObject player;
 
     private void Awake()
@@ -22,8 +22,8 @@ public class UnstableCharge : MonoBehaviour
 
     IEnumerator LaserDuration()
     {
-        yield return new WaitForSecondsRealtime(laserDuration);                 // Leave the laser active for the specified amount of time
+        yield return new WaitForSeconds(laserDuration);                 // Leave the laser active for the specified amount of time
         laser.SetActive(false);                                                 // Disable the line once the duration is up 
-        player.GetComponentInChildren<PlayerAbilities>().abilityLaser = false;
+        player.GetComponent<PlayerAbilities>().abilityLaser = false;
     }
 }

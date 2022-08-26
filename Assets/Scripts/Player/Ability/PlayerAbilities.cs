@@ -48,6 +48,7 @@ public class PlayerAbilities : MonoBehaviour
     {
         shootWeapon = GameObject.FindGameObjectWithTag("PWeapon").GetComponent<PlayerWeapon>().shootWeapon;
         var cost = player.GetComponent<PlayerStats>().maxEnergy / percentageCost;
+
         if (!shootWeapon && Input.GetMouseButtonDown(1) && Time.time > nextFire && player.GetComponent<PlayerStats>().currentEnergy >= cost)
         {
             player.GetComponent<PlayerStats>().ConsumeEnergy(cost);

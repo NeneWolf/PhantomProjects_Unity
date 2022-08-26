@@ -218,6 +218,7 @@ MonoBehaviour:
   energyRegenAmount: 2
   energyRegenRate: 1.5
   energyDelayPeriod: 5
+  loadedPlayer: 0
 --- !u!95 &2453644834374148032
 Animator:
   serializedVersion: 4
@@ -988,6 +989,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef9719f797d2a84ebd981ecc93cdc87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_animator: {fileID: 0}
   weaponPosition: {fileID: 8595360503003740098}
   nextFire: 0.15
   fireDelay: 0.5

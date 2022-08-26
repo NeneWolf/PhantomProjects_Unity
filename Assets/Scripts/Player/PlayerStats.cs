@@ -7,6 +7,7 @@ using PhantomProjects.Managers;
 public class PlayerStats : MonoBehaviour, IDataPersistance
 {
     #region Variables
+    PrototypeHero controls;
 
     [Header("Health & Energy")]
     [Space]
@@ -34,23 +35,26 @@ public class PlayerStats : MonoBehaviour, IDataPersistance
 
     void Start()
     {
-        if (!loadedPlayer)
-        {
-            gameManager = GameObject.FindObjectOfType<GameManager>().gameObject;
+        //if (!loadedPlayer)
+        //{
+        //    gameManager = GameObject.FindObjectOfType<GameManager>().gameObject;
 
-            if(gameManager.GetComponent<GameManager>().playerCurrentHealth == 0)
-            {
-                print("NO DATA");
-                currentEnergy = maxEnergy;
-                currentHealth = maxHealth;
-            }
-            else
-            {
-                print("Bingo");
-                currentEnergy = gameManager.GetComponent<GameManager>().playerCurrentEnergy;
-                currentHealth = gameManager.GetComponent<GameManager>().playerCurrentHealth;
-            }
-        }
+        //    if(gameManager.GetComponent<GameManager>().playerCurrentHealth == 0)
+        //    {
+        //        print("NO DATA");
+        //        currentEnergy = maxEnergy;
+        //        currentHealth = maxHealth;
+        //    }
+        //    else
+        //    {
+        //        print("Bingo");
+        //        currentEnergy = gameManager.GetComponent<GameManager>().playerCurrentEnergy;
+        //        currentHealth = gameManager.GetComponent<GameManager>().playerCurrentHealth;
+        //    }
+        //}
+
+        currentEnergy = maxEnergy;
+        currentHealth = maxHealth;
 
         canUseEnergy = true;
     }
@@ -68,8 +72,8 @@ public class PlayerStats : MonoBehaviour, IDataPersistance
     {
         if (currentHealth <= 0)                                     // Check's to see if the player has ran out of health
         {
-            IsPlayerDead = true;                                    // If the player runs out of health, set the player dead bool to true
-            Destroy(gameObject);
+            IsPlayerDead = true;
+            //Destroy(gameObject);
         }
     }
 
@@ -126,6 +130,7 @@ public class PlayerStats : MonoBehaviour, IDataPersistance
         {
             if (currentHealth - attackDetails.damageAmount >= 0)    // As long as the amount of damage dealt to the player's current health is above 0, they will take damage
             {
+                this.GetComponent<PrototypeHero>().Hurt();
                 currentHealth -= attackDetails.damageAmount;
             }
         }
@@ -137,6 +142,7 @@ public class PlayerStats : MonoBehaviour, IDataPersistance
         {
             if (currentHealth - damageAmount >= 0)                      // As long as the amount of damage dealt to the player's current health is above 0, they will take damage
             {
+                this.GetComponent<PrototypeHero>().Hurt();
                 currentHealth -= damageAmount;
             }
         }

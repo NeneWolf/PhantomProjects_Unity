@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerWeapon : MonoBehaviour
 {
+	[SerializeField] Animator m_animator;
+
 	[SerializeField] Transform weaponPosition;
 
     [Header("Interval Between Bullets")]
@@ -24,10 +26,12 @@ public class PlayerWeapon : MonoBehaviour
 	int currentShotAmount = 0;
 
 	public bool shootWeapon { get; private set; }
+	GameObject controls;
 	bool abilityLaser;
 
 	void Awake()
     {
+		controls = GameObject.FindGameObjectWithTag("Player");
 		pistol.transform.position = weaponPosition.transform.position;
 		demonLaser.transform.position = weaponPosition.transform.position;
 
@@ -36,8 +40,7 @@ public class PlayerWeapon : MonoBehaviour
 
     void Update()
     {
-		abilityLaser = GameObject.FindObjectOfType<PlayerAbilities>().GetComponent<PlayerAbilities>().abilityLaser;
-
+		abilityLaser = controls.GetComponent<PlayerAbilities>().abilityLaser;
 
 		if (!hasUpgradedWeapon)
         {
@@ -46,6 +49,8 @@ public class PlayerWeapon : MonoBehaviour
 
 			if (Input.GetMouseButtonDown(0) && Time.time > nextFire && !abilityLaser)
 			{
+
+				m_animator.SetTrigger("Attack1");
 				PistolShoot();
 				shootWeapon = true;
 			}
