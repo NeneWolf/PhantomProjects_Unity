@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerAbilities : MonoBehaviour
 {
+    [SerializeField] Animator m_animator;
+
     //Shield Ability
     [Header("Ability 1: Shield")]
     [Space]
@@ -46,11 +48,13 @@ public class PlayerAbilities : MonoBehaviour
 
     void ActivateUnstableCharge()
     {
+
         shootWeapon = GameObject.FindGameObjectWithTag("PWeapon").GetComponent<PlayerWeapon>().shootWeapon;
         var cost = player.GetComponent<PlayerStats>().maxEnergy / percentageCost;
 
         if (!shootWeapon && Input.GetMouseButtonDown(1) && Time.time > nextFire && player.GetComponent<PlayerStats>().currentEnergy >= cost)
         {
+            m_animator.SetTrigger("Attack2");
             player.GetComponent<PlayerStats>().ConsumeEnergy(cost);
             abilityLaser = true;
             UnstableCharge();

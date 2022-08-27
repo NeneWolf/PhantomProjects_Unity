@@ -43,6 +43,7 @@ namespace PhantomProjects.Managers
 
         private void Update()
         {
+
             if (sceneManager.GetComponent<ScenesManager>().currentScene >= level0Index)
             {
                 inStartLevel = true;

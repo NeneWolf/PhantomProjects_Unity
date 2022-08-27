@@ -267,10 +267,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Characters:
-  - {fileID: 8595360501525960195, guid: e63da7bf02349974a9074cae67af1e0d, type: 3}
-  - {fileID: 8595360501525960195, guid: e08f362461b20a7439d00e03abfd2dc8, type: 3}
-  - {fileID: 8595360501525960195, guid: e08f362461b20a7439d00e03abfd2dc8, type: 3}
-  - {fileID: 8595360501525960195, guid: e08f362461b20a7439d00e03abfd2dc8, type: 3}
+  - {fileID: 1723391535611507553, guid: d253cf2c28564914eb493f07ed55d5fd, type: 3}
+  - {fileID: 1723391535611507553, guid: d253cf2c28564914eb493f07ed55d5fd, type: 3}
+  - {fileID: 1723391535611507553, guid: d253cf2c28564914eb493f07ed55d5fd, type: 3}
+  - {fileID: 1723391535611507553, guid: d253cf2c28564914eb493f07ed55d5fd, type: 3}
   charactersIndex: 0
   gameDifficulty: 0
   difficultyMultiplier: 0
@@ -279,7 +279,7 @@ MonoBehaviour:
   playerCurrentEnergy: 0
   mutationPointsCollected: 0
   level0Index: 6
-  loadedPlayer: 0
+  loadedSave: 0
   player: {fileID: 0}
 --- !u!1 &1604639056651624758
 GameObject:

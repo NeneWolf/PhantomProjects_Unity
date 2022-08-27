@@ -30284,22 +30284,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 820341504, guid: bdba78f4d25963543aaae46132c3f48c, type: 3}
-      propertyPath: Characters.Array.data[0]
-      value: 
-      objectReference: {fileID: 1723391535611507553, guid: d253cf2c28564914eb493f07ed55d5fd, type: 3}
-    - target: {fileID: 820341504, guid: bdba78f4d25963543aaae46132c3f48c, type: 3}
-      propertyPath: Characters.Array.data[1]
-      value: 
-      objectReference: {fileID: 1723391535611507553, guid: d253cf2c28564914eb493f07ed55d5fd, type: 3}
-    - target: {fileID: 820341504, guid: bdba78f4d25963543aaae46132c3f48c, type: 3}
-      propertyPath: Characters.Array.data[2]
-      value: 
-      objectReference: {fileID: 1723391535611507553, guid: d253cf2c28564914eb493f07ed55d5fd, type: 3}
-    - target: {fileID: 820341504, guid: bdba78f4d25963543aaae46132c3f48c, type: 3}
-      propertyPath: Characters.Array.data[3]
-      value: 
-      objectReference: {fileID: 1723391535611507553, guid: d253cf2c28564914eb493f07ed55d5fd, type: 3}
     - target: {fileID: 1604639055448437906, guid: bdba78f4d25963543aaae46132c3f48c, type: 3}
       propertyPath: pCapsule
       value: 
@@ -30363,10 +30347,6 @@ PrefabInstance:
     - target: {fileID: 1604639055460297827, guid: bdba78f4d25963543aaae46132c3f48c, type: 3}
       propertyPath: m_Name
       value: Managers
-      objectReference: {fileID: 0}
-    - target: {fileID: 1604639056717006876, guid: bdba78f4d25963543aaae46132c3f48c, type: 3}
-      propertyPath: currentMutationPoints
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bdba78f4d25963543aaae46132c3f48c, type: 3}

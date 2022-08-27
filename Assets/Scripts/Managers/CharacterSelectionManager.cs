@@ -16,7 +16,7 @@ namespace PhantomProjects.Managers
 
         public Sprite[] sprite;
         public Image image;
-
+        public GameObject button;
         int indexSelected;
 
         int index;
@@ -26,10 +26,14 @@ namespace PhantomProjects.Managers
             gameManager = FindObjectOfType<GameManager>();
             buttonManager = FindObjectOfType<ButtonManager>();
             sceneManager = FindObjectOfType<ScenesManager>();
+
+            button.SetActive(false);
         }
 
         public void CharacterSelection()
         {
+            button.SetActive(true);
+
             if (spawnPosition.transform.childCount > 0)
             {
                 foreach(Transform child in spawnPosition.transform)
@@ -46,6 +50,8 @@ namespace PhantomProjects.Managers
 
         public void CharacterSelection(int i)
         {
+            button.SetActive(true);
+
             if (spawnPosition.transform.childCount > 0)
             {
                 foreach (Transform child in spawnPosition.transform)

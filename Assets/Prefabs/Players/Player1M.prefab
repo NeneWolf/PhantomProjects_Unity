@@ -30,7 +30,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1723391535611507553}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.11, y: -0.67, z: -0.13896568}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.9709785, y: 1.9709785, z: 1.9709785}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -64,6 +64,9 @@ MonoBehaviour:
   m_noBlood: 0
   m_SpecialGun: 0
   m_maxSpeed: 6
+  doubleJumpActive: 0
+  extraJumpsValue: 1
+  coyoteTime: 0.2
   WeaponController: {fileID: 1723391536118613666}
 --- !u!50 &1723391535611507554
 Rigidbody2D:
@@ -93,7 +96,7 @@ CapsuleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1723391535611507553}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -115,7 +118,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0016964078, y: 0.14670876}
+  m_Offset: {x: 0.0016964078, y: 0.03434226}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -126,7 +129,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.49448806, y: 1.1069205}
+  m_Size: {x: 0.49448806, y: 1.3316534}
   m_EdgeRadius: 0
 --- !u!114 &1723391535611507566
 MonoBehaviour:
@@ -158,6 +161,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 882727161823be141b5e5dd24f4a6967, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_animator: {fileID: 1723391537635212324}
   shield: {fileID: 1723391537451599759}
   shieldDuration: 5.5
   shieldCooldown: 20.5
@@ -687,7 +691,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1723391536693801127}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.5389996, y: 0.6510001, z: 0}
+  m_LocalPosition: {x: 0.561, y: 0.458, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -765,8 +769,8 @@ LineRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1701796961
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Positions:
   - {x: -1.8699908, y: 0.4849597, z: 0}
@@ -985,6 +989,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 882727161823be141b5e5dd24f4a6967, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_animator: {fileID: 1723391537635212324}
   shield: {fileID: 1723391537451599759}
   shieldDuration: 5.5
   shieldCooldown: 20.5
@@ -1202,7 +1207,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1723391537583493699}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.66, z: 0}
+  m_LocalPosition: {x: 0, y: -0.611, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using PhantomProjects.Managers;
+using System;
+using System.Linq;
 
 public class UpgradeMenu : MonoBehaviour, IDataPersistance
 {
@@ -14,22 +16,15 @@ public class UpgradeMenu : MonoBehaviour, IDataPersistance
     bool loadedTree = false;
     List<SkillControl> abilities;
 
+    int rows = 0;
+    string skillString = string.Empty;
     public int[,] skills { get; private set; }
 
-    private void Awake()
+    private void Start()
     {
-        print("Tree awake");
+        //print("Tree awake");
         UIManager = GameObject.FindObjectOfType<UIManager>().gameObject;
         UpgradeSystem = GameObject.FindObjectOfType<UpgradeMenu>().gameObject;
-
-        //if (loadedTree == false)
-        //{
-
-
-        //    loadedTree = true;
-        //}
-        
-        //print(skills); // row, collum
     }
 
     private void Update()
@@ -47,34 +42,41 @@ public class UpgradeMenu : MonoBehaviour, IDataPersistance
         }
     }
 
-    void RefreshAllTheInstanceOfSkillUnbought()
-    {
-        abilities = FindAllSkillsControls();
-
-        foreach(SkillControl skillControl in abilities)
-        {
-            if(!skillControl.buyClicked)
-                skillControl.Refresh();
-        }
-    }
-
-    private List<SkillControl> FindAllSkillsControls()
-    {
-        IEnumerable<SkillControl> abilities = FindObjectsOfType<SkillControl>();
-
-        return new List<SkillControl>(abilities);
-    }
-
     public void LoadData(GameData data)
     {
-        print("Loaded Tree");
-        //loadedTree = data.saveTree;
+        //print("Loaded Tree");
+        loadedTree = data.saveTree;
+        RevertToArray(data);
+        RefreshAllTheInstanceOfSkillUnbought();
 
-        if(data.skillTree != null)
-            skills = data.skillTree;
-        else
-        {
-            skills = new int[,]
+    }
+
+    public void SaveData(GameData data)
+    {
+        loadedTree = true;
+        GenerateAsString();
+        data.saveTree = loadedTree;
+        data.skillTree = skillString;
+    }
+
+    void GenerateAsString()
+    {
+        int nRows = skills.GetLength(0);
+        int nCollumns = skills.GetLength(1);
+
+        var results = string.Join(",",
+            Enumerable.Range(0, skills.GetUpperBound(0) + 1)
+                .Select(x => Enumerable.Range(0, skills.GetUpperBound(1) + 1)
+                    .Select(y => skills[x, y]))
+                .Select(z => "{" + string.Join(",", z) + "}"));
+
+
+        skillString = results;
+    }
+
+    void RevertToArray(GameData data)
+    {
+        skills = new int[,]
         {
             //{Bool,id, price}
             {0,11,10},
@@ -93,15 +95,63 @@ public class UpgradeMenu : MonoBehaviour, IDataPersistance
             {0,52,10},
             {0,53,10},
             {0,99,10}
-            };
+        };
+
+        if (loadedTree == true)
+        {
+            skillString = data.skillTree;
+
+            for(int i = 0; i < skillString.Length; i++)
+            {
+                string start = "{";
+                int startpos = skillString.IndexOf(start) + 1;
+                int stoppos = skillString.IndexOf("}", startpos + 1);
+
+                string substring = skillString.Substring(startpos, stoppos - startpos);
+                LoadData(substring);
+
+            }
         }
     }
 
-    public void SaveData(GameData data)
+    void LoadData(string objectStatus)
     {
-        print("Save");
-        
-        data.saveTree = loadedTree;
-        data.skillTree = skills;
+        string[] elements = objectStatus.Split(",");
+
+        if (elements.Length >= 3)
+        {
+            for (int i = 0; i < 3; i++)
+            {
+                skills[rows, i] = Int32.Parse(elements[i]);
+            }
+        }
+        rows++;
+
+        if(rows >=2)
+            rows = 0;
+
+    }
+
+
+
+    //Refresh each skill
+
+
+    void RefreshAllTheInstanceOfSkillUnbought()
+    {
+        abilities = FindAllSkillsControls();
+
+        foreach (SkillControl skillControl in abilities)
+        {
+            if (!skillControl.buyClicked)
+                skillControl.Refresh();
+        }
+    }
+
+    private List<SkillControl> FindAllSkillsControls()
+    {
+        IEnumerable<SkillControl> abilities = FindObjectsOfType<SkillControl>();
+
+        return new List<SkillControl>(abilities);
     }
 }

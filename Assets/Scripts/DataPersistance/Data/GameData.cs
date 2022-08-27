@@ -18,7 +18,7 @@ public class GameData
 
     //Skill Tree
     public bool saveTree;
-    public int[,] skillTree;
+    public string skillTree;
 
     //TODO: Add time played on this "save"
 

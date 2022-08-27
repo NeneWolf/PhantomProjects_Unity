@@ -110,4 +110,17 @@ public class DataPersistanceManager : MonoBehaviour
     {
         return dataHandler.LoadAllProfiles();
     }
+
+
+
+
+    // Test
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.G))
+        {
+            SaveGame();
+        }
+    }
 }

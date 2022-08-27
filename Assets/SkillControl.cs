@@ -23,7 +23,22 @@ public class SkillControl : MonoBehaviour
     {
         parentTree = GameObject.FindObjectOfType<UpgradeMenu>().gameObject;
         skill = parentTree.GetComponent<UpgradeMenu>().skills;
+
         UpdateSkill();
+
+        //if (skill[target, 0] == 1)
+        //{
+        //    buyClicked = true;
+
+        //    // Disable buttons
+        //    button.SetActive(false);
+        //    purchased.SetActive(true);
+
+        //    // Update skill Image after purchase
+        //    purchasedImage.SetActive(false);
+
+        //    price.text = "0";
+        //}
     }
 
 
@@ -47,7 +62,6 @@ public class SkillControl : MonoBehaviour
             // Update skill Image after purchase
             purchasedImage.SetActive(false);
         }
-
     }
 
     public void Refresh()
@@ -71,18 +85,18 @@ public class SkillControl : MonoBehaviour
                     button.SetActive(false);
                 }
 
-                if (i != 0 && skill[i - 1, 0] == 1) 
+                if (i != 0 && skill[i - 1, 0] == 1)
                 {
                     button.SetActive(true);
                 }
 
-                if (id == 99 && (skill[8, 0] == 1 || skill[11, 0] == 1))
+                if (id == 99 && (skill[8, 0] == 1  && skill[11, 0] == 1))
                 {
                     button.SetActive(true);
                 }
 
                 target = i;
-                price.text = ""+skill[i, 2];
+                price.text = "" + skill[i, 2];
                 return;
             }
         }

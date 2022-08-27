@@ -41,6 +41,13 @@ public class PrototypeHero : MonoBehaviour {
     private float               m_gravity;
     public float                m_maxSpeed = 4.5f;
 
+    [SerializeField] bool doubleJumpActive = false;                             // Whether or not the player can double jump
+    [SerializeField] int extraJumpsValue;                                       // Number of extra jumps the player can peform whilst in the air
+    [SerializeField] float coyoteTime = 0.2f;
+    bool jump = false;
+    int extraJumps;                                                             // Stores the number of extra jumps
+    float coyoteTimeCounter;
+
     [SerializeField] GameObject WeaponController;
 
     // Use this for initialization
@@ -99,6 +106,21 @@ public class PrototypeHero : MonoBehaviour {
         }
 
         Movement();
+
+        if (m_grounded)
+        {
+            coyoteTimeCounter = coyoteTime;
+        }
+        else
+        {
+            coyoteTimeCounter -= Time.deltaTime;
+        }
+
+        // Check to see if double jump is active
+        if (doubleJumpActive && m_grounded)
+            extraJumps = extraJumpsValue;
+
+        Jump();
 
         // SlowDownSpeed helps decelerate the characters when stopping
         float SlowDownSpeed = m_moving ? 1.0f : 0.5f;
@@ -303,25 +325,6 @@ public class PrototypeHero : MonoBehaviour {
             DisableWallSensors();
         }
 
-        //Jump
-        else if (Input.GetButtonDown("Jump") && (m_grounded || m_wallSlide) && !m_dodging && !m_ledgeGrab && !m_ledgeClimb && !m_crouching && m_disableMovementTimer < 0.0f)
-        {
-            // Check if it's a normal jump or a wall jump
-            if(!m_wallSlide)
-                m_body2d.velocity = new Vector2(m_body2d.velocity.x, m_jumpForce);
-            else
-            {
-                m_body2d.velocity = new Vector2(-m_facingDirection * m_jumpForce / 2.0f, m_jumpForce);
-                m_facingDirection = -m_facingDirection;
-                m_SR.flipX = !m_SR.flipX;
-            }
-
-            m_animator.SetTrigger("Jump");
-            m_grounded = false;
-            m_animator.SetBool("Grounded", m_grounded);
-            m_groundSensor.Disable(0.2f);
-        }
-
         ////Crouch / Stand up
         //else if (Input.GetKeyDown("s") && m_grounded && !m_dodging && !m_ledgeGrab && !m_ledgeClimb && m_parryTimer < 0.0f)
         //{
@@ -459,5 +462,54 @@ public class PrototypeHero : MonoBehaviour {
                 m_facingDirection = -1;
             }
         }
+    }
+
+    void Jump()
+    {
+        //Jump
+        if (Input.GetButtonDown("Jump"))
+        {
+            jump = true;
+
+
+            if(m_wallSlide && !m_dodging && !m_ledgeGrab && !m_ledgeClimb && !m_crouching && m_disableMovementTimer < 0.0f)
+            {
+                m_body2d.velocity = new Vector2(-m_facingDirection * m_jumpForce / 2.0f, m_jumpForce);
+                m_facingDirection = -m_facingDirection;
+                m_SR.flipX = !m_SR.flipX;
+                jump = false;
+
+                m_animator.SetTrigger("Jump");
+                m_grounded = false;
+                m_animator.SetBool("Grounded", m_grounded);
+                m_groundSensor.Disable(0.2f);
+            }
+            else if(m_grounded && !m_dodging && !m_ledgeGrab && !m_ledgeClimb && !m_crouching && m_disableMovementTimer < 0.0f)
+            {
+                m_body2d.velocity = new Vector2(m_body2d.velocity.x, m_jumpForce);
+
+                m_animator.SetTrigger("Jump");
+                m_grounded = false;
+                m_animator.SetBool("Grounded", m_grounded);
+                m_groundSensor.Disable(0.2f);
+            }
+            else if (jump && extraJumps > 0)
+            {
+                m_body2d.velocity = new Vector2(-m_facingDirection * m_jumpForce / 2.0f, m_jumpForce);
+                m_facingDirection = -m_facingDirection;
+                m_SR.flipX = !m_SR.flipX;
+                extraJumps--;
+
+                m_animator.SetTrigger("Jump");
+                m_grounded = false;
+                m_animator.SetBool("Grounded", m_grounded);
+                m_groundSensor.Disable(0.2f);
+            }
+
+
+        }
+
+        jump = false;
+
     }
 }
