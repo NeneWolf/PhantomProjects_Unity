@@ -11,9 +11,9 @@ public class CanvasUI : MonoBehaviour
     [Space]
     [SerializeField] Image characterImage;
 
-    [SerializeField] TextMeshProUGUI keycardsTextDisplay;
-    [SerializeField] TextMeshProUGUI mutationPointsTextDisplay;
-    [SerializeField] TextMeshProUGUI bossName;
+    [SerializeField] Text keycardsTextDisplay;
+    [SerializeField] Text mutationPointsTextDisplay;
+    [SerializeField] Text bossName;
 
     [Header("Player UI")]
     public Slider healthBarSlider;
@@ -32,6 +32,10 @@ public class CanvasUI : MonoBehaviour
     GameObject boss;
     bool bossLevel = false;
 
+    //Upgrade Panel
+    [SerializeField] GameObject upgradePanel;
+    [SerializeField] Text amountDisplay;
+
     private void Update()
     {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -47,6 +51,7 @@ public class CanvasUI : MonoBehaviour
 
         if(boss != null)
             BossUI();
+
     }
 
     //Player Sliders
@@ -82,6 +87,19 @@ public class CanvasUI : MonoBehaviour
     {
         keycardsTextDisplay.text = keys.ToString();
         mutationPointsTextDisplay.text = mutationPoints.ToString();
+        amountDisplay.text = mutationPoints.ToString();
+    }
+
+    public void TurnOnOrOFFPanel(bool value)
+    {
+        upgradePanel.SetActive(value);
+
+        if (value)
+        {
+            Time.timeScale = 0f;
+        }
+        else
+            Time.timeScale = 1f;
     }
 }
 

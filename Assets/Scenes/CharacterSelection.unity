@@ -7260,10 +7260,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnPosition: {fileID: 1721784714}
   characters:
-  - {fileID: 8595360501525960195, guid: 1107f8a8a79335a40b2ef165cab95233, type: 3}
-  - {fileID: 8595360501525960195, guid: a562a6586df03cb4d906e00190597604, type: 3}
-  - {fileID: 8595360501525960195, guid: a562a6586df03cb4d906e00190597604, type: 3}
-  - {fileID: 8595360501525960195, guid: a562a6586df03cb4d906e00190597604, type: 3}
+  - {fileID: 1723391535611507553, guid: 1f4006f3cb9e9b3488b9821e7cd9dbe0, type: 3}
+  - {fileID: 1723391535611507553, guid: 1f4006f3cb9e9b3488b9821e7cd9dbe0, type: 3}
+  - {fileID: 1723391535611507553, guid: 1f4006f3cb9e9b3488b9821e7cd9dbe0, type: 3}
+  - {fileID: 1723391535611507553, guid: 1f4006f3cb9e9b3488b9821e7cd9dbe0, type: 3}
   sprite:
   - {fileID: 21300000, guid: 4eab97b1bb7906841811c6c42bfd6db9, type: 3}
   - {fileID: -57989370, guid: b2df5ddafc143e34fb2f2062b65dc4d8, type: 3}

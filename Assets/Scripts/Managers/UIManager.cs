@@ -52,6 +52,12 @@ namespace PhantomProjects.Managers
             gameManager.GetComponent<GameManager>().mutationPointsCollected = currentMutationPoints;
         }
 
+        public void MutationPointsRemove(int points)
+        {
+            currentMutationPoints -= points;
+            gameManager.GetComponent<GameManager>().mutationPointsCollected = currentMutationPoints;
+        }
+
         public void LoadData(GameData data)
         {
             this.currentMutationPoints = data.mutationPoints;

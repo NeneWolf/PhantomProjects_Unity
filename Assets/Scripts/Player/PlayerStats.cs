@@ -35,26 +35,20 @@ public class PlayerStats : MonoBehaviour, IDataPersistance
 
     void Start()
     {
-        //if (!loadedPlayer)
-        //{
-        //    gameManager = GameObject.FindObjectOfType<GameManager>().gameObject;
+        gameManager = GameObject.FindObjectOfType<GameManager>().gameObject;
 
-        //    if(gameManager.GetComponent<GameManager>().playerCurrentHealth == 0)
-        //    {
-        //        print("NO DATA");
-        //        currentEnergy = maxEnergy;
-        //        currentHealth = maxHealth;
-        //    }
-        //    else
-        //    {
-        //        print("Bingo");
-        //        currentEnergy = gameManager.GetComponent<GameManager>().playerCurrentEnergy;
-        //        currentHealth = gameManager.GetComponent<GameManager>().playerCurrentHealth;
-        //    }
-        //}
-
-        currentEnergy = maxEnergy;
-        currentHealth = maxHealth;
+        if (gameManager.GetComponent<GameManager>().playerCurrentHealth == 0)
+        {
+            print("NO DATA");
+            currentEnergy = maxEnergy;
+            currentHealth = maxHealth;
+        }
+        else
+        {
+            print("Bingo");
+            currentEnergy = gameManager.GetComponent<GameManager>().playerCurrentEnergy;
+            currentHealth = gameManager.GetComponent<GameManager>().playerCurrentHealth;
+        }
 
         canUseEnergy = true;
     }

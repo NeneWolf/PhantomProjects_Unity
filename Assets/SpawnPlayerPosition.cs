@@ -6,11 +6,20 @@ public class SpawnPlayerPosition : MonoBehaviour
 {
     GameObject target;
 
-    // Start is called before the first frame update
-    void Start()
+    bool hasMovePlayer = false;
+
+    private void Update()
     {
-        target = GameObject.FindGameObjectWithTag("Player");
+        if (hasMovePlayer == false)
+            StartCoroutine(waitBeforePutting());
+    }
+
+    IEnumerator waitBeforePutting()
+    {
+        yield return new WaitForSeconds(0.2f);
+        target = GameObject.FindGameObjectWithTag("Player").gameObject;
         target.transform.position = this.gameObject.transform.position;
+        hasMovePlayer = true;
     }
 
 }

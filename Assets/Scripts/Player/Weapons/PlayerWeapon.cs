@@ -64,6 +64,7 @@ public class PlayerWeapon : MonoBehaviour
 
 			if (Input.GetMouseButtonDown(0) && Time.time > nextFire && !abilityLaser)
 			{
+				m_animator.SetTrigger("Attack1");
 				DLaserShoot();
 				shootWeapon = true;
 

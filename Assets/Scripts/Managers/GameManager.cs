@@ -30,7 +30,7 @@ namespace PhantomProjects.Managers
 
         public bool inStartLevel { get; private set; } = false;
 
-        public bool loadedPlayer = false;
+        public bool loadedSave = false;
 
         // 
         public GameObject player;
@@ -58,7 +58,7 @@ namespace PhantomProjects.Managers
 
         public void LoadData(GameData data)
         {
-            this.loadedPlayer = data.loadedPlayer;
+            this.loadedSave = data.loadedPlayer;
             this.charactersIndex = data.characterSelected;
             this.gameDifficulty = data.modeSelected;
             this.currentSceneIndex = data.currentLevelIndex;
@@ -68,7 +68,9 @@ namespace PhantomProjects.Managers
 
         public void SaveData(GameData data)
         {
-            data.loadedPlayer = this.loadedPlayer;
+            loadedSave = true;
+
+            data.loadedPlayer = this.loadedSave;
 
             data.characterSelected = this.charactersIndex;
             data.modeSelected = difficultyManager.difficultyLevel;

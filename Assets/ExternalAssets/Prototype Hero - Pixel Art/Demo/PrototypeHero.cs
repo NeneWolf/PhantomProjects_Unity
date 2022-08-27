@@ -41,6 +41,8 @@ public class PrototypeHero : MonoBehaviour {
     private float               m_gravity;
     public float                m_maxSpeed = 4.5f;
 
+    [SerializeField] GameObject WeaponController;
+
     // Use this for initialization
     void Start ()
     {
@@ -108,7 +110,14 @@ public class PrototypeHero : MonoBehaviour {
         // Set AirSpeed in animator
         m_animator.SetFloat("AirSpeedY", m_body2d.velocity.y);
 
-        // Set Animation layer for hiding sword
+        // Change to Upgrade Weapon Animation
+        if(WeaponController != null)
+        {
+            if (WeaponController.GetComponent<PlayerWeapon>().hasUpgradedWeapon)
+                m_SpecialGun = true;
+        }
+
+        // Set Animation layer f
         int boolInt = m_SpecialGun ? 1 : 0;
         m_animator.SetLayerWeight(1, boolInt);
 
@@ -148,7 +157,6 @@ public class PrototypeHero : MonoBehaviour {
 
                 if (ledge)
                 {
-                    print("Hold Ledge!");
                     m_ledgeGrab = true;
                     m_body2d.velocity = Vector2.zero;
                     m_body2d.gravityScale = 0;

@@ -16,8 +16,10 @@ public class GameData
     public int currentLevelIndex;
     public int modeSelected;
 
+    //Skill Tree
+    public bool saveTree;
+    public int[,] skillTree;
 
-    //TODO: Add fields of the Upgrade System !!
     //TODO: Add time played on this "save"
 
 
