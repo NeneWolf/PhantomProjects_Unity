@@ -42,6 +42,7 @@ public class UpgradeMenu : MonoBehaviour, IDataPersistance
         }
     }
 
+    //Load To Game Data
     public void LoadData(GameData data)
     {
         //print("Loaded Tree");
@@ -51,29 +52,7 @@ public class UpgradeMenu : MonoBehaviour, IDataPersistance
 
     }
 
-    public void SaveData(GameData data)
-    {
-        loadedTree = true;
-        GenerateAsString();
-        data.saveTree = loadedTree;
-        data.skillTree = skillString;
-    }
-
-    void GenerateAsString()
-    {
-        int nRows = skills.GetLength(0);
-        int nCollumns = skills.GetLength(1);
-
-        var results = string.Join(",",
-            Enumerable.Range(0, skills.GetUpperBound(0) + 1)
-                .Select(x => Enumerable.Range(0, skills.GetUpperBound(1) + 1)
-                    .Select(y => skills[x, y]))
-                .Select(z => "{" + string.Join(",", z) + "}"));
-
-
-        skillString = results;
-    }
-
+    // Revert From string to Array
     void RevertToArray(GameData data)
     {
         skills = new int[,]
@@ -101,7 +80,7 @@ public class UpgradeMenu : MonoBehaviour, IDataPersistance
         {
             skillString = data.skillTree;
 
-            for(int i = 0; i < skillString.Length; i++)
+            for (int i = 0; i < skillString.Length; i++)
             {
                 string start = "{";
                 int startpos = skillString.IndexOf(start) + 1;
@@ -114,6 +93,7 @@ public class UpgradeMenu : MonoBehaviour, IDataPersistance
         }
     }
 
+    //Load string data to array
     void LoadData(string objectStatus)
     {
         string[] elements = objectStatus.Split(",");
@@ -127,16 +107,37 @@ public class UpgradeMenu : MonoBehaviour, IDataPersistance
         }
         rows++;
 
-        if(rows >=2)
+        if (rows >= 2)
             rows = 0;
 
     }
 
 
+    //Save to Game Data
+    public void SaveData(GameData data)
+    {
+        loadedTree = true;
+        GenerateAsString();
+        data.saveTree = loadedTree;
+        data.skillTree = skillString;
+    }
+
+    void GenerateAsString()
+    {
+        int nRows = skills.GetLength(0);
+        int nCollumns = skills.GetLength(1);
+
+        var results = string.Join(",",
+            Enumerable.Range(0, skills.GetUpperBound(0) + 1)
+                .Select(x => Enumerable.Range(0, skills.GetUpperBound(1) + 1)
+                    .Select(y => skills[x, y]))
+                .Select(z => "{" + string.Join(",", z) + "}"));
+
+
+        skillString = results;
+    }
 
     //Refresh each skill
-
-
     void RefreshAllTheInstanceOfSkillUnbought()
     {
         abilities = FindAllSkillsControls();
