@@ -326,10 +326,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterSprite:
-  - {fileID: 21300000, guid: f092ce84f22d31f46be1197025d05cd5, type: 3}
-  - {fileID: 21300000, guid: 5cdd62af6a376fa4fb90260e0ed63940, type: 3}
-  - {fileID: 21300000, guid: cb6bd8d0e45b61546885a07718b3e9e8, type: 3}
-  - {fileID: 21300000, guid: 40ad863aca7c706448e526a0e19bac37, type: 3}
+  - {fileID: 873918317, guid: 8b504857a4cc6ea48b0700891015e80a, type: 3}
+  - {fileID: -1428130399, guid: f2ef0e91022ed1c4491dfcbb91e25e44, type: 3}
   currentMutationPoints: 0
 --- !u!1 &1604639056800357947
 GameObject:

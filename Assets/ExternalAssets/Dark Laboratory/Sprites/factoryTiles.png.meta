@@ -2329,7 +2329,10 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -50, y: 50}
+        - {x: -50, y: -50}
+        - {x: 50, y: -50}
       tessellationDetail: 0
       bones: []
       spriteID: 719114d787d5979b0800000000000000
@@ -2350,7 +2353,10 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -50, y: -50}
+        - {x: 50, y: -50}
+        - {x: 50, y: 50}
       tessellationDetail: 0
       bones: []
       spriteID: 7acb9c77646cb7110800000000000000
@@ -2497,7 +2503,10 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -50, y: 50}
+        - {x: -50, y: -50}
+        - {x: 50, y: -50}
       tessellationDetail: 0
       bones: []
       spriteID: 0beb58f7c5602c820800000000000000
@@ -2518,7 +2527,10 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -50, y: -50}
+        - {x: 50, y: -50}
+        - {x: 50, y: 50}
       tessellationDetail: 0
       bones: []
       spriteID: eefde10fc1bfe2450800000000000000
@@ -3649,7 +3661,7 @@ TextureImporter:
         width: 100
         height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3670,7 +3682,7 @@ TextureImporter:
         width: 100
         height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3698,7 +3710,7 @@ TextureImporter:
       factoryTiles_26: 8381848449091431789
       factoryTiles_81: -8133706287384832793
       factoryTiles_106: -3944253719683136646
-      factoryTiles_147: -2734339923573805221
+      factoryTiles_19: -4799451894923459704
       factoryTiles_139: -5398542148018627171
       factoryTiles_118: 5378364958163723197
       factoryTiles_52: 3406882447049380837
@@ -3723,10 +3735,10 @@ TextureImporter:
       factoryTiles_145: 4259780284976944160
       factoryTiles_73: 1509337516741190693
       factoryTiles_133: -7757310454555258825
-      factoryTiles_116: -5801983161795213864
+      factoryTiles_124: -4035605683385593718
       factoryTiles_119: -1913718717403310173
       factoryTiles_110: -48305034372095141
-      factoryTiles_124: -4035605683385593718
+      factoryTiles_116: -5801983161795213864
       factoryTiles_121: 3928542814908229381
       factoryTiles_65: 2393980777395704192
       factoryTiles_107: -3818899586068834103
@@ -3842,10 +3854,10 @@ TextureImporter:
       factoryTiles_61: -7501009930529081594
       factoryTiles_40: -5200955727395496469
       factoryTiles_95: 8248259764934694827
-      factoryTiles_134: 8946212729960611014
       factoryTiles_66: -4098173818098769029
+      factoryTiles_134: 8946212729960611014
       factoryTiles_3: -7647304956188690139
-      factoryTiles_19: -4799451894923459704
+      factoryTiles_147: -2734339923573805221
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

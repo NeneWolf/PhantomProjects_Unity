@@ -76,28 +76,38 @@ public class SkillControl : MonoBehaviour
         {
             if (skill[i, 1] == id)
             {
-                if (i == 12 || i == 9 || i == 6 || i == 3 || i == 0)
-                {
-                    button.SetActive(true);
-                }
-                else
-                {
+                if (skill[i, 0] == 1) {
+                    buyClicked = true;
+                    price.text = "0";
                     button.SetActive(false);
+                    purchasedImage.SetActive(false);
                 }
-
-                if (i != 0 && skill[i - 1, 0] == 1)
+                else 
                 {
-                    button.SetActive(true);
-                }
+                    
+                    if (i == 12 || i == 9 || i == 6 || i == 3 || i == 0)
+                    {
+                        button.SetActive(true);
+                    }
+                    else
+                    {
+                        button.SetActive(false);
+                    }
 
-                if (id == 99 && (skill[8, 0] == 1  && skill[11, 0] == 1))
-                {
-                    button.SetActive(true);
-                }
+                    if (i != 0 && skill[i - 1, 0] == 1)
+                    {
+                        button.SetActive(true);
+                    }
 
-                target = i;
-                price.text = "" + skill[i, 2];
-                return;
+                    if (id == 99 && (skill[8, 0] == 1 && skill[11, 0] == 1))
+                    {
+                        button.SetActive(true);
+                    }
+
+                    target = i;
+                    price.text = "" + skill[i, 2];
+                    return;
+                }
             }
         }
     }

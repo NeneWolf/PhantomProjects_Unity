@@ -41,6 +41,7 @@ public class PrototypeHero : MonoBehaviour {
     private float               m_gravity;
     public float                m_maxSpeed = 4.5f;
 
+    //Double jump
     [SerializeField] bool doubleJumpActive = false;                             // Whether or not the player can double jump
     [SerializeField] int extraJumpsValue;                                       // Number of extra jumps the player can peform whilst in the air
     [SerializeField] float coyoteTime = 0.2f;
@@ -127,7 +128,15 @@ public class PrototypeHero : MonoBehaviour {
 
         // Set movement
         if(!m_dodging && !m_ledgeGrab && !m_ledgeClimb && !m_crouching && m_parryTimer < 0.0f)
-            m_body2d.velocity = new Vector2(inputX * m_maxSpeed * SlowDownSpeed, m_body2d.velocity.y);
+        {
+            if (Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.D))
+                m_body2d.velocity = new Vector2(0f, m_body2d.velocity.y);
+            else
+                m_body2d.velocity = new Vector2(inputX * m_maxSpeed * SlowDownSpeed, m_body2d.velocity.y);
+        }
+
+
+
 
         // Set AirSpeed in animator
         m_animator.SetFloat("AirSpeedY", m_body2d.velocity.y);

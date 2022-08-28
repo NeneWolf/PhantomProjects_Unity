@@ -20,6 +20,10 @@ public class UpgradeMenu : MonoBehaviour, IDataPersistance
     string skillString = string.Empty;
     public int[,] skills { get; private set; }
 
+    
+    int startPosition;
+    int endPosition;
+
     private void Start()
     {
         //print("Tree awake");
@@ -80,42 +84,35 @@ public class UpgradeMenu : MonoBehaviour, IDataPersistance
         {
             skillString = data.skillTree;
 
+            int j = 0;
+
+
             for (int i = 0; i < skillString.Length; i++)
             {
-                string start = "{";
-                int startpos = skillString.IndexOf(start) + 1;
-                int stoppos = skillString.IndexOf("}", startpos + 1);
-
-                string substring = skillString.Substring(startpos, stoppos - startpos);
-                LoadData(substring);
-
+                if (skillString[i] == '{')
+                {
+                    startPosition = i + 1;
+                }
+                else if (skillString[i] == '}')
+                {
+                    endPosition = i;
+                    string ability = skillString.Substring(startPosition, endPosition - startPosition);
+                    string[] abilitySplit = ability.Split(',');
+                    skills[j, 0] = int.Parse(abilitySplit[0]);
+                    skills[j, 1] = int.Parse(abilitySplit[1]);
+                    skills[j, 2] = int.Parse(abilitySplit[2]);
+                    j++;
+                }
             }
         }
-    }
 
-    //Load string data to array
-    void LoadData(string objectStatus)
-    {
-        string[] elements = objectStatus.Split(",");
-
-        if (elements.Length >= 3)
-        {
-            for (int i = 0; i < 3; i++)
-            {
-                skills[rows, i] = Int32.Parse(elements[i]);
-            }
-        }
-        rows++;
-
-        if (rows >= 2)
-            rows = 0;
 
     }
-
 
     //Save to Game Data
     public void SaveData(GameData data)
     {
+
         loadedTree = true;
         GenerateAsString();
         data.saveTree = loadedTree;
