@@ -5,9 +5,11 @@ using UnityEngine;
 [System.Serializable]
 public class GameData
 {
+    // Character information
     public bool loadedPlayer;
     public int characterSelected;
 
+    //Player Stats
     public float currentHealth;
     public float currentEnergy;
     public int mutationPoints;
@@ -20,7 +22,14 @@ public class GameData
     public bool saveTree;
     public string skillTree;
 
-    //TODO: Add time played on this "save"
+    // Upgrades
+    public float shieldDuration;
+    public float shieldCooldown;
+    
+    public float gunDamage;
+    public float gunRate;
+    
+    public float abilityDamage;
 
-
+    public bool UpgradedWeapon;
 }

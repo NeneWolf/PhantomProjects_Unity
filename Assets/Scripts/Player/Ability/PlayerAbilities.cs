@@ -1,3 +1,4 @@
+using PhantomProjects.Managers;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,8 +11,8 @@ public class PlayerAbilities : MonoBehaviour
     [Header("Ability 1: Shield")]
     [Space]
     [SerializeField] GameObject shield;                                     // Get shield sprite
-    [SerializeField] float shieldDuration = 5.5f;                           // Set the duration for the shield (how long it will stay up)
-    [SerializeField] float shieldCooldown = 20.5f;                          // Set shield cooldown (how long before the shield is available to use again)
+    [SerializeField] float shieldDuration = 5.5f;                                            // Set the duration for the shield (how long it will stay up)
+    [SerializeField] float shieldCooldown = 20.5f;                           // Set shield cooldown (how long before the shield is available to use again)
     float shieldDurationCounter;                                            // Variable to hold timer for shield duration
     float shieldCooldownCounter;                                            // Variable to hold timer for shield cooldown
     bool shieldReady = true;                                                // Check to see if the shield is ready to be used
@@ -26,18 +27,22 @@ public class PlayerAbilities : MonoBehaviour
 
     bool shootWeapon;
     public bool abilityLaser;
+    
     GameObject player;
+    GameObject gameManager;
 
     private void Awake()
     {
         abilityLaser = false;
-        player = GameObject.FindGameObjectWithTag("Player");
+        player = GameObject.FindGameObjectWithTag("Player").gameObject;
+        gameManager = GameObject.FindObjectOfType<GameManager>().gameObject;
+
     }
 
     private void Start()
     {
         shieldDurationCounter = shieldDuration;                             // Set timer
-        shieldCooldownCounter = shieldCooldown;                             // Set timer
+        shieldCooldownCounter = shieldCooldown;                             // Set timer       
     }
 
     private void Update()
@@ -48,7 +53,6 @@ public class PlayerAbilities : MonoBehaviour
 
     void ActivateUnstableCharge()
     {
-
         shootWeapon = GameObject.FindGameObjectWithTag("PWeapon").GetComponent<PlayerWeapon>().shootWeapon;
         var cost = player.GetComponent<PlayerStats>().maxEnergy / percentageCost;
 
@@ -113,16 +117,26 @@ public class PlayerAbilities : MonoBehaviour
         shieldDurationCounter = shieldDuration;                             // Set shield duration counter
     }
 
+    // Reduce
     public void ShieldDurationIncrease(float amount)                        // Method for upgrading (increasing) the duration of the shield (how long it will be up for).
     {
         shieldDuration += amount;
+        gameManager.GetComponent<GameManager>().RetrieveShieldData(shieldDuration, shieldCooldown);
     }
 
     public void ShieldCooldownDecrease(float amount)                        // Method for upgrading (decreasing) the cooldown of the shield (how long before being able to use it again).
     {
         shieldCooldown -= amount;
+                gameManager.GetComponent<GameManager>().RetrieveShieldData(shieldDuration, shieldCooldown);
     }
 
+    public void UpdateDuration(float shieldDuration)
+    {
+        this.shieldDuration = shieldDuration;
+    }
 
-
+    public void UpdateCooldown(float shieldCooldown)
+    {
+        this.shieldCooldown = shieldCooldown;
+    }
 }

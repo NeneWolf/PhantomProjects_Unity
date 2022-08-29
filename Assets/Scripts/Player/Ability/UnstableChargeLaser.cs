@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class UnstableChargeLaser : MonoBehaviour
 {
+    GameObject upgradeManager;
+    
     [Header("Laser Stats")]
     [Space]
     [SerializeField] float damage = 10f;
@@ -13,9 +15,15 @@ public class UnstableChargeLaser : MonoBehaviour
     [SerializeField] GameObject laser;
     [SerializeField] LayerMask whatIsEnemy;
 
+    private void Awake()
+    {
+        upgradeManager = GameObject.FindObjectOfType<UpgradeManager>().gameObject;
+        CheckDamage();
+    }
+    
     private void Update()
     {
-        damageHit = Physics2D.OverlapBox(GetComponent<CapsuleCollider2D>().transform.position, new Vector2(5f, 0.5f), whatIsEnemy);
+        damageHit = Physics2D.OverlapBox(this.transform.position, new Vector2(5f, 0.5f), whatIsEnemy);
 
         if (damageHit)
         {
@@ -34,15 +42,26 @@ public class UnstableChargeLaser : MonoBehaviour
 
     }
 
+    void CheckDamage()
+    {
+        if (upgradeManager.GetComponent<UpgradeManager>().abilityDamage != 0)
+        {
+            damage += upgradeManager.GetComponent<UpgradeManager>().abilityDamage;
+        }
+        else
+            damage = damage;
+    }
+
     IEnumerator wait()
     {
         
         yield return new WaitForSeconds(0.02f);
         laser.SetActive(false);
     }
+    
     private void OnDrawGizmos()
     {
-        Gizmos.DrawWireCube(GetComponent<CapsuleCollider2D>().transform.position, new Vector2(5f, 0.5f));
+        Gizmos.DrawWireCube(this.transform.position, new Vector2(5f, 0.5f));
     }
 
 }

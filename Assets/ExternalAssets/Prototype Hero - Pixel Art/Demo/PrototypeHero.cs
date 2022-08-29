@@ -65,6 +65,7 @@ public class PrototypeHero : MonoBehaviour {
         m_wallSensorR2 = transform.Find("WallSensor_R2").GetComponent<Sensor_Prototype>();
         m_wallSensorL1 = transform.Find("WallSensor_L1").GetComponent<Sensor_Prototype>();
         m_wallSensorL2 = transform.Find("WallSensor_L2").GetComponent<Sensor_Prototype>();
+
     }
 
     // Update is called once per frame
@@ -141,16 +142,7 @@ public class PrototypeHero : MonoBehaviour {
         // Set AirSpeed in animator
         m_animator.SetFloat("AirSpeedY", m_body2d.velocity.y);
 
-        // Change to Upgrade Weapon Animation
-        if(WeaponController != null)
-        {
-            if (WeaponController.GetComponent<PlayerWeapon>().hasUpgradedWeapon)
-                m_SpecialGun = true;
-        }
-
-        // Set Animation layer f
-        int boolInt = m_SpecialGun ? 1 : 0;
-        m_animator.SetLayerWeight(1, boolInt);
+        CheckUpgradedWeapon();
 
         // Check if all sensors are setup properly
         if (m_wallSensorR1 && m_wallSensorR2 && m_wallSensorL1 && m_wallSensorL2)
@@ -520,5 +512,19 @@ public class PrototypeHero : MonoBehaviour {
 
         jump = false;
 
+    }
+
+    void CheckUpgradedWeapon()
+    {
+        // Change to Upgrade Weapon Animation
+        if (WeaponController != null)
+        {
+            if (WeaponController.GetComponent<PlayerWeapon>().hasUpgradedWeapon)
+                m_SpecialGun = true;
+        }
+
+        // Set Animation layer f
+        int boolInt = m_SpecialGun ? 1 : 0;
+        m_animator.SetLayerWeight(1, boolInt);
     }
 }

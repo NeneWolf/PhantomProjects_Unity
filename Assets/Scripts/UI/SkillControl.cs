@@ -26,19 +26,7 @@ public class SkillControl : MonoBehaviour
 
         UpdateSkill();
 
-        //if (skill[target, 0] == 1)
-        //{
-        //    buyClicked = true;
 
-        //    // Disable buttons
-        //    button.SetActive(false);
-        //    purchased.SetActive(true);
-
-        //    // Update skill Image after purchase
-        //    purchasedImage.SetActive(false);
-
-        //    price.text = "0";
-        //}
     }
 
 
@@ -72,7 +60,7 @@ public class SkillControl : MonoBehaviour
 
     void UpdateSkill()
     {
-        for (int i = 0; i < 13; i++)
+        for (int i = 0; i < skill.GetLength(0); i++)
         {
             if (skill[i, 1] == id)
             {
@@ -80,12 +68,12 @@ public class SkillControl : MonoBehaviour
                     buyClicked = true;
                     price.text = "0";
                     button.SetActive(false);
+                    purchased.SetActive(true);
                     purchasedImage.SetActive(false);
                 }
                 else 
                 {
-                    
-                    if (i == 12 || i == 9 || i == 6 || i == 3 || i == 0)
+                    if (i == 13 || i == 9 || i == 6 || i == 3 || i == 0)
                     {
                         button.SetActive(true);
                     }
@@ -94,7 +82,7 @@ public class SkillControl : MonoBehaviour
                         button.SetActive(false);
                     }
 
-                    if (i != 0 && skill[i - 1, 0] == 1)
+                    if (i != 0 && skill[i - 1, 0] == 1 && id != 99)
                     {
                         button.SetActive(true);
                     }

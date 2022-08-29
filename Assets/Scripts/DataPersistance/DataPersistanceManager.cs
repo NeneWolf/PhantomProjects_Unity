@@ -114,13 +114,13 @@ public class DataPersistanceManager : MonoBehaviour
 
 
 
-    // Test
+    //// Test
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.G))
-        {
-            SaveGame();
-        }
-    }
+    //private void Update()
+    //{
+    //    if (Input.GetKeyDown(KeyCode.G))
+    //    {
+    //        SaveGame();
+    //    }
+    //}
 }

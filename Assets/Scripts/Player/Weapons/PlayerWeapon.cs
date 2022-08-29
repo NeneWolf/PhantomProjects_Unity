@@ -1,3 +1,4 @@
+using PhantomProjects.Managers;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,7 +11,7 @@ public class PlayerWeapon : MonoBehaviour
 
     [Header("Interval Between Bullets")]
 	[SerializeField] float nextFire = 1f;                               // Time before next projectile is spawned 
-	[SerializeField] float fireDelay = 0.5f;
+	public float fireDelay = 0.5f;
 
 	[Header("Pistol")]
 	[Space]
@@ -27,29 +28,34 @@ public class PlayerWeapon : MonoBehaviour
 
 	public bool shootWeapon { get; private set; }
 	GameObject controls;
+	GameObject gameManager;
+	GameObject upgradeManager;
 	bool abilityLaser;
 
 	void Awake()
     {
 		controls = GameObject.FindGameObjectWithTag("Player");
+		gameManager = GameObject.FindObjectOfType<GameManager>().gameObject;
+		upgradeManager = GameObject.FindObjectOfType<UpgradeManager>().gameObject;
 		pistol.transform.position = weaponPosition.transform.position;
 		demonLaser.transform.position = weaponPosition.transform.position;
 
 		shootWeapon = false;
+
+		hasUpgradedWeapon = upgradeManager.GetComponent<UpgradeManager>().specialGunOn;
 	}
 
     void Update()
     {
-		abilityLaser = controls.GetComponent<PlayerAbilities>().abilityLaser;
+		abilityLaser = controls.GetComponentInChildren<PlayerAbilities>().abilityLaser;
 
-		if (!hasUpgradedWeapon)
+        if (!hasUpgradedWeapon)
         {
 			pistol.SetActive(true);
 			demonLaser.SetActive(false);
 
 			if (Input.GetMouseButtonDown(0) && Time.time > nextFire && !abilityLaser)
 			{
-
 				m_animator.SetTrigger("Attack1");
 				PistolShoot();
 				shootWeapon = true;
@@ -78,6 +84,7 @@ public class PlayerWeapon : MonoBehaviour
     {
 		pistol.GetComponent<Pistol>().Shoot();
 		nextFire = Time.time + fireDelay;
+		print("Next Fire:" + nextFire);
 	}
 
 	void DLaserShoot()
@@ -97,19 +104,8 @@ public class PlayerWeapon : MonoBehaviour
 	}
 
 
-	//   public void WeaponDamageIncrease(float amount)                                    // Upgrade (Increase) the player's weapon damage
-	//{
-	//	pistolDamage += amount;
-	//}
-
-	//public void FireRateIncrease(float amount)
-	//   {
-	//	if (pistolAttackInterval - amount <= pistolMinimumAttackInterval)
-	//	{
-	//		pistolAttackInterval = pistolMinimumAttackInterval;
-	//	}
-	//	else pistolAttackInterval -= amount;
-	//   }
-
-
+    public void FireRateDecrease(float amount)
+    {
+		fireDelay -= amount;
+	}
 }

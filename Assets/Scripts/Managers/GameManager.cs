@@ -30,6 +30,11 @@ namespace PhantomProjects.Managers
 
         public bool inStartLevel { get; private set; } = false;
 
+        public float shieldDuration;
+        public float shieldCooldown;
+        
+        public float fireDelay;
+        
         public bool loadedSave = false;
 
         // 
@@ -54,7 +59,19 @@ namespace PhantomProjects.Managers
                 spawnPlayerPosition = GameObject.Find("PlayerSpawnPosition").transform;
                 GameObject.Instantiate(Characters[charactersIndex], spawnPlayerPosition.transform.position, Quaternion.identity);
                 player = GameObject.FindGameObjectWithTag("Player");
-            }               
+            }
+
+            if (player != null)
+            {
+                if (fireDelay != 0)
+                    player.GetComponentInChildren<PlayerWeapon>().fireDelay = fireDelay;
+
+                if (shieldDuration != 0)
+                    player.GetComponentInChildren<PlayerAbilities>().UpdateDuration(shieldDuration);
+
+                if (shieldCooldown != 0)
+                    player.GetComponentInChildren<PlayerAbilities>().UpdateCooldown(shieldCooldown);
+            }
         }
 
         public void LoadData(GameData data)
@@ -65,7 +82,10 @@ namespace PhantomProjects.Managers
             this.currentSceneIndex = data.currentLevelIndex;
             this.playerCurrentHealth = data.currentHealth;
             this.playerCurrentEnergy = data.currentEnergy;
-         }
+            this.fireDelay = data.gunRate;
+            this.shieldCooldown = data.shieldCooldown;
+            this.shieldDuration = data.shieldDuration;
+        }
 
         public void SaveData(GameData data)
         {
@@ -76,17 +96,27 @@ namespace PhantomProjects.Managers
             data.characterSelected = this.charactersIndex;
             data.modeSelected = difficultyManager.difficultyLevel;
             data.modeSelected = gameDifficulty;
+            
 
             if (player != null)
             {
                 data.currentHealth = player.GetComponent<PlayerStats>().currentHealth;
                 data.currentEnergy = player.GetComponent<PlayerStats>().currentEnergy;
+                data.gunRate = player.GetComponentInChildren<PlayerWeapon>().fireDelay;
+                data.shieldDuration = shieldDuration;
+                data.shieldCooldown = shieldCooldown;
             }
 
             if (sceneManager.GetComponent<ScenesManager>().currentScene >= level0Index)
                 data.currentLevelIndex = sceneManager.GetComponent<ScenesManager>().currentScene + 1;
             else if (sceneManager.GetComponent<ScenesManager>().currentScene < level0Index && data.characterSelected != null)
                 data.currentLevelIndex = 6;
+        }
+
+        public void RetrieveShieldData(float duration, float cooldown)
+        {
+            this.shieldDuration = duration;
+            this.shieldCooldown = cooldown;
         }
     }
 }

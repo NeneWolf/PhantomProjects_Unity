@@ -13,6 +13,7 @@ public class UpgradeMenu : MonoBehaviour, IDataPersistance
 
     GameObject UIManager;
     GameObject UpgradeSystem;
+    //GameObject UpgradeManager;
     bool loadedTree = false;
     List<SkillControl> abilities;
 
@@ -28,7 +29,7 @@ public class UpgradeMenu : MonoBehaviour, IDataPersistance
     {
         //print("Tree awake");
         UIManager = GameObject.FindObjectOfType<UIManager>().gameObject;
-        UpgradeSystem = GameObject.FindObjectOfType<UpgradeMenu>().gameObject;
+        UpgradeSystem = GameObject.FindObjectOfType<UpgradeManager>().gameObject;
     }
 
     private void Update()
@@ -42,6 +43,7 @@ public class UpgradeMenu : MonoBehaviour, IDataPersistance
         {
             skills[abilityNumber, 0] = 1;
             UIManager.GetComponent<UIManager>().MutationPointsRemove(skills[abilityNumber,2]);
+            UpgradeSystem.GetComponent<UpgradeManager>().UpdateSkill(skills[abilityNumber,1]);
             RefreshAllTheInstanceOfSkillUnbought();
         }
     }
@@ -59,6 +61,7 @@ public class UpgradeMenu : MonoBehaviour, IDataPersistance
     // Revert From string to Array
     void RevertToArray(GameData data)
     {
+        // By Default always create this array with the default values
         skills = new int[,]
         {
             //{Bool,id, price}
@@ -74,12 +77,14 @@ public class UpgradeMenu : MonoBehaviour, IDataPersistance
             {0,41,10},
             {0,42,10},
             {0,43,10},
+            {0,99,10},
             {0,51,10},
             {0,52,10},
-            {0,53,10},
-            {0,99,10}
+            {0,53,10}
+
         };
 
+        //If it's a saved tree, load it on top of the created one
         if (loadedTree == true)
         {
             skillString = data.skillTree;
@@ -105,8 +110,6 @@ public class UpgradeMenu : MonoBehaviour, IDataPersistance
                 }
             }
         }
-
-
     }
 
     //Save to Game Data

@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using PhantomProjects.Managers;
 
 public class ProjectileController : MonoBehaviour
 {
+    GameObject upgradeManager;
+    
     [SerializeField] public float damage { get; private set; }
     [SerializeField] float damageP;
     [SerializeField] float speed = 20f;
@@ -17,11 +20,24 @@ public class ProjectileController : MonoBehaviour
 
     private void Awake()
     {
+        upgradeManager = GameObject.FindObjectOfType<UpgradeManager>().gameObject;
         rb = GetComponent<Rigidbody2D>();
         rb.velocity = transform.right * speed;
-        damage = damageP;
+
+        CheckDamage();
     }
 
+    void CheckDamage()
+    {
+        if (upgradeManager.GetComponent<UpgradeManager>().gunDamage != 0)
+        {
+            damage = damageP + upgradeManager.GetComponent<UpgradeManager>().gunDamage;
+        }
+        else
+        {
+            damage = damageP;
+        }
+    }
 
     private void Update()
     {

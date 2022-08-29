@@ -24,6 +24,6 @@ public class UnstableCharge : MonoBehaviour
     {
         yield return new WaitForSeconds(laserDuration);                 // Leave the laser active for the specified amount of time
         laser.SetActive(false);                                                 // Disable the line once the duration is up 
-        player.GetComponent<PlayerAbilities>().abilityLaser = false;
+        player.GetComponentInChildren<PlayerAbilities>().abilityLaser = false;
     }
 }
