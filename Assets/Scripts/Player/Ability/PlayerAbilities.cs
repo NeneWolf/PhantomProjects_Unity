@@ -47,8 +47,11 @@ public class PlayerAbilities : MonoBehaviour
 
     private void Update()
     {
-        ActivateShield();
-        ActivateUnstableCharge();
+        if(Time.timeScale != 0)
+        {
+            ActivateShield();
+            ActivateUnstableCharge();
+        }
     }
 
     void ActivateUnstableCharge()

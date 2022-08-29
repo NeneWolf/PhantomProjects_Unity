@@ -16,7 +16,7 @@ public class AutoAddPlayerToVcamTargets : MonoBehaviour
 
     IEnumerator WaitToFindPlayer()
     {
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSecondsRealtime(0.1f);
 
         if (tag != null)
         {

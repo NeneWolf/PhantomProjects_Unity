@@ -16,7 +16,7 @@ public class SpawnPlayerPosition : MonoBehaviour
 
     IEnumerator waitBeforePutting()
     {
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSecondsRealtime(0.2f);
         target = GameObject.FindGameObjectWithTag("Player").gameObject;
         target.transform.position = this.gameObject.transform.position;
         hasMovePlayer = true;

@@ -47,36 +47,39 @@ public class PlayerWeapon : MonoBehaviour
 
     void Update()
     {
-		abilityLaser = controls.GetComponentInChildren<PlayerAbilities>().abilityLaser;
-
-        if (!hasUpgradedWeapon)
+		if(Time.timeScale != 0)
         {
-			pistol.SetActive(true);
-			demonLaser.SetActive(false);
+			abilityLaser = controls.GetComponentInChildren<PlayerAbilities>().abilityLaser;
 
-			if (Input.GetMouseButtonDown(0) && Time.time > nextFire && !abilityLaser)
+			if (!hasUpgradedWeapon)
 			{
-				m_animator.SetTrigger("Attack1");
-				PistolShoot();
-				shootWeapon = true;
-			}
-			else
-				shootWeapon = false;
-		}
-		else if(hasUpgradedWeapon)
-        {
-			pistol.SetActive(false);
-			demonLaser.SetActive(true);
+				pistol.SetActive(true);
+				demonLaser.SetActive(false);
 
-			if (Input.GetMouseButtonDown(0) && Time.time > nextFire && !abilityLaser)
+				if (Input.GetMouseButtonDown(0) && Time.time > nextFire && !abilityLaser)
+				{
+					m_animator.SetTrigger("Attack1");
+					PistolShoot();
+					shootWeapon = true;
+				}
+				else
+					shootWeapon = false;
+			}
+			else if (hasUpgradedWeapon)
 			{
-				m_animator.SetTrigger("Attack1");
-				DLaserShoot();
-				shootWeapon = true;
+				pistol.SetActive(false);
+				demonLaser.SetActive(true);
 
+				if (Input.GetMouseButtonDown(0) && Time.time > nextFire && !abilityLaser)
+				{
+					m_animator.SetTrigger("Attack1");
+					DLaserShoot();
+					shootWeapon = true;
+
+				}
+				else
+					shootWeapon = false;
 			}
-			else
-				shootWeapon = false;
 		}
     }
 
