@@ -23,11 +23,12 @@ public class DataPersistanceManager : MonoBehaviour
 
     private void Awake()
     {
-        print("Started");
-        SceneManager.sceneUnloaded += OnSceneUnloaded;
-        SceneManager.sceneLoaded += OnSceneLoaded;
         instance = this;
         sceneManager = GameObject.Find("SceneManager");
+
+        SceneManager.sceneUnloaded += OnSceneUnloaded;
+        SceneManager.sceneLoaded += OnSceneLoaded;
+
         this.dataHandler = new FileDataHandler(Application.persistentDataPath, fileName);
     }
 
@@ -72,7 +73,7 @@ public class DataPersistanceManager : MonoBehaviour
         {
             dataPersistanceObj.LoadData(gameData);
         }
-        
+
         lastLevelIndex = gameData.currentLevelIndex;
 
     }

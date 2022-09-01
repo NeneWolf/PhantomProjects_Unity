@@ -1,0 +1,189 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8886358366230504659
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8886358366230504657}
+  - component: {fileID: 8451179498602931749}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8886358366230504657
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8886358366230504659}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.12946096, y: 1.155117, z: -0.001312156}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8451179498602931749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8886358366230504659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0738482735810f74fb6847e93c22f3ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_sounds:
+  - m_name: Footstep
+    background: 0
+    m_clips:
+    - {fileID: 8300000, guid: 1a631ada4ecd9cf49a88b135aa70c396, type: 3}
+    - {fileID: 8300000, guid: ee00faf8b8432ff40a6e008c84d5ae59, type: 3}
+    - {fileID: 8300000, guid: 9b0833c02b71a294faba6438278d937a, type: 3}
+    volume: 1
+    pitch: 1
+    m_loop: 0
+  - m_name: RunStop
+    background: 0
+    m_clips:
+    - {fileID: 8300000, guid: 1a631ada4ecd9cf49a88b135aa70c396, type: 3}
+    volume: 1
+    pitch: 1
+    m_loop: 0
+  - m_name: Jump
+    background: 0
+    m_clips:
+    - {fileID: 8300000, guid: 5a18f2ef7db9f1943bedda13ff85ee89, type: 3}
+    volume: 1
+    pitch: 1
+    m_loop: 0
+  - m_name: Landing
+    background: 0
+    m_clips:
+    - {fileID: 8300000, guid: 5329b99920a6642409627b29d379aff7, type: 3}
+    volume: 0
+    pitch: 0
+    m_loop: 0
+  - m_name: Shooting
+    background: 0
+    m_clips:
+    - {fileID: 8300000, guid: e36c7aab97266844ab3c110205fb846c, type: 3}
+    volume: 0.5
+    pitch: 1
+    m_loop: 0
+  - m_name: Laser
+    background: 0
+    m_clips:
+    - {fileID: 8300000, guid: f6a5ba3f0c4701944936c7372dba24ee, type: 3}
+    volume: 0.5
+    pitch: 1
+    m_loop: 0
+  - m_name: Hurt
+    background: 0
+    m_clips:
+    - {fileID: 8300000, guid: 4acaf282c31675042873963419dc479d, type: 3}
+    volume: 0.8
+    pitch: 1
+    m_loop: 0
+  - m_name: Death
+    background: 0
+    m_clips:
+    - {fileID: 8300000, guid: 628c4205ac542644b9286a339010668f, type: 3}
+    volume: 0.8
+    pitch: 1
+    m_loop: 0
+  - m_name: Dodge
+    background: 0
+    m_clips:
+    - {fileID: 8300000, guid: cc0a09af0c0ff0e45843d8ebcf4bf2e0, type: 3}
+    volume: 0.8
+    pitch: 1
+    m_loop: 0
+  - m_name: LedgeGrab
+    background: 0
+    m_clips:
+    - {fileID: 8300000, guid: 5329b99920a6642409627b29d379aff7, type: 3}
+    volume: 0.8
+    pitch: 1
+    m_loop: 0
+  - m_name: WallSlide
+    background: 0
+    m_clips:
+    - {fileID: 8300000, guid: c121abe05053b164d98e52f12af5b14c, type: 3}
+    volume: 0.8
+    pitch: 1
+    m_loop: 1
+  - m_name: CapsuleCracking
+    background: 0
+    m_clips:
+    - {fileID: 8300000, guid: ac1bf322d2bc6524cb16d8faaaa988f3, type: 3}
+    volume: 0.8
+    pitch: 1
+    m_loop: 0
+  - m_name: CapsuleBreak
+    background: 0
+    m_clips:
+    - {fileID: 8300000, guid: 45b5aa7481522b149bc39c4915edf96b, type: 3}
+    volume: 0.8
+    pitch: 1
+    m_loop: 0
+  - m_name: Main
+    background: 1
+    m_clips:
+    - {fileID: 8300000, guid: 475fa5e2ac6084f91ad0de5304100e30, type: 3}
+    volume: 0.2
+    pitch: 1
+    m_loop: 1
+  - m_name: Lab
+    background: 1
+    m_clips:
+    - {fileID: 8300000, guid: 60baa0d997e354655a1cbf215a3cc093, type: 3}
+    volume: 0.2
+    pitch: 1
+    m_loop: 1
+  - m_name: Office
+    background: 1
+    m_clips:
+    - {fileID: 8300000, guid: 997f12b4c844a264b8a6ffa303a28abe, type: 3}
+    volume: 0.2
+    pitch: 1
+    m_loop: 1
+  - m_name: GreenHouse
+    background: 1
+    m_clips:
+    - {fileID: 8300000, guid: d5dee481ef04b4ee5b7b918bdc4de11a, type: 3}
+    volume: 0.2
+    pitch: 1
+    m_loop: 1
+  - m_name: BossRoom
+    background: 1
+    m_clips:
+    - {fileID: 8300000, guid: eb8da84559a3e49dca774e562d515526, type: 3}
+    volume: 0.2
+    pitch: 1
+    m_loop: 1
+  - m_name: Victory
+    background: 1
+    m_clips:
+    - {fileID: 8300000, guid: eb8da84559a3e49dca774e562d515526, type: 3}
+    volume: 0.2
+    pitch: 1
+    m_loop: 1
+  - m_name: EndGame
+    background: 1
+    m_clips:
+    - {fileID: 8300000, guid: 287a3728e9ea240f0aeb0a6d1c9307a6, type: 3}
+    volume: 0.2
+    pitch: 1
+    m_loop: 1

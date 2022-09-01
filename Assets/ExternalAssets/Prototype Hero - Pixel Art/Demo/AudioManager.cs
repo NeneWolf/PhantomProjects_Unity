@@ -6,14 +6,15 @@ using UnityEngine;
 public class Sound
 {
     public string m_name;
+    public bool background;
     public AudioClip[] m_clips;
 
     [Range(0f, 1f)]
     public float volume = 1.0f;
     [Range(0f, 1.5f)]
     public float pitch = 1.0f;
-    public Vector2 m_randomVolumeRange = new Vector2(1.0f, 1.0f);
-    public Vector2 m_randomPitchRange = new Vector2(1.0f, 1.0f);
+    //public Vector2 m_randomVolumeRange = new Vector2(1.0f, 1.0f);
+    //public Vector2 m_randomPitchRange = new Vector2(1.0f, 1.0f);
     public bool m_loop = false;
 
     private AudioSource m_source;
@@ -21,8 +22,14 @@ public class Sound
     public void SetSource(AudioSource source)
     {
         m_source = source;
-        int randomClip = Random.Range(0, m_clips.Length - 1);
-        m_source.clip = m_clips[randomClip];
+        if (m_clips.Length > 0)
+        {
+            int randomClip = Random.Range(0, m_clips.Length - 1);
+            m_source.clip = m_clips[randomClip];
+        }
+        else
+            m_source.clip = m_clips[0];
+        
         m_source.loop = m_loop;
     }
 
@@ -33,8 +40,8 @@ public class Sound
             int randomClip = Random.Range(0, m_clips.Length - 1);
             m_source.clip = m_clips[randomClip];
         }
-        m_source.volume = volume * Random.Range(m_randomVolumeRange.x, m_randomVolumeRange.y);
-        m_source.pitch = pitch * Random.Range(m_randomPitchRange.x, m_randomPitchRange.y);
+        m_source.volume = volume;
+        m_source.pitch = pitch;
         m_source.Play();
     }
 
@@ -52,23 +59,24 @@ public class Sound
     }
 }
 
-public class AudioManager_PrototypeHero : MonoBehaviour
+public class AudioManager : MonoBehaviour
 {
     // Make it a singleton class that can be accessible everywhere
-    public static AudioManager_PrototypeHero instance;
+    public static AudioManager instance;
 
     [SerializeField]
     Sound[] m_sounds;
 
     private void Awake()
     {
-        if(instance != null)
+        if (instance != null)
         {
-            Debug.LogError("More than one AudioManger in scene");
+            Destroy(gameObject);
         }
         else
         {
             instance = this;
+            DontDestroyOnLoad(gameObject);
         }
     }
 
@@ -93,7 +101,7 @@ public class AudioManager_PrototypeHero : MonoBehaviour
             }
         }
 
-        Debug.LogWarning("AudioManager: Sound name not found in list: " + name);
+        return;
     }
 
     public void StopSound(string name)
@@ -104,6 +112,25 @@ public class AudioManager_PrototypeHero : MonoBehaviour
             {
                 m_sounds[i].Stop();
                 return;
+            }
+        }
+    }
+
+    public void StopAllSounds()
+    {
+        for (int i = 0; i < m_sounds.Length; i++)
+        {
+            m_sounds[i].Stop();
+        }
+    }
+
+    public void StopAllBackgroundSounds()
+    {
+        for (int i = 0; i < m_sounds.Length; i++)
+        {
+            if (m_sounds[i].background == true)
+            {
+                m_sounds[i].Stop();
             }
         }
     }
@@ -119,5 +146,31 @@ public class AudioManager_PrototypeHero : MonoBehaviour
         }
 
         return false;
+    }
+
+    public bool IsPlayingBackground()
+    {
+        for (int i = 0; i < m_sounds.Length; i++)
+        {
+            if (m_sounds[i].background == true && m_sounds[i].IsPlaying())
+            {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    public string ReturnCurrentBackgroundMusicPlaying()
+    {
+        for (int i = 0; i < m_sounds.Length; i++)
+        {
+            if (m_sounds[i].background == true && m_sounds[i].IsPlaying())
+            {
+                return m_sounds[i].m_name;
+            }
+        }
+
+        return null;
     }
 }

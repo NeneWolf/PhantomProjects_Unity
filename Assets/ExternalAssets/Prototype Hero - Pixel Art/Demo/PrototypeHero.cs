@@ -159,7 +159,7 @@ public class PrototypeHero : MonoBehaviour {
                 m_animator.SetBool("WallSlide", m_wallSlide);
                 //Play wall slide sound
                 if (prevWallSlide && !m_wallSlide)
-                    AudioManager_PrototypeHero.instance.StopSound("WallSlide");
+                    AudioManager.instance.StopSound("WallSlide");
 
 
                 //Grab Ledge

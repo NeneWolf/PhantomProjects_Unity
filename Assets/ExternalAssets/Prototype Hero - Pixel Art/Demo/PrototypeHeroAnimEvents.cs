@@ -16,13 +16,13 @@ public class PrototypeHeroAnimEvents : MonoBehaviour
     public GameObject           m_ParryEffect;
 
     private PrototypeHero       m_player;
-    private AudioManager_PrototypeHero m_audioManager;
+    private AudioManager m_audioManager;
 
     // Start is called before the first frame update
     void Start()
     {
         m_player = GetComponentInParent<PrototypeHero>();
-        m_audioManager = AudioManager_PrototypeHero.instance;
+        m_audioManager = AudioManager.instance;
     }
 
     // Animation Events
@@ -119,12 +119,12 @@ public class PrototypeHeroAnimEvents : MonoBehaviour
 
     void AE_SwordAttack()
     {
-        m_audioManager.PlaySound("SwordAttack");
+        m_audioManager.PlaySound("Shooting");
     }
 
     void AE_SheathSword()
     {
-        m_audioManager.PlaySound("SheathSword");
+        m_audioManager.PlaySound("Laser");
     }
 
     void AE_Dodge()

@@ -79,5 +79,10 @@ namespace PhantomProjects.Managers
             sceneManager.BringNextScene("SampleScene");
 
         }
+
+        public void ReturnToMainMenu()
+        {
+            sceneManager.BringNextScene("MainMenu");
+        }
     }
 }

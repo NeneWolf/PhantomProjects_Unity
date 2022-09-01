@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using PhantomProjects.Core;
+using UnityEngine.SceneManagement;
 
 namespace PhantomProjects.Managers
 {
@@ -44,11 +45,12 @@ namespace PhantomProjects.Managers
         {
             sceneManager = GameObject.Find("SceneManager");
             difficultyManager = FindObjectOfType<DifficultyManager>();
+
         }
 
         private void Update()
         {
-
+            
             if (sceneManager.GetComponent<ScenesManager>().currentScene >= level0Index)
             {
                 inStartLevel = true;
@@ -107,10 +109,19 @@ namespace PhantomProjects.Managers
                 data.shieldCooldown = shieldCooldown;
             }
 
-            if (sceneManager.GetComponent<ScenesManager>().currentScene >= level0Index)
-                data.currentLevelIndex = sceneManager.GetComponent<ScenesManager>().currentScene + 1;
-            else if (sceneManager.GetComponent<ScenesManager>().currentScene < level0Index && data.characterSelected != null)
-                data.currentLevelIndex = 6;
+            currentSceneIndex = sceneManager.GetComponent<ScenesManager>().currentScene + 1;
+
+            ////If current scene is level 0 save that as currentLevelIndex
+            if (currentSceneIndex < level0Index)
+            {
+                data.currentLevelIndex = 1;
+            }
+
+            // if current scene is above level 0 save currentScene + 1
+            if (currentSceneIndex > level0Index)
+            {
+                data.currentLevelIndex = currentSceneIndex;
+            }
         }
 
         public void RetrieveShieldData(float duration, float cooldown)

@@ -9,7 +9,9 @@ namespace PhantomProjects.Managers
 {
     public class ScenesManager : MonoBehaviour
     {
+        GameObject m_audioManager;
         GameObject dataManager;
+        GameObject savingManager;
 
         public int currentScene;
 
@@ -23,20 +25,48 @@ namespace PhantomProjects.Managers
         GameObject player;
         GameManager gameManager;
 
+
         private void Awake()
         {
+            m_audioManager = FindObjectOfType<AudioManager>().gameObject;
             gameManager = FindObjectOfType<GameManager>();
+            savingManager = GameObject.Find("SavingManager");
             dataManager = GameObject.Find("SavingManager");
+
+
         }
+
+        //private void Start()
+        //{
+        //    print("Start Scene manager");
+        //    currentScene = SceneManager.GetActiveScene().buildIndex;
+        //    OnLevelWasLoaded(currentScene);
+        //}
+
+        //private void OnLevelWasLoaded(int level)
+        //{
+        //    if(level == 6)
+        //    {
+        //        print("Scene Manager Save");
+        //        savingManager.GetComponent<DataPersistanceManager>().SaveGame();
+        //    }
+        //}
 
         private void Update()
         {
             currentScene = SceneManager.GetActiveScene().buildIndex;
-
+            
             if (fader == null)
             {
                 fader = findChildFromParent("Canvas", "Fader");
             }
+
+            if (fader.GetComponent<Fader>().isLoading == false && m_audioManager.GetComponent<AudioManager>().IsPlayingBackground() == false)
+            {
+                PlayBackgroundSound(currentScene);
+            }
+            else if (fader.GetComponent<Fader>().isLoading == true)
+                m_audioManager.GetComponent<AudioManager>().StopAllSounds();
 
             if (gameManager.inStartLevel)
             {
@@ -49,6 +79,39 @@ namespace PhantomProjects.Managers
                         BringNextScene("EndGame");
                     }
                 }
+            }
+        }
+
+        private void PlayBackgroundSound(int currentScene)
+        {
+            if (currentScene >= 0 && currentScene <= 3)
+                CheckMusic("Main");
+            else if (currentScene >= 6 && currentScene <= 10)          // Lab Scenes
+                CheckMusic("Lab");
+            else if (currentScene >= 12 && currentScene <= 16)          // Office Scenes
+                CheckMusic("Office");
+            else if (currentScene >= 18 && currentScene <= 22)         // Green House
+                CheckMusic("GreenHouse");
+            else if (currentScene == 11 || currentScene == 17)
+                CheckMusic("BossRoom");                  // Boss rooms
+            else if (currentScene == 4)
+                CheckMusic("Victory");                   // Victory Screen // Completed game
+            else if (currentScene == 5)
+                CheckMusic("EndGame");                   // Player Died
+
+        }
+
+        void CheckMusic(string backMusic)
+        { 
+            //Check current sound player and if its the same as requested, stop it and play the correct one
+            if (m_audioManager.GetComponent<AudioManager>().ReturnCurrentBackgroundMusicPlaying() != backMusic)
+            {
+                m_audioManager.GetComponent<AudioManager>().StopAllBackgroundSounds();
+                m_audioManager.GetComponent<AudioManager>().PlaySound(backMusic);
+            }
+            else if(m_audioManager.GetComponent<AudioManager>().ReturnCurrentBackgroundMusicPlaying() == null)
+            {
+                m_audioManager.GetComponent<AudioManager>().PlaySound(backMusic);
             }
         }
 

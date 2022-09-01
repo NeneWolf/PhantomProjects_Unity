@@ -28,7 +28,6 @@ public class Fader : MonoBehaviour
 
     IEnumerator FadeOut(float time)
     {
-        print("fade out");
         while (canvasGroup.alpha < 1)
         {
             canvasGroup.alpha += Time.deltaTime / time;
@@ -42,8 +41,12 @@ public class Fader : MonoBehaviour
         {
             Time.timeScale = 0f;
             Loading.SetActive(true);
+            isLoading = true;
+            
             yield return new WaitForSecondsRealtime(5f);
+            
             Time.timeScale = 1f;
+            isLoading = false;
             Loading.SetActive(false);
         }
             
