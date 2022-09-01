@@ -37,7 +37,7 @@ public class UpgradeManager : MonoBehaviour, IDataPersistance
 
     void Update()
     {
-        if (player == null && gameManager.GetComponent<GameManager>().inStartLevel)
+        if (gameManager.GetComponent<GameManager>().inStartLevel && player == null )
         {
             player = GameObject.FindGameObjectWithTag("Player").gameObject;
             pWeapon = GameObject.FindGameObjectWithTag("PWeapon").gameObject;

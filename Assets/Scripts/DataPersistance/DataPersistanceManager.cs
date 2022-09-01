@@ -26,8 +26,14 @@ public class DataPersistanceManager : MonoBehaviour
         instance = this;
         sceneManager = GameObject.Find("SceneManager");
 
-        SceneManager.sceneUnloaded += OnSceneUnloaded;
-        SceneManager.sceneLoaded += OnSceneLoaded;
+        if (sceneManager.GetComponent<ScenesManager>().currentScene == 0 ||
+            sceneManager.GetComponent<ScenesManager>().currentScene == 1 ||
+            sceneManager.GetComponent<ScenesManager>().currentScene == 6)
+        {
+            SceneManager.sceneUnloaded += OnSceneUnloaded; //Save
+        }
+        
+        SceneManager.sceneLoaded += OnSceneLoaded; // Load
 
         this.dataHandler = new FileDataHandler(Application.persistentDataPath, fileName);
     }
@@ -40,7 +46,12 @@ public class DataPersistanceManager : MonoBehaviour
 
     private void OnDisable()
     {
-        SceneManager.sceneUnloaded -= OnSceneUnloaded;
+        if (sceneManager.GetComponent<ScenesManager>().currentScene == 0 ||
+            sceneManager.GetComponent<ScenesManager>().currentScene == 1 ||
+            sceneManager.GetComponent<ScenesManager>().currentScene == 6)
+        {
+            SceneManager.sceneUnloaded -= OnSceneUnloaded;
+        }
     }
 
     public void OnSceneLoaded(Scene scene, LoadSceneMode mode)

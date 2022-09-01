@@ -24,7 +24,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8886358366230504659}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.12946096, y: 1.155117, z: -0.001312156}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -54,6 +54,7 @@ MonoBehaviour:
     volume: 1
     pitch: 1
     m_loop: 0
+    audioMixer: {fileID: 24300002, guid: 0516aec6963970f40b205ec2cfb9ab11, type: 2}
   - m_name: RunStop
     background: 0
     m_clips:
@@ -61,6 +62,7 @@ MonoBehaviour:
     volume: 1
     pitch: 1
     m_loop: 0
+    audioMixer: {fileID: 24300002, guid: 0516aec6963970f40b205ec2cfb9ab11, type: 2}
   - m_name: Jump
     background: 0
     m_clips:
@@ -68,13 +70,15 @@ MonoBehaviour:
     volume: 1
     pitch: 1
     m_loop: 0
+    audioMixer: {fileID: 24300002, guid: 0516aec6963970f40b205ec2cfb9ab11, type: 2}
   - m_name: Landing
     background: 0
     m_clips:
     - {fileID: 8300000, guid: 5329b99920a6642409627b29d379aff7, type: 3}
-    volume: 0
-    pitch: 0
+    volume: 0.2
+    pitch: 1
     m_loop: 0
+    audioMixer: {fileID: 24300002, guid: 0516aec6963970f40b205ec2cfb9ab11, type: 2}
   - m_name: Shooting
     background: 0
     m_clips:
@@ -82,6 +86,7 @@ MonoBehaviour:
     volume: 0.5
     pitch: 1
     m_loop: 0
+    audioMixer: {fileID: 24300002, guid: 0516aec6963970f40b205ec2cfb9ab11, type: 2}
   - m_name: Laser
     background: 0
     m_clips:
@@ -89,6 +94,7 @@ MonoBehaviour:
     volume: 0.5
     pitch: 1
     m_loop: 0
+    audioMixer: {fileID: 24300002, guid: 0516aec6963970f40b205ec2cfb9ab11, type: 2}
   - m_name: Hurt
     background: 0
     m_clips:
@@ -96,6 +102,7 @@ MonoBehaviour:
     volume: 0.8
     pitch: 1
     m_loop: 0
+    audioMixer: {fileID: 24300002, guid: 0516aec6963970f40b205ec2cfb9ab11, type: 2}
   - m_name: Death
     background: 0
     m_clips:
@@ -103,6 +110,7 @@ MonoBehaviour:
     volume: 0.8
     pitch: 1
     m_loop: 0
+    audioMixer: {fileID: 24300002, guid: 0516aec6963970f40b205ec2cfb9ab11, type: 2}
   - m_name: Dodge
     background: 0
     m_clips:
@@ -110,6 +118,7 @@ MonoBehaviour:
     volume: 0.8
     pitch: 1
     m_loop: 0
+    audioMixer: {fileID: 24300002, guid: 0516aec6963970f40b205ec2cfb9ab11, type: 2}
   - m_name: LedgeGrab
     background: 0
     m_clips:
@@ -117,6 +126,7 @@ MonoBehaviour:
     volume: 0.8
     pitch: 1
     m_loop: 0
+    audioMixer: {fileID: 24300002, guid: 0516aec6963970f40b205ec2cfb9ab11, type: 2}
   - m_name: WallSlide
     background: 0
     m_clips:
@@ -124,6 +134,7 @@ MonoBehaviour:
     volume: 0.8
     pitch: 1
     m_loop: 1
+    audioMixer: {fileID: 24300002, guid: 0516aec6963970f40b205ec2cfb9ab11, type: 2}
   - m_name: CapsuleCracking
     background: 0
     m_clips:
@@ -131,6 +142,7 @@ MonoBehaviour:
     volume: 0.8
     pitch: 1
     m_loop: 0
+    audioMixer: {fileID: 24300002, guid: 0516aec6963970f40b205ec2cfb9ab11, type: 2}
   - m_name: CapsuleBreak
     background: 0
     m_clips:
@@ -138,6 +150,7 @@ MonoBehaviour:
     volume: 0.8
     pitch: 1
     m_loop: 0
+    audioMixer: {fileID: 24300002, guid: 0516aec6963970f40b205ec2cfb9ab11, type: 2}
   - m_name: Main
     background: 1
     m_clips:
@@ -145,13 +158,15 @@ MonoBehaviour:
     volume: 0.2
     pitch: 1
     m_loop: 1
+    audioMixer: {fileID: 24300002, guid: c1cf8eef1b431b74c9c83d640b75cd76, type: 2}
   - m_name: Lab
     background: 1
     m_clips:
     - {fileID: 8300000, guid: 60baa0d997e354655a1cbf215a3cc093, type: 3}
-    volume: 0.2
+    volume: 0.47
     pitch: 1
     m_loop: 1
+    audioMixer: {fileID: 24300002, guid: c1cf8eef1b431b74c9c83d640b75cd76, type: 2}
   - m_name: Office
     background: 1
     m_clips:
@@ -159,6 +174,7 @@ MonoBehaviour:
     volume: 0.2
     pitch: 1
     m_loop: 1
+    audioMixer: {fileID: 24300002, guid: c1cf8eef1b431b74c9c83d640b75cd76, type: 2}
   - m_name: GreenHouse
     background: 1
     m_clips:
@@ -166,6 +182,7 @@ MonoBehaviour:
     volume: 0.2
     pitch: 1
     m_loop: 1
+    audioMixer: {fileID: 24300002, guid: c1cf8eef1b431b74c9c83d640b75cd76, type: 2}
   - m_name: BossRoom
     background: 1
     m_clips:
@@ -173,6 +190,7 @@ MonoBehaviour:
     volume: 0.2
     pitch: 1
     m_loop: 1
+    audioMixer: {fileID: 24300002, guid: c1cf8eef1b431b74c9c83d640b75cd76, type: 2}
   - m_name: Victory
     background: 1
     m_clips:
@@ -180,6 +198,7 @@ MonoBehaviour:
     volume: 0.2
     pitch: 1
     m_loop: 1
+    audioMixer: {fileID: 24300002, guid: c1cf8eef1b431b74c9c83d640b75cd76, type: 2}
   - m_name: EndGame
     background: 1
     m_clips:
@@ -187,3 +206,4 @@ MonoBehaviour:
     volume: 0.2
     pitch: 1
     m_loop: 1
+    audioMixer: {fileID: 24300002, guid: c1cf8eef1b431b74c9c83d640b75cd76, type: 2}

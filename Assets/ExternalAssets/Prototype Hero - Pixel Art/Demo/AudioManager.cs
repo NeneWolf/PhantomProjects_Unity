@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 [System.Serializable]
 public class Sound
@@ -9,15 +10,17 @@ public class Sound
     public bool background;
     public AudioClip[] m_clips;
 
-    [Range(0f, 1f)]
-    public float volume = 1.0f;
+    [Range(-80f, 0f)]
+    public float volume = 0f;
+    
     [Range(0f, 1.5f)]
     public float pitch = 1.0f;
-    //public Vector2 m_randomVolumeRange = new Vector2(1.0f, 1.0f);
-    //public Vector2 m_randomPitchRange = new Vector2(1.0f, 1.0f);
+
     public bool m_loop = false;
 
     private AudioSource m_source;
+
+    public AudioMixerGroup audioMixer;
 
     public void SetSource(AudioSource source)
     {
@@ -31,6 +34,7 @@ public class Sound
             m_source.clip = m_clips[0];
         
         m_source.loop = m_loop;
+        m_source.outputAudioMixerGroup = audioMixer;
     }
 
     public void Play()
@@ -134,6 +138,28 @@ public class AudioManager : MonoBehaviour
             }
         }
     }
+
+    //public void SetVolumeEffect(float volume)
+    //{
+    //    for (int i = 0; i < m_sounds.Length; i++)
+    //    {
+    //        if (m_sounds[i].background == false)
+    //        {
+    //            m_sounds[i].volume = volume;
+    //        }
+    //    }
+    //}
+
+    //public void SetVolumeBackground(float volume)
+    //{
+    //    for (int i = 0; i < m_sounds.Length; i++)
+    //    {
+    //        if (m_sounds[i].background == true)
+    //        {
+    //            m_sounds[i].volume = volume;
+    //        }
+    //    }
+    //}
 
     public bool IsPlaying(string name)
     {

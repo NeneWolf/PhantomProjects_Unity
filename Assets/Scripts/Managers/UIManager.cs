@@ -18,6 +18,10 @@ namespace PhantomProjects.Managers
         public int currentKeycards { get; private set; } = 0;
         public int currentMutationPoints = 0;
 
+        // Volume 
+        public float effectVolume;
+        public float backgroundVolume;
+
         private void Awake()
         {
             gameManager = FindObjectOfType<GameManager>();
@@ -25,7 +29,7 @@ namespace PhantomProjects.Managers
 
         void  Update()
         {
-            if (gameManager.inStartLevel)
+            if (gameManager.inStartLevel && gameManager.player != null)
             {
                 canvas = GameObject.Find("Canvas").GetComponent<CanvasUI>();
                 levelUIManager();

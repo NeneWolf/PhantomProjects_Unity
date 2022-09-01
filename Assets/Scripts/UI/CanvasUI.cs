@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using PhantomProjects.Managers;
 
 public class CanvasUI : MonoBehaviour
 {
@@ -33,8 +34,14 @@ public class CanvasUI : MonoBehaviour
     bool bossLevel = false;
 
     //Upgrade Panel
+    [Header("Upgrade Menu")]
+    [Space]
     [SerializeField] GameObject upgradePanel;
     [SerializeField] Text amountDisplay;
+
+    [Header("Pause Menu")]
+    [Space]
+    [SerializeField] GameObject pauseMenu;
 
     private void Update()
     {
@@ -52,6 +59,35 @@ public class CanvasUI : MonoBehaviour
         if(boss != null)
             BossUI();
 
+        if (Input.GetKeyDown(KeyCode.P) && upgradePanel.activeInHierarchy == false)
+        {
+            if (!isPaused)
+            {
+                PauseGame();
+            }
+        }
+    }
+
+    void PauseGame()
+    {
+        pauseMenu.SetActive(true);
+        Time.timeScale = 0f;
+        isPaused = true;
+    }
+
+    public void ResumeGame()
+    {
+        pauseMenu.SetActive(false);
+        Time.timeScale = 1f;
+        isPaused = false;
+    }
+
+    public void ReturnToMainMenu()
+    {
+        pauseMenu.SetActive(false);
+        Time.timeScale = 1f;
+        //Destroy(GameObject.FindGameObjectWithTag("Player"));
+        GameObject.FindObjectOfType<ScenesManager>().gameObject.GetComponent<ScenesManager>().BringNextScene("MainMenu");
     }
 
     //Player Sliders

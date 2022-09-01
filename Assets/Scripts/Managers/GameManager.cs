@@ -55,15 +55,16 @@ namespace PhantomProjects.Managers
             {
                 inStartLevel = true;
             }
+            else
+                inStartLevel = false;
 
-            if (player == null && sceneManager.GetComponent<ScenesManager>().currentScene >= level0Index)
+            if (player == null && inStartLevel)
             {
                 spawnPlayerPosition = GameObject.Find("PlayerSpawnPosition").transform;
                 GameObject.Instantiate(Characters[charactersIndex], spawnPlayerPosition.transform.position, Quaternion.identity);
                 player = GameObject.FindGameObjectWithTag("Player");
             }
-
-            if (player != null)
+            else if (player != null && inStartLevel)
             {
                 if (fireDelay != 0)
                     player.GetComponentInChildren<PlayerWeapon>().fireDelay = fireDelay;
@@ -74,6 +75,12 @@ namespace PhantomProjects.Managers
                 if (shieldCooldown != 0)
                     player.GetComponentInChildren<PlayerAbilities>().UpdateCooldown(shieldCooldown);
             }
+            else if( player != null && !inStartLevel)
+            {
+                Destroy(player);
+            }
+
+            print(inStartLevel);
         }
 
         public void LoadData(GameData data)
@@ -109,7 +116,7 @@ namespace PhantomProjects.Managers
                 data.shieldCooldown = shieldCooldown;
             }
 
-            currentSceneIndex = sceneManager.GetComponent<ScenesManager>().currentScene + 1;
+            currentSceneIndex = sceneManager.GetComponent<ScenesManager>().currentScene;
 
             ////If current scene is level 0 save that as currentLevelIndex
             if (currentSceneIndex < level0Index)
@@ -118,10 +125,11 @@ namespace PhantomProjects.Managers
             }
 
             // if current scene is above level 0 save currentScene + 1
-            if (currentSceneIndex > level0Index)
+            if (currentSceneIndex >= level0Index)
             {
                 data.currentLevelIndex = currentSceneIndex;
             }
+
         }
 
         public void RetrieveShieldData(float duration, float cooldown)
