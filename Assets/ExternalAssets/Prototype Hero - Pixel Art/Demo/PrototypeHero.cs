@@ -3,7 +3,7 @@ using System.Collections;
 using System;
 
 public class PrototypeHero : MonoBehaviour {
-
+    
     public float      m_runSpeed = 4.5f;
     public float      m_walkSpeed = 2.0f;
     public float      m_jumpForce = 7.5f;
@@ -73,6 +73,8 @@ public class PrototypeHero : MonoBehaviour {
     {
         if(Time.timeScale != 0)
         {
+
+            
             //Check if the player is dead
             m_dead = playerStats.IsPlayerDead;
 
@@ -137,9 +139,6 @@ public class PrototypeHero : MonoBehaviour {
                 else
                     m_body2d.velocity = new Vector2(inputX * m_maxSpeed * SlowDownSpeed, m_body2d.velocity.y);
             }
-
-
-
 
             // Set AirSpeed in animator
             m_animator.SetFloat("AirSpeedY", m_body2d.velocity.y);
@@ -526,8 +525,28 @@ public class PrototypeHero : MonoBehaviour {
                 m_SpecialGun = true;
         }
 
-        // Set Animation layer f
+        // Set Animation layer for special gun
         int boolInt = m_SpecialGun ? 1 : 0;
         m_animator.SetLayerWeight(1, boolInt);
+        //m_animator.SetLayerWeight(0, 0);
+    }
+
+    public void ReduceSpeed(float amount)
+    {
+        var minimumVelocity = m_runSpeed / 2;
+        
+        if (m_runSpeed - amount > minimumVelocity)
+        {
+            m_runSpeed -= amount;
+        }
+        else if (m_runSpeed - amount <= minimumVelocity)
+        {
+            m_runSpeed = minimumVelocity;
+        }
+    }
+    
+    public void ResetSpeed()
+    {
+        m_runSpeed = 4.5f;
     }
 }

@@ -58,7 +58,6 @@ public class PlayerWeapon : MonoBehaviour
 
 				if (Input.GetMouseButtonDown(0) && Time.time > nextFire && !abilityLaser)
 				{
-					m_animator.SetTrigger("Attack1");
 					PistolShoot();
 					shootWeapon = true;
 				}
@@ -72,7 +71,6 @@ public class PlayerWeapon : MonoBehaviour
 
 				if (Input.GetMouseButtonDown(0) && Time.time > nextFire && !abilityLaser)
 				{
-					m_animator.SetTrigger("Attack1");
 					DLaserShoot();
 					shootWeapon = true;
 
@@ -85,15 +83,16 @@ public class PlayerWeapon : MonoBehaviour
 
 	void PistolShoot()
     {
+		m_animator.SetTrigger("Attack1");
 		pistol.GetComponent<Pistol>().Shoot();
 		nextFire = Time.time + fireDelay;
-		print("Next Fire:" + nextFire);
 	}
 
 	void DLaserShoot()
 	{
-		if(currentShotAmount != numberOfBullets)
-        {
+		if (currentShotAmount != numberOfBullets)
+		{
+			m_animator.SetTrigger("Attack1");
 			currentShotAmount++;
 			demonLaser.GetComponent<DemonLaser>().Shoot();
 			nextFire = Time.time + fireDelay;

@@ -22,7 +22,7 @@ public class PrototypeHeroAnimEvents : MonoBehaviour
     void Start()
     {
         m_player = GetComponentInParent<PrototypeHero>();
-        m_audioManager = AudioManager.instance;
+        m_audioManager = GameObject.Find("AudioManager").GetComponent<AudioManager>();
     }
 
     // Animation Events

@@ -36,7 +36,7 @@ public class E2_PlayerDetectedState : PlayerDetectedState
             {
                 stateMachine.ChangeState(enemy.dodgeState);
             }
-            else stateMachine.ChangeState(enemy.meleeAttackState);
+            //else stateMachine.ChangeState(enemy.meleeAttackState);
 
         }
         else if (performLongRangeAction)

@@ -80,7 +80,7 @@ namespace PhantomProjects.Managers
                 Destroy(player);
             }
 
-            print(inStartLevel);
+            //print(inStartLevel);
         }
 
         public void LoadData(GameData data)

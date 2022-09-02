@@ -125,6 +125,10 @@ public class PlayerStats : MonoBehaviour, IDataPersistance
                 this.GetComponent<PrototypeHero>().Hurt();
                 currentHealth -= attackDetails.damageAmount;
             }
+            else if(currentHealth - attackDetails.damageAmount <= 0)
+            {
+                currentHealth = 0;
+            }
         }
     }
 
@@ -136,6 +140,10 @@ public class PlayerStats : MonoBehaviour, IDataPersistance
             {
                 this.GetComponent<PrototypeHero>().Hurt();
                 currentHealth -= damageAmount;
+            }
+            else if (currentHealth - damageAmount <= 0)
+            {
+                currentHealth = 0;
             }
         }
     }

@@ -10,6 +10,8 @@ public class RangeAttackState : AttackState
     protected GameObject projectile;
     protected Projectile projectileScript;
 
+    float bulletDamage;
+
     //Lazer
     protected GameObject laser;
 
@@ -59,7 +61,8 @@ public class RangeAttackState : AttackState
         {
             projectile = GameObject.Instantiate(stateData.projectile, attackPosition.position, attackPosition.rotation);
             projectileScript = projectile.GetComponent<Projectile>();
-            projectileScript.FireProjectile(stateData.projectileSpeed, stateData.projectileDamage);
+            bulletDamage = stateData.projectileDamage * entity.difficulty;
+            projectileScript.FireProjectile(stateData.projectileSpeed, bulletDamage);
         }
         else if(stateData.useLaser)
         {

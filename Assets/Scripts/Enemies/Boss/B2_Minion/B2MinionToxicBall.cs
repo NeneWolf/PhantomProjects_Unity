@@ -1,4 +1,5 @@
 using PhantomProjects.Core;
+using PhantomProjects.Managers;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -15,10 +16,13 @@ public class B2MinionToxicBall : MonoBehaviour
     float speed = 10f;
     float diff;
 
+    DifficultyManager difficulty;
+
     private void Start()
     {
         target = GameObject.FindGameObjectWithTag("Player");
-
+        difficulty = GameObject.FindObjectOfType<DifficultyManager>().GetComponent<DifficultyManager>();
+        damage *= difficulty.difficultyMultiplier;
         diff = target.transform.position.x - transform.position.x;
         
     }

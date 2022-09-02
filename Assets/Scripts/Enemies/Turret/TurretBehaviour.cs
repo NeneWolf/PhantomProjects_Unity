@@ -22,32 +22,33 @@ public class TurretBehaviour : MonoBehaviour
     [SerializeField] float agrooRange;
     [SerializeField] LayerMask whatIsPlayer;
 
-    Transform target;
+    GameObject target;
     Vector2 direction;
     GameObject BulletIns;
 
-    void Start()
-    {
-        target = GameObject.FindGameObjectWithTag("Player").transform;
-    }
-
     void Update()
     {
-        Vector2 targetPos = target.position;
-        direction = targetPos - (Vector2)transform.position;
+        if(target == null)
+            target = GameObject.FindGameObjectWithTag("Player").gameObject;
 
-        RaycastHit2D rayInfo = Physics2D.Raycast(playerCheck.transform.position, direction, agrooRange, whatIsPlayer);
-
-        if (rayInfo)
+        if(target != null)
         {
-            if(targetPos.y < transform.position.y)
-            {
-                turretHead.transform.up = direction;
+            Vector2 targetPos = target.transform.position;
+            direction = targetPos - (Vector2)transform.position;
 
-                if (Time.time > nextTimeToFire)
+            RaycastHit2D rayInfo = Physics2D.Raycast(playerCheck.transform.position, direction, agrooRange, whatIsPlayer);
+
+            if (rayInfo)
+            {
+                if (targetPos.y < transform.position.y)
                 {
-                    nextTimeToFire = Time.time + 1 / fireRate;
-                    ShootTarget();
+                    turretHead.transform.up = direction;
+
+                    if (Time.time > nextTimeToFire)
+                    {
+                        nextTimeToFire = Time.time + 1 / fireRate;
+                        ShootTarget();
+                    }
                 }
             }
         }

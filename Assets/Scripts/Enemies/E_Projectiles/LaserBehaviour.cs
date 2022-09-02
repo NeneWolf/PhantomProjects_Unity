@@ -1,4 +1,5 @@
 using PhantomProjects.Core;
+using PhantomProjects.Managers;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,11 +15,15 @@ public class LaserBehaviour : MonoBehaviour
 
     GameObject target;
 
+    DifficultyManager difficulty;
+
     private void Awake()
     {
         transform.position = GameObject.Find("/Mini_Boss_ME16/Alive/RangeAttackPosition").transform.position;
         rayPosition = GameObject.Find("/Mini_Boss_ME16/Alive/PlayerCheck").transform;
         target = GameObject.FindGameObjectWithTag("Player");
+        difficulty = GameObject.FindObjectOfType<DifficultyManager>().GetComponent<DifficultyManager>();
+        damage *= difficulty.difficultyMultiplier;
 
         ShootLaser();
     }

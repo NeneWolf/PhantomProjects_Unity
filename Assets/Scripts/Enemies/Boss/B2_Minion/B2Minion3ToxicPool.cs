@@ -23,7 +23,7 @@ public class B2Minion3ToxicPool : MonoBehaviour
         if (damageHit && !hasSlowdownPlayer)
         {
             hasSlowdownPlayer = true;
-            target.GetComponent<PlayerMovement>().ReduceSpeed(reduceVelocity);
+            target.GetComponent<PrototypeHero>().ReduceSpeed(reduceVelocity);
             StartCoroutine(ReduceTimer());
         }
         else

@@ -29,6 +29,7 @@ public class UnstableChargeLaser : MonoBehaviour
         {
             if (damageHit.tag == "Enemy")
             {
+                //print("Hit Enemy");
                 damageHit.gameObject.GetComponentInParent<Entity>().Damage(damage);
                 StartCoroutine(wait());
             }
@@ -54,7 +55,6 @@ public class UnstableChargeLaser : MonoBehaviour
 
     IEnumerator wait()
     {
-        
         yield return new WaitForSeconds(0.02f);
         laser.SetActive(false);
     }

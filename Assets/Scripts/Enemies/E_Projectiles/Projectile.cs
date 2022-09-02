@@ -1,4 +1,5 @@
 using PhantomProjects.Core;
+using PhantomProjects.Managers;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -25,7 +26,7 @@ public class Projectile : MonoBehaviour
         animation = GetComponent<Animator>();
         rigidbody2.gravityScale = 0.0f;
         rigidbody2.velocity = transform.right * speed;
-
+        
         if (hasAnimation)
             StartCoroutine(TimeToDestroy());
     }

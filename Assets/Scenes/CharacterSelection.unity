@@ -7161,10 +7161,10 @@ MonoBehaviour:
   spawnPosition: {fileID: 1721784714}
   characters:
   - {fileID: 1723391535611507553, guid: 1f4006f3cb9e9b3488b9821e7cd9dbe0, type: 3}
-  - {fileID: 1723391535611507553, guid: 1f4006f3cb9e9b3488b9821e7cd9dbe0, type: 3}
+  - {fileID: 1723391535611507553, guid: 8dedf576b08dff148a5d7e6b2bf4c54d, type: 3}
   sprite:
   - {fileID: 1635769994, guid: 332bc4a341759854e9e6ea808b9aa87e, type: 3}
-  - {fileID: 2002314289, guid: 605e93e61a6e5484fa6ba1df48879965, type: 3}
+  - {fileID: -391540337, guid: 0dddbe104d62bb54db1710eea26afe7c, type: 3}
   image: {fileID: 1816294416}
   button: {fileID: 709444528}
 --- !u!4 &864622690

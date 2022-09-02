@@ -1,4 +1,5 @@
 using PhantomProjects.Core;
+using PhantomProjects.Managers;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -25,10 +26,15 @@ public class OverTimeDamage : MonoBehaviour
     Collider2D damageHit;
     float nextTimeToDamage = 0f;
 
+    DifficultyManager difficultyManager;
+
     private void Awake()
     {
         coll = GetComponent<BoxCollider2D>();
+        difficultyManager = GameObject.FindObjectOfType<DifficultyManager>().GetComponent<DifficultyManager>();
+        damage *= difficultyManager.difficultyMultiplier;
     }
+
     void Start()
     {
         if (wire && canDamage)

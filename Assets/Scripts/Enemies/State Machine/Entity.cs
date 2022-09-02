@@ -50,6 +50,16 @@ public class Entity : MonoBehaviour
     
     Vector2 velocityWorkspace;
 
+    // Difficulty
+    DifficultyManager difficultyManager;
+    public float difficulty;
+
+    private void Awake()
+    {
+        difficultyManager = GameObject.Find("DifficultyManager").gameObject.GetComponent<DifficultyManager>();
+        difficulty = difficultyManager.difficultyMultiplier;
+    }
+
     public virtual void Start()
     {
         facingDirection = 1;
@@ -161,13 +171,13 @@ public class Entity : MonoBehaviour
 
     public virtual void Damage(float dmg) 
     {
-        print("Enemy HP: " + currentHealth);
+        //print("Enemy HP: " + currentHealth);
         hasBeenDamage = true;
 
         currentHealth -= dmg;
 
         if(!isDead)
-            Instantiate(entityData.hitParticle, aliveGO.transform.position, Quaternion.Euler(0f, 0f, Random.Range(0, 360f)));
+            Instantiate(entityData.hitParticle, aliveGO.transform.position, Quaternion.identity);
 
         if (currentHealth <= 0)
         {

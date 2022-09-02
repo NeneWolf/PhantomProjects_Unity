@@ -35,13 +35,13 @@ namespace PhantomProjects.Managers
             switch (difficultyLevel)
             {
                 case 0:
-                    difficultyMultiplier = 1f;
+                    difficultyMultiplier = 0.5f;
                     break;
                 case 1:
-                    difficultyMultiplier = 1.2f;
+                    difficultyMultiplier = 1f;
                     break;
                 case 2:
-                    difficultyMultiplier = 10f;
+                    difficultyMultiplier = 3f;
                     break;
                 default:
                     difficultyMultiplier = 1f;

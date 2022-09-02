@@ -1,4 +1,5 @@
 using PhantomProjects.Core;
+using PhantomProjects.Managers;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -28,11 +29,16 @@ public class B2MinionLaser : MonoBehaviour
     Vector3 originalAngle;
     Vector3 targetAngle = new Vector3(0f, 0f, 0f);
 
+    DifficultyManager difficulty;
+
     private void Awake()
     {
         hasRotated = false;
         if (particles != null)
             particles = Instantiate(particles, this.transform);
+
+        difficulty = GameObject.FindObjectOfType<DifficultyManager>().GetComponent<DifficultyManager>();
+        damage *= difficulty.difficultyMultiplier;
     }
 
     void Update()

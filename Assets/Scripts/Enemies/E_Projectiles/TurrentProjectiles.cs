@@ -1,4 +1,5 @@
 using PhantomProjects.Core;
+using PhantomProjects.Managers;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,9 +14,13 @@ public class TurrentProjectiles : MonoBehaviour
     [SerializeField] private LayerMask whatIsPlayer;
     [SerializeField] float damageRadius;
 
+    DifficultyManager difficulty;
+
     private void Awake()
     {
         rd2d = GetComponent<Rigidbody2D>();
+        difficulty = GameObject.FindObjectOfType<DifficultyManager>().GetComponent<DifficultyManager>();
+        damage *= difficulty.difficultyMultiplier;
     }
  
     

@@ -22,7 +22,10 @@ public class MeleeAttackState : AttackState
     {
         base.Enter();
 
-        attackDetails.damageAmount = stateData.attackDamage;
+        
+        attackDetails.damageAmount = stateData.attackDamage;  // Retrieve the damage value
+        attackDetails.damageAmount *= entity.difficulty;      // Multiply with the difficulty value
+
         attackDetails.position = entity.aliveGO.transform.position;
     }
 

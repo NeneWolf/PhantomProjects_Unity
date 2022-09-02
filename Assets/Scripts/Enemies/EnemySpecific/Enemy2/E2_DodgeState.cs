@@ -32,11 +32,11 @@ public class E2_DodgeState : DodgeState
 
         if (isDodgeOver)
         {
-            if(isPlayerInMaxAgroRange && performCloseRangeAction)
-            {
-                stateMachine.ChangeState(enemy.meleeAttackState);
-            }
-            else if (isPlayerInMaxAgroRange && !performCloseRangeAction)
+            //if(isPlayerInMaxAgroRange && performCloseRangeAction)
+            //{
+            //    stateMachine.ChangeState(enemy.meleeAttackState);
+            //}
+             if (isPlayerInMaxAgroRange && !performCloseRangeAction)
             {
                 stateMachine.ChangeState(enemy.rangeAttackState);
             }
