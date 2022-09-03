@@ -119,6 +119,7 @@ MonoBehaviour:
   spawnCount: 0
   spawnPosition: {fileID: 0}
   enemySpawn: {fileID: 0}
+  difficulty: 0
   idleStateData: {fileID: 11400000, guid: acd36c051641f89439f5d534347e045f, type: 2}
   moveStateData: {fileID: 11400000, guid: 9f9a737cd97a59a4880d4cd0c3c789f5, type: 2}
   playerDetectedStateData: {fileID: 11400000, guid: fb525fd3916d4294ca7e364ad49cacc8, type: 2}
@@ -240,8 +241,8 @@ SpriteRenderer:
   m_SortingLayerID: 1838932657
   m_SortingLayer: 7
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 0aa9f226417934f83a5ff6b26ec2a9c7, type: 3}
-  m_Color: {r: 0.6698113, g: 0.6698113, b: 0.6698113, a: 1}
+  m_Sprite: {fileID: 21300000, guid: efb888c0255a7c94d947cb64f89813d5, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
