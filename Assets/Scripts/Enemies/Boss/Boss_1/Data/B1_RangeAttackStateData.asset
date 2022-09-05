@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   useProjectile: 0
   projectile: {fileID: 0}
-  projectileDamage: 10
+  projectileDamage: 25
   projectileSpeed: 12
-  useLazer: 0
-  lazer: {fileID: 0}
+  useLaser: 0
+  laser: {fileID: 0}
   useFireBall: 1
   fireBall: {fileID: 28153486916584120, guid: c6efe27723af78747a3287d9a9c3b82f, type: 3}
   minRange: 6
