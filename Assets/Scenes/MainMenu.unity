@@ -31453,42 +31453,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 8451179498602931749, guid: a42f78f1c328d72419d8b5bd7b989fff, type: 3}
-      propertyPath: m_sounds.Array.size
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 8451179498602931749, guid: a42f78f1c328d72419d8b5bd7b989fff, type: 3}
-      propertyPath: m_sounds.Array.data[20].pitch
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8451179498602931749, guid: a42f78f1c328d72419d8b5bd7b989fff, type: 3}
-      propertyPath: m_sounds.Array.data[20].m_loop
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8451179498602931749, guid: a42f78f1c328d72419d8b5bd7b989fff, type: 3}
-      propertyPath: m_sounds.Array.data[20].m_name
-      value: EndGame
-      objectReference: {fileID: 0}
-    - target: {fileID: 8451179498602931749, guid: a42f78f1c328d72419d8b5bd7b989fff, type: 3}
-      propertyPath: m_sounds.Array.data[20].volume
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8451179498602931749, guid: a42f78f1c328d72419d8b5bd7b989fff, type: 3}
-      propertyPath: m_sounds.Array.data[20].audioMixer
-      value: 
-      objectReference: {fileID: 24300002, guid: c1cf8eef1b431b74c9c83d640b75cd76, type: 2}
-    - target: {fileID: 8451179498602931749, guid: a42f78f1c328d72419d8b5bd7b989fff, type: 3}
-      propertyPath: m_sounds.Array.data[20].background
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8451179498602931749, guid: a42f78f1c328d72419d8b5bd7b989fff, type: 3}
-      propertyPath: m_sounds.Array.data[20].m_clips.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8451179498602931749, guid: a42f78f1c328d72419d8b5bd7b989fff, type: 3}
-      propertyPath: m_sounds.Array.data[20].m_clips.Array.data[0]
-      value: 
-      objectReference: {fileID: 8300000, guid: 287a3728e9ea240f0aeb0a6d1c9307a6, type: 3}
     - target: {fileID: 8886358366230504657, guid: a42f78f1c328d72419d8b5bd7b989fff, type: 3}
       propertyPath: m_RootOrder
       value: 5
