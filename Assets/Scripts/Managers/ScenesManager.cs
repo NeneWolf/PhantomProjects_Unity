@@ -61,12 +61,12 @@ namespace PhantomProjects.Managers
                 fader = findChildFromParent("Canvas", "Fader");
             }
 
-            if (fader.GetComponent<Fader>().isLoading == false && m_audioManager.GetComponent<AudioManager>().IsPlayingBackground() == false)
+            if (/*fader.GetComponent<Fader>().isLoading == false &&*/ m_audioManager.GetComponent<AudioManager>().IsPlayingBackground() == false)
             {
                 PlayBackgroundSound(currentScene);
             }
-            else if (fader.GetComponent<Fader>().isLoading == true)
-                m_audioManager.GetComponent<AudioManager>().StopAllSounds();
+           /* else if (fader.GetComponent<Fader>().isLoading == true)
+                m_audioManager.GetComponent<AudioManager>().StopAllSounds();*/
 
             if (gameManager.inStartLevel)
             {

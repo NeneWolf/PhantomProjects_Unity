@@ -57,7 +57,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_runSpeed: 6
   m_walkSpeed: 2
-  m_jumpForce: 7.5
+  m_jumpForce: 9
   m_dodgeForce: 8
   m_parryKnockbackForce: 4
   m_noBlood: 0
