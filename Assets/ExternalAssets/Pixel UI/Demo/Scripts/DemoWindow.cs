@@ -36,7 +36,7 @@ namespace PixelsoftGames.PixelUI
         #region Callbacks
 
         /// <summary>
-        /// When the button is clicked we will spawn an instance of the prefab and change the state of the button.
+        /// When the button is clicked we will spawn an instanceData of the prefab and change the state of the button.
         /// </summary>
         public void On_Click()
         {

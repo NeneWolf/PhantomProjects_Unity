@@ -45,12 +45,12 @@ namespace PhantomProjects.Managers
         {
             sceneManager = GameObject.Find("SceneManager");
             difficultyManager = FindObjectOfType<DifficultyManager>();
-
         }
 
         private void Update()
         {
-            
+            currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+
             if (sceneManager.GetComponent<ScenesManager>().currentScene >= level0Index)
             {
                 inStartLevel = true;
@@ -75,7 +75,7 @@ namespace PhantomProjects.Managers
                 if (shieldCooldown != 0)
                     player.GetComponentInChildren<PlayerAbilities>().UpdateCooldown(shieldCooldown);
             }
-            else if( player != null && !inStartLevel)
+            else if (player != null && !inStartLevel)
             {
                 Destroy(player);
             }
@@ -104,7 +104,7 @@ namespace PhantomProjects.Managers
 
             data.characterSelected = this.charactersIndex;
             data.modeSelected = difficultyManager.difficultyLevel;
-            data.modeSelected = gameDifficulty;
+            //data.modeSelected = gameDifficulty;
             
 
             if (player != null)
@@ -116,19 +116,10 @@ namespace PhantomProjects.Managers
                 data.shieldCooldown = shieldCooldown;
             }
 
-            currentSceneIndex = sceneManager.GetComponent<ScenesManager>().currentScene;
-
-            ////If current scene is level 0 save that as currentLevelIndex
-            if (currentSceneIndex < level0Index)
-            {
-                data.currentLevelIndex = 1;
-            }
-
-            // if current scene is above level 0 save currentScene + 1
-            if (currentSceneIndex >= level0Index)
-            {
+            if (inStartLevel && difficultyManager.difficultyLevel != 2)
                 data.currentLevelIndex = currentSceneIndex;
-            }
+            else
+                data.currentLevelIndex = 1;
 
         }
 

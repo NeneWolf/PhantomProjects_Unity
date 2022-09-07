@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class Fader : MonoBehaviour
 {
     public bool isLoading;
+    GameObject m_audioManager;
     [SerializeField] GameObject Loading;
     
     float fadeinTime = 2f;
@@ -15,7 +16,8 @@ public class Fader : MonoBehaviour
     CanvasGroup canvasGroup;
 
     private void Start()
-    {       
+    {
+        m_audioManager = FindObjectOfType<AudioManager>().gameObject;
         canvasGroup = GetComponent<CanvasGroup>();
         canvasGroup.alpha = 1;
         StartCoroutine(FadeOutIn());
@@ -42,7 +44,7 @@ public class Fader : MonoBehaviour
             Time.timeScale = 0f;
             Loading.SetActive(true);
             isLoading = true;
-            
+            m_audioManager.GetComponent<AudioManager>().StopAllSounds();
             yield return new WaitForSecondsRealtime(5f);
             
             Time.timeScale = 1f;

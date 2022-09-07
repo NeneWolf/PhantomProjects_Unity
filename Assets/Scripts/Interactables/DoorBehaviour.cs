@@ -13,13 +13,12 @@ public class DoorBehaviour : MonoBehaviour
     GameObject uiManager;
     GameObject savingManager;
 
-    [SerializeField] bool nextScene = false;
-    [SerializeField] bool previousScene = false;
+    //[SerializeField] bool nextScene = false;
+    //[SerializeField] bool previousScene = false;
 
     private void Awake()
     {
         sceneManager = GameObject.Find("SceneManager");
-        savingManager = GameObject.Find("SavingManager");
         gameManager = GameObject.Find("GameManager");
         uiManager = GameObject.Find("UIManager");
     }
@@ -30,12 +29,9 @@ public class DoorBehaviour : MonoBehaviour
 
         if (playerCollider && Input.GetKeyDown(KeyCode.F) && uiManager.GetComponent<UIManager>().currentKeycards == requiredNumberOfKeys)
         {
-            savingManager.GetComponent<DataPersistanceManager>().SaveGame();
-            sceneManager.GetComponent<ScenesManager>().BringNextSchene();
+            DataPersistanceManager.instanceData.SaveGame();
+            sceneManager.GetComponent<ScenesManager>().BringNextScene();
         }
-        //else if (previousScene && playerCollider && Input.GetKeyDown(KeyCode.F))
-        //{
-        //    sceneManager.ReturnToPreviousScene();
-        //}
+
     }
 }

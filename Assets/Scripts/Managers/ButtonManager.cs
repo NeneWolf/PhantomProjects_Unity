@@ -74,22 +74,22 @@ namespace PhantomProjects.Managers
 
         #region Save and Load Button Functions
 
-        // Saving & Loading
-        public void OnNewGameClicked()
-        {
-            DataPersistanceManager.instance.NewGame();
-        }
+        //// Saving & Loading
+        //public void OnNewGameClicked()
+        //{
+        //    DataPersistanceManager.instanceData.NewGame();
+        //}
 
-        public void OnLoadGameClicked()
-        {
-            DataPersistanceManager.instance.LoadGame();
-        }
+        //public void OnLoadGameClicked()
+        //{
+        //    DataPersistanceManager.instanceData.LoadGame();
+        //}
 
 
-        public void OnSaveGameClicked()
-        {
-            DataPersistanceManager.instance.SaveGame();
-        }
+        //public void OnSaveGameClicked()
+        //{
+        //    DataPersistanceManager.instanceData.SaveGame();
+        //}
 
         //public void LoadSavedScene()
         //{

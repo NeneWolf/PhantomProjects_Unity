@@ -153,7 +153,7 @@ namespace PixelsoftGames.PixelUI
         /// <summary>
         /// This gets called when the Tick event is raised.
         /// </summary>
-        /// <param name="clock">The instance of the clock calling the tick event.</param>
+        /// <param name="clock">The instanceData of the clock calling the tick event.</param>
         protected void UIClock_Tick(UIClock clock)
         {
             UpdateTime();

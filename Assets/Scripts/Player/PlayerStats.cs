@@ -2,7 +2,6 @@ using PhantomProjects.Managers;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using PhantomProjects.Managers;
 
 public class PlayerStats : MonoBehaviour, IDataPersistance
 {
@@ -30,12 +29,14 @@ public class PlayerStats : MonoBehaviour, IDataPersistance
     public bool loadedPlayer;
 
     GameObject gameManager;
+    GameObject scenesManager;
 
     #endregion
 
     void Start()
     {
         gameManager = GameObject.FindObjectOfType<GameManager>().gameObject;
+        scenesManager = GameObject.FindObjectOfType<ScenesManager>().gameObject;
 
         if (gameManager.GetComponent<GameManager>().playerCurrentHealth == 0)
         {
@@ -62,10 +63,10 @@ public class PlayerStats : MonoBehaviour, IDataPersistance
 
     public void IsDead()
     {
-        if (currentHealth <= 0)                                     // Check's to see if the player has ran out of health
+        if (currentHealth <= 0 && !IsPlayerDead)                                     // Check's to see if the player has ran out of health
         {
             IsPlayerDead = true;
-            //Destroy(gameObject);
+            scenesManager.GetComponent<ScenesManager>().LoadScene(5);
         }
     }
 

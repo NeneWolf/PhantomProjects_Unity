@@ -86,6 +86,7 @@ public class CanvasUI : MonoBehaviour
     {
         pauseMenu.SetActive(false);
         Time.timeScale = 1f;
+        DataPersistanceManager.instanceData.SaveGame();
         //Destroy(GameObject.FindGameObjectWithTag("Player"));
         GameObject.FindObjectOfType<ScenesManager>().gameObject.GetComponent<ScenesManager>().BringNextScene("MainMenu");
     }

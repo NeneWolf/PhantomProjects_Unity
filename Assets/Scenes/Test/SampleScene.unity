@@ -205,7 +205,7 @@ Transform:
   - {fileID: 941925429}
   - {fileID: 1475021743}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &41722342
 GameObject:
@@ -30420,7 +30420,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &936599007
 GameObject:
@@ -30769,6 +30769,63 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 077717220e3641e44806d2a0241c9ca9, type: 3}
+--- !u!1001 &1056318728
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5664139566969684942, guid: c13269dcea8d42442b598887930ea419, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5664139566969684942, guid: c13269dcea8d42442b598887930ea419, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.620431
+      objectReference: {fileID: 0}
+    - target: {fileID: 5664139566969684942, guid: c13269dcea8d42442b598887930ea419, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.60615116
+      objectReference: {fileID: 0}
+    - target: {fileID: 5664139566969684942, guid: c13269dcea8d42442b598887930ea419, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5664139566969684942, guid: c13269dcea8d42442b598887930ea419, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5664139566969684942, guid: c13269dcea8d42442b598887930ea419, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5664139566969684942, guid: c13269dcea8d42442b598887930ea419, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5664139566969684942, guid: c13269dcea8d42442b598887930ea419, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5664139566969684942, guid: c13269dcea8d42442b598887930ea419, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5664139566969684942, guid: c13269dcea8d42442b598887930ea419, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5664139566969684942, guid: c13269dcea8d42442b598887930ea419, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5664139566969684943, guid: c13269dcea8d42442b598887930ea419, type: 3}
+      propertyPath: m_Name
+      value: Enemy1_Dog
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c13269dcea8d42442b598887930ea419, type: 3}
 --- !u!1 &1096347089
 GameObject:
   m_ObjectHideFlags: 0
@@ -39285,7 +39342,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1964815147
 GameObject:
@@ -39352,7 +39409,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2024480728
 GameObject:
@@ -40301,6 +40358,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1681156751, guid: bdfd41d3a2df1ce4388c04a794dda989, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4592463774451269173, guid: bdfd41d3a2df1ce4388c04a794dda989, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0

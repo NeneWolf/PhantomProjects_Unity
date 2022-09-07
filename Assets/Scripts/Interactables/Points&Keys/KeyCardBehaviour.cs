@@ -17,7 +17,7 @@ namespace PhantomProjects.Core
 
         private void Update()
         {
-            Collider2D playerCollider = Physics2D.OverlapCircle(transform.position, transform.localScale.x);
+            Collider2D playerCollider = Physics2D.OverlapCircle(transform.position, transform.localScale.x, whatIsPlayer);
 
             if (playerCollider && Input.GetKeyDown(KeyCode.F))
             {

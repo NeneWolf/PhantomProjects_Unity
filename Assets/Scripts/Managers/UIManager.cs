@@ -29,10 +29,13 @@ namespace PhantomProjects.Managers
 
         void  Update()
         {
-            if (gameManager.inStartLevel && gameManager.player != null)
+            if (gameManager.inStartLevel)
             {
-                canvas = GameObject.Find("Canvas").GetComponent<CanvasUI>();
-                levelUIManager();
+                if (GameObject.Find("Canvas").GetComponent<CanvasUI>() != null)
+                {
+                    canvas = GameObject.Find("Canvas").GetComponent<CanvasUI>();
+                    levelUIManager();
+                }
             }
         }
 

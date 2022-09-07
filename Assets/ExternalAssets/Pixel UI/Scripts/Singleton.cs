@@ -31,7 +31,7 @@ namespace PixelsoftGames
         }
 
         /// <summary>
-        /// On awake, check if there's already an existing instance of this Singleton.  If there is, then destroy this instance.
+        /// On awake, check if there's already an existing instanceData of this Singleton.  If there is, then destroy this instanceData.
         /// </summary>
         public virtual void Awake()
         {
@@ -40,7 +40,7 @@ namespace PixelsoftGames
                 return;
             }
 
-            // Check if a Singleton instance already exists
+            // Check if a Singleton instanceData already exists
             if (instance == null)
             {
                 // If none exists, make this the Singleton
@@ -50,7 +50,7 @@ namespace PixelsoftGames
             }
             else
             {
-                // If another Singleton instance already exists, destroy this instance.
+                // If another Singleton instanceData already exists, destroy this instanceData.
                 if (this != instance)
                 {
                     Destroy(this.gameObject);
@@ -59,7 +59,7 @@ namespace PixelsoftGames
         }
 
         /// <summary>
-        /// On destroy check if we are destroying the singleton instance.  If so, we want to ensure that we nullify the instance reference.
+        /// On destroy check if we are destroying the singleton instanceData.  If so, we want to ensure that we nullify the instanceData reference.
         /// </summary>
         public virtual void OnDestroy()
         {
