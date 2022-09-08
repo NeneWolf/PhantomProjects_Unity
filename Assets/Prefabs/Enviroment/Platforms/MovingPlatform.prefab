@@ -298,7 +298,7 @@ GameObject:
   - component: {fileID: 1791828276}
   m_Layer: 14
   m_Name: Platform
-  m_TagString: Untagged
+  m_TagString: SpecialPlatform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -418,7 +418,7 @@ MonoBehaviour:
   moveSpeed: 2
   whatIsPlayer:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 8384
   playerCheck: {fileID: 9188538628953843068}
   extraX: 0.1
   extraY: 0.3

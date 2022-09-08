@@ -23,13 +23,13 @@ public class Sensor_Prototype : MonoBehaviour {
     void OnTriggerEnter2D(Collider2D other)
     {
         //print(other.IsTouchingLayers(whatisGround));
-         if(other.name == "Ground" || other.tag =="Ground" || other.name == "Platform" || other.tag == "Platform")
+         if(other.name == "Ground" || other.tag =="Ground" || other.name == "SpecialPlatform" || other.tag == "SpecialPlatform")
             m_ColCount++;
     }
 
     void OnTriggerExit2D(Collider2D other)
     {
-        if (other.name == "Ground" || other.tag == "Ground" || other.name == "Platform" || other.tag == "Platform")
+        if (other.name == "Ground" || other.tag == "Ground" || other.name == "SpecialPlatform" || other.tag == "SpecialPlatform")
             m_ColCount--;
     }
 
