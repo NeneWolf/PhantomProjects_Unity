@@ -45,6 +45,7 @@ GameObject:
   - component: {fileID: 8402189771272969554}
   - component: {fileID: 8402189771272969557}
   - component: {fileID: 5763957237982043483}
+  - component: {fileID: 2488616451951159831}
   m_Layer: 6
   m_Name: Alive
   m_TagString: Enemy
@@ -194,6 +195,18 @@ CapsuleCollider2D:
   m_Offset: {x: 0.01336813, y: -0.15707469}
   m_Size: {x: 0.15422525, y: 0.44423777}
   m_Direction: 0
+--- !u!114 &2488616451951159831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8402189771272969551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0adb6507b95b88245a02cce5bc34f094, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8402189771586322845
 GameObject:
   m_ObjectHideFlags: 0
@@ -282,15 +295,14 @@ MonoBehaviour:
   spawnCount: 0
   spawnPosition: {fileID: 0}
   enemySpawn: {fileID: 0}
+  difficulty: 0
   moveStateData: {fileID: 11400000, guid: 25a797fe09b6b2d43a2e2a85311461f7, type: 2}
   idleStateData: {fileID: 11400000, guid: d16c34ccd927fe741b5d9c70c0911838, type: 2}
   playerDetectedStateData: {fileID: 11400000, guid: d6e8d40b64a53ea43a71e8587fc3394f, type: 2}
-  meleeAttackStateData: {fileID: 11400000, guid: 2811bd47ec523b84cb348efe724f5a9d, type: 2}
   lookForPlayerStateData: {fileID: 11400000, guid: 2c6fb83b7cb5827458226e8469c6574f, type: 2}
   deadStateData: {fileID: 11400000, guid: 938089c57dd35804db12e8f9206214da, type: 2}
   dodgeStateData: {fileID: 11400000, guid: 8147805d59687004eb50e6607d017205, type: 2}
   rangeAttackStateData: {fileID: 11400000, guid: 4b2c79b5487ef8d4f83f2a3fdb9058dc, type: 2}
-  meleeAttackPosition: {fileID: 8402189773149124107}
   RangeAttackPosition: {fileID: 8402189771586322844}
 --- !u!1 &8402189772216449941
 GameObject:

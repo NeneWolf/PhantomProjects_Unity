@@ -10,7 +10,7 @@ public class Sound
     public bool background;
     public AudioClip[] m_clips;
 
-    [Range(-80f, 0f)]
+    [Range(0f, 1f)]
     public float volume = 0f;
     
     [Range(0f, 1.5f)]

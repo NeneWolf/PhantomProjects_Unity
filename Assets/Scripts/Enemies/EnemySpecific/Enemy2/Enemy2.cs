@@ -29,10 +29,12 @@ public class Enemy2 : Entity
     //[SerializeField] private Transform meleeAttackPosition;
     [SerializeField] private Transform RangeAttackPosition;
 
+    GameObject m_audioManager;
+
     public override void Start()
     {
         base.Start();
-
+        m_audioManager = GameObject.FindObjectOfType<AudioManager>().gameObject;
         moveState = new E2_MoveState(stateMachine, this, "move", moveStateData, this);
         idleState = new E2_IdleState(stateMachine, this, "idle", idleStateData, this);
         playerDetectedState = new E2_PlayerDetectedState(stateMachine,this,"playerDetected",playerDetectedStateData, this);
@@ -51,6 +53,7 @@ public class Enemy2 : Entity
 
         if (isDead)
         {
+            m_audioManager.GetComponent<AudioManager>().PlaySound("Guard - Dead");
             stateMachine.ChangeState(deadState);
             StartCoroutine("WaitToDisable");
         }

@@ -238,6 +238,7 @@ GameObject:
   - component: {fileID: 82347607}
   - component: {fileID: 82347606}
   - component: {fileID: 82347605}
+  - component: {fileID: 82347609}
   m_Layer: 5
   m_Name: MainMenuButton
   m_TagString: Untagged
@@ -330,6 +331,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 82347609}
+        m_TargetAssemblyTypeName: PlayButtonSound, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 864622689}
         m_TargetAssemblyTypeName: PhantomProjects.Managers.CharacterSelectionManager,
           Assembly-CSharp
@@ -381,6 +394,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 82347603}
   m_CullTransparentMesh: 1
+--- !u!114 &82347609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 82347603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f98d7b44b9779043aed189ba733845c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &162141636
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2104,6 +2129,7 @@ GameObject:
   - component: {fileID: 709444532}
   - component: {fileID: 709444531}
   - component: {fileID: 709444530}
+  - component: {fileID: 709444534}
   m_Layer: 5
   m_Name: ConfirmButton
   m_TagString: Untagged
@@ -2196,6 +2222,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 709444534}
+        m_TargetAssemblyTypeName: PlayButtonSound, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 864622689}
         m_TargetAssemblyTypeName: PhantomProjects.Managers.CharacterSelectionManager,
           Assembly-CSharp
@@ -2247,6 +2285,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 709444528}
   m_CullTransparentMesh: 1
+--- !u!114 &709444534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 709444528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f98d7b44b9779043aed189ba733845c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &721739492
 GameObject:
   m_ObjectHideFlags: 0
@@ -12140,17 +12190,105 @@ PrefabInstance:
     m_TransformParent: {fileID: 1499263544}
     m_Modifications:
     - target: {fileID: 257512346, guid: 8b40eb6ce47704441898348e32b175b5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 257512346, guid: 8b40eb6ce47704441898348e32b175b5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 257512346, guid: 8b40eb6ce47704441898348e32b175b5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 257512346, guid: 8b40eb6ce47704441898348e32b175b5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 1784255775}
+    - target: {fileID: 257512346, guid: 8b40eb6ce47704441898348e32b175b5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
       objectReference: {fileID: 864622689}
+    - target: {fileID: 257512346, guid: 8b40eb6ce47704441898348e32b175b5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 257512346, guid: 8b40eb6ce47704441898348e32b175b5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlaySound
+      objectReference: {fileID: 0}
+    - target: {fileID: 257512346, guid: 8b40eb6ce47704441898348e32b175b5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: CharacterVersion
+      objectReference: {fileID: 0}
+    - target: {fileID: 257512346, guid: 8b40eb6ce47704441898348e32b175b5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PlayButtonSound, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 257512346, guid: 8b40eb6ce47704441898348e32b175b5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: PhantomProjects.Managers.CharacterSelectionManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 257512346, guid: 8b40eb6ce47704441898348e32b175b5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 257512346, guid: 8b40eb6ce47704441898348e32b175b5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_IntArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 257512346, guid: 8b40eb6ce47704441898348e32b175b5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 1816294419, guid: 8b40eb6ce47704441898348e32b175b5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 864622689}
     - target: {fileID: 1884620210, guid: 8b40eb6ce47704441898348e32b175b5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1884620210, guid: 8b40eb6ce47704441898348e32b175b5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1884620210, guid: 8b40eb6ce47704441898348e32b175b5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1884620210, guid: 8b40eb6ce47704441898348e32b175b5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 1784255775}
+    - target: {fileID: 1884620210, guid: 8b40eb6ce47704441898348e32b175b5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
       objectReference: {fileID: 864622689}
+    - target: {fileID: 1884620210, guid: 8b40eb6ce47704441898348e32b175b5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1884620210, guid: 8b40eb6ce47704441898348e32b175b5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlaySound
+      objectReference: {fileID: 0}
+    - target: {fileID: 1884620210, guid: 8b40eb6ce47704441898348e32b175b5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: CharacterVersion
+      objectReference: {fileID: 0}
+    - target: {fileID: 1884620210, guid: 8b40eb6ce47704441898348e32b175b5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PlayButtonSound, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1884620210, guid: 8b40eb6ce47704441898348e32b175b5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: PhantomProjects.Managers.CharacterSelectionManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1884620210, guid: 8b40eb6ce47704441898348e32b175b5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 5784596290952857234, guid: 8b40eb6ce47704441898348e32b175b5, type: 3}
       propertyPath: m_Name
       value: PlayerItems
@@ -12246,6 +12384,40 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5784596290952857261, guid: 8b40eb6ce47704441898348e32b175b5, type: 3}
   m_PrefabInstance: {fileID: 1784255771}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1784255773 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5784596291764338195, guid: 8b40eb6ce47704441898348e32b175b5, type: 3}
+  m_PrefabInstance: {fileID: 1784255771}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1784255774 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5784596290958895598, guid: 8b40eb6ce47704441898348e32b175b5, type: 3}
+  m_PrefabInstance: {fileID: 1784255771}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1784255775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1784255773}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f98d7b44b9779043aed189ba733845c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1784255776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1784255774}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f98d7b44b9779043aed189ba733845c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1816294416 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5784596291254458208, guid: 8b40eb6ce47704441898348e32b175b5, type: 3}

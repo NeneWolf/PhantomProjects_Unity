@@ -636,6 +636,7 @@ GameObject:
   m_Component:
   - component: {fileID: 492779501}
   - component: {fileID: 492779502}
+  - component: {fileID: 345607993}
   m_Layer: 5
   m_Name: Toggle
   m_TagString: Untagged
@@ -712,6 +713,18 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 345607993}
+        m_TargetAssemblyTypeName: PlayButtonSound, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1858129758478559857}
         m_TargetAssemblyTypeName: OptionsCanvas, Assembly-CSharp
         m_MethodName: SetFullScreen
@@ -725,6 +738,18 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   m_IsOn: 1
+--- !u!114 &345607993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 492779500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f98d7b44b9779043aed189ba733845c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &520437323
 GameObject:
   m_ObjectHideFlags: 0
@@ -1849,6 +1874,7 @@ GameObject:
   - component: {fileID: 1002112961}
   - component: {fileID: 1002112960}
   - component: {fileID: 1002112959}
+  - component: {fileID: 596380908}
   m_Layer: 5
   m_Name: Dropdown (Legacy)
   m_TagString: Untagged
@@ -1979,6 +2005,18 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 596380908}
+        m_TargetAssemblyTypeName: PlayButtonSound, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1858129758478559857}
         m_TargetAssemblyTypeName: OptionsCanvas, Assembly-CSharp
         m_MethodName: SetResolution
@@ -1992,6 +2030,18 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   m_AlphaFadeSpeed: 0.15
+--- !u!114 &596380908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1002112957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f98d7b44b9779043aed189ba733845c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1109300192
 GameObject:
   m_ObjectHideFlags: 0
@@ -2796,6 +2846,7 @@ GameObject:
   - component: {fileID: 1587950812}
   - component: {fileID: 1587950811}
   - component: {fileID: 1587950810}
+  - component: {fileID: 9128242085684756178}
   m_Layer: 5
   m_Name: Main Menu
   m_TagString: Untagged
@@ -2906,6 +2957,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 9128242085684756178}
+        m_TargetAssemblyTypeName: PlayButtonSound, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 4592463775148371833}
         m_TargetAssemblyTypeName: CanvasUI, Assembly-CSharp
         m_MethodName: ReturnToMainMenu
@@ -2918,6 +2981,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &9128242085684756178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1587950808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f98d7b44b9779043aed189ba733845c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1607599142
 GameObject:
   m_ObjectHideFlags: 0
@@ -2930,6 +3005,7 @@ GameObject:
   - component: {fileID: 1607599146}
   - component: {fileID: 1607599145}
   - component: {fileID: 1607599144}
+  - component: {fileID: 4592463775770233290}
   m_Layer: 5
   m_Name: Resume
   m_TagString: Untagged
@@ -3040,6 +3116,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 4592463775770233290}
+        m_TargetAssemblyTypeName: PlayButtonSound, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 4592463775148371833}
         m_TargetAssemblyTypeName: CanvasUI, Assembly-CSharp
         m_MethodName: ResumeGame
@@ -3052,6 +3140,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &4592463775770233290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1607599142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f98d7b44b9779043aed189ba733845c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1612769581
 GameObject:
   m_ObjectHideFlags: 0
@@ -3064,6 +3164,7 @@ GameObject:
   - component: {fileID: 1612769585}
   - component: {fileID: 1612769584}
   - component: {fileID: 1612769583}
+  - component: {fileID: 1474697618}
   m_Layer: 5
   m_Name: TreeButton
   m_TagString: Untagged
@@ -3174,6 +3275,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1474697618}
+        m_TargetAssemblyTypeName: PlayButtonSound, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
       - m_Target: {fileID: 4592463775148371833}
         m_TargetAssemblyTypeName: CanvasUI, Assembly-CSharp
         m_MethodName: TurnOnOrOFFPanel
@@ -3186,6 +3299,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+--- !u!114 &1474697618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1612769581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f98d7b44b9779043aed189ba733845c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1636989305
 GameObject:
   m_ObjectHideFlags: 0
@@ -3389,6 +3514,7 @@ GameObject:
   - component: {fileID: 1686289992}
   - component: {fileID: 1686289991}
   - component: {fileID: 1686289990}
+  - component: {fileID: 2566591379455767057}
   m_Layer: 5
   m_Name: CloseTree
   m_TagString: Untagged
@@ -3499,6 +3625,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 2566591379455767057}
+        m_TargetAssemblyTypeName: PlayButtonSound, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 4592463775148371833}
         m_TargetAssemblyTypeName: CanvasUI, Assembly-CSharp
         m_MethodName: TurnOnOrOFFPanel
@@ -3511,6 +3649,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &2566591379455767057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1686289988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f98d7b44b9779043aed189ba733845c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1809652139
 GameObject:
   m_ObjectHideFlags: 0
@@ -8974,6 +9124,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 8bce6e5c5f255ec4fa757669bd7a213d, type: 3}
+    - target: {fileID: 5674925727523013716, guid: 0e650715724600a49a884f88a631fef0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5674925727523013739, guid: 0e650715724600a49a884f88a631fef0, type: 3}
       propertyPath: m_Sprite
       value: 

@@ -439,6 +439,7 @@ GameObject:
   - component: {fileID: 59153325}
   - component: {fileID: 59153324}
   - component: {fileID: 59153323}
+  - component: {fileID: 59153327}
   m_Layer: 5
   m_Name: MainMenuButton
   m_TagString: Untagged
@@ -532,6 +533,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 59153327}
+        m_TargetAssemblyTypeName: PlayButtonSound, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 363957900}
         m_TargetAssemblyTypeName: CanvasButtonManager, Assembly-CSharp
         m_MethodName: ReturnToMainMenu
@@ -582,6 +595,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 59153321}
   m_CullTransparentMesh: 1
+--- !u!114 &59153327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 59153321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f98d7b44b9779043aed189ba733845c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &75365820
 GameObject:
   m_ObjectHideFlags: 0
@@ -1720,6 +1745,7 @@ GameObject:
   - component: {fileID: 268720783}
   - component: {fileID: 268720782}
   - component: {fileID: 268720781}
+  - component: {fileID: 268720785}
   m_Layer: 5
   m_Name: ExtraButton
   m_TagString: Untagged
@@ -1812,6 +1838,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 268720785}
+        m_TargetAssemblyTypeName: PlayButtonSound, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 363957900}
         m_TargetAssemblyTypeName: CanvasButtonManager, Assembly-CSharp
         m_MethodName: MoveToScene
@@ -1862,6 +1900,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 268720779}
   m_CullTransparentMesh: 1
+--- !u!114 &268720785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 268720779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f98d7b44b9779043aed189ba733845c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &295088054
 GameObject:
   m_ObjectHideFlags: 0
@@ -2288,6 +2338,7 @@ GameObject:
   - component: {fileID: 354176848}
   - component: {fileID: 354176847}
   - component: {fileID: 354176846}
+  - component: {fileID: 354176850}
   m_Layer: 5
   m_Name: OptionsButton
   m_TagString: Untagged
@@ -2380,6 +2431,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 354176850}
+        m_TargetAssemblyTypeName: PlayButtonSound, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 363957900}
         m_TargetAssemblyTypeName: CanvasButtonManager, Assembly-CSharp
         m_MethodName: MoveToScene
@@ -2430,6 +2493,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 354176844}
   m_CullTransparentMesh: 1
+--- !u!114 &354176850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 354176844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f98d7b44b9779043aed189ba733845c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &363957895
 GameObject:
   m_ObjectHideFlags: 0
@@ -2637,6 +2712,7 @@ GameObject:
   - component: {fileID: 380977955}
   - component: {fileID: 380977954}
   - component: {fileID: 380977953}
+  - component: {fileID: 380977957}
   m_Layer: 5
   m_Name: QuitButton
   m_TagString: Untagged
@@ -2729,6 +2805,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 380977957}
+        m_TargetAssemblyTypeName: PlayButtonSound, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 363957900}
         m_TargetAssemblyTypeName: CanvasButtonManager, Assembly-CSharp
         m_MethodName: QuitGame
@@ -2779,6 +2867,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 380977951}
   m_CullTransparentMesh: 1
+--- !u!114 &380977957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 380977951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f98d7b44b9779043aed189ba733845c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &407474236
 GameObject:
   m_ObjectHideFlags: 0
@@ -2871,6 +2971,7 @@ GameObject:
   - component: {fileID: 458140962}
   - component: {fileID: 458140961}
   - component: {fileID: 458140960}
+  - component: {fileID: 458140963}
   m_Layer: 5
   m_Name: SaveButtonEmpty
   m_TagString: Untagged
@@ -2946,6 +3047,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 458140963}
+        m_TargetAssemblyTypeName: PlayButtonSound, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 353559494}
         m_TargetAssemblyTypeName: SaveSlotMenu, Assembly-CSharp
         m_MethodName: OnSaveSlotClicked
@@ -3008,6 +3121,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 458140958}
   m_CullTransparentMesh: 1
+--- !u!114 &458140963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 458140958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f98d7b44b9779043aed189ba733845c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &482496086
 GameObject:
   m_ObjectHideFlags: 0
@@ -7996,6 +8121,7 @@ GameObject:
   - component: {fileID: 557848888}
   - component: {fileID: 557848887}
   - component: {fileID: 557848886}
+  - component: {fileID: 557848889}
   m_Layer: 5
   m_Name: SaveButton
   m_TagString: Untagged
@@ -8072,6 +8198,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 458140963}
+        m_TargetAssemblyTypeName: PlayButtonSound, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 353559494}
         m_TargetAssemblyTypeName: SaveSlotMenu, Assembly-CSharp
         m_MethodName: OnSaveSlotClicked
@@ -8134,6 +8272,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 557848884}
   m_CullTransparentMesh: 1
+--- !u!114 &557848889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 557848884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f98d7b44b9779043aed189ba733845c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &572235600
 GameObject:
   m_ObjectHideFlags: 0
@@ -8988,6 +9138,7 @@ GameObject:
   - component: {fileID: 731868942}
   - component: {fileID: 731868941}
   - component: {fileID: 731868944}
+  - component: {fileID: 731868945}
   m_Layer: 5
   m_Name: StartGameButton
   m_TagString: Untagged
@@ -9060,6 +9211,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 731868945}
+        m_TargetAssemblyTypeName: PlayButtonSound, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 363957900}
         m_TargetAssemblyTypeName: CanvasButtonManager, Assembly-CSharp
         m_MethodName: MoveToSelectMenu
@@ -9130,6 +9293,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &731868945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 731868939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f98d7b44b9779043aed189ba733845c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &737793215
 GameObject:
   m_ObjectHideFlags: 0
@@ -9647,6 +9822,7 @@ GameObject:
   - component: {fileID: 949216587}
   - component: {fileID: 949216586}
   - component: {fileID: 949216585}
+  - component: {fileID: 949216588}
   m_Layer: 5
   m_Name: EasyMode
   m_TagString: Untagged
@@ -9720,6 +9896,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 949216588}
+        m_TargetAssemblyTypeName: PlayButtonSound, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 363957900}
         m_TargetAssemblyTypeName: CanvasButtonManager, Assembly-CSharp
         m_MethodName: DisableDifficultyMenu
@@ -9770,6 +9958,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 949216583}
   m_CullTransparentMesh: 1
+--- !u!114 &949216588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 949216583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f98d7b44b9779043aed189ba733845c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &975773031
 GameObject:
   m_ObjectHideFlags: 0
@@ -13914,6 +14114,7 @@ GameObject:
   - component: {fileID: 1235500628}
   - component: {fileID: 1235500627}
   - component: {fileID: 1235500626}
+  - component: {fileID: 1235500629}
   m_Layer: 5
   m_Name: SaveButtonEmpty
   m_TagString: Untagged
@@ -13989,6 +14190,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1235500629}
+        m_TargetAssemblyTypeName: PlayButtonSound, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 353559494}
         m_TargetAssemblyTypeName: SaveSlotMenu, Assembly-CSharp
         m_MethodName: OnSaveSlotClicked
@@ -14051,6 +14264,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1235500624}
   m_CullTransparentMesh: 1
+--- !u!114 &1235500629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1235500624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f98d7b44b9779043aed189ba733845c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1238404861
 GameObject:
   m_ObjectHideFlags: 0
@@ -19312,6 +19537,7 @@ GameObject:
   - component: {fileID: 1273912541}
   - component: {fileID: 1273912540}
   - component: {fileID: 1273912539}
+  - component: {fileID: 1273912542}
   m_Layer: 5
   m_Name: SaveButton
   m_TagString: Untagged
@@ -19388,6 +19614,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1273912542}
+        m_TargetAssemblyTypeName: PlayButtonSound, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 353559494}
         m_TargetAssemblyTypeName: SaveSlotMenu, Assembly-CSharp
         m_MethodName: OnSaveSlotClicked
@@ -19450,6 +19688,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1273912537}
   m_CullTransparentMesh: 1
+--- !u!114 &1273912542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1273912537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f98d7b44b9779043aed189ba733845c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1294265562
 GameObject:
   m_ObjectHideFlags: 0
@@ -19961,6 +20211,7 @@ GameObject:
   - component: {fileID: 1361702001}
   - component: {fileID: 1361702000}
   - component: {fileID: 1361701999}
+  - component: {fileID: 1361702002}
   m_Layer: 5
   m_Name: NormalMode
   m_TagString: Untagged
@@ -20034,6 +20285,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1361702002}
+        m_TargetAssemblyTypeName: PlayButtonSound, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 363957900}
         m_TargetAssemblyTypeName: CanvasButtonManager, Assembly-CSharp
         m_MethodName: DisableDifficultyMenu
@@ -20084,6 +20347,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1361701997}
   m_CullTransparentMesh: 1
+--- !u!114 &1361702002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1361701997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f98d7b44b9779043aed189ba733845c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1386288212
 GameObject:
   m_ObjectHideFlags: 0
@@ -20096,6 +20371,7 @@ GameObject:
   - component: {fileID: 1386288216}
   - component: {fileID: 1386288215}
   - component: {fileID: 1386288214}
+  - component: {fileID: 1386288217}
   m_Layer: 5
   m_Name: SaveButton
   m_TagString: Untagged
@@ -20172,6 +20448,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1386288217}
+        m_TargetAssemblyTypeName: PlayButtonSound, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 353559494}
         m_TargetAssemblyTypeName: SaveSlotMenu, Assembly-CSharp
         m_MethodName: OnSaveSlotClicked
@@ -20234,6 +20522,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1386288212}
   m_CullTransparentMesh: 1
+--- !u!114 &1386288217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1386288212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f98d7b44b9779043aed189ba733845c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1411512234
 GameObject:
   m_ObjectHideFlags: 0
@@ -25794,6 +26094,7 @@ GameObject:
   - component: {fileID: 1646381126}
   - component: {fileID: 1646381125}
   - component: {fileID: 1646381124}
+  - component: {fileID: 1646381127}
   m_Layer: 5
   m_Name: HardMode
   m_TagString: Untagged
@@ -25867,6 +26168,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1646381127}
+        m_TargetAssemblyTypeName: PlayButtonSound, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 363957900}
         m_TargetAssemblyTypeName: CanvasButtonManager, Assembly-CSharp
         m_MethodName: DisableDifficultyMenu
@@ -25917,6 +26230,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1646381122}
   m_CullTransparentMesh: 1
+--- !u!114 &1646381127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1646381122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f98d7b44b9779043aed189ba733845c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1659117978
 GameObject:
   m_ObjectHideFlags: 0
@@ -31225,6 +31550,7 @@ GameObject:
   - component: {fileID: 1907119298}
   - component: {fileID: 1907119297}
   - component: {fileID: 1907119296}
+  - component: {fileID: 1907119299}
   m_Layer: 5
   m_Name: SaveButtonEmpty
   m_TagString: Untagged
@@ -31300,6 +31626,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1386288217}
+        m_TargetAssemblyTypeName: PlayButtonSound, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 353559494}
         m_TargetAssemblyTypeName: SaveSlotMenu, Assembly-CSharp
         m_MethodName: OnSaveSlotClicked
@@ -31362,6 +31700,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1907119294}
   m_CullTransparentMesh: 1
+--- !u!114 &1907119299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1907119294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f98d7b44b9779043aed189ba733845c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1940843592
 GameObject:
   m_ObjectHideFlags: 0
@@ -31514,6 +31864,286 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8451179498602931749, guid: a42f78f1c328d72419d8b5bd7b989fff, type: 3}
+      propertyPath: m_sounds.Array.size
+      value: 27
+      objectReference: {fileID: 0}
+    - target: {fileID: 8451179498602931749, guid: a42f78f1c328d72419d8b5bd7b989fff, type: 3}
+      propertyPath: m_sounds.Array.data[20].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8451179498602931749, guid: a42f78f1c328d72419d8b5bd7b989fff, type: 3}
+      propertyPath: m_sounds.Array.data[21].pitch
+      value: 0.743
+      objectReference: {fileID: 0}
+    - target: {fileID: 8451179498602931749, guid: a42f78f1c328d72419d8b5bd7b989fff, type: 3}
+      propertyPath: m_sounds.Array.data[22].pitch
+      value: 0.743
+      objectReference: {fileID: 0}
+    - target: {fileID: 8451179498602931749, guid: a42f78f1c328d72419d8b5bd7b989fff, type: 3}
+      propertyPath: m_sounds.Array.data[23].pitch
+      value: 0.743
+      objectReference: {fileID: 0}
+    - target: {fileID: 8451179498602931749, guid: a42f78f1c328d72419d8b5bd7b989fff, type: 3}
+      propertyPath: m_sounds.Array.data[24].pitch
+      value: 0.743
+      objectReference: {fileID: 0}
+    - target: {fileID: 8451179498602931749, guid: a42f78f1c328d72419d8b5bd7b989fff, type: 3}
+      propertyPath: m_sounds.Array.data[25].pitch
+      value: 0.743
+      objectReference: {fileID: 0}
+    - target: {fileID: 8451179498602931749, guid: a42f78f1c328d72419d8b5bd7b989fff, type: 3}
+      propertyPath: m_sounds.Array.data[26].pitch
+      value: 0.743
+      objectReference: {fileID: 0}
+    - target: {fileID: 8451179498602931749, guid: a42f78f1c328d72419d8b5bd7b989fff, type: 3}
+      propertyPath: m_sounds.Array.data[13].m_loop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8451179498602931749, guid: a42f78f1c328d72419d8b5bd7b989fff, type: 3}
+      propertyPath: m_sounds.Array.data[13].m_name
+      value: ButtonClick
+      objectReference: {fileID: 0}
+    - target: {fileID: 8451179498602931749, guid: a42f78f1c328d72419d8b5bd7b989fff, type: 3}
+      propertyPath: m_sounds.Array.data[14].m_name
+      value: Main
+      objectReference: {fileID: 0}
+    - target: {fileID: 8451179498602931749, guid: a42f78f1c328d72419d8b5bd7b989fff, type: 3}
+      propertyPath: m_sounds.Array.data[14].volume
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8451179498602931749, guid: a42f78f1c328d72419d8b5bd7b989fff, type: 3}
+      propertyPath: m_sounds.Array.data[15].m_name
+      value: Lab
+      objectReference: {fileID: 0}
+    - target: {fileID: 8451179498602931749, guid: a42f78f1c328d72419d8b5bd7b989fff, type: 3}
+      propertyPath: m_sounds.Array.data[15].volume
+      value: 0.47
+      objectReference: {fileID: 0}
+    - target: {fileID: 8451179498602931749, guid: a42f78f1c328d72419d8b5bd7b989fff, type: 3}
+      propertyPath: m_sounds.Array.data[16].m_name
+      value: Office
+      objectReference: {fileID: 0}
+    - target: {fileID: 8451179498602931749, guid: a42f78f1c328d72419d8b5bd7b989fff, type: 3}
+      propertyPath: m_sounds.Array.data[17].m_name
+      value: GreenHouse
+      objectReference: {fileID: 0}
+    - target: {fileID: 8451179498602931749, guid: a42f78f1c328d72419d8b5bd7b989fff, type: 3}
+      propertyPath: m_sounds.Array.data[18].m_name
+      value: BossRoom
+      objectReference: {fileID: 0}
+    - target: {fileID: 8451179498602931749, guid: a42f78f1c328d72419d8b5bd7b989fff, type: 3}
+      propertyPath: m_sounds.Array.data[19].m_loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8451179498602931749, guid: a42f78f1c328d72419d8b5bd7b989fff, type: 3}
+      propertyPath: m_sounds.Array.data[19].m_name
+      value: Victory
+      objectReference: {fileID: 0}
+    - target: {fileID: 8451179498602931749, guid: a42f78f1c328d72419d8b5bd7b989fff, type: 3}
+      propertyPath: m_sounds.Array.data[20].m_loop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8451179498602931749, guid: a42f78f1c328d72419d8b5bd7b989fff, type: 3}
+      propertyPath: m_sounds.Array.data[20].m_name
+      value: EndGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 8451179498602931749, guid: a42f78f1c328d72419d8b5bd7b989fff, type: 3}
+      propertyPath: m_sounds.Array.data[20].volume
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8451179498602931749, guid: a42f78f1c328d72419d8b5bd7b989fff, type: 3}
+      propertyPath: m_sounds.Array.data[21].m_name
+      value: Guard - Dead
+      objectReference: {fileID: 0}
+    - target: {fileID: 8451179498602931749, guid: a42f78f1c328d72419d8b5bd7b989fff, type: 3}
+      propertyPath: m_sounds.Array.data[21].volume
+      value: -21
+      objectReference: {fileID: 0}
+    - target: {fileID: 8451179498602931749, guid: a42f78f1c328d72419d8b5bd7b989fff, type: 3}
+      propertyPath: m_sounds.Array.data[22].m_name
+      value: Dog - Dead
+      objectReference: {fileID: 0}
+    - target: {fileID: 8451179498602931749, guid: a42f78f1c328d72419d8b5bd7b989fff, type: 3}
+      propertyPath: m_sounds.Array.data[22].volume
+      value: -21
+      objectReference: {fileID: 0}
+    - target: {fileID: 8451179498602931749, guid: a42f78f1c328d72419d8b5bd7b989fff, type: 3}
+      propertyPath: m_sounds.Array.data[23].m_name
+      value: Dog - Footsteps
+      objectReference: {fileID: 0}
+    - target: {fileID: 8451179498602931749, guid: a42f78f1c328d72419d8b5bd7b989fff, type: 3}
+      propertyPath: m_sounds.Array.data[23].volume
+      value: -21
+      objectReference: {fileID: 0}
+    - target: {fileID: 8451179498602931749, guid: a42f78f1c328d72419d8b5bd7b989fff, type: 3}
+      propertyPath: m_sounds.Array.data[24].m_name
+      value: Turret - Shooting
+      objectReference: {fileID: 0}
+    - target: {fileID: 8451179498602931749, guid: a42f78f1c328d72419d8b5bd7b989fff, type: 3}
+      propertyPath: m_sounds.Array.data[24].volume
+      value: -21
+      objectReference: {fileID: 0}
+    - target: {fileID: 8451179498602931749, guid: a42f78f1c328d72419d8b5bd7b989fff, type: 3}
+      propertyPath: m_sounds.Array.data[25].m_name
+      value: Guard - Footsteps
+      objectReference: {fileID: 0}
+    - target: {fileID: 8451179498602931749, guid: a42f78f1c328d72419d8b5bd7b989fff, type: 3}
+      propertyPath: m_sounds.Array.data[25].volume
+      value: 0.646
+      objectReference: {fileID: 0}
+    - target: {fileID: 8451179498602931749, guid: a42f78f1c328d72419d8b5bd7b989fff, type: 3}
+      propertyPath: m_sounds.Array.data[26].m_name
+      value: Ceiling Drop
+      objectReference: {fileID: 0}
+    - target: {fileID: 8451179498602931749, guid: a42f78f1c328d72419d8b5bd7b989fff, type: 3}
+      propertyPath: m_sounds.Array.data[26].volume
+      value: -21
+      objectReference: {fileID: 0}
+    - target: {fileID: 8451179498602931749, guid: a42f78f1c328d72419d8b5bd7b989fff, type: 3}
+      propertyPath: m_sounds.Array.data[13].audioMixer
+      value: 
+      objectReference: {fileID: 24300002, guid: 0516aec6963970f40b205ec2cfb9ab11, type: 2}
+    - target: {fileID: 8451179498602931749, guid: a42f78f1c328d72419d8b5bd7b989fff, type: 3}
+      propertyPath: m_sounds.Array.data[13].background
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8451179498602931749, guid: a42f78f1c328d72419d8b5bd7b989fff, type: 3}
+      propertyPath: m_sounds.Array.data[20].audioMixer
+      value: 
+      objectReference: {fileID: 24300002, guid: c1cf8eef1b431b74c9c83d640b75cd76, type: 2}
+    - target: {fileID: 8451179498602931749, guid: a42f78f1c328d72419d8b5bd7b989fff, type: 3}
+      propertyPath: m_sounds.Array.data[20].background
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8451179498602931749, guid: a42f78f1c328d72419d8b5bd7b989fff, type: 3}
+      propertyPath: m_sounds.Array.data[21].audioMixer
+      value: 
+      objectReference: {fileID: 24300002, guid: 0516aec6963970f40b205ec2cfb9ab11, type: 2}
+    - target: {fileID: 8451179498602931749, guid: a42f78f1c328d72419d8b5bd7b989fff, type: 3}
+      propertyPath: m_sounds.Array.data[22].audioMixer
+      value: 
+      objectReference: {fileID: 24300002, guid: 0516aec6963970f40b205ec2cfb9ab11, type: 2}
+    - target: {fileID: 8451179498602931749, guid: a42f78f1c328d72419d8b5bd7b989fff, type: 3}
+      propertyPath: m_sounds.Array.data[23].audioMixer
+      value: 
+      objectReference: {fileID: 24300002, guid: 0516aec6963970f40b205ec2cfb9ab11, type: 2}
+    - target: {fileID: 8451179498602931749, guid: a42f78f1c328d72419d8b5bd7b989fff, type: 3}
+      propertyPath: m_sounds.Array.data[24].audioMixer
+      value: 
+      objectReference: {fileID: 24300002, guid: 0516aec6963970f40b205ec2cfb9ab11, type: 2}
+    - target: {fileID: 8451179498602931749, guid: a42f78f1c328d72419d8b5bd7b989fff, type: 3}
+      propertyPath: m_sounds.Array.data[25].audioMixer
+      value: 
+      objectReference: {fileID: 24300002, guid: 0516aec6963970f40b205ec2cfb9ab11, type: 2}
+    - target: {fileID: 8451179498602931749, guid: a42f78f1c328d72419d8b5bd7b989fff, type: 3}
+      propertyPath: m_sounds.Array.data[26].audioMixer
+      value: 
+      objectReference: {fileID: 24300002, guid: 0516aec6963970f40b205ec2cfb9ab11, type: 2}
+    - target: {fileID: 8451179498602931749, guid: a42f78f1c328d72419d8b5bd7b989fff, type: 3}
+      propertyPath: m_sounds.Array.data[20].m_clips.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8451179498602931749, guid: a42f78f1c328d72419d8b5bd7b989fff, type: 3}
+      propertyPath: m_sounds.Array.data[21].m_clips.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8451179498602931749, guid: a42f78f1c328d72419d8b5bd7b989fff, type: 3}
+      propertyPath: m_sounds.Array.data[22].m_clips.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8451179498602931749, guid: a42f78f1c328d72419d8b5bd7b989fff, type: 3}
+      propertyPath: m_sounds.Array.data[23].m_clips.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8451179498602931749, guid: a42f78f1c328d72419d8b5bd7b989fff, type: 3}
+      propertyPath: m_sounds.Array.data[24].m_clips.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8451179498602931749, guid: a42f78f1c328d72419d8b5bd7b989fff, type: 3}
+      propertyPath: m_sounds.Array.data[25].m_clips.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8451179498602931749, guid: a42f78f1c328d72419d8b5bd7b989fff, type: 3}
+      propertyPath: m_sounds.Array.data[26].m_clips.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8451179498602931749, guid: a42f78f1c328d72419d8b5bd7b989fff, type: 3}
+      propertyPath: m_sounds.Array.data[5].m_clips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: e1d38b23e9d524b46b2837dfcb52d010, type: 3}
+    - target: {fileID: 8451179498602931749, guid: a42f78f1c328d72419d8b5bd7b989fff, type: 3}
+      propertyPath: m_sounds.Array.data[13].m_clips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 55e571673da33ef45bf2ab735ea082ca, type: 3}
+    - target: {fileID: 8451179498602931749, guid: a42f78f1c328d72419d8b5bd7b989fff, type: 3}
+      propertyPath: m_sounds.Array.data[14].m_clips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 98399876c1ed54121b03840b441ca64b, type: 3}
+    - target: {fileID: 8451179498602931749, guid: a42f78f1c328d72419d8b5bd7b989fff, type: 3}
+      propertyPath: m_sounds.Array.data[15].m_clips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 475fa5e2ac6084f91ad0de5304100e30, type: 3}
+    - target: {fileID: 8451179498602931749, guid: a42f78f1c328d72419d8b5bd7b989fff, type: 3}
+      propertyPath: m_sounds.Array.data[16].m_clips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: a93894bea89444165b280c23fc15abab, type: 3}
+    - target: {fileID: 8451179498602931749, guid: a42f78f1c328d72419d8b5bd7b989fff, type: 3}
+      propertyPath: m_sounds.Array.data[17].m_clips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: d5dee481ef04b4ee5b7b918bdc4de11a, type: 3}
+    - target: {fileID: 8451179498602931749, guid: a42f78f1c328d72419d8b5bd7b989fff, type: 3}
+      propertyPath: m_sounds.Array.data[18].m_clips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 0d22c57f6667549d0bfd81a88382fbc8, type: 3}
+    - target: {fileID: 8451179498602931749, guid: a42f78f1c328d72419d8b5bd7b989fff, type: 3}
+      propertyPath: m_sounds.Array.data[19].m_clips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 9486c0a4e77834f2d891b5785176fed4, type: 3}
+    - target: {fileID: 8451179498602931749, guid: a42f78f1c328d72419d8b5bd7b989fff, type: 3}
+      propertyPath: m_sounds.Array.data[20].m_clips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: cc120cec0ae21405688b1b3958a7de94, type: 3}
+    - target: {fileID: 8451179498602931749, guid: a42f78f1c328d72419d8b5bd7b989fff, type: 3}
+      propertyPath: m_sounds.Array.data[21].m_clips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: adb4cf45862b91945a1bc4ef2ac84ff2, type: 3}
+    - target: {fileID: 8451179498602931749, guid: a42f78f1c328d72419d8b5bd7b989fff, type: 3}
+      propertyPath: m_sounds.Array.data[22].m_clips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: adb4cf45862b91945a1bc4ef2ac84ff2, type: 3}
+    - target: {fileID: 8451179498602931749, guid: a42f78f1c328d72419d8b5bd7b989fff, type: 3}
+      propertyPath: m_sounds.Array.data[23].m_clips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: adb4cf45862b91945a1bc4ef2ac84ff2, type: 3}
+    - target: {fileID: 8451179498602931749, guid: a42f78f1c328d72419d8b5bd7b989fff, type: 3}
+      propertyPath: m_sounds.Array.data[24].m_clips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 2e776623ef0f3f642930a36bc65adcbd, type: 3}
+    - target: {fileID: 8451179498602931749, guid: a42f78f1c328d72419d8b5bd7b989fff, type: 3}
+      propertyPath: m_sounds.Array.data[25].m_clips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: d88cbad2d217cd74ba1eb0899d6c55ad, type: 3}
+    - target: {fileID: 8451179498602931749, guid: a42f78f1c328d72419d8b5bd7b989fff, type: 3}
+      propertyPath: m_sounds.Array.data[25].m_clips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: ada024810fd950d408257d2b4903e899, type: 3}
+    - target: {fileID: 8451179498602931749, guid: a42f78f1c328d72419d8b5bd7b989fff, type: 3}
+      propertyPath: m_sounds.Array.data[25].m_clips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 74fb0bf68831ec14e8bbc1d6ab1dfba5, type: 3}
+    - target: {fileID: 8451179498602931749, guid: a42f78f1c328d72419d8b5bd7b989fff, type: 3}
+      propertyPath: m_sounds.Array.data[26].m_clips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 54f7989ba8afdc84482a806074339b1e, type: 3}
+    - target: {fileID: 8451179498602931749, guid: a42f78f1c328d72419d8b5bd7b989fff, type: 3}
+      propertyPath: m_sounds.Array.data[26].m_clips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: ada024810fd950d408257d2b4903e899, type: 3}
+    - target: {fileID: 8451179498602931749, guid: a42f78f1c328d72419d8b5bd7b989fff, type: 3}
+      propertyPath: m_sounds.Array.data[26].m_clips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 74fb0bf68831ec14e8bbc1d6ab1dfba5, type: 3}
     - target: {fileID: 8886358366230504657, guid: a42f78f1c328d72419d8b5bd7b989fff, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -31653,6 +32283,7 @@ GameObject:
   - component: {fileID: 1985775145}
   - component: {fileID: 1985775144}
   - component: {fileID: 1985775143}
+  - component: {fileID: 1985775147}
   m_Layer: 5
   m_Name: MainMenuButton
   m_TagString: Untagged
@@ -31746,6 +32377,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1985775147}
+        m_TargetAssemblyTypeName: PlayButtonSound, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 363957900}
         m_TargetAssemblyTypeName: CanvasButtonManager, Assembly-CSharp
         m_MethodName: ReturnToMainMenu
@@ -31796,6 +32439,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1985775141}
   m_CullTransparentMesh: 1
+--- !u!114 &1985775147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1985775141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f98d7b44b9779043aed189ba733845c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1988404829
 GameObject:
   m_ObjectHideFlags: 0

@@ -26,6 +26,13 @@ public class TurretBehaviour : MonoBehaviour
     Vector2 direction;
     GameObject BulletIns;
 
+    GameObject m_audioManager;
+
+    private void Start()
+    {
+        m_audioManager = GameObject.FindObjectOfType<AudioManager>().gameObject;
+    }
+
     void Update()
     {
         if(target == null)
@@ -61,6 +68,7 @@ public class TurretBehaviour : MonoBehaviour
 
     void ShootTarget()
     {
+        m_audioManager.GetComponent<AudioManager>().PlaySound("Turret - Shooting");
         BulletIns = GameObject.Instantiate(bullet, shootPoint.transform.position, Quaternion.identity);
         BulletIns.GetComponent<Rigidbody2D>().AddForce(direction * force);
     }
