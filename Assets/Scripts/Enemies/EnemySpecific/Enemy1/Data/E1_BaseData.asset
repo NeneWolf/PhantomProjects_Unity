@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c553bad63f2ec6b41a45ce96b7318ca5, type: 3}
   m_Name: E1_BaseData
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 150
   damageHopSpeed: 2.5
   wallCheckDistance: 1
   ledgeCheckDistance: 0.5

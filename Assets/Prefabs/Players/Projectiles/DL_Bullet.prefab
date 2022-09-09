@@ -136,7 +136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e65efec0ef3824d449f1de1563d2d70c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageP: 35
+  damageP: 50
   speed: 20
   damageRadius: 0.12
   whatIsGround:

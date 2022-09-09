@@ -232,7 +232,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: The Eye
-  mutationPoints: 125
+  mutationPoints: 300
   entityData: {fileID: 11400000, guid: 75e66275d06fd184284ed4c7c98b6dd5, type: 2}
   wallCheck: {fileID: 6148322109853209573}
   ledgeCheck: {fileID: 6148322108881915938}
@@ -243,6 +243,7 @@ MonoBehaviour:
   spawnCount: 3
   spawnPosition: {fileID: 6148322110919607713}
   enemySpawn: {fileID: 3232583526800357565, guid: 4b384c195ff47a34bb6c9881d8ff1345, type: 3}
+  difficulty: 0
   idleStateData: {fileID: 11400000, guid: 74fccdcb684a2674585eaf63df8f1abc, type: 2}
   moveStateData: {fileID: 11400000, guid: 65761cb15bdb534429e2fb56773350d2, type: 2}
   playerDetectedStateData: {fileID: 11400000, guid: 1f24a8d86fec17b459371c3711ebfeeb, type: 2}
@@ -365,7 +366,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1838932657
-  m_SortingLayer: 3
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: -662902435344139210, guid: d86a3de7b11430248b0bcbeea8956f12, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

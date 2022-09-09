@@ -4,21 +4,32 @@ using UnityEngine;
 
 public class E2_AnimEvent : MonoBehaviour
 {
-    private AudioManager m_audioManager;
+    [SerializeField] AudioSource[] m_audio;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        m_audioManager = GameObject.Find("AudioManager").GetComponent<AudioManager>();
-    }
 
     void E2Footsteps()
     {
-        m_audioManager.PlaySound("Guard - Footsteps");
+        StopAllEffects();
+        m_audio[0].Play();
     }
 
     void E2Shoot()
     {
-        m_audioManager.PlaySound("Guard - Shoot");
+        StopAllEffects();
+        m_audio[1].Play();
+    }
+
+    void E2Died()
+    {
+        StopAllEffects();
+        m_audio[2].Play();
+    }
+
+    void StopAllEffects()
+    {
+        foreach (AudioSource audio in m_audio)
+        {
+            audio.Stop();
+        }
     }
 }

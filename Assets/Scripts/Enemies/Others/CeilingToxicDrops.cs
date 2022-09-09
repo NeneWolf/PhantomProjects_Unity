@@ -7,15 +7,9 @@ using UnityEngine;
 public class CeilingToxicDrops : MonoBehaviour
 {
     [SerializeField] float damagePerDrop;
+    AudioSource m_audio;
 
     DifficultyManager difficulty;
-
-    AudioManager m_audioManager;
-
-    private void Start()
-    {
-        m_audioManager = GameObject.Find("AudioManager").GetComponent<AudioManager>().gameObject.GetComponent<AudioManager>();
-    }
 
     private void OnParticleCollision(GameObject other)
     {
@@ -28,7 +22,8 @@ public class CeilingToxicDrops : MonoBehaviour
 
         if(other.tag == "Ground")
         {
-            m_audioManager.PlaySound("Ceiling Drop");
+            m_audio = GetComponent<AudioSource>();
+            m_audio.Play();
         }
     }
 }

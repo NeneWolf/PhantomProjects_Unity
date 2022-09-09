@@ -3,9 +3,12 @@ using PhantomProjects.Managers;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 public class OverTimeDamage : MonoBehaviour
 {
+    DifficultyManager difficultyManager;
+    
     [Header("Active Wire (Default)")]
     [SerializeField] bool wire = true; //Default
     [SerializeField] bool canDamage = false;
@@ -26,7 +29,18 @@ public class OverTimeDamage : MonoBehaviour
     Collider2D damageHit;
     float nextTimeToDamage = 0f;
 
-    DifficultyManager difficultyManager;
+    [Header("Wire Lights")]
+    [SerializeField]Light2D light;
+
+    public bool malfunctionLight;
+
+    [SerializeField] float maxIntensity;
+    [SerializeField] float minIntensity;
+    [SerializeField] float secondsBetweenFlickers;
+
+    float currentIntensity;
+
+
 
     private void Awake()
     {
@@ -40,6 +54,14 @@ public class OverTimeDamage : MonoBehaviour
         if (wire && canDamage)
         {
             sparks.Play();
+        }
+
+        if (malfunctionLight)
+        {
+            light = GetComponent<Light2D>();
+            currentIntensity = maxIntensity;
+            light.intensity = currentIntensity;
+            StartCoroutine(LightFlicker());
         }
     }
 
@@ -67,6 +89,13 @@ public class OverTimeDamage : MonoBehaviour
                 damageHit.gameObject.GetComponent<PlayerStats>().TakeDamage(damage);
             }
         }
+    }
+
+    IEnumerator LightFlicker()
+    {
+        yield return new WaitForSeconds(secondsBetweenFlickers);
+        light.intensity = Random.Range(minIntensity, maxIntensity);
+        StartCoroutine(LightFlicker());
     }
 
 }

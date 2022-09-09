@@ -121,7 +121,7 @@ public class PlayerStats : MonoBehaviour, IDataPersistance
     {
         if (!isShielded)                                   // When the shield is not active, the player will take damage 
         {
-            if (currentHealth - attackDetails.damageAmount >= 0)    // As long as the amount of damage dealt to the player's current health is above 0, they will take damage
+            if (currentHealth - attackDetails.damageAmount > 0)    // As long as the amount of damage dealt to the player's current health is above 0, they will take damage
             {
                 this.GetComponent<PrototypeHero>().Hurt();
                 currentHealth -= attackDetails.damageAmount;
@@ -137,7 +137,7 @@ public class PlayerStats : MonoBehaviour, IDataPersistance
     {
         if (!isShielded)
         {
-            if (currentHealth - damageAmount >= 0)                      // As long as the amount of damage dealt to the player's current health is above 0, they will take damage
+            if (currentHealth - damageAmount > 0)                      // As long as the amount of damage dealt to the player's current health is above 0, they will take damage
             {
                 this.GetComponent<PrototypeHero>().Hurt();
                 currentHealth -= damageAmount;

@@ -76,6 +76,8 @@ GameObject:
   - component: {fileID: 3823697762031069430}
   - component: {fileID: 3823697762031069431}
   - component: {fileID: 3823697762031069428}
+  - component: {fileID: 4425853710229627226}
+  - component: {fileID: 6344135627007978135}
   m_Layer: 6
   m_Name: Alive
   m_TagString: Enemy
@@ -142,7 +144,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1838932657
-  m_SortingLayer: 3
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: 2862098844252162519, guid: 6b859bee2b2f65f4899c3911b90ecf76, type: 3}
   m_Color: {r: 0.074065454, g: 0.6167324, b: 0.6886792, a: 1}
@@ -224,6 +226,116 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e300bd43ba3b6d54293d48235b441f42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4425853710229627226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3823697762031069426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66d131a818c1c394e83a38656e8c3cbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_audio:
+  - {fileID: 6344135627007978135}
+--- !u!82 &6344135627007978135
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3823697762031069426}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 0516aec6963970f40b205ec2cfb9ab11, type: 2}
+  m_audioClip: {fileID: 8300000, guid: 5ee035317ecd24348970f2e47e057d5d, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.6
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 2.227028
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &3823697762994921246
 GameObject:
   m_ObjectHideFlags: 0
@@ -311,8 +423,8 @@ MonoBehaviour:
   spawnAfterDead: 0
   spawnCount: 0
   spawnPosition: {fileID: 0}
-  enemiesLocation: {fileID: 0}
   enemySpawn: {fileID: 0}
+  difficulty: 0
   idleStateData: {fileID: 11400000, guid: 5586fcac050c4ce4f90d709fd1617989, type: 2}
   moveStateData: {fileID: 11400000, guid: daf16d05751d0fd4b8c7454e172630d6, type: 2}
   playerDetectedStateData: {fileID: 11400000, guid: 37b323882e29bfb43bb226e805d0fc1a, type: 2}
