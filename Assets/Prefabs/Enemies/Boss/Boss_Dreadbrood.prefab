@@ -73,7 +73,7 @@ GameObject:
   - component: {fileID: 6697733539507866534}
   - component: {fileID: 6697733539507866552}
   m_Layer: 0
-  m_Name: Boss_1
+  m_Name: Boss_Dreadbrood
   m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

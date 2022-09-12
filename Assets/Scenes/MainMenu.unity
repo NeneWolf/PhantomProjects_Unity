@@ -31819,58 +31819,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 8451179498602931749, guid: a42f78f1c328d72419d8b5bd7b989fff, type: 3}
-      propertyPath: m_sounds.Array.size
-      value: 21
-      objectReference: {fileID: 0}
-    - target: {fileID: 8451179498602931749, guid: a42f78f1c328d72419d8b5bd7b989fff, type: 3}
-      propertyPath: m_sounds.Array.data[21].m_name
-      value: Turret - Shooting
-      objectReference: {fileID: 0}
-    - target: {fileID: 8451179498602931749, guid: a42f78f1c328d72419d8b5bd7b989fff, type: 3}
-      propertyPath: m_sounds.Array.data[22].m_name
-      value: Ceiling Drop
-      objectReference: {fileID: 0}
-    - target: {fileID: 8451179498602931749, guid: a42f78f1c328d72419d8b5bd7b989fff, type: 3}
-      propertyPath: m_sounds.Array.data[23].m_name
-      value: Ceiling Drop
-      objectReference: {fileID: 0}
-    - target: {fileID: 8451179498602931749, guid: a42f78f1c328d72419d8b5bd7b989fff, type: 3}
-      propertyPath: m_sounds.Array.data[24].m_name
-      value: Ceiling Drop
-      objectReference: {fileID: 0}
-    - target: {fileID: 8451179498602931749, guid: a42f78f1c328d72419d8b5bd7b989fff, type: 3}
-      propertyPath: m_sounds.Array.data[25].m_name
-      value: Ceiling Drop
-      objectReference: {fileID: 0}
-    - target: {fileID: 8451179498602931749, guid: a42f78f1c328d72419d8b5bd7b989fff, type: 3}
-      propertyPath: m_sounds.Array.data[25].volume
-      value: -21
-      objectReference: {fileID: 0}
-    - target: {fileID: 8451179498602931749, guid: a42f78f1c328d72419d8b5bd7b989fff, type: 3}
-      propertyPath: m_sounds.Array.data[25].m_clips.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8451179498602931749, guid: a42f78f1c328d72419d8b5bd7b989fff, type: 3}
-      propertyPath: m_sounds.Array.data[21].m_clips.Array.data[0]
-      value: 
-      objectReference: {fileID: 8300000, guid: 2e776623ef0f3f642930a36bc65adcbd, type: 3}
-    - target: {fileID: 8451179498602931749, guid: a42f78f1c328d72419d8b5bd7b989fff, type: 3}
-      propertyPath: m_sounds.Array.data[22].m_clips.Array.data[0]
-      value: 
-      objectReference: {fileID: 8300000, guid: 54f7989ba8afdc84482a806074339b1e, type: 3}
-    - target: {fileID: 8451179498602931749, guid: a42f78f1c328d72419d8b5bd7b989fff, type: 3}
-      propertyPath: m_sounds.Array.data[23].m_clips.Array.data[0]
-      value: 
-      objectReference: {fileID: 8300000, guid: 54f7989ba8afdc84482a806074339b1e, type: 3}
-    - target: {fileID: 8451179498602931749, guid: a42f78f1c328d72419d8b5bd7b989fff, type: 3}
-      propertyPath: m_sounds.Array.data[24].m_clips.Array.data[0]
-      value: 
-      objectReference: {fileID: 8300000, guid: 54f7989ba8afdc84482a806074339b1e, type: 3}
-    - target: {fileID: 8451179498602931749, guid: a42f78f1c328d72419d8b5bd7b989fff, type: 3}
-      propertyPath: m_sounds.Array.data[25].m_clips.Array.data[0]
-      value: 
-      objectReference: {fileID: 8300000, guid: 54f7989ba8afdc84482a806074339b1e, type: 3}
     - target: {fileID: 8886358366230504657, guid: a42f78f1c328d72419d8b5bd7b989fff, type: 3}
       propertyPath: m_RootOrder
       value: 5

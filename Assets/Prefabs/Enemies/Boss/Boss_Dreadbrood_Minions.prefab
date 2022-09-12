@@ -271,7 +271,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27c52890db1f18341a82553c541a432d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_audio: []
+  m_audio:
+  - {fileID: 7501520651638138885}
+  - {fileID: 7653581647509900379}
 --- !u!82 &7501520651638138885
 AudioSource:
   m_ObjectHideFlags: 0
@@ -295,7 +297,7 @@ AudioSource:
   MinDistance: 3.9697895
   MaxDistance: 500
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -328,7 +330,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -391,7 +393,7 @@ AudioSource:
   MinDistance: 3.9509926
   MaxDistance: 500
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -424,7 +426,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -506,7 +508,7 @@ GameObject:
   - component: {fileID: 6126658445939303928}
   - component: {fileID: 6126658445939303935}
   m_Layer: 0
-  m_Name: Boss_1_Minions
+  m_Name: Boss_Dreadbrood_Minions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

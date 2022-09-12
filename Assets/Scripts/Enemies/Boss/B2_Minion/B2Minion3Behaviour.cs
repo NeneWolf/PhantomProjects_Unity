@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class B2Minion3Behaviour : MonoBehaviour
 {
+    [SerializeField] AudioSource m_audio;
+
     [Header("Details")]
     [SerializeField] float maxHealth;
     float currentHealth;
@@ -34,6 +36,8 @@ public class B2Minion3Behaviour : MonoBehaviour
 
     public void TakeDamage(float dmg)
     {
+        m_audio.Play();
+        
         GameObject.Instantiate(bloodEffect, transform.position, Quaternion.identity);
 
         if (currentHealth - dmg <= 0)

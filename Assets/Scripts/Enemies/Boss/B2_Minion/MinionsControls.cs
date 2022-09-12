@@ -62,8 +62,8 @@ public class MinionsControls : MonoBehaviour
 
     void UpdateMinion1()
     {
-        differentMinions[0].GetComponent<B2Minion1Behaviour>().SetFire(false);
-        laser.GetComponentInChildren<B2MinionLaser>().SetFire(false);
+        differentMinions[0].GetComponent<B2Minion1Behaviour>().SetFire();
+        //laser.GetComponentInChildren<B2MinionLaser>().SetFire(false);
         nextShot = Time.time + fireDelay;
     }
 

@@ -212,8 +212,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_audio:
   - {fileID: 7990881748467777700}
-  - {fileID: 4992037099204890890}
   - {fileID: 1792921936429743131}
+  - {fileID: 4992037099204890890}
 --- !u!82 &7990881748467777700
 AudioSource:
   m_ObjectHideFlags: 0
@@ -226,7 +226,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 24300002, guid: 0516aec6963970f40b205ec2cfb9ab11, type: 2}
   m_audioClip: {fileID: 8300000, guid: 808e632fc59e45449849a5a84caceb09, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.6
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -234,10 +234,10 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 2.2575493
+  MinDistance: 6
   MaxDistance: 500
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -270,7 +270,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -322,7 +322,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 24300002, guid: 0516aec6963970f40b205ec2cfb9ab11, type: 2}
   m_audioClip: {fileID: 8300000, guid: adb4cf45862b91945a1bc4ef2ac84ff2, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.6
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -330,10 +330,10 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 2.2575493
+  MinDistance: 6
   MaxDistance: 500
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -366,7 +366,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -426,10 +426,10 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 2.2575493
+  MinDistance: 6
   MaxDistance: 500
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -462,7 +462,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0

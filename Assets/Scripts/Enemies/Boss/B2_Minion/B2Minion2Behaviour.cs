@@ -1,9 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using PhantomProjects.Managers;
 
 public class B2Minion2Behaviour : MonoBehaviour
 {
+
+    [SerializeField] AudioSource m_audio;
+
     [Header("Details")]
     [SerializeField] float maxHealth;
     float currentHealth;
@@ -15,10 +19,20 @@ public class B2Minion2Behaviour : MonoBehaviour
     [SerializeField] ParticleSystem particles;
     [SerializeField] float healAmount;
 
+    // Difficulty
+    DifficultyManager difficultyManager;
+    public float difficulty;
+
     private void Awake()
     {
         currentHealth = maxHealth;
         isDead = false;
+    }
+
+    private void Start()
+    {
+        difficultyManager = GameObject.Find("DifficultyManager").gameObject.GetComponent<DifficultyManager>();
+        difficulty = difficultyManager.difficultyMultiplier;
     }
 
     public void healBoss()
@@ -36,11 +50,17 @@ public class B2Minion2Behaviour : MonoBehaviour
     IEnumerator HealStart()
     {
         yield return new WaitForSeconds(1f);
-        boss.GetComponent<Entity>().Heal(healAmount);
+
+        if(difficulty > 1)
+            boss.GetComponent<Entity>().Heal(healAmount * (difficulty/2));
+        else
+            boss.GetComponent<Entity>().Heal(healAmount);
     }
 
     public void TakeDamage(float dmg)
     {
+        m_audio.Play();
+        
         GameObject.Instantiate(bloodEffect, transform.position, Quaternion.identity);
         if (currentHealth - dmg <= 0)
         {

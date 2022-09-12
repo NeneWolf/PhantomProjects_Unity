@@ -171,7 +171,7 @@ MonoBehaviour:
     background: 1
     m_clips:
     - {fileID: 8300000, guid: 475fa5e2ac6084f91ad0de5304100e30, type: 3}
-    volume: 0.47
+    volume: 0.2
     pitch: 1
     m_loop: 1
     audioMixer: {fileID: 24300002, guid: c1cf8eef1b431b74c9c83d640b75cd76, type: 2}
@@ -215,53 +215,19 @@ MonoBehaviour:
     pitch: 1
     m_loop: 0
     audioMixer: {fileID: 24300002, guid: c1cf8eef1b431b74c9c83d640b75cd76, type: 2}
-  - m_name: Guard - Dead
+  - m_name: ButtonClick2
     background: 0
     m_clips:
-    - {fileID: 8300000, guid: adb4cf45862b91945a1bc4ef2ac84ff2, type: 3}
-    volume: -21
-    pitch: 0.743
+    - {fileID: 8300000, guid: cdcb50a60efea9f409abb8dafc7a47f8, type: 3}
+    volume: 0.2
+    pitch: 1
     m_loop: 0
     audioMixer: {fileID: 24300002, guid: 0516aec6963970f40b205ec2cfb9ab11, type: 2}
-  - m_name: Dog - Dead
+  - m_name: ButtonClick3
     background: 0
     m_clips:
-    - {fileID: 8300000, guid: adb4cf45862b91945a1bc4ef2ac84ff2, type: 3}
-    volume: -21
-    pitch: 0.743
-    m_loop: 0
-    audioMixer: {fileID: 24300002, guid: 0516aec6963970f40b205ec2cfb9ab11, type: 2}
-  - m_name: Dog - Footsteps
-    background: 0
-    m_clips:
-    - {fileID: 8300000, guid: adb4cf45862b91945a1bc4ef2ac84ff2, type: 3}
-    volume: -21
-    pitch: 0.743
-    m_loop: 0
-    audioMixer: {fileID: 24300002, guid: 0516aec6963970f40b205ec2cfb9ab11, type: 2}
-  - m_name: Turret - Shooting
-    background: 0
-    m_clips:
-    - {fileID: 8300000, guid: 2e776623ef0f3f642930a36bc65adcbd, type: 3}
-    volume: -21
-    pitch: 0.743
-    m_loop: 0
-    audioMixer: {fileID: 24300002, guid: 0516aec6963970f40b205ec2cfb9ab11, type: 2}
-  - m_name: Guard - Footsteps
-    background: 0
-    m_clips:
-    - {fileID: 8300000, guid: d88cbad2d217cd74ba1eb0899d6c55ad, type: 3}
-    - {fileID: 8300000, guid: ada024810fd950d408257d2b4903e899, type: 3}
-    - {fileID: 8300000, guid: 74fb0bf68831ec14e8bbc1d6ab1dfba5, type: 3}
-    volume: 0.646
-    pitch: 0.743
-    m_loop: 0
-    audioMixer: {fileID: 24300002, guid: 0516aec6963970f40b205ec2cfb9ab11, type: 2}
-  - m_name: Ceiling Drop
-    background: 0
-    m_clips:
-    - {fileID: 8300000, guid: 54f7989ba8afdc84482a806074339b1e, type: 3}
-    volume: -21
-    pitch: 0.743
+    - {fileID: 8300000, guid: 169ec60c21ddb03498d6999387a996da, type: 3}
+    volume: 0.2
+    pitch: 1
     m_loop: 0
     audioMixer: {fileID: 24300002, guid: 0516aec6963970f40b205ec2cfb9ab11, type: 2}

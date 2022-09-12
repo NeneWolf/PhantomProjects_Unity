@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class B2Minion1Behaviour : MonoBehaviour
 {
+    [SerializeField] AudioSource m_audio;
+    
     [Header("Details")]
     [SerializeField] float maxHealth;
     float currentHealth;
@@ -21,7 +23,9 @@ public class B2Minion1Behaviour : MonoBehaviour
 
     Vector3 currentAngle;
     Vector3 targetAngle = new Vector3(0f, 0f, -65f);
-    bool hasShoot = false;
+    Vector3 originalAngle = new Vector3(0f, 0f, 0f);
+    bool rotateToAttack = false;
+    bool rotateToOrigin = false;
 
     Animator animation;
 
@@ -33,70 +37,119 @@ public class B2Minion1Behaviour : MonoBehaviour
 
     void Update()
     {
-        if (!isDead)
+        if (rotateToAttack)
         {
-            currentAngle = transform.eulerAngles;
             RotateToAttack();
+        }
+        else if (rotateToOrigin)
+        {
+            RotateToOrigin();
         }
     }
 
     void RotateToAttack()
     {
-        if (!hasShoot)
-        {
-            var step = speed * Time.deltaTime;
+        var step = speed * Time.deltaTime;
 
-            if (boss.GetComponent<Entity>().facingDirection == 1)
-            {
-                currentAngle = new Vector3(
+        if (boss.GetComponent<Entity>().facingDirection == 1)
+        {
+            currentAngle = new Vector3(
+                Quaternion.identity.x,
+                Quaternion.identity.y,
+                Mathf.LerpAngle(currentAngle.z, targetAngle.z, step));
+
+            transform.eulerAngles = currentAngle;
+        }
+        else if (boss.GetComponent<Entity>().facingDirection == -1)
+        {
+
+            currentAngle = new Vector3(
                     Quaternion.identity.x,
-                    Quaternion.identity.y,
+                    Quaternion.identity.y - 180,
                     Mathf.LerpAngle(currentAngle.z, targetAngle.z, step));
 
-                transform.eulerAngles = currentAngle;
-            }
-            else if (boss.GetComponent<Entity>().facingDirection == -1)
-            {
-
-                currentAngle = new Vector3(
-                        Quaternion.identity.x,
-                        Quaternion.identity.y - 180,
-                        Mathf.LerpAngle(currentAngle.z, targetAngle.z, step));
-
-                transform.eulerAngles = currentAngle;
-            }
-
-            StartCoroutine(ShootTimer());
+            transform.eulerAngles = currentAngle;
         }
+
+        StartCoroutine(WaitRotateToOrigin());
     }
 
-    IEnumerator ShootTimer()
+    void RotateToOrigin()
     {
-        yield return new WaitForSeconds(warningTime);
-        hasShoot = true;
         laser.SetActive(true);
+        var step = speed * Time.deltaTime;
 
-        StopCoroutine(ShootTimer());
+        if (boss.GetComponent<Entity>().facingDirection == 1)
+        {
+            currentAngle = new Vector3(
+                    Quaternion.identity.x,
+                    Quaternion.identity.y,
+                    Mathf.LerpAngle(currentAngle.z, originalAngle.z, step));
+            transform.eulerAngles = currentAngle;
+        }
+        else if (boss.GetComponent<Entity>().facingDirection == -1)
+        {
+            currentAngle = new Vector3(
+                    Quaternion.identity.x,
+                    Quaternion.identity.y - 180,
+                    Mathf.LerpAngle(currentAngle.z, originalAngle.z, step));
+
+            transform.eulerAngles = currentAngle;
+        }
+
+        StartCoroutine(InOrigin());
     }
 
-    public void SetFire(bool fire)
+    IEnumerator WaitRotateToOrigin()
     {
-        hasShoot = fire;
+        yield return new WaitForSeconds(3f);
+        rotateToAttack = false;
+        rotateToOrigin = true;
+    }
+
+    IEnumerator InOrigin()
+    {
+        yield return new WaitForSeconds(3f);
+        laser.SetActive(false);
+        rotateToOrigin = false;
+    }
+
+    //IEnumerator ShootTimer()
+    //{
+    //    yield return new WaitForSeconds(warningTime);
+    //    hasShoot = true;
+    //    laser.SetActive(true);
+
+    //    StopCoroutine(ShootTimer());
+    //}
+
+    public void SetFire()
+    {
+        rotateToAttack = true;
     }
 
     public void TakeDamage(float dmg)
     {
+        m_audio.Play();
+        
         GameObject.Instantiate(bloodEffect, transform.position, Quaternion.identity);
 
         if (currentHealth - dmg <= 0)
         {
             currentHealth = 0;
             isDead = true;
-            this.gameObject.SetActive(false);
+            StartCoroutine(WaitToDie());
         }
         else
         {
             currentHealth -= dmg;
         }
+    }
+
+    IEnumerator WaitToDie()
+    {
+        yield return new WaitForSeconds(1f);
+        this.gameObject.SetActive(false);
+
     }
 }

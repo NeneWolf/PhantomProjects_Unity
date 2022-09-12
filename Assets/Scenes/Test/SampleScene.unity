@@ -34134,7 +34134,7 @@ GameObject:
   - component: {fileID: 1876333795}
   - component: {fileID: 1876333799}
   - component: {fileID: 1876333798}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Pipes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40538,10 +40538,6 @@ PrefabInstance:
     - target: {fileID: 4592463775148371838, guid: bdfd41d3a2df1ce4388c04a794dda989, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4592463775321921754, guid: bdfd41d3a2df1ce4388c04a794dda989, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bdfd41d3a2df1ce4388c04a794dda989, type: 3}

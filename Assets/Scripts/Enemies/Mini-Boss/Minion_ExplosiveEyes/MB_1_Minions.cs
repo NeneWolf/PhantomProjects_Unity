@@ -82,7 +82,7 @@ public class MB_1_Minions : Entity
 
     private IEnumerator WaitToDisable()
     {
-        yield return new WaitForSeconds(4f);
+        yield return new WaitForSeconds(1f);
         gameObject.SetActive(false);
     }
 }

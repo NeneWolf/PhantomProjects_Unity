@@ -81,20 +81,6 @@ public class Entity : MonoBehaviour
 
         animator.SetFloat("yVelocity", rb2d.velocity.y);
 
-        if(canSpawnMinions && hasSpawnMinions == false)
-        {
-            if (spawnAfterDead  && currentHealth == 0)
-            {
-                SpawnMinions();
-                hasSpawnMinions = true;
-            }
-            else if (!spawnAfterDead && currentHealth <= (entityData.maxHealth / 2))
-            {
-                SpawnMinions();
-                hasSpawnMinions = true;
-            }
-        }
-
         if (isDead && dropPondDead)
         {
             rb2d.gravityScale = 0.5f;
@@ -188,6 +174,18 @@ public class Entity : MonoBehaviour
                 GiveRewards(mutationPoints);
                 canGiveReward = false;
             }
+
+            if (canSpawnMinions && spawnAfterDead && hasSpawnMinions == false)
+            {
+                SpawnMinions();
+                hasSpawnMinions = true;
+            }
+        }
+
+        if (canSpawnMinions && hasSpawnMinions == false && !spawnAfterDead && currentHealth <= (entityData.maxHealth / 2))
+        {
+            SpawnMinions();
+            hasSpawnMinions = true;
         }
     }
 
@@ -226,7 +224,7 @@ public class Entity : MonoBehaviour
     {
         for(int i = 0; i < spawnCount; i++)
         {
-            //TODO: Change this...
+            print("Spawn Enemy");
             Instantiate(enemySpawn, new Vector3(spawnPosition.transform.position.x + Random.Range(-10.0f,10.0f), spawnPosition.transform.position.y, 0f), Quaternion.identity);
         }
     }

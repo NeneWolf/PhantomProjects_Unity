@@ -30,15 +30,9 @@ public class MB_1_M_ExplodeState : ExplodeState
     {
         base.LogicUpdate();
 
-        if (isAnimationFinish)
-        {
-            if(entity.hasBeenDamage == true)
-            {
-                entity.GiveRewards(entity.mutationPoints);
-            }
+        mBMinions.aliveGO.GetComponent<CapsuleCollider2D>().enabled = false;
+        mBMinions.Damage(10000);
 
-            mBMinions.gameObject.SetActive(false);
-        }
     }
 
     public override void PhysicsUpdate()

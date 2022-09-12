@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c553bad63f2ec6b41a45ce96b7318ca5, type: 3}
   m_Name: B2_Fetiddeviation
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 1000
   damageHopSpeed: 3
   wallCheckDistance: 4
   ledgeCheckDistance: 1
