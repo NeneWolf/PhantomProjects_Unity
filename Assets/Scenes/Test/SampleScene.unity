@@ -31175,9 +31175,12 @@ MonoBehaviour:
   dialogueBox: {fileID: 207571401}
   dialogue:
     sentences:
-    - Testing
-    - Test 1
-    - Test 2
+    - Testing. Testing. Testing. Testing. Testing. Testing. Testing. Testing. Testing.
+      Testing.
+    - Testing. Testing. Testing. Testing. Testing. Testing. Testing. Testing. Testing.
+      Testing.
+    - Testing. Testing. Testing. Testing. Testing. Testing. Testing. Testing. Testing.
+      Testing.
 --- !u!4 &1062434131
 Transform:
   m_ObjectHideFlags: 0

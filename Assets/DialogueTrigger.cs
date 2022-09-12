@@ -17,6 +17,7 @@ public class DialogueTrigger : MonoBehaviour
         if (collision.tag == "Player")
         {
             dialogueBox.SetActive(true);
+            Time.timeScale = 0f;
             FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
             Destroy(this.gameObject);
         }
