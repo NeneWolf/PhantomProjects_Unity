@@ -2089,7 +2089,7 @@ TilemapRenderer:
   m_ReflectionProbeUsage: 0
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
+  m_RenderingLayerMask: 6
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
@@ -16151,7 +16151,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 541121600}
-  m_BodyType: 2
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -40362,14 +40362,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4590044658497665871, guid: 4ea5092cb3085a343beb68e2857fed4f, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -10.568363
-      objectReference: {fileID: 0}
-    - target: {fileID: 4590044658497665871, guid: 4ea5092cb3085a343beb68e2857fed4f, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2.546074
-      objectReference: {fileID: 0}
     - target: {fileID: 4590044659024711196, guid: 4ea5092cb3085a343beb68e2857fed4f, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -40417,14 +40409,6 @@ PrefabInstance:
     - target: {fileID: 4590044659024711197, guid: 4ea5092cb3085a343beb68e2857fed4f, type: 3}
       propertyPath: m_Name
       value: Cameras
-      objectReference: {fileID: 0}
-    - target: {fileID: 4590044659024711197, guid: 4ea5092cb3085a343beb68e2857fed4f, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4590044659242546284, guid: 4ea5092cb3085a343beb68e2857fed4f, type: 3}
-      propertyPath: m_Follow
-      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4ea5092cb3085a343beb68e2857fed4f, type: 3}

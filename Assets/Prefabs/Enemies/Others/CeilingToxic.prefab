@@ -25,8 +25,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2664876702686140639}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 35.9975, y: 6.6, z: -0.076858334}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.900321, y: 0.70361227, z: 0.08213941}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2664876702798994992}
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: -851300071
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1126788202, guid: de978e4c1e1938a468d828bb53c60339, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 102645fa07d79bc40bb0e7e687fe70a0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -113,7 +113,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2664876702798994993}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.661, y: -0.182, z: 0}
+  m_LocalPosition: {x: -1.131, y: 0.391, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -372,7 +372,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.1
+      scalar: 0.05
       minScalar: 0.05
       maxCurve:
         serializedVersion: 2
@@ -4941,8 +4941,8 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 5.060585
-  MaxDistance: 500
+  MinDistance: 1.8187617
+  MaxDistance: 5
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -4977,7 +4977,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0

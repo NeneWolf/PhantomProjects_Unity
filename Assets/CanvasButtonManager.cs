@@ -59,7 +59,7 @@ public class CanvasButtonManager : MonoBehaviour
     {
         FindObjectOfType<DifficultyManager>().SetDifficulty(difficultyLevel);
         FindObjectOfType<GameManager>().gameDifficulty = difficultyLevel;
-        sceneManager.GetComponent<ScenesManager>().BringNextScene("CharacterSelection");
+        sceneManager.GetComponent<ScenesManager>().BringNextScene("Character Selection");
     }
 
     IEnumerator TheBreak()

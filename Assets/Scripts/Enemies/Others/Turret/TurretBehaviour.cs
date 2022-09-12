@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class TurretBehaviour : MonoBehaviour
 {
+    [SerializeField] AudioSource m_audio;
+    
     [Header("Properties")]
     [Space]
     [SerializeField] GameObject playerCheck;
@@ -25,13 +27,6 @@ public class TurretBehaviour : MonoBehaviour
     GameObject target;
     Vector2 direction;
     GameObject BulletIns;
-
-    GameObject m_audioManager;
-
-    private void Start()
-    {
-        m_audioManager = GameObject.FindObjectOfType<AudioManager>().gameObject;
-    }
 
     void Update()
     {
@@ -68,7 +63,7 @@ public class TurretBehaviour : MonoBehaviour
 
     void ShootTarget()
     {
-        m_audioManager.GetComponent<AudioManager>().PlaySound("Turret - Shooting");
+        m_audio.Play();
         BulletIns = GameObject.Instantiate(bullet, shootPoint.transform.position, Quaternion.identity);
         BulletIns.GetComponent<Rigidbody2D>().AddForce(direction * force);
     }

@@ -75,7 +75,7 @@ namespace PhantomProjects.Managers
         public void ConfirmSelected()
         {
             gameManager.charactersIndex = indexSelected;
-            sceneManager.BringNextScene("SampleScene");
+            sceneManager.BringNextScene("Tutorial Level");
         }
 
         public void ReturnToMainMenu()

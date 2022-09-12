@@ -2,17 +2,20 @@
 using System.Collections;
 
 public class Sensor_Prototype : MonoBehaviour {
-
-    //[SerializeField] LayerMask whatisGround;
     private int m_ColCount = 0;
 
     private float m_DisableTimer;
 
-    private void OnEnable()
+    private void OnLevelWasLoaded(int level)
     {
         m_ColCount = 0;
     }
-
+    
+    private void Start()
+    {
+        m_ColCount = 0;
+    }
+    
     public bool State()
     {
         if (m_DisableTimer > 0)
@@ -22,14 +25,14 @@ public class Sensor_Prototype : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        //print(other.IsTouchingLayers(whatisGround));
-         if(other.name == "Ground" || other.tag =="Ground" || other.name == "SpecialPlatform" || other.tag == "SpecialPlatform")
+        if (other.tag == "Ground" || other.tag == "SpecialPlatform")
             m_ColCount++;
+
     }
 
     void OnTriggerExit2D(Collider2D other)
     {
-        if (other.name == "Ground" || other.tag == "Ground" || other.name == "SpecialPlatform" || other.tag == "SpecialPlatform")
+        if (other.tag == "Ground" || other.tag == "SpecialPlatform")
             m_ColCount--;
     }
 

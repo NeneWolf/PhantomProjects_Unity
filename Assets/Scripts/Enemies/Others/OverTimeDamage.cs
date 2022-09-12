@@ -25,7 +25,6 @@ public class OverTimeDamage : MonoBehaviour
     [SerializeField] ParticleSystem sparks;
 
 
-    private BoxCollider2D coll;
     Collider2D damageHit;
     float nextTimeToDamage = 0f;
 
@@ -40,34 +39,28 @@ public class OverTimeDamage : MonoBehaviour
 
     float currentIntensity;
 
-
-
-    private void Awake()
-    {
-        coll = GetComponent<BoxCollider2D>();
-        difficultyManager = GameObject.FindObjectOfType<DifficultyManager>().GetComponent<DifficultyManager>();
-        damage *= difficultyManager.difficultyMultiplier;
-    }
-
     void Start()
     {
+        difficultyManager = GameObject.FindObjectOfType<DifficultyManager>().GetComponent<DifficultyManager>();
+        damage *= difficultyManager.difficultyMultiplier;
+        
         if (wire && canDamage)
         {
             sparks.Play();
         }
 
-        if (malfunctionLight)
-        {
-            light = GetComponent<Light2D>();
-            currentIntensity = maxIntensity;
-            light.intensity = currentIntensity;
-            StartCoroutine(LightFlicker());
-        }
+        //if (malfunctionLight)
+        //{
+        //    light = gameObject.GetComponent<Light2D>();
+        //    currentIntensity = maxIntensity;
+        //    light.intensity = currentIntensity;
+        //    StartCoroutine(LightFlicker());
+        //}
     }
 
     void Update()
     {
-        damageHit = Physics2D.OverlapBox(coll.bounds.center, coll.bounds.size, 0f, whatIsPlayer);
+        damageHit = Physics2D.OverlapBox(transform.position, new Vector2(1.3f, 0.5f), 0f, whatIsPlayer);
 
         if (wire && canDamage)
         {
@@ -96,6 +89,11 @@ public class OverTimeDamage : MonoBehaviour
         yield return new WaitForSeconds(secondsBetweenFlickers);
         light.intensity = Random.Range(minIntensity, maxIntensity);
         StartCoroutine(LightFlicker());
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireCube(transform.position, new Vector2(1.3f, 0.5f));
     }
 
 }

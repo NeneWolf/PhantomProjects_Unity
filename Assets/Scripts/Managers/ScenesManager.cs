@@ -70,8 +70,6 @@ namespace PhantomProjects.Managers
             else if (currentScene == 11 || currentScene == 17)
                 CheckMusic("BossRoom");                  // Boss rooms
 
-
-
         }
 
         void CheckMusic(string backMusic)
