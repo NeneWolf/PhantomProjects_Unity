@@ -13,6 +13,7 @@ public class GameData
     public float currentHealth;
     public float currentEnergy;
     public int mutationPoints;
+    public bool doubleJump;
 
     //Level
     public int currentLevelIndex;

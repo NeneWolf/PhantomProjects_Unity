@@ -42,7 +42,7 @@ public class PrototypeHero : MonoBehaviour {
     public float                m_maxSpeed = 4.5f;
 
     //Double jump
-    [SerializeField] bool doubleJumpActive = false;                             // Whether or not the player can double jump
+    [SerializeField] public bool doubleJumpActive { get; private set; } = false;                             // Whether or not the player can double jump
     [SerializeField] int extraJumpsValue;                                       // Number of extra jumps the player can peform whilst in the air
     [SerializeField] float coyoteTime = 0.2f;
     bool jump = false;
@@ -73,8 +73,6 @@ public class PrototypeHero : MonoBehaviour {
     {
         if(Time.timeScale != 0)
         {
-
-            
             //Check if the player is dead
             m_dead = playerStats.IsPlayerDead;
 
@@ -548,5 +546,10 @@ public class PrototypeHero : MonoBehaviour {
     public void ResetSpeed()
     {
         m_runSpeed = 4.5f;
+    }
+
+    public void DoubleJump(bool jumpD)
+    {
+        doubleJumpActive = jumpD;
     }
 }

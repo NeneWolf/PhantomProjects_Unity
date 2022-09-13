@@ -19,6 +19,7 @@ TagManager:
   - Fader
   - BMinion
   - Ground
+  - Tablet
   layers:
   - Default
   - TransparentFX

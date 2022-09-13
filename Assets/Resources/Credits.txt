@@ -1,0 +1,85 @@
+!Future App Team
+
+Project Leader & Programmer
+Jatinderbir Dole
+
+Level Designer
+Yoanna Krasimirova Gramatikova
+
+Designer, Animator & Sound Engineer 
+Qin Huang
+
+Leader Programmer & Leader Tester
+Ines Mateus Lobo 
+
+
+
+!Unity Assets
+
+2d Dark Laboratory by NormalCatStudio
+
+2D Pixel Art - Underground Laboratory 16x16 by Lifty
+
+Pixel Fantasy Deep Forest by Szadi Art.
+
+The Factory - Platformer Tileset by Zuhria A
+
+Pixel UI by Pixelsoft Games
+
+Pixel Art GUI / UI Kit - over 400 PNG + 151 icons! by HONETi
+
+Free Pixel Font - Thaleah by Tiny Worlds
+
+Pixel Fonts Megapack by PixelMush
+
+Prototype Hero - Pixel Art by Sven Thole
+
+Pixel Gunner Prototype by dylestorm
+
+2D Pixel Gun Weapon Pack by KoTiaRaRuS
+
+Pixel Art RPG VFX by AFGA
+
+Pixel Sprite Effects pack by bestgamekits
+
+2D Pixel - RPG Icon Pack by Layer Lab
+
+Pixel Art: Animated Animals by Saru Rezec
+
+Pixel Monsters Vol.1 by Ismartal
+
+Pixel Monsters Vol.2 by Ismartal
+
+Pixel Polymer by Pixel Cattle Games
+
+Boss: Pixel Greedy Mouth by Pixel Cattle Games
+
+Ultimate Sound FX Bundle by Sidearm Studios
+
+Universal Sound FX by Imphenzia
+
+Ultimate Game Music Collection by John Leonard French
+
+
+
+!Playtesters
+
+To be added...
+
+
+
+!Special Thanks 
+
+John Tzotze - Programmer Assistance
+
+Markos  
+
+Jack
+
+Stephen
+
+
+
+Copy Right information
+@2022 Future App 
+

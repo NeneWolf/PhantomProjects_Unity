@@ -23,7 +23,9 @@ namespace PhantomProjects.Managers
         public int currentSceneIndex; //SceneManager
 
         public float playerCurrentHealth;
-        public float playerCurrentEnergy; 
+        public float playerCurrentEnergy;
+
+        public bool doubleJump;
 
         public int mutationPointsCollected; // UIManager
 
@@ -63,6 +65,9 @@ namespace PhantomProjects.Managers
                 spawnPlayerPosition = GameObject.Find("PlayerSpawnPosition").transform;
                 GameObject.Instantiate(Characters[charactersIndex], spawnPlayerPosition.transform.position, Quaternion.identity);
                 player = GameObject.FindGameObjectWithTag("Player");
+
+                if (doubleJump)
+                    player.GetComponent<PrototypeHero>().DoubleJump(doubleJump);
             }
             else if (player != null && inStartLevel)
             {
@@ -94,6 +99,7 @@ namespace PhantomProjects.Managers
             this.fireDelay = data.gunRate;
             this.shieldCooldown = data.shieldCooldown;
             this.shieldDuration = data.shieldDuration;
+            this.doubleJump = data.doubleJump;
         }
 
         public void SaveData(GameData data)
@@ -114,6 +120,7 @@ namespace PhantomProjects.Managers
                 data.gunRate = player.GetComponentInChildren<PlayerWeapon>().fireDelay;
                 data.shieldDuration = shieldDuration;
                 data.shieldCooldown = shieldCooldown;
+                data.doubleJump = player.GetComponent<PrototypeHero>().doubleJumpActive;
             }
 
             if (inStartLevel && difficultyManager.difficultyLevel != 2)

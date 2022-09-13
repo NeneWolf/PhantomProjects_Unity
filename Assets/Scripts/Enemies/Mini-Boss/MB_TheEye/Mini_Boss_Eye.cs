@@ -74,6 +74,7 @@ public class Mini_Boss_Eye : Entity
 
     private IEnumerator WaitToDisable()
     {
+        GameObject.FindGameObjectWithTag("Player").gameObject.GetComponent<PrototypeHero>().DoubleJump(true);
         yield return new WaitForSeconds(4f);
         gameObject.SetActive(false);
     }
