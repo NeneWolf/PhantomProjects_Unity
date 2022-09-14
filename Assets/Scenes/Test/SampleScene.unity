@@ -1150,6 +1150,85 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2928188427536486527, guid: fc77aeec385c5f7498b271f02b468823, type: 3}
   m_PrefabInstance: {fileID: 104647234}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &154169847
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 154169848}
+  - component: {fileID: 154169850}
+  - component: {fileID: 154169849}
+  m_Layer: 0
+  m_Name: Trigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &154169848
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 154169847}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.59, y: -3.1575549, z: -0.030563615}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1382551873}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &154169849
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 154169847}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 1.9989791}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 7.992359}
+  m_EdgeRadius: 0
+--- !u!114 &154169850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 154169847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da1875905a011ee43adacdc60f434d3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueBox: {fileID: 207571401}
+  dialogue:
+    sentences:
+    - It's that buzzing sound again. What is that thing ahead of me...
+    - They look like mosquitoes but seem a bit different. The note did mention something
+      about mutations, I wonder if these mosquitoes have been mutated?
+    - They seem to be heading towards me and they don't look friendly. I guess this
+      is a good time to practice my shooting and test out this Unstable Charge ability.
 --- !u!1 &197521608
 GameObject:
   m_ObjectHideFlags: 0
@@ -16798,8 +16877,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -200, y: 55}
-  m_SizeDelta: {x: 350, y: 100}
+  m_AnchoredPosition: {x: -200, y: 40}
+  m_SizeDelta: {x: 350, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &634490772
 MonoBehaviour:
@@ -31012,11 +31091,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7075366258601304335, guid: 470bbb6b345d5bf4aafecd2360c5c020, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.222125
+      value: 9.11
       objectReference: {fileID: 0}
     - target: {fileID: 7075366258601304335, guid: 470bbb6b345d5bf4aafecd2360c5c020, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.79
+      value: -0.52
       objectReference: {fileID: 0}
     - target: {fileID: 7075366258601304335, guid: 470bbb6b345d5bf4aafecd2360c5c020, type: 3}
       propertyPath: m_LocalPosition.z
@@ -31257,8 +31336,7 @@ MonoBehaviour:
   dialogueBox: {fileID: 207571401}
   dialogue:
     sentences:
-    - Testing. Testing. Testing. Testing. Testing. Testing. Testing. Testing. Testing.
-      Testing.
+    - Press F to interact with collectibles or doors.
     - Testing. Testing. Testing. Testing. Testing. Testing. Testing. Testing. Testing.
       Testing.
     - Testing. Testing. Testing. Testing. Testing. Testing. Testing. Testing. Testing.
@@ -31276,7 +31354,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1382551873}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1087893237
 PrefabInstance:
@@ -31295,11 +31373,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3823697763488265813, guid: ea5883d47ef51f04da80673e208c8b89, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.624284
+      value: 1.94
       objectReference: {fileID: 0}
     - target: {fileID: 3823697763488265813, guid: ea5883d47ef51f04da80673e208c8b89, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.4797438
+      value: 0.61
       objectReference: {fileID: 0}
     - target: {fileID: 3823697763488265813, guid: ea5883d47ef51f04da80673e208c8b89, type: 3}
       propertyPath: m_LocalPosition.z
@@ -32463,6 +32541,7 @@ Transform:
   - {fileID: 494499165}
   - {fileID: 1396363323}
   - {fileID: 1581137453}
+  - {fileID: 154169848}
   - {fileID: 1062434131}
   m_Father: {fileID: 0}
   m_RootOrder: 11
@@ -32526,9 +32605,17 @@ MonoBehaviour:
   dialogueBox: {fileID: 207571401}
   dialogue:
     sentences:
-    - Click the Left Mouse Button to shoot.
-    - Hold the CTRL key to aim forward and start walking.
-    - Click the Right Mouse Button to use your special ability Unstable Charge.
+    - Where am I?
+    - This place... I don't recognise it. What happened to me... and how did I get
+      here?
+    - My head... it hurts so much... I can't remember anything.
+    - (Strange noises can be heard in the distance, you spot a pistol on the ground
+      and quickly grab it as your only means of protection)
+    - What was that sound?
+    - I'm not really sure what's going on, but I should prepare myself for any situation.
+      This weapon should come in handy.
+    - Press the left mouse button to shoot in the direction you are facing.
+    - Hold Ctrl to aim forward and start walking.
 --- !u!4 &1396363323
 Transform:
   m_ObjectHideFlags: 0
@@ -32537,7 +32624,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1396363320}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.9863186, y: -3.1575549, z: -0.030563615}
+  m_LocalPosition: {x: -8, y: -3.1575549, z: -0.030563615}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -33498,7 +33585,7 @@ GameObject:
   - component: {fileID: 1581137452}
   - component: {fileID: 1581137451}
   m_Layer: 0
-  m_Name: Trigger
+  m_Name: Note
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -33528,7 +33615,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 7.981405}
+  m_Size: {x: 1.0958319, y: 7.981405}
   m_EdgeRadius: 0
 --- !u!114 &1581137452
 MonoBehaviour:
@@ -33545,9 +33632,46 @@ MonoBehaviour:
   dialogueBox: {fileID: 207571401}
   dialogue:
     sentences:
-    - More story stuff...
-    - Continued...
-    - End
+    - 'Test Subject X154
+
+      Entry 1
+
+
+      Unlike the other subjects, injection
+      of the substance into subject X154 has proven to be successful. Vitals appear
+      to be stable and there have been no signs of mutation. '
+    - 'Test Subject X154
+
+      Entry 1
+
+
+      Extra caution is advised when handling
+      subject X154. During testing, another scientist attempted to grab the subject''s
+      arm and a powerful laser beam was shot out of the subject''s hand resulting
+      in two casualties.'
+    - 'Test Subject X154
+
+      Entry 1
+
+
+      We conclude that this is the unique
+      ability the substance has provided to this individual. We have decided to name
+      this ability: Unstable charge, as we currently have no control over its devastating
+      power.'
+    - 'Test Subject X154
+
+      Entry 1
+
+
+      We will continue to monitor subject
+      X154 and further testing will commence once the substance has fully spread
+      throughout the subject''s body.'
+    - Are these notes about me? Looks like I was being experimented on... A powerful
+      laser beam? Unstable charge... Am I really able to do something like that?
+      Guess it wouldn't hurt to try out.
+    - I don't know why I was chosen for this, but trying to sit here and figure it
+      out won't do me any good if I can't remember anything.
+    - 'Press the right mouse button to use your special ability: Unstable Charge.'
 --- !u!4 &1581137453
 Transform:
   m_ObjectHideFlags: 0
@@ -33556,7 +33680,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1581137450}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.6336815, y: -3.1575549, z: -0.030563615}
+  m_LocalPosition: {x: -1.96, y: -3.1575549, z: -0.030563615}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
