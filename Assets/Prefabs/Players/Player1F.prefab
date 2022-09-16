@@ -64,7 +64,6 @@ MonoBehaviour:
   m_noBlood: 0
   m_SpecialGun: 0
   m_maxSpeed: 6
-  doubleJumpActive: 0
   extraJumpsValue: 1
   coyoteTime: 0.2
   WeaponController: {fileID: 1723391536118613666}
@@ -475,6 +474,7 @@ MonoBehaviour:
   hasUpgradedWeapon: 0
   demonLaser: {fileID: 1723391535668319359}
   numberOfBullets: 3
+  player: {fileID: 1723391535611507565}
 --- !u!1 &1723391536203128834
 GameObject:
   m_ObjectHideFlags: 0

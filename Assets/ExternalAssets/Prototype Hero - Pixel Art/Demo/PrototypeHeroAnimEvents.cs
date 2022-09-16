@@ -55,6 +55,7 @@ public class PrototypeHeroAnimEvents : MonoBehaviour
 
     void AE_Jump()
     {
+        m_player.ResetDodging();
         m_audioManager.PlaySound("Jump");
 
         if(!m_player.IsWallSliding())
@@ -119,11 +120,13 @@ public class PrototypeHeroAnimEvents : MonoBehaviour
 
     void AE_SwordAttack()
     {
+        m_player.ResetDodging();
         m_audioManager.PlaySound("Shooting");
     }
 
     void AE_SheathSword()
     {
+        m_player.ResetDodging();
         m_audioManager.PlaySound("Laser");
     }
 

@@ -36,6 +36,12 @@ namespace PhantomProjects.Managers
                     canvas = GameObject.Find("Canvas").GetComponent<CanvasUI>();
                     levelUIManager();
                 }
+
+                if (GameObject.FindGameObjectWithTag("Player").gameObject.GetComponent<PlayerStats>().currentHealth <=0)
+                {
+                    currentKeycards = 0;
+                    currentMutationPoints = 0;
+                }
             }
         }
 
@@ -75,5 +81,9 @@ namespace PhantomProjects.Managers
             data.mutationPoints = this.currentMutationPoints;
         }
 
+
+        public void ResetKeyCards(){
+            currentKeycards = 0;
+        }
     }
 }

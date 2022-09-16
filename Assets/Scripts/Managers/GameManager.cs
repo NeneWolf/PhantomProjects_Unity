@@ -84,7 +84,6 @@ namespace PhantomProjects.Managers
             {
                 Destroy(player);
             }
-
             //print(inStartLevel);
         }
 

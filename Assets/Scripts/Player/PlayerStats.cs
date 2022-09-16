@@ -31,6 +31,8 @@ public class PlayerStats : MonoBehaviour, IDataPersistance
     GameObject gameManager;
     GameObject scenesManager;
 
+    bool isRegenEnergy = false;
+
     #endregion
 
     void Start()
@@ -66,8 +68,15 @@ public class PlayerStats : MonoBehaviour, IDataPersistance
         if (currentHealth <= 0 && !IsPlayerDead)                                     // Check's to see if the player has ran out of health
         {
             IsPlayerDead = true;
-            scenesManager.GetComponent<ScenesManager>().LoadScene(5);
+            StartCoroutine(WaitToDie());
         }
+    }
+
+    IEnumerator WaitToDie()
+    {
+        yield return new WaitForSeconds(1f);
+        scenesManager.GetComponent<ScenesManager>().LoadScene(5);
+        StopCoroutine(WaitToDie());
     }
 
     public void IncreaseHealth(float amount)
@@ -90,9 +99,10 @@ public class PlayerStats : MonoBehaviour, IDataPersistance
         }
         else currentEnergy -= amount;                               // Reduce the player's current amount of energy by the amount specified
 
-        if (currentEnergy < maxEnergy)
+        if (currentEnergy < maxEnergy && !isRegenEnergy)             // If the player's energy is less than the max energy and the energy regeneration coroutine is not running, start the coroutine
         {
-            StartCoroutine(EnergyRegen());                          // If energy has been consumed start regenerating energy
+            isRegenEnergy = true;
+            StartCoroutine(EnergyRegen());                           // If energy has been consumed start regenerating energy
         }
     }
 
@@ -115,6 +125,9 @@ public class PlayerStats : MonoBehaviour, IDataPersistance
 
             IncreaseEnergy(energyRegenAmount);                      // Increase energy by a given amount
         }
+
+        isRegenEnergy = false;
+        StopCoroutine(EnergyRegen());
     }
 
     public void TakeDamage(AttackDetails attackDetails)             // Method for reducing the player's health by enemies

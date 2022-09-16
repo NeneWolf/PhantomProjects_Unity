@@ -29,6 +29,7 @@ public class DoorBehaviour : MonoBehaviour
 
         if (playerCollider && Input.GetKeyDown(KeyCode.F) && uiManager.GetComponent<UIManager>().currentKeycards == requiredNumberOfKeys)
         {
+            uiManager.GetComponent<UIManager>().ResetKeyCards();
             DataPersistanceManager.instanceData.SaveGame();
             sceneManager.GetComponent<ScenesManager>().BringNextScene();
         }

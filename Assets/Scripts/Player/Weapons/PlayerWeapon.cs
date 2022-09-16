@@ -32,6 +32,8 @@ public class PlayerWeapon : MonoBehaviour
 	GameObject upgradeManager;
 	bool abilityLaser;
 
+    [SerializeField]PrototypeHero player;
+
 	void Awake()
     {
 		controls = GameObject.FindGameObjectWithTag("Player");
@@ -56,7 +58,7 @@ public class PlayerWeapon : MonoBehaviour
 				pistol.SetActive(true);
 				demonLaser.SetActive(false);
 
-				if (Input.GetMouseButtonDown(0) && Time.time > nextFire && !abilityLaser)
+				if (Input.GetMouseButtonDown(0) && !player.m_dodging && Time.time > nextFire && !abilityLaser)
 				{
 					PistolShoot();
 					shootWeapon = true;
@@ -69,7 +71,7 @@ public class PlayerWeapon : MonoBehaviour
 				pistol.SetActive(false);
 				demonLaser.SetActive(true);
 
-				if (Input.GetMouseButtonDown(0) && Time.time > nextFire && !abilityLaser)
+				if (Input.GetMouseButtonDown(0) && !player.m_dodging && Time.time > nextFire && !abilityLaser)
 				{
 					DLaserShoot();
 					shootWeapon = true;

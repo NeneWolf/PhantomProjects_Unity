@@ -25,7 +25,7 @@ public class PrototypeHero : MonoBehaviour {
     private bool                m_grounded = false;
     private bool                m_moving = false;
     private bool                m_dead;
-    private bool                m_dodging = false;
+    public  bool                m_dodging { get; private set; } = false;
     private bool                m_wallSlide = false;
     private bool                m_ledgeGrab = false;
     private bool                m_ledgeClimb = false;
@@ -87,13 +87,6 @@ public class PrototypeHero : MonoBehaviour {
 
             // Decrease timer that disables input movement. Used when attacking
             m_disableMovementTimer -= Time.deltaTime;
-
-            //// Respawn Hero if dead
-            //if (m_dead && m_respawnTimer < 0.0f)
-            //    RespawnHero();
-
-            //if (m_dead)
-            //    return;
 
             //Check if character just landed on the ground
             if (!m_grounded && m_groundSensor.State())
@@ -195,168 +188,68 @@ public class PrototypeHero : MonoBehaviour {
             }
 
 
-            // -- Handle Animations --
-            //Death
-            if (m_dead && !m_dodging)
-            {
-                //m_animator.SetBool("noBlood", m_noBlood);
-                m_animator.SetTrigger("Death");
-                //m_respawnTimer = 2.5f;
-                DisableWallSensors();
-                //m_dead = true;
-            }
-            // Parry & parry stance
-            //else if (Input.GetMouseButtonDown(1) && !m_dodging && !m_ledgeGrab && !m_ledgeClimb && !m_crouching && m_grounded)
-            //{
-            //    // Parry
-            //    // Used when you are in parry stance and something hits you
-            //    if (m_parryTimer > 0.0f)
-            //    {
-            //        m_animator.SetTrigger("Parry");
-            //        m_body2d.velocity = new Vector2(-m_facingDirection * m_parryKnockbackForce, m_body2d.velocity.y);
-            //    }
+            PlayerActions();
 
-            //    // Parry Stance
-            //    // Ready to parry in case something hits you
-            //    else
-            //    {
-            //        m_animator.SetTrigger("ParryStance");
-            //        m_parryTimer = 7.0f / 12.0f;
-            //    }
-            //}
 
-            ////Up Attack
-            //else if (Input.GetMouseButtonDown(0) && Input.GetKey("w") && !m_dodging && !m_ledgeGrab && !m_ledgeClimb && !m_crouching && m_grounded && m_timeSinceAttack > 0.2f)
-            //{
-            //    m_animator.SetTrigger("UpAttack");
 
-            //    // Reset timer
-            //    m_timeSinceAttack = 0.0f;
-
-            //    // Disable movement 
-            //    m_disableMovementTimer = 0.35f;
-            //}
-
-            ////Attack -- Being used to Shoot
-            //else if (Input.GetMouseButtonDown(0) && !m_dodging && !m_ledgeGrab && !m_ledgeClimb) //&& !m_crouching && m_grounded) //&& m_timeSinceAttack > 0.2f)
-            //{
-            //    // Reset timer
-            //    //m_timeSinceAttack = 0.0f;
-
-            //    //m_currentAttack++;
-
-            //    //// Loop back to one after second attack
-            //    //if (m_currentAttack > 2)
-            //    //    m_currentAttack = 1;
-
-            //    //// Reset Attack combo if time since last attack is too large
-            //    //if (m_timeSinceAttack > 1.0f)
-            //    //    m_currentAttack = 1;
-
-            //    // Call one of the two attack animations "Attack1" or "Attack2"
-            //    m_animator.SetTrigger("Attack1");
-
-            //    // Disable movement 
-            //    //m_disableMovementTimer = 0.35f;
-            //}
-
-            ////Air Slam Attack
-            //else if (Input.GetMouseButtonDown(0) && Input.GetKey("s") && !m_ledgeGrab && !m_ledgeClimb && !m_grounded)
-            //{
-            //    m_animator.SetTrigger("AttackAirSlam");
-            //    m_body2d.velocity = new Vector2(0.0f, -m_jumpForce);
-            //    m_disableMovementTimer = 0.8f;
-
-            //    // Reset timer
-            //    m_timeSinceAttack = 0.0f;
-            //}
-
-            //// Air Attack Up
-            //else if (Input.GetMouseButtonDown(0) && Input.GetKey("w") && !m_dodging && !m_ledgeGrab && !m_ledgeClimb && !m_crouching && !m_grounded && m_timeSinceAttack > 0.2f)
-            //{
-            //    Debug.Log("Air attack up");
-            //    m_animator.SetTrigger("AirAttackUp");
-
-            //    // Reset timer
-            //    m_timeSinceAttack = 0.0f;
-            //}
-
-            //// Air Attack
-            //else if (Input.GetMouseButtonDown(0) && !m_dodging && !m_ledgeGrab && !m_ledgeClimb && !m_crouching && !m_grounded && m_timeSinceAttack > 0.2f)
-            //{
-            //    m_animator.SetTrigger("AirAttack");
-
-            //    // Reset timer
-            //    m_timeSinceAttack = 0.0f;
-            //}
-
-            //Dodge
-            else if (Input.GetKeyDown("left shift") && m_grounded && !m_dodging && !m_ledgeGrab && !m_ledgeClimb)
-            {
-                m_dodging = true;
-                m_crouching = false;
-                m_animator.SetBool("Crouching", false);
-                m_animator.SetTrigger("Dodge");
-                m_body2d.velocity = new Vector2(m_facingDirection * m_dodgeForce, m_body2d.velocity.y);
-            }
-
-            //// Throw
-            //else if(Input.GetKeyDown("f") && m_grounded && !m_dodging && !m_ledgeGrab && !m_ledgeClimb)
-            //{
-            //    m_animator.SetTrigger("Throw");
-
-            //    // Disable movement 
-            //    m_disableMovementTimer = 0.20f;
-            //}
-
-            // Ledge Climb
-            else if (Input.GetKeyDown("w") && m_ledgeGrab)
-            {
-                DisableWallSensors();
-                m_ledgeClimb = true;
-                m_body2d.gravityScale = 0;
-                m_disableMovementTimer = 6.0f / 14.0f;
-                m_animator.SetTrigger("LedgeClimb");
-            }
-
-            // Ledge Drop
-            else if (Input.GetKeyDown("s") && m_ledgeGrab)
-            {
-                DisableWallSensors();
-            }
-
-            ////Crouch / Stand up
-            //else if (Input.GetKeyDown("s") && m_grounded && !m_dodging && !m_ledgeGrab && !m_ledgeClimb && m_parryTimer < 0.0f)
-            //{
-            //    m_crouching = true;
-            //    m_animator.SetBool("Crouching", true);
-            //    m_body2d.velocity = new Vector2(m_body2d.velocity.x / 2.0f, m_body2d.velocity.y);
-            //}
-            //else if (Input.GetKeyUp("s") && m_crouching)
-            //{
-            //    m_crouching = false;
-            //    m_animator.SetBool("Crouching", false);
-            //}
-            //Walk
-            else if (m_moving && Input.GetKey(KeyCode.LeftControl))
-            {
-                m_animator.SetInteger("AnimState", 2);
-                m_maxSpeed = m_walkSpeed;
-            }
-
-            //Run
-            else if (m_moving)
-            {
-                m_animator.SetInteger("AnimState", 1);
-                m_maxSpeed = m_runSpeed;
-            }
-
-            //Idle
-            else
-                m_animator.SetInteger("AnimState", 0);
+            print(m_dodging);
         }
     }
 
+    void PlayerActions()
+    {
+        // -- Handle Animations --
+        //Death
+        if (m_dead && !m_dodging)
+        {
+            ResetDodging();
+            //m_animator.SetBool("noBlood", m_noBlood);
+            m_animator.SetTrigger("Death");
+            //m_respawnTimer = 2.5f;
+            DisableWallSensors();
+            m_body2d.mass = 1000f;
+            //m_dead = true;
+        }
+        // Ledge Climb
+        else if (Input.GetKeyDown("w") && m_ledgeGrab)
+        {
+            DisableWallSensors();
+            m_ledgeClimb = true;
+            m_body2d.gravityScale = 0;
+            m_disableMovementTimer = 6.0f / 14.0f;
+            m_animator.SetTrigger("LedgeClimb");
+        }
+        // Ledge Drop
+        else if (Input.GetKeyDown("s") && m_ledgeGrab)
+        {
+            DisableWallSensors();
+        }
+        //Dodge
+        else if (Input.GetKeyDown("left shift") && m_grounded && !m_dodging && !m_ledgeGrab && !m_ledgeClimb)
+        {
+            m_dodging = true;
+            m_animator.SetTrigger("Dodge");
+            m_body2d.velocity = new Vector2(m_facingDirection * m_dodgeForce, m_body2d.velocity.y);
+        }
+        //Walk
+        else if (m_moving && Input.GetKey(KeyCode.LeftControl) && !m_dodging)
+        {
+            m_animator.SetInteger("AnimState", 2);
+            m_maxSpeed = m_walkSpeed;
+        }
+        //Run
+        else if (m_moving)
+        {
+            m_animator.SetInteger("AnimState", 1);
+            m_maxSpeed = m_runSpeed;
+        }
+        //Idle
+        else
+            m_animator.SetInteger("AnimState", 0);
+
+
+    }
+    
     // Function used to spawn a dust effect
     // All dust effects spawns on the floor
     // dustXoffset controls how far from the player the effects spawns.
@@ -468,7 +361,7 @@ public class PrototypeHero : MonoBehaviour {
     void Jump()
     {
         //Jump
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Jump") && !m_dodging)
         {
             jump = true;
 
