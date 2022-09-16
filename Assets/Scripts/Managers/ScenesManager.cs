@@ -122,7 +122,9 @@ namespace PhantomProjects.Managers
         //Fader
         IEnumerator LoadScenebyName()
         {
-            DataPersistanceManager.instanceData.SaveGame();
+            if (currentScene < 6)
+                DataPersistanceManager.instanceData.SaveGame();
+
             FindFaderAndTurnOn();
             yield return new WaitForSeconds(waitingToSwitchScene);
             SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
@@ -132,7 +134,9 @@ namespace PhantomProjects.Managers
 
         IEnumerator LoadScenebyNumber()
         {
-            DataPersistanceManager.instanceData.SaveGame();
+            if (currentScene < 6)
+                DataPersistanceManager.instanceData.SaveGame();
+            
             FindFaderAndTurnOn();
             yield return new WaitForSeconds(waitingToSwitchScene);
             SceneManager.LoadScene(sceneNumber, LoadSceneMode.Single);

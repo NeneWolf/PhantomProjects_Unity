@@ -2,6 +2,7 @@ using PhantomProjects.Managers;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DoorBehaviour : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class DoorBehaviour : MonoBehaviour
     GameObject uiManager;
     GameObject savingManager;
 
+    [SerializeField] Text keycardsTextDisplay;
     //[SerializeField] bool nextScene = false;
     //[SerializeField] bool previousScene = false;
 
@@ -21,6 +23,8 @@ public class DoorBehaviour : MonoBehaviour
         sceneManager = GameObject.Find("SceneManager");
         gameManager = GameObject.Find("GameManager");
         uiManager = GameObject.Find("UIManager");
+
+        keycardsTextDisplay.text = requiredNumberOfKeys.ToString();
     }
 
     void Update()
@@ -30,7 +34,12 @@ public class DoorBehaviour : MonoBehaviour
         if (playerCollider && Input.GetKeyDown(KeyCode.F) && uiManager.GetComponent<UIManager>().currentKeycards == requiredNumberOfKeys)
         {
             uiManager.GetComponent<UIManager>().ResetKeyCards();
+
+            if (gameManager.GetComponent<GameManager>().loadedSave == false)
+                gameManager.GetComponent<GameManager>().loadedSave = true;
+
             DataPersistanceManager.instanceData.SaveGame();
+            
             sceneManager.GetComponent<ScenesManager>().BringNextScene();
         }
 

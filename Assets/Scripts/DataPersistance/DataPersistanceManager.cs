@@ -54,10 +54,10 @@ public class DataPersistanceManager : MonoBehaviour
         LoadGame();
     }
 
-    public void OnSceneUnloaded(Scene scene)
-    {
-        SaveGame();
-    }
+    //public void OnSceneUnloaded(Scene scene)
+    //{
+    //    SaveGame();
+    //}
 
 
     public void NewGame()

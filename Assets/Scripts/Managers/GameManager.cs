@@ -84,6 +84,7 @@ namespace PhantomProjects.Managers
             {
                 Destroy(player);
             }
+            
             //print(inStartLevel);
         }
 
@@ -103,8 +104,6 @@ namespace PhantomProjects.Managers
 
         public void SaveData(GameData data)
         {
-            loadedSave = true;
-
             data.loadedPlayer = this.loadedSave;
 
             data.characterSelected = this.charactersIndex;
@@ -123,7 +122,7 @@ namespace PhantomProjects.Managers
             }
 
             if (inStartLevel && difficultyManager.difficultyLevel != 2)
-                data.currentLevelIndex = currentSceneIndex;
+                data.currentLevelIndex = currentSceneIndex +1;
             else
                 data.currentLevelIndex = 1;
 

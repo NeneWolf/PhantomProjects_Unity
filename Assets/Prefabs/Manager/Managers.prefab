@@ -191,15 +191,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Characters:
   - {fileID: 1723391535611507553, guid: d253cf2c28564914eb493f07ed55d5fd, type: 3}
-  - {fileID: 1723391535611507553, guid: d253cf2c28564914eb493f07ed55d5fd, type: 3}
-  - {fileID: 1723391535611507553, guid: d253cf2c28564914eb493f07ed55d5fd, type: 3}
-  - {fileID: 1723391535611507553, guid: d253cf2c28564914eb493f07ed55d5fd, type: 3}
+  - {fileID: 1723391535611507553, guid: b8ad75b309efd8d4b9007d63fe4621ad, type: 3}
   charactersIndex: 0
   gameDifficulty: 0
   difficultyMultiplier: 0
   currentSceneIndex: 0
   playerCurrentHealth: 0
   playerCurrentEnergy: 0
+  doubleJump: 0
   mutationPointsCollected: 0
   level0Index: 6
   shieldDuration: 0

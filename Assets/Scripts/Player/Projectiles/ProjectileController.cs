@@ -25,8 +25,16 @@ public class ProjectileController : MonoBehaviour
         rb.velocity = transform.right * speed;
 
         CheckDamage();
+
+        StartCoroutine(DestroyBullet());
     }
 
+    IEnumerator DestroyBullet()
+    {
+        yield return new WaitForSeconds(0.8f);
+        Destroy(this.gameObject);
+    }
+    
     void CheckDamage()
     {
         if (upgradeManager.GetComponent<UpgradeManager>().gunDamage != 0)

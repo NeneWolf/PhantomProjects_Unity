@@ -13,7 +13,7 @@ public class SaveSlot : MonoBehaviour
     [Header("Content")]
     [SerializeField] private GameObject noDataContent;
     [SerializeField] private GameObject hasDataContent;
-    [SerializeField] private Text levelCurrentlyIn;
+    [SerializeField] public Text levelCurrentlyIn;
     [SerializeField] private Text modeAndTimerCurrentlyIn;
 
     string modeSelected;
@@ -45,7 +45,7 @@ public class SaveSlot : MonoBehaviour
                     break;
             }
 
-            modeAndTimerCurrentlyIn.text = modeSelected + " | " + "00:00 Time"; // TO BE WORKED ON ...
+            modeAndTimerCurrentlyIn.text = modeSelected; // TO BE WORKED ON TO EVENTUALLY ADD A TIMER :D KEK I COULDNT BE BOTHERED ! TO BE CONTINUED...
         }
     }
 
@@ -62,4 +62,14 @@ public class SaveSlot : MonoBehaviour
         return this.profileId;
     }
 
+    public string GetLevelCurrentlyIn(GameData data)
+    {
+        return this.levelCurrentlyIn.text;
+    }
+
+    public void ResetSlot()
+    {
+        noDataContent.SetActive(true);
+        hasDataContent.SetActive(false);
+    }
 }

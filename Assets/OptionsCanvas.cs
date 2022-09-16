@@ -14,6 +14,7 @@ public class OptionsCanvas : MonoBehaviour
     public Slider[] sliders;
     
     public Dropdown resolutionDropdown;
+    
     private void Start()
     {
         sliders[0].value = GameObject.FindObjectOfType<UIManager>().gameObject.GetComponent<UIManager>().effectVolume;

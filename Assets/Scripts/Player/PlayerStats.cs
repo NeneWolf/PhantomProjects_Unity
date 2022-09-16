@@ -40,7 +40,7 @@ public class PlayerStats : MonoBehaviour, IDataPersistance
         gameManager = GameObject.FindObjectOfType<GameManager>().gameObject;
         scenesManager = GameObject.FindObjectOfType<ScenesManager>().gameObject;
 
-        if (gameManager.GetComponent<GameManager>().playerCurrentHealth == 0)
+        if (!gameManager.GetComponent<GameManager>().loadedSave)
         {
             currentEnergy = maxEnergy;
             currentHealth = maxHealth;
@@ -74,7 +74,7 @@ public class PlayerStats : MonoBehaviour, IDataPersistance
 
     IEnumerator WaitToDie()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(2f);
         scenesManager.GetComponent<ScenesManager>().LoadScene(5);
         StopCoroutine(WaitToDie());
     }

@@ -9,11 +9,12 @@ public class SaveSlotMenu : MonoBehaviour
     private void Awake()
     {
         saveSlots = this.GetComponentsInChildren<SaveSlot>();
+        ActivateMenu();
     }
 
     private void Start()
     {
-        ActivateMenu();
+        
     }
 
     public void OnSaveSlotClicked(SaveSlot saveSlot)
@@ -36,6 +37,12 @@ public class SaveSlotMenu : MonoBehaviour
             GameData profileData = null;
             profilesGameData.TryGetValue(saveSlot.GetProfileId(), out profileData);
             saveSlot.SetData(profileData);
+
+            if (saveSlot.GetLevelCurrentlyIn(profileData) == "Character Selection")
+            {
+                DataPersistanceManager.instanceData.DeleteProfileData(saveSlot.GetProfileId());
+                saveSlot.ResetSlot();
+            }
         }
     }
 

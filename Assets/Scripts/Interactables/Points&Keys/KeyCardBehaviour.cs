@@ -10,19 +10,44 @@ namespace PhantomProjects.Core
         UIManager ui;
         [SerializeField] LayerMask whatIsPlayer;
 
+        [SerializeField] bool SpecialKeyCard;
+        [SerializeField] SpriteRenderer keyCardSprite;
+        [SerializeField] GameObject Boss;
+
         private void Awake()
         {
             ui = GameObject.FindObjectOfType<UIManager>();
+
+            if(SpecialKeyCard)
+                keyCardSprite.enabled = false;
         }
 
         private void Update()
         {
-            Collider2D playerCollider = Physics2D.OverlapCircle(transform.position, transform.localScale.x, whatIsPlayer);
-
-            if (playerCollider && Input.GetKeyDown(KeyCode.F))
+            if (!SpecialKeyCard)
             {
-                ui.KeyCardCollection();
-                Destroy(this.gameObject);
+                Collider2D playerCollider = Physics2D.OverlapCircle(transform.position, transform.localScale.x, whatIsPlayer);
+
+                if (playerCollider && Input.GetKeyDown(KeyCode.F))
+                {
+                    ui.KeyCardCollection();
+                    Destroy(this.gameObject);
+                }
+            }
+            else if (SpecialKeyCard)
+            {
+                if (Boss.activeInHierarchy == false)
+                {
+                    keyCardSprite.enabled = true;
+
+                    Collider2D playerCollider = Physics2D.OverlapCircle(transform.position, transform.localScale.x, whatIsPlayer);
+
+                    if (playerCollider && Input.GetKeyDown(KeyCode.F))
+                    {
+                        ui.KeyCardCollection();
+                        Destroy(this.gameObject);
+                    }
+                }
             }
         }
     }
