@@ -73,7 +73,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -885570739
-  m_SortingLayer: 8
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 1200553147, guid: 092e9e5c03db9d649a32e7610aee872e, type: 3}
   m_Color: {r: 0.20726234, g: 0.71932477, b: 0.7735849, a: 1}
@@ -101,6 +101,9 @@ MonoBehaviour:
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 128
+  SpecialKeyCard: 0
+  keyCardSprite: {fileID: 0}
+  Boss: {fileID: 0}
 --- !u!95 &6157647850002069176
 Animator:
   serializedVersion: 4
