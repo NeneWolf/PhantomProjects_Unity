@@ -6172,7 +6172,7 @@ GameObject:
   - component: {fileID: 189567240}
   - component: {fileID: 189567239}
   m_Layer: 0
-  m_Name: Trigger
+  m_Name: IntroTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6211,7 +6211,7 @@ MonoBehaviour:
     - Where am I?
     - "This place\u2026 I don\u2019t recognise it. What happened to me... and how
       did I get here?"
-    - "My head\u2026it hurts so much\u2026 I don't remember anything."
+    - "My head\u2026 it hurts so much\u2026 I don't remember anything."
     - (Strange noises can be heard in the distance, you spot a pistol on the ground
       and quickly grab it as your only means of protection)
     - What was that sound?
@@ -9693,6 +9693,8 @@ MonoBehaviour:
     sentences:
     - Press F to interact with doors.
     - Doors will remain shut until you fulfil the requirement.
+    - You can see the number of KEYCARDS you have collected in the top left of your
+      UI.
     - Looks like I'll need some kind of KEYCARD to open this door.
 --- !u!61 &621392762
 BoxCollider2D:
@@ -12374,6 +12376,22 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1724517080}
+    - target: {fileID: 3667223997447681928, guid: bdfd41d3a2df1ce4388c04a794dda989, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3667223997447681928, guid: bdfd41d3a2df1ce4388c04a794dda989, type: 3}
+      propertyPath: m_Color.b
+      value: 0.39215687
+      objectReference: {fileID: 0}
+    - target: {fileID: 3667223997447681928, guid: bdfd41d3a2df1ce4388c04a794dda989, type: 3}
+      propertyPath: m_Color.g
+      value: 0.39215687
+      objectReference: {fileID: 0}
+    - target: {fileID: 3667223997447681928, guid: bdfd41d3a2df1ce4388c04a794dda989, type: 3}
+      propertyPath: m_Color.r
+      value: 0.39215687
+      objectReference: {fileID: 0}
     - target: {fileID: 4592463774451269173, guid: bdfd41d3a2df1ce4388c04a794dda989, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -12477,6 +12495,64 @@ PrefabInstance:
     - target: {fileID: 4592463775148371838, guid: bdfd41d3a2df1ce4388c04a794dda989, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4834088317912251235, guid: bdfd41d3a2df1ce4388c04a794dda989, type: 3}
+      propertyPath: m_fontSize
+      value: 55
+      objectReference: {fileID: 0}
+    - target: {fileID: 4834088317912251235, guid: bdfd41d3a2df1ce4388c04a794dda989, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: e8d9da4b37f4399479d32d9014a653e9, type: 2}
+    - target: {fileID: 4834088317912251235, guid: bdfd41d3a2df1ce4388c04a794dda989, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 55
+      objectReference: {fileID: 0}
+    - target: {fileID: 4834088317912251235, guid: bdfd41d3a2df1ce4388c04a794dda989, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -1525620899203419544, guid: e8d9da4b37f4399479d32d9014a653e9, type: 2}
+    - target: {fileID: 6241883776204916972, guid: bdfd41d3a2df1ce4388c04a794dda989, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7110162678812371783, guid: bdfd41d3a2df1ce4388c04a794dda989, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f6d4b07bb4362844fa5281b1008ba67b, type: 3}
+    - target: {fileID: 7110162678812371783, guid: bdfd41d3a2df1ce4388c04a794dda989, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 2100000, guid: 7d7ccc8bc40d1df4e850a5e7888f977d, type: 2}
+    - target: {fileID: 8370531771032780429, guid: bdfd41d3a2df1ce4388c04a794dda989, type: 3}
+      propertyPath: m_text
+      value: 'Continue >>>
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8370531771032780429, guid: bdfd41d3a2df1ce4388c04a794dda989, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: e8d9da4b37f4399479d32d9014a653e9, type: 2}
+    - target: {fileID: 8370531771032780429, guid: bdfd41d3a2df1ce4388c04a794dda989, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -1525620899203419544, guid: e8d9da4b37f4399479d32d9014a653e9, type: 2}
+    - target: {fileID: 8660743891550497596, guid: bdfd41d3a2df1ce4388c04a794dda989, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8660743891550497596, guid: bdfd41d3a2df1ce4388c04a794dda989, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -150
+      objectReference: {fileID: 0}
+    - target: {fileID: 8660743891550497596, guid: bdfd41d3a2df1ce4388c04a794dda989, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8660743891550497596, guid: bdfd41d3a2df1ce4388c04a794dda989, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bdfd41d3a2df1ce4388c04a794dda989, type: 3}
@@ -19850,7 +19926,7 @@ GameObject:
   - component: {fileID: 1431554918}
   - component: {fileID: 1431554919}
   m_Layer: 0
-  m_Name: IntroTrigger
+  m_Name: ControlsInfoTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19914,6 +19990,7 @@ MonoBehaviour:
     sentences:
     - Use A and D to move Left and Right.
     - Press the SPACEBAR to jump.
+    - Press E to activate your shield.
     - Press LEFT SHIFT to slide.
 --- !u!1 &1431811567
 GameObject:
