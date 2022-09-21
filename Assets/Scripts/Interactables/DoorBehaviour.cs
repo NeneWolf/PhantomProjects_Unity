@@ -15,6 +15,8 @@ public class DoorBehaviour : MonoBehaviour
     GameObject savingManager;
 
     [SerializeField] Text keycardsTextDisplay;
+
+    [SerializeField] bool EndDoor = false;
     //[SerializeField] bool nextScene = false;
     //[SerializeField] bool previousScene = false;
 
@@ -29,19 +31,38 @@ public class DoorBehaviour : MonoBehaviour
 
     void Update()
     {
-        Collider2D playerCollider = Physics2D.OverlapBox(transform.position, transform.localScale, transform.rotation.x ,whatIsPlayer);
-
-        if (playerCollider && Input.GetKeyDown(KeyCode.F) && uiManager.GetComponent<UIManager>().currentKeycards == requiredNumberOfKeys)
+        if (EndDoor == false)
         {
-            uiManager.GetComponent<UIManager>().ResetKeyCards();
+            Collider2D playerCollider = Physics2D.OverlapBox(transform.position, transform.localScale, transform.rotation.x, whatIsPlayer);
 
-            if (gameManager.GetComponent<GameManager>().loadedSave == false)
-                gameManager.GetComponent<GameManager>().loadedSave = true;
+            if (playerCollider && Input.GetKeyDown(KeyCode.F) && uiManager.GetComponent<UIManager>().currentKeycards == requiredNumberOfKeys)
+            {
+                uiManager.GetComponent<UIManager>().ResetKeyCards();
 
-            DataPersistanceManager.instanceData.SaveGame();
-            
-            sceneManager.GetComponent<ScenesManager>().BringNextScene();
+                if (gameManager.GetComponent<GameManager>().loadedSave == false)
+                    gameManager.GetComponent<GameManager>().loadedSave = true;
+
+                DataPersistanceManager.instanceData.SaveGame();
+
+                sceneManager.GetComponent<ScenesManager>().BringNextScene();
+            }
+        }else if (EndDoor == true)
+        {
+            Collider2D playerCollider = Physics2D.OverlapBox(transform.position, transform.localScale, transform.rotation.x, whatIsPlayer);
+
+            if (playerCollider && Input.GetKeyDown(KeyCode.F) && uiManager.GetComponent<UIManager>().currentKeycards == requiredNumberOfKeys)
+            {
+                uiManager.GetComponent<UIManager>().ResetKeyCards();
+
+                if (gameManager.GetComponent<GameManager>().loadedSave == false)
+                    gameManager.GetComponent<GameManager>().loadedSave = true;
+
+                DataPersistanceManager.instanceData.SaveGame();
+
+                sceneManager.GetComponent<ScenesManager>().LoadScene(4);
+            }
         }
+
 
     }
 }

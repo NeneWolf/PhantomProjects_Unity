@@ -64,6 +64,7 @@ MonoBehaviour:
   m_noBlood: 0
   m_SpecialGun: 0
   m_maxSpeed: 6
+  doubleJumpActive: 1
   extraJumpsValue: 1
   coyoteTime: 0.2
   WeaponController: {fileID: 1723391536118613666}

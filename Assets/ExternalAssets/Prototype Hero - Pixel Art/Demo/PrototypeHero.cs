@@ -42,7 +42,7 @@ public class PrototypeHero : MonoBehaviour {
     public float                m_maxSpeed = 4.5f;
 
     //Double jump
-    [SerializeField] public bool doubleJumpActive { get; private set; } = false;                             // Whether or not the player can double jump
+    [SerializeField] public bool doubleJumpActive = false;                             // Whether or not the player can double jump
     [SerializeField] int extraJumpsValue;                                       // Number of extra jumps the player can peform whilst in the air
     [SerializeField] float coyoteTime = 0.2f;
     bool jump = false;
