@@ -1,0 +1,280 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7454030397214874800
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7454030397214874803}
+  m_Layer: 0
+  m_Name: StoryTriggers 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7454030397214874803
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7454030397214874800}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 4351386474100948199}
+  - {fileID: 4351386475611626846}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &7454030396572773126
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 7454030397214874803}
+    m_Modifications:
+    - target: {fileID: 4655022001062027364, guid: 4ac3c1f7dcb55f24e81f37b09b49fb68, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 4655022001062027364, guid: 4ac3c1f7dcb55f24e81f37b09b49fb68, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 1.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 6562083130229536341, guid: 4ac3c1f7dcb55f24e81f37b09b49fb68, type: 3}
+      propertyPath: m_Name
+      value: Note #2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6562083130229536344, guid: 4ac3c1f7dcb55f24e81f37b09b49fb68, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6562083130229536344, guid: 4ac3c1f7dcb55f24e81f37b09b49fb68, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 8.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6562083130229536344, guid: 4ac3c1f7dcb55f24e81f37b09b49fb68, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 51.83
+      objectReference: {fileID: 0}
+    - target: {fileID: 6562083130229536344, guid: 4ac3c1f7dcb55f24e81f37b09b49fb68, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.3781816
+      objectReference: {fileID: 0}
+    - target: {fileID: 6562083130229536344, guid: 4ac3c1f7dcb55f24e81f37b09b49fb68, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9817644
+      objectReference: {fileID: 0}
+    - target: {fileID: 6562083130229536344, guid: 4ac3c1f7dcb55f24e81f37b09b49fb68, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6562083130229536344, guid: 4ac3c1f7dcb55f24e81f37b09b49fb68, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6562083130229536344, guid: 4ac3c1f7dcb55f24e81f37b09b49fb68, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.190102
+      objectReference: {fileID: 0}
+    - target: {fileID: 6562083130229536344, guid: 4ac3c1f7dcb55f24e81f37b09b49fb68, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6562083130229536344, guid: 4ac3c1f7dcb55f24e81f37b09b49fb68, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6562083130229536344, guid: 4ac3c1f7dcb55f24e81f37b09b49fb68, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 21.917
+      objectReference: {fileID: 0}
+    - target: {fileID: 7428566922965382518, guid: 4ac3c1f7dcb55f24e81f37b09b49fb68, type: 3}
+      propertyPath: dialogueBox
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7428566922965382518, guid: 4ac3c1f7dcb55f24e81f37b09b49fb68, type: 3}
+      propertyPath: dialogue.sentences.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7428566922965382518, guid: 4ac3c1f7dcb55f24e81f37b09b49fb68, type: 3}
+      propertyPath: dialogue.sentences.Array.data[0]
+      value: 'Test Subject X154
+
+        Entry 2
+
+
+
+        The failed subjects that
+        were fully mutated maintained the ability they gained from the substance
+        but lost all sense of who they were. We were able to contain them after a
+        difficult struggle and many lives were lost. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 7428566922965382518, guid: 4ac3c1f7dcb55f24e81f37b09b49fb68, type: 3}
+      propertyPath: dialogue.sentences.Array.data[1]
+      value: 'Test Subject X154
+
+        Entry 2
+
+
+
+        It is clear how much
+        of a threat they are to us and so it is of the utmost importance we understand
+        how this substance works and how it affects the body. Further research and
+        testing will need to be carried out so we can guarantee more successful results
+        like subject x154.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7428566922965382518, guid: 4ac3c1f7dcb55f24e81f37b09b49fb68, type: 3}
+      propertyPath: dialogue.sentences.Array.data[2]
+      value: "Test Subject X154\r\nEntry 2\r\n\r\nResults from previous subjects
+        indicate that being injected with this substance increases the individual\u2019s
+        physical strength and stamina. Furthermore, each individual developed some
+        kind of unique ability but, there was no clear indication as to what ability
+        the individual would gain."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7428566922965382518, guid: 4ac3c1f7dcb55f24e81f37b09b49fb68, type: 3}
+      propertyPath: dialogue.sentences.Array.data[3]
+      value: "Test Subject X154\r\nEntry 2\r\n\r\nResults from previous subjects
+        indicate that being injected with this substance increases the individual\u2019s
+        physical strength and stamina. Furthermore, each individual developed some
+        kind of unique ability but, there was no clear indication as to what ability
+        the individual would gain."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7428566922965382518, guid: 4ac3c1f7dcb55f24e81f37b09b49fb68, type: 3}
+      propertyPath: dialogue.sentences.Array.data[4]
+      value: Press the RIGHT MOUSE BUTTON to activate your special ability.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7428566922965382518, guid: 4ac3c1f7dcb55f24e81f37b09b49fb68, type: 3}
+      propertyPath: dialogue.sentences.Array.data[5]
+      value: Press the RIGHT MOUSE BUTTON to activate your special ability.
+      objectReference: {fileID: 0}
+    - target: {fileID: 9202158010105573843, guid: 4ac3c1f7dcb55f24e81f37b09b49fb68, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4ac3c1f7dcb55f24e81f37b09b49fb68, type: 3}
+--- !u!4 &4351386475611626846 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6562083130229536344, guid: 4ac3c1f7dcb55f24e81f37b09b49fb68, type: 3}
+  m_PrefabInstance: {fileID: 7454030396572773126}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7454030398085122751
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 7454030397214874803}
+    m_Modifications:
+    - target: {fileID: 6562083130229536341, guid: 4ac3c1f7dcb55f24e81f37b09b49fb68, type: 3}
+      propertyPath: m_Name
+      value: Note #2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6562083130229536344, guid: 4ac3c1f7dcb55f24e81f37b09b49fb68, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6562083130229536344, guid: 4ac3c1f7dcb55f24e81f37b09b49fb68, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 64.314
+      objectReference: {fileID: 0}
+    - target: {fileID: 6562083130229536344, guid: 4ac3c1f7dcb55f24e81f37b09b49fb68, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 16.093
+      objectReference: {fileID: 0}
+    - target: {fileID: 6562083130229536344, guid: 4ac3c1f7dcb55f24e81f37b09b49fb68, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.3781816
+      objectReference: {fileID: 0}
+    - target: {fileID: 6562083130229536344, guid: 4ac3c1f7dcb55f24e81f37b09b49fb68, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9817644
+      objectReference: {fileID: 0}
+    - target: {fileID: 6562083130229536344, guid: 4ac3c1f7dcb55f24e81f37b09b49fb68, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6562083130229536344, guid: 4ac3c1f7dcb55f24e81f37b09b49fb68, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6562083130229536344, guid: 4ac3c1f7dcb55f24e81f37b09b49fb68, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.190102
+      objectReference: {fileID: 0}
+    - target: {fileID: 6562083130229536344, guid: 4ac3c1f7dcb55f24e81f37b09b49fb68, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6562083130229536344, guid: 4ac3c1f7dcb55f24e81f37b09b49fb68, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6562083130229536344, guid: 4ac3c1f7dcb55f24e81f37b09b49fb68, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 21.917
+      objectReference: {fileID: 0}
+    - target: {fileID: 7428566922965382518, guid: 4ac3c1f7dcb55f24e81f37b09b49fb68, type: 3}
+      propertyPath: dialogueBox
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7428566922965382518, guid: 4ac3c1f7dcb55f24e81f37b09b49fb68, type: 3}
+      propertyPath: dialogue.sentences.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7428566922965382518, guid: 4ac3c1f7dcb55f24e81f37b09b49fb68, type: 3}
+      propertyPath: dialogue.sentences.Array.data[0]
+      value: "Test Subject X154\r\nEntry 2\r\n\r\nIt\u2019s been 24 hours and preliminary
+        results show that the subject\u2019s body has completely accepted the substance.
+        There have been no signs of mutation whatsoever, this seems to be our first
+        successful subject. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 7428566922965382518, guid: 4ac3c1f7dcb55f24e81f37b09b49fb68, type: 3}
+      propertyPath: dialogue.sentences.Array.data[1]
+      value: "Test Subject X154\r\nEntry 2\r\n\r\nWe currently have no idea of the
+        individual\u2019s capabilities until they regain consciousness however, we
+        can conclude from the previous incident that occured, the substance has enhanced
+        the subject significantly.\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7428566922965382518, guid: 4ac3c1f7dcb55f24e81f37b09b49fb68, type: 3}
+      propertyPath: dialogue.sentences.Array.data[2]
+      value: "Test Subject X154\r\nEntry 2\r\n\r\nResults from previous subjects
+        indicate that being injected with this substance increases the individual\u2019s
+        physical strength and stamina. Furthermore, each individual developed some
+        kind of unique ability but, there was no clear indication as to what ability
+        the individual would gain."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7428566922965382518, guid: 4ac3c1f7dcb55f24e81f37b09b49fb68, type: 3}
+      propertyPath: dialogue.sentences.Array.data[3]
+      value: "Test Subject X154\r\nEntry 2\r\n\r\nResults from previous subjects
+        indicate that being injected with this substance increases the individual\u2019s
+        physical strength and stamina. Furthermore, each individual developed some
+        kind of unique ability but, there was no clear indication as to what ability
+        the individual would gain."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7428566922965382518, guid: 4ac3c1f7dcb55f24e81f37b09b49fb68, type: 3}
+      propertyPath: dialogue.sentences.Array.data[4]
+      value: Press the RIGHT MOUSE BUTTON to activate your special ability.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7428566922965382518, guid: 4ac3c1f7dcb55f24e81f37b09b49fb68, type: 3}
+      propertyPath: dialogue.sentences.Array.data[5]
+      value: Press the RIGHT MOUSE BUTTON to activate your special ability.
+      objectReference: {fileID: 0}
+    - target: {fileID: 9202158010105573843, guid: 4ac3c1f7dcb55f24e81f37b09b49fb68, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4ac3c1f7dcb55f24e81f37b09b49fb68, type: 3}
+--- !u!4 &4351386474100948199 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6562083130229536344, guid: 4ac3c1f7dcb55f24e81f37b09b49fb68, type: 3}
+  m_PrefabInstance: {fileID: 7454030398085122751}
+  m_PrefabAsset: {fileID: 0}
