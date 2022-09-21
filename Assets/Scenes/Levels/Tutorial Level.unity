@@ -6068,7 +6068,7 @@ Transform:
   m_Children:
   - {fileID: 1431554917}
   - {fileID: 189567238}
-  - {fileID: 869092964}
+  - {fileID: 6562083129898006587}
   - {fileID: 1129718535}
   - {fileID: 520638958}
   - {fileID: 595412378}
@@ -11789,153 +11789,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1001 &869092963
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 170657186}
-    m_Modifications:
-    - target: {fileID: 6562083130229536341, guid: 4ac3c1f7dcb55f24e81f37b09b49fb68, type: 3}
-      propertyPath: m_Name
-      value: Note #1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6562083130229536344, guid: 4ac3c1f7dcb55f24e81f37b09b49fb68, type: 3}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6562083130229536344, guid: 4ac3c1f7dcb55f24e81f37b09b49fb68, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -6.802
-      objectReference: {fileID: 0}
-    - target: {fileID: 6562083130229536344, guid: 4ac3c1f7dcb55f24e81f37b09b49fb68, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.976
-      objectReference: {fileID: 0}
-    - target: {fileID: 6562083130229536344, guid: 4ac3c1f7dcb55f24e81f37b09b49fb68, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6562083130229536344, guid: 4ac3c1f7dcb55f24e81f37b09b49fb68, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.9817644
-      objectReference: {fileID: 0}
-    - target: {fileID: 6562083130229536344, guid: 4ac3c1f7dcb55f24e81f37b09b49fb68, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6562083130229536344, guid: 4ac3c1f7dcb55f24e81f37b09b49fb68, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6562083130229536344, guid: 4ac3c1f7dcb55f24e81f37b09b49fb68, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.190102
-      objectReference: {fileID: 0}
-    - target: {fileID: 6562083130229536344, guid: 4ac3c1f7dcb55f24e81f37b09b49fb68, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6562083130229536344, guid: 4ac3c1f7dcb55f24e81f37b09b49fb68, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6562083130229536344, guid: 4ac3c1f7dcb55f24e81f37b09b49fb68, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 21.917
-      objectReference: {fileID: 0}
-    - target: {fileID: 7428566922965382518, guid: 4ac3c1f7dcb55f24e81f37b09b49fb68, type: 3}
-      propertyPath: dialogueBox
-      value: 
-      objectReference: {fileID: 706970053}
-    - target: {fileID: 7428566922965382518, guid: 4ac3c1f7dcb55f24e81f37b09b49fb68, type: 3}
-      propertyPath: dialogue.sentences.Array.size
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 7428566922965382518, guid: 4ac3c1f7dcb55f24e81f37b09b49fb68, type: 3}
-      propertyPath: dialogue.sentences.Array.data[0]
-      value: 'Test Subject X154
-
-        Entry 1
-
-
-        Unlike the other subjects,
-        injection of the substance into subject X154 has proven to be successful.
-        Vitals appear to be stable and there have been no signs of mutation.'
-      objectReference: {fileID: 0}
-    - target: {fileID: 7428566922965382518, guid: 4ac3c1f7dcb55f24e81f37b09b49fb68, type: 3}
-      propertyPath: dialogue.sentences.Array.data[1]
-      value: 'Test Subject X154
-
-        Entry 1
-
-
-        Extra caution is advised
-        when handling subject X154. During testing, another scientist attempted to
-        grab the subject''s arm and a powerful laser beam was shot out of the subject''s
-        hand resulting in two casualties.'
-      objectReference: {fileID: 0}
-    - target: {fileID: 7428566922965382518, guid: 4ac3c1f7dcb55f24e81f37b09b49fb68, type: 3}
-      propertyPath: dialogue.sentences.Array.data[2]
-      value: 'Test Subject X154
-
-        Entry 1
-
-
-        We conclude that this
-        is the unique ability the substance has provided to this individual. We have
-        decided to name this ability: Unstable charge, as we currently have no control
-        over its devastating power.'
-      objectReference: {fileID: 0}
-    - target: {fileID: 7428566922965382518, guid: 4ac3c1f7dcb55f24e81f37b09b49fb68, type: 3}
-      propertyPath: dialogue.sentences.Array.data[3]
-      value: 'Test Subject X154
-
-        Entry 1
-
-
-        We will continue to monitor
-        subject X154 and further testing will commence once the substance has fully
-        spread throughout the subject''s body.'
-      objectReference: {fileID: 0}
-    - target: {fileID: 7428566922965382518, guid: 4ac3c1f7dcb55f24e81f37b09b49fb68, type: 3}
-      propertyPath: dialogue.sentences.Array.data[4]
-      value: Are these notes about me? Looks like I was being experimented on...
-        A powerful laser beam? Unstable charge... Am I really able to do something
-        like that? Guess it wouldn't hurt to try out.
-      objectReference: {fileID: 0}
-    - target: {fileID: 7428566922965382518, guid: 4ac3c1f7dcb55f24e81f37b09b49fb68, type: 3}
-      propertyPath: dialogue.sentences.Array.data[5]
-      value: I don't know why I was chosen for this, but trying to sit here and figure
-        it out won't do me any good if I can't remember anything.
-      objectReference: {fileID: 0}
-    - target: {fileID: 7428566922965382518, guid: 4ac3c1f7dcb55f24e81f37b09b49fb68, type: 3}
-      propertyPath: dialogue.sentences.Array.data[6]
-      value: 'Press the right mouse button to use your special ability: Unstable
-        Charge.'
-      objectReference: {fileID: 0}
-    - target: {fileID: 7428566922965382518, guid: 4ac3c1f7dcb55f24e81f37b09b49fb68, type: 3}
-      propertyPath: dialogue.sentences.Array.data[7]
-      value: 'Test Subject X154
-
-        Entry 1
-
-
-        Unlike the other subjects,
-        injection of the substance into subject X154 has proven to be successful.
-        Vitals appear to be stable and there have been no signs of mutation.'
-      objectReference: {fileID: 0}
-    - target: {fileID: 9202158010105573843, guid: 4ac3c1f7dcb55f24e81f37b09b49fb68, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 4ac3c1f7dcb55f24e81f37b09b49fb68, type: 3}
---- !u!4 &869092964 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6562083130229536344, guid: 4ac3c1f7dcb55f24e81f37b09b49fb68, type: 3}
-  m_PrefabInstance: {fileID: 869092963}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &869831924
 GameObject:
   m_ObjectHideFlags: 0
@@ -67348,6 +67201,72 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &1293737621774855128
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 170657186}
+    m_Modifications:
+    - target: {fileID: 5396847640825926627, guid: 44cae3f0fcb8fd04ba9d6b5fe25ffb7e, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5396847640825926627, guid: 44cae3f0fcb8fd04ba9d6b5fe25ffb7e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -6.802
+      objectReference: {fileID: 0}
+    - target: {fileID: 5396847640825926627, guid: 44cae3f0fcb8fd04ba9d6b5fe25ffb7e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.976
+      objectReference: {fileID: 0}
+    - target: {fileID: 5396847640825926627, guid: 44cae3f0fcb8fd04ba9d6b5fe25ffb7e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5396847640825926627, guid: 44cae3f0fcb8fd04ba9d6b5fe25ffb7e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9817644
+      objectReference: {fileID: 0}
+    - target: {fileID: 5396847640825926627, guid: 44cae3f0fcb8fd04ba9d6b5fe25ffb7e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5396847640825926627, guid: 44cae3f0fcb8fd04ba9d6b5fe25ffb7e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5396847640825926627, guid: 44cae3f0fcb8fd04ba9d6b5fe25ffb7e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.190102
+      objectReference: {fileID: 0}
+    - target: {fileID: 5396847640825926627, guid: 44cae3f0fcb8fd04ba9d6b5fe25ffb7e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5396847640825926627, guid: 44cae3f0fcb8fd04ba9d6b5fe25ffb7e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5396847640825926627, guid: 44cae3f0fcb8fd04ba9d6b5fe25ffb7e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 21.917
+      objectReference: {fileID: 0}
+    - target: {fileID: 5396847640825926638, guid: 44cae3f0fcb8fd04ba9d6b5fe25ffb7e, type: 3}
+      propertyPath: m_Name
+      value: Note #1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8566925941499941069, guid: 44cae3f0fcb8fd04ba9d6b5fe25ffb7e, type: 3}
+      propertyPath: dialogueBox
+      value: 
+      objectReference: {fileID: 706970053}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 44cae3f0fcb8fd04ba9d6b5fe25ffb7e, type: 3}
+--- !u!4 &6562083129898006587 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5396847640825926627, guid: 44cae3f0fcb8fd04ba9d6b5fe25ffb7e, type: 3}
+  m_PrefabInstance: {fileID: 1293737621774855128}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7475328517328134734
 PrefabInstance:
   m_ObjectHideFlags: 0
