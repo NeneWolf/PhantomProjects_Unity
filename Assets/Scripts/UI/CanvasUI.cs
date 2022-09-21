@@ -43,6 +43,8 @@ public class CanvasUI : MonoBehaviour
     [Space]
     [SerializeField] GameObject pauseMenu;
 
+    [SerializeField] GameObject storyMenu;
+
     private void Update()
     {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -59,7 +61,7 @@ public class CanvasUI : MonoBehaviour
         if(boss != null)
             BossUI();
 
-        if (Input.GetKeyDown(KeyCode.P) && upgradePanel.active == false)
+        if (Input.GetKeyDown(KeyCode.P) && upgradePanel.active == false && storyMenu.active == false)
         {
             if (!isPaused)
             {
