@@ -192,6 +192,7 @@ GameObject:
   - component: {fileID: 7475328517001802993}
   - component: {fileID: 7475328517001802894}
   - component: {fileID: 7475328517001802895}
+  - component: {fileID: 3080630893348701133}
   m_Layer: 0
   m_Name: Door
   m_TagString: Untagged
@@ -284,3 +285,24 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   keycardsTextDisplay: {fileID: 6714255089071264371}
+  EndDoor: 0
+--- !u!95 &3080630893348701133
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7475328517001802992}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e06616dfb396c344ca9cd7c5d0b97640, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

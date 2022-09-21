@@ -6,12 +6,14 @@ Jatinderbir Dole
 Level Designer
 Yoanna Krasimirova Gramatikova
 
-Designer, Animator & Sound Engineer 
+Lead Artist & Sound Engineer 
 Qin Huang
 
-Leader Programmer & Leader Tester
+Lead Programmer & Lead Tester
 Ines Mateus Lobo 
 
+Project Assistant
+Spencer
 
 
 !Unity Assets

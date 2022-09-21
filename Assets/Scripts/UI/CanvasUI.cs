@@ -59,7 +59,7 @@ public class CanvasUI : MonoBehaviour
         if(boss != null)
             BossUI();
 
-        if (Input.GetKeyDown(KeyCode.P) && upgradePanel.activeInHierarchy == false)
+        if (Input.GetKeyDown(KeyCode.P) && upgradePanel.active == false)
         {
             if (!isPaused)
             {

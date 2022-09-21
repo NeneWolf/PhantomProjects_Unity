@@ -8,6 +8,7 @@ public class DoorBehaviour : MonoBehaviour
 {
     [SerializeField] int requiredNumberOfKeys;
     [SerializeField] LayerMask whatIsPlayer;
+    Animator doorAnim;
 
     GameObject sceneManager;
     GameObject gameManager;
@@ -25,6 +26,7 @@ public class DoorBehaviour : MonoBehaviour
         sceneManager = GameObject.Find("SceneManager");
         gameManager = GameObject.Find("GameManager");
         uiManager = GameObject.Find("UIManager");
+        doorAnim = GetComponent<Animator>();
 
         keycardsTextDisplay.text = requiredNumberOfKeys.ToString();
     }
@@ -63,6 +65,9 @@ public class DoorBehaviour : MonoBehaviour
             }
         }
 
-
+        if(uiManager.GetComponent<UIManager>().currentKeycards == requiredNumberOfKeys)
+        {
+            doorAnim.SetBool("Open", true);
+        }
     }
 }
