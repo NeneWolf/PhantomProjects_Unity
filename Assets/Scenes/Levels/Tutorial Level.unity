@@ -66899,12 +66899,11 @@ PrefabInstance:
 
         Entry 1
 
-        
 
-        Unlike the
-        other subjects, injection of the substance into subject X154 has proven to
-        be successful. Vitals appear to be stable and there have been no signs of
-        mutation.'
+
+        Unlike the other subjects,
+        injection of the substance into subject X154 has proven to be successful.
+        Vitals appear to be stable and there have been no signs of mutation.'
       objectReference: {fileID: 0}
     - target: {fileID: 1129965057030473517, guid: f54c84b0d1db401498a731162a1c8776, type: 3}
       propertyPath: dialogue.sentences.Array.data[1]
@@ -66912,12 +66911,12 @@ PrefabInstance:
 
         Entry 1
 
-        
 
-        Extra caution
-        is advised when handling subject X154. During testing, another scientist
-        attempted to grab the subject''s arm and a powerful laser beam was shot out
-        of the subject''s hand resulting in two casualties.'
+
+        Extra caution is advised
+        when handling subject X154. During testing, another scientist attempted to
+        grab the subject''s arm and a powerful laser beam was shot out of the subject''s
+        hand resulting in two casualties.'
       objectReference: {fileID: 0}
     - target: {fileID: 1129965057030473517, guid: f54c84b0d1db401498a731162a1c8776, type: 3}
       propertyPath: dialogue.sentences.Array.data[2]
@@ -66925,12 +66924,12 @@ PrefabInstance:
 
         Entry 1
 
-        
 
-        We conclude
-        that this is the unique ability the substance has provided to this individual.
-        We have decided to name this ability: Unstable charge, as we currently have
-        no control over its devastating power.'
+
+        We conclude that this
+        is the unique ability the substance has provided to this individual. We have
+        decided to name this ability: Unstable charge, as we currently have no control
+        over its devastating power.'
       objectReference: {fileID: 0}
     - target: {fileID: 1129965057030473517, guid: f54c84b0d1db401498a731162a1c8776, type: 3}
       propertyPath: dialogue.sentences.Array.data[3]
@@ -66938,11 +66937,11 @@ PrefabInstance:
 
         Entry 1
 
-        
 
-        We will continue
-        to monitor subject X154 and further testing will commence once the substance
-        has fully spread throughout the subject''s body.'
+
+        We will continue to monitor
+        subject X154 and further testing will commence once the substance has fully
+        spread throughout the subject''s body.'
       objectReference: {fileID: 0}
     - target: {fileID: 1129965057030473517, guid: f54c84b0d1db401498a731162a1c8776, type: 3}
       propertyPath: dialogue.sentences.Array.data[4]
