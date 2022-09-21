@@ -42,7 +42,7 @@ namespace PhantomProjects.Managers
                 fader = findChildFromParent("Canvas", "Fader");
             }
 
-            if (fader.GetComponent<Fader>().isLoading)
+            if (fader.gameObject.GetComponent<Fader>().isLoading)
             {
                 m_audioManager.GetComponent<AudioManager>().StopAllSounds();
             }

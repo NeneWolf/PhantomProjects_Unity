@@ -6890,7 +6890,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 652f7165b7c30ab46af6c4aad90a639b, type: 2}
-    m_FontSize: 60
+    m_FontSize: 44
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 6
@@ -8209,6 +8209,10 @@ PrefabInstance:
     - target: {fileID: 8301565689883148986, guid: 52545e849aa76764891a07d0342978f4, type: 3}
       propertyPath: m_Name
       value: Fader
+      objectReference: {fileID: 0}
+    - target: {fileID: 8301565689883148986, guid: 52545e849aa76764891a07d0342978f4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52545e849aa76764891a07d0342978f4, type: 3}

@@ -11758,7 +11758,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22740d0ce926ef94ca3034d06412f56a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueBox: {fileID: 1914356263}
+  dialogueBox: {fileID: 1062892165}
   dialogue:
     sentences:
     - Press F to interact with doors.
@@ -11779,7 +11779,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22740d0ce926ef94ca3034d06412f56a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueBox: {fileID: 1914356263}
+  dialogueBox: {fileID: 1062892165}
   dialogue:
     sentences:
     - Press F to interact with objects found on each level.
@@ -11795,7 +11795,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22740d0ce926ef94ca3034d06412f56a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueBox: {fileID: 1914356263}
+  dialogueBox: {fileID: 1062892165}
   dialogue:
     sentences:
     - A KEYCARD, this looks like it could be helpful, better hold on to it.
@@ -12005,6 +12005,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2765511913538290260, guid: bdfd41d3a2df1ce4388c04a794dda989, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1914356263}
     - target: {fileID: 4592463774451269173, guid: bdfd41d3a2df1ce4388c04a794dda989, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -12108,6 +12112,10 @@ PrefabInstance:
     - target: {fileID: 4592463775148371838, guid: bdfd41d3a2df1ce4388c04a794dda989, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5516526338746781994, guid: bdfd41d3a2df1ce4388c04a794dda989, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bdfd41d3a2df1ce4388c04a794dda989, type: 3}
@@ -63233,7 +63241,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22740d0ce926ef94ca3034d06412f56a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueBox: {fileID: 1914356263}
+  dialogueBox: {fileID: 1062892165}
   dialogue:
     sentences:
     - Use A and D to move Left and Right.
@@ -63257,7 +63265,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22740d0ce926ef94ca3034d06412f56a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueBox: {fileID: 1914356263}
+  dialogueBox: {fileID: 1062892165}
   dialogue:
     sentences:
     - Where am I?
@@ -63288,7 +63296,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22740d0ce926ef94ca3034d06412f56a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueBox: {fileID: 1914356263}
+  dialogueBox: {fileID: 1062892165}
   dialogue:
     sentences:
     - "That sound again\u2026 What is that thing ahead of me\u2026"
@@ -64230,11 +64238,17 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 1914356264, guid: 9742e2a2b1a45cc4b804119b3813bbff, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 9742e2a2b1a45cc4b804119b3813bbff, type: 3}
---- !u!1 &1914356263 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8145182091929514029, guid: 9742e2a2b1a45cc4b804119b3813bbff, type: 3}
+--- !u!114 &1914356263 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3197763343607804956, guid: 9742e2a2b1a45cc4b804119b3813bbff, type: 3}
   m_PrefabInstance: {fileID: 1914356262}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 888b6b44d230dee4cba722c57a3fd3e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1924509943
 GameObject:
   m_ObjectHideFlags: 0
@@ -66912,7 +66926,6 @@ PrefabInstance:
         Entry 1
 
 
-
         Extra caution is advised
         when handling subject X154. During testing, another scientist attempted to
         grab the subject''s arm and a powerful laser beam was shot out of the subject''s
@@ -66925,7 +66938,6 @@ PrefabInstance:
         Entry 1
 
 
-
         We conclude that this
         is the unique ability the substance has provided to this individual. We have
         decided to name this ability: Unstable charge, as we currently have no control
@@ -66936,7 +66948,6 @@ PrefabInstance:
       value: 'Test Subject X154
 
         Entry 1
-
 
 
         We will continue to monitor

@@ -61,7 +61,7 @@ public class CanvasUI : MonoBehaviour
         if(boss != null)
             BossUI();
 
-        if (Input.GetKeyDown(KeyCode.P) && upgradePanel.active == false && storyMenu.active == false)
+        if ((Input.GetKeyDown(KeyCode.P) ||Input.GetKeyDown(KeyCode.Escape)) && upgradePanel.active == false && storyMenu.active == false)
         {
             if (!isPaused)
             {
