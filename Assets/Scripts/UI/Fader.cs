@@ -44,7 +44,7 @@ public class Fader : MonoBehaviour
             Time.timeScale = 0f;
             Loading.SetActive(true);
             isLoading = true;
-            m_audioManager.GetComponent<AudioManager>().StopAllSounds();
+            m_audioManager.gameObject.GetComponent<AudioManager>().StopAllSounds();
             yield return new WaitForSecondsRealtime(5f);
             
             Time.timeScale = 1f;
