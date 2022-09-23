@@ -10,11 +10,11 @@ public class UnstableChargeLaser : MonoBehaviour
     [Space]
     [SerializeField] float damage = 10f;
 
-    Collider2D damageHit;
-
     [SerializeField] GameObject laser;
     [SerializeField] LayerMask whatIsEnemy;
 
+    [SerializeField] BoxCollider2D boxCollider;
+    
     private void Awake()
     {
         upgradeManager = GameObject.FindObjectOfType<UpgradeManager>().gameObject;
@@ -23,22 +23,20 @@ public class UnstableChargeLaser : MonoBehaviour
     
     private void Update()
     {
-        damageHit = Physics2D.OverlapBox(this.transform.position, new Vector2(5f, 0.5f), whatIsEnemy);
+        Collider2D damageHit = Physics2D.OverlapBox(transform.position, boxCollider.bounds.size, transform.position.x, whatIsEnemy);
 
         if (damageHit)
         {
-            if (damageHit.tag == "Enemy")
+            if (damageHit.gameObject.tag == "Enemy")
             {
-                //print("Hit Enemy");
                 damageHit.gameObject.GetComponentInParent<Entity>().Damage(damage);
                 StartCoroutine(wait());
             }
-            else if (damageHit.tag == "BMinion")
+            else if (damageHit.gameObject.tag == "BMinion")
             {
                 damageHit.gameObject.GetComponentInParent<MinionsControls>().TakeMinionDamage(damageHit.gameObject.name, damage);
                 StartCoroutine(wait());
             }
-               
         }
 
     }
@@ -55,13 +53,13 @@ public class UnstableChargeLaser : MonoBehaviour
 
     IEnumerator wait()
     {
-        yield return new WaitForSeconds(0.02f);
+        yield return new WaitForSeconds(0.1f);
         laser.SetActive(false);
     }
     
     private void OnDrawGizmos()
     {
-        Gizmos.DrawWireCube(this.transform.position, new Vector2(5f, 0.5f));
+        Gizmos.DrawWireCube(transform.position, boxCollider.bounds.size);
     }
 
 }
