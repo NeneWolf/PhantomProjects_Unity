@@ -45,6 +45,12 @@ public class CanvasUI : MonoBehaviour
 
     [SerializeField] GameObject storyMenu;
 
+    UIManager uiManager;
+
+    private void Start()
+    {
+        uiManager = GameObject.Find("UIManager").GetComponent<UIManager>();
+    }
     private void Update()
     {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -61,7 +67,7 @@ public class CanvasUI : MonoBehaviour
         if(boss != null)
             BossUI();
 
-        if ((Input.GetKeyDown(KeyCode.P) ||Input.GetKeyDown(KeyCode.Escape)) && upgradePanel.active == false && storyMenu.active == false)
+        if (Input.GetKeyDown(KeyCode.P) && upgradePanel.active == false && storyMenu.active == false)
         {
             if (!isPaused)
             {
@@ -86,10 +92,9 @@ public class CanvasUI : MonoBehaviour
 
     public void ReturnToMainMenu()
     {
+        uiManager.ResetKeyCards();
         pauseMenu.SetActive(false);
         Time.timeScale = 1f;
-        //DataPersistanceManager.instanceData.SaveGame();
-        //Destroy(GameObject.FindGameObjectWithTag("Player"));
         GameObject.FindObjectOfType<ScenesManager>().gameObject.GetComponent<ScenesManager>().BringNextScene("MainMenu");
     }
 

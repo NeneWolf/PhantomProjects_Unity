@@ -84,8 +84,6 @@ namespace PhantomProjects.Managers
             {
                 Destroy(player);
             }
-            
-            //print(inStartLevel);
         }
 
         public void LoadData(GameData data)
@@ -108,8 +106,6 @@ namespace PhantomProjects.Managers
 
             data.characterSelected = this.charactersIndex;
             data.modeSelected = difficultyManager.difficultyLevel;
-            //data.modeSelected = gameDifficulty;
-            
 
             if (player != null)
             {
@@ -121,8 +117,8 @@ namespace PhantomProjects.Managers
                 data.doubleJump = player.GetComponent<PrototypeHero>().doubleJumpActive;
             }
 
-            if (inStartLevel && difficultyManager.difficultyLevel != 2)
-                data.currentLevelIndex = currentSceneIndex +1;
+            if (inStartLevel)
+                data.currentLevelIndex = currentSceneIndex + 1;
             else
                 data.currentLevelIndex = 1;
 
