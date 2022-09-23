@@ -37,11 +37,13 @@ public class PrototypeHeroAnimEvents : MonoBehaviour
 
     void AE_setPositionToClimbPosition()
     {
+        m_player.ResetDodging();
         m_player.SetPositionToClimbPosition();
     }
 
     void AE_runStop()
     {
+        m_player.ResetDodging();
         m_audioManager.PlaySound("RunStop");
         float dustXOffset = 0.6f;
         float dustYOffset = 0.078125f;
@@ -50,6 +52,7 @@ public class PrototypeHeroAnimEvents : MonoBehaviour
 
     void AE_footstep()
     {
+        m_player.ResetDodging();
         m_audioManager.PlaySound("Footstep");
     }
 
@@ -71,6 +74,7 @@ public class PrototypeHeroAnimEvents : MonoBehaviour
 
     void AE_Landing()
     {
+        m_player.ResetDodging();
         m_audioManager.PlaySound("Landing");
         float dustYOffset = 0.078125f;
         m_player.SpawnDustEffect(m_LandingDust, 0.0f, dustYOffset);
@@ -78,11 +82,13 @@ public class PrototypeHeroAnimEvents : MonoBehaviour
 
     void AE_Throw()
     {
+        m_player.ResetDodging();
         m_audioManager.PlaySound("Jump");
     }
 
     void AE_Parry()
     {
+        m_player.ResetDodging();
         m_audioManager.PlaySound("Parry");
         float xOffset = 0.1875f;
         float yOffset = 0.25f;
@@ -92,16 +98,19 @@ public class PrototypeHeroAnimEvents : MonoBehaviour
 
     void AE_ParryStance()
     {
+        m_player.ResetDodging();
         m_audioManager.PlaySound("DrawSword");
     }
 
     void AE_AttackAirSlam()
     {
+        m_player.ResetDodging();
         m_audioManager.PlaySound("DrawSword");
     }
 
     void AE_AttackAirLanding()
     {
+        m_player.ResetDodging();
         m_audioManager.PlaySound("AirSlamLanding");
         float dustYOffset = 0.078125f;
         m_player.SpawnDustEffect(m_AirSlamDust, 0.0f, dustYOffset);
@@ -110,11 +119,13 @@ public class PrototypeHeroAnimEvents : MonoBehaviour
 
     void AE_Hurt()
     {
+        m_player.ResetDodging();
         m_audioManager.PlaySound("Hurt");
     }
 
     void AE_Death()
     {
+
         m_audioManager.PlaySound("Death");
     }
 
@@ -140,7 +151,8 @@ public class PrototypeHeroAnimEvents : MonoBehaviour
     void AE_WallSlide()
     {
         //m_audioManager.GetComponent<AudioSource>().loop = true;
-        if(!m_audioManager.IsPlaying("WallSlide")) 
+        m_player.ResetDodging();
+        if (!m_audioManager.IsPlaying("WallSlide")) 
             m_audioManager.PlaySound("WallSlide");
         float dustXOffset = 0.25f;
         float dustYOffset = 0.25f;

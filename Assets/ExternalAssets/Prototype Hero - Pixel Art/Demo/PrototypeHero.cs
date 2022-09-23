@@ -192,7 +192,7 @@ public class PrototypeHero : MonoBehaviour {
 
 
 
-            print(m_dodging);
+            //print(m_dodging);
         }
     }
 
