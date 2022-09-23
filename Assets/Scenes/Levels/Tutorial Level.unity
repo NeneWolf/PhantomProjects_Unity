@@ -66913,11 +66913,12 @@ PrefabInstance:
 
         Entry 1
 
+        
 
-
-        Unlike the other subjects,
-        injection of the substance into subject X154 has proven to be successful.
-        Vitals appear to be stable and there have been no signs of mutation.'
+        Unlike the
+        other subjects, injection of the substance into subject X154 has proven to
+        be successful. Vitals appear to be stable and there have been no signs of
+        mutation.'
       objectReference: {fileID: 0}
     - target: {fileID: 1129965057030473517, guid: f54c84b0d1db401498a731162a1c8776, type: 3}
       propertyPath: dialogue.sentences.Array.data[1]
