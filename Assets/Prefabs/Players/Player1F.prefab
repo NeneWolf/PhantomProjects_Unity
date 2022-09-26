@@ -201,7 +201,7 @@ MonoBehaviour:
   firePoint: {fileID: 1723391537550653391}
   weaponProjectilePrefab: {fileID: 8456512587707761462, guid: 6c082e28f9cc8e34da958aa29036cf95, type: 3}
   laser: {fileID: 1723391536767970617}
-  laserDuration: 1
+  laserDuration: 0.5
 --- !u!1 &1723391535780523586
 GameObject:
   m_ObjectHideFlags: 0
@@ -1091,7 +1091,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1723391537550653388}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.522, y: 0.1, z: 0}
+  m_LocalPosition: {x: -0.84, y: -0.62, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

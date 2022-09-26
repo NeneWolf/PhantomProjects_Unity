@@ -438,7 +438,7 @@ public class PrototypeHero : MonoBehaviour {
     
     public void ResetSpeed()
     {
-        m_runSpeed = 4.5f;
+        m_runSpeed = 6f;
     }
 
     public void DoubleJump(bool jumpD)

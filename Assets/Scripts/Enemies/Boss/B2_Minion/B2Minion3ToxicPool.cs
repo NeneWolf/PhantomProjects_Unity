@@ -7,6 +7,7 @@ public class B2Minion3ToxicPool : MonoBehaviour
 {
     [SerializeField] float reduceVelocity;
     [SerializeField] LayerMask whatIsPlayer;
+    [SerializeField] LayerMask whatIsGround;
     [SerializeField] float cooldownToDisable;
     GameObject target;
     bool hasSlowdownPlayer = false;
@@ -18,29 +19,23 @@ public class B2Minion3ToxicPool : MonoBehaviour
 
     void Update()
     {
+        target = GameObject.FindGameObjectWithTag("Player");
+        
         Collider2D damageHit = Physics2D.OverlapBox(transform.position, transform.localScale, 0f,whatIsPlayer);
-
+        Collider2D groundHit = Physics2D.OverlapBox(transform.position, transform.localScale, 0f, whatIsGround);
+        
         if (damageHit && !hasSlowdownPlayer)
         {
             hasSlowdownPlayer = true;
-            target.GetComponent<PrototypeHero>().ReduceSpeed(reduceVelocity);
+            target.gameObject.GetComponent<PrototypeHero>().ReduceSpeed(reduceVelocity);
             StartCoroutine(ReduceTimer());
         }
-        else
-        {
-            StartCoroutine(Destroy());
-        }
-    }
-    IEnumerator Destroy()
-    {
-        yield return new WaitForSeconds(cooldownToDisable);
-        Destroy(this.gameObject);
     }
 
     IEnumerator ReduceTimer()
     {
         yield return new WaitForSeconds(cooldownToDisable);
-        target.GetComponent<PlayerMovement>().ResetSpeed();
+        target.gameObject.GetComponent<PrototypeHero>().ResetSpeed();
         Destroy(this.gameObject);
     }
 }
