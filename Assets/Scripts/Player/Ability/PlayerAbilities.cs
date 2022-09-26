@@ -11,12 +11,16 @@ public class PlayerAbilities : MonoBehaviour
     [Header("Ability 1: Shield")]
     [Space]
     [SerializeField] GameObject shield;                                     // Get shield sprite
-    [SerializeField] float shieldDuration = 5.5f;                                            // Set the duration for the shield (how long it will stay up)
-    [SerializeField] float shieldCooldown = 20.5f;                           // Set shield cooldown (how long before the shield is available to use again)
-    float shieldDurationCounter;                                            // Variable to hold timer for shield duration
-    float shieldCooldownCounter;                                            // Variable to hold timer for shield cooldown
-    bool shieldReady = true;                                                // Check to see if the shield is ready to be used
+    [SerializeField] float shieldDuration = 5.5f;                           // Set the duration for the shield (how long it will stay up)
+    [SerializeField] float shieldCooldown = 20.5f;                          // Set shield cooldown (how long before the shield is available to use again)
+    public float shieldDurationCounter { get; private set; }                // Variable to hold timer for shield duration
+    public float shieldCooldownCounter { get; private set; }                // Variable to hold timer for shield cooldown                                         // Check to see if the shield is ready to be used
     public bool shieldActive { get; private set; } = false;                 // Check to see if the shield is currently active
+
+    public bool shieldOnCooldown { get; private set; } = false;
+
+    bool shieldReady = true;
+    
 
     [Header("Ability 2: Unstable Charge Laser")]
     [Space]
@@ -36,7 +40,6 @@ public class PlayerAbilities : MonoBehaviour
         abilityLaser = false;
         player = GameObject.FindGameObjectWithTag("Player").gameObject;
         gameManager = GameObject.FindObjectOfType<GameManager>().gameObject;
-
     }
 
     private void Start()
@@ -82,12 +85,16 @@ public class PlayerAbilities : MonoBehaviour
             shieldReady = false;                                            // Set shield ready to false to prevent the player from constantly shielding
             shieldActive = true;                                            // Set shield active check to true
 
-            ShieldDurationTimer();                                          // If the shield is active, start and update shield duration timer
             StartCoroutine(ShieldDuration());                               // Method to activate shield for a given amount of time
         }
         else if (!shieldReady && !shieldActive)                             // Check to see if shield is not ready and the shield isn't active
         {
             ShieldCooldownTimer();                                          // Start and update shield cooldown timer
+        }
+
+        if (shieldActive)
+        {
+            ShieldDurationTimer();                                          // If the shield is active, start and update shield duration timer
         }
     }
 
@@ -114,9 +121,11 @@ public class PlayerAbilities : MonoBehaviour
 
     IEnumerator ShieldCooldown()                                            // Method to prepare shield for next use after cooldown period
     {
+        shieldOnCooldown = true;
         yield return new WaitForSecondsRealtime(shieldCooldown);            // How long before the next shield activation
 
         shieldReady = true;                                                 // Set shield ready to be true so the player will be able to activate it again
+        shieldOnCooldown = false;
         shieldDurationCounter = shieldDuration;                             // Set shield duration counter
     }
 

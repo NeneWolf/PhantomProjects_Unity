@@ -61,13 +61,13 @@ namespace PhantomProjects.Managers
 
             if (currentScene >= 0 && currentScene <= 3)
                 CheckMusic("Main");
-            else if (currentScene >= 6 && currentScene <= 10)          // Lab Scenes
+            else if (currentScene >= 6 && currentScene <= 11)          // Lab Scenes
                 CheckMusic("Lab");
-            else if (currentScene >= 12 && currentScene <= 16)          // Office Scenes
+            else if (currentScene >= 13 && currentScene <= 17)          // Office Scenes
                 CheckMusic("Office");
-            else if (currentScene >= 18 && currentScene <= 22)         // Green House
-                CheckMusic("GreenHouse");
-            else if (currentScene == 11 || currentScene == 17)
+            //else if (currentScene >= 18 && currentScene <= 22)         // Green House
+            //    CheckMusic("GreenHouse");
+            else if (currentScene == 12 || currentScene == 18)
                 CheckMusic("BossRoom");                  // Boss rooms
 
         }

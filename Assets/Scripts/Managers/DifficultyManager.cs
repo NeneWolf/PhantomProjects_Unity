@@ -41,7 +41,7 @@ namespace PhantomProjects.Managers
                     difficultyMultiplier = 1f;
                     break;
                 case 2:
-                    difficultyMultiplier = 3f;
+                    difficultyMultiplier = 2f;
                     break;
                 default:
                     difficultyMultiplier = 1f;

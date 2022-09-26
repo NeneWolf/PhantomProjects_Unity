@@ -232,7 +232,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: The Eye
-  mutationPoints: 300
+  mutationPoints: 400
   entityData: {fileID: 11400000, guid: 75e66275d06fd184284ed4c7c98b6dd5, type: 2}
   wallCheck: {fileID: 6148322109853209573}
   ledgeCheck: {fileID: 6148322108881915938}
@@ -576,7 +576,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 24300002, guid: 0516aec6963970f40b205ec2cfb9ab11, type: 2}
   m_audioClip: {fileID: 8300000, guid: f423dd4abb3eb0c478bd615c38905181, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.4
+  m_Volume: 0.02
   m_Pitch: 1
   Loop: 0
   Mute: 0

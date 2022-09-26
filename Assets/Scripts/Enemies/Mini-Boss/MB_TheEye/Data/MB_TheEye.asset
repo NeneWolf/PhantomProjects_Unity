@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c553bad63f2ec6b41a45ce96b7318ca5, type: 3}
   m_Name: MB_TheEye
   m_EditorClassIdentifier: 
-  maxHealth: 500
+  maxHealth: 1000
   damageHopSpeed: 3
   wallCheckDistance: 2
   ledgeCheckDistance: 1.5

@@ -341,8 +341,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_audio:
-  - {fileID: 7273785878602304525}
   - {fileID: 7273785878602304524}
+  - {fileID: 7273785878602304525}
   - {fileID: 7273785878602304527}
 --- !u!82 &7273785878602304524
 AudioSource:

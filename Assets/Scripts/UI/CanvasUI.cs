@@ -47,6 +47,19 @@ public class CanvasUI : MonoBehaviour
 
     UIManager uiManager;
 
+    // Timer
+    PlayerAbilities shield;
+
+    [Header("Shield Duration")]
+    [Space]
+    [SerializeField] GameObject shieldDurationUI;
+    [SerializeField] Text shieldDurationUITimer;
+
+    [Header("Shield Cooldown")]
+    [Space]
+    [SerializeField] GameObject shieldCooldownUI;
+    [SerializeField] Text shieldCooldownUITimer;
+
     private void Start()
     {
         uiManager = GameObject.Find("UIManager").GetComponent<UIManager>();
@@ -62,6 +75,8 @@ public class CanvasUI : MonoBehaviour
             energyBarSlider.maxValue = player.GetComponent<PlayerStats>().maxHealth;
 
             updateSliders();
+
+            updateShieldUI();
         }
 
         if(boss != null)
@@ -73,6 +88,11 @@ public class CanvasUI : MonoBehaviour
             {
                 PauseGame();
             }
+        }
+
+        if(Input.GetKeyDown(KeyCode.U) && pauseMenu.active == false && storyMenu.active == false)
+        {
+            TurnOnOrOFFPanel(true);
         }
     }
 
@@ -98,6 +118,27 @@ public class CanvasUI : MonoBehaviour
         GameObject.FindObjectOfType<ScenesManager>().gameObject.GetComponent<ScenesManager>().BringNextScene("MainMenu");
     }
 
+    void updateShieldUI()
+    {
+        shield = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<PlayerAbilities>();
+
+        if (shield.shieldActive == true)
+        {
+            shieldDurationUI.SetActive(true);
+            shieldDurationUITimer.text = "Duration: " + (int)shield.shieldDurationCounter;
+        }
+        else
+            shieldDurationUI.SetActive(false);
+
+        if (shield.shieldOnCooldown == true)
+        {
+            shieldCooldownUI.SetActive(true);
+            shieldCooldownUITimer.text = "Cooldown: " + (int)shield.shieldCooldownCounter;
+        }
+        else
+            shieldCooldownUI.SetActive(false);
+    }
+    
     //Player Sliders
     void updateSliders()
     {
@@ -120,6 +161,7 @@ public class CanvasUI : MonoBehaviour
         }
     }
 
+    //Update boss health bar
     public void updateCanvasUI(Sprite characterProfile, bool isBossLevel)
     {
         this.bossLevel = isBossLevel;
@@ -127,6 +169,8 @@ public class CanvasUI : MonoBehaviour
         characterImage.GetComponent<Image>().sprite = characterProfile;
     }
 
+    
+    //Update Keycards and mutation points on the UI
     public void UpdatePlayerUI(int keys, int mutationPoints)
     {
         keycardsTextDisplay.text = keys.ToString();
@@ -134,6 +178,7 @@ public class CanvasUI : MonoBehaviour
         amountDisplay.text = mutationPoints.ToString();
     }
 
+    //Turn on and off Upgrade Panel
     public void TurnOnOrOFFPanel(bool value)
     {
         upgradePanel.SetActive(value);

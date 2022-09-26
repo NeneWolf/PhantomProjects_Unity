@@ -159,7 +159,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   laserSpawnPoint: {fileID: 7439681106689270356}
   defDistanceRay: 25
-  damage: 10
+  damage: 5
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 128
