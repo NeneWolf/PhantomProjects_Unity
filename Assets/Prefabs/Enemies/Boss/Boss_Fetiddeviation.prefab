@@ -6454,7 +6454,7 @@ MonoBehaviour:
   bloodEffect: {fileID: 946820834762324403, guid: b938fa393ddcb8242ac70ed4bb384e7e, type: 3}
   boss: {fileID: 2152633211823046921}
   particles: {fileID: 6864153387828342143}
-  healAmount: 20
+  healAmount: 100
   difficulty: 0
 --- !u!82 &4852138127984212164
 AudioSource:
