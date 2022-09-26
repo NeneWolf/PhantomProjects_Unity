@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c553bad63f2ec6b41a45ce96b7318ca5, type: 3}
   m_Name: MB_2_ME16
   m_EditorClassIdentifier: 
-  maxHealth: 350
+  maxHealth: 450
   damageHopSpeed: 3
   wallCheckDistance: 1
   ledgeCheckDistance: 1

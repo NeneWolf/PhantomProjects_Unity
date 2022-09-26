@@ -5982,7 +5982,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_audio: {fileID: 3051215798528969617}
-  maxHealth: 200
+  maxHealth: 300
   bloodEffect: {fileID: 946820834762324403, guid: b938fa393ddcb8242ac70ed4bb384e7e, type: 3}
   boss: {fileID: 2152633211823046921}
   shootingPoint: {fileID: 7717034681098205007}
@@ -6231,7 +6231,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_audio: {fileID: 7399623782007735700}
-  maxHealth: 200
+  maxHealth: 300
   bloodEffect: {fileID: 946820834762324403, guid: b938fa393ddcb8242ac70ed4bb384e7e, type: 3}
   boss: {fileID: 2152633211823046921}
   laser: {fileID: 6673807177560994012}
@@ -6450,11 +6450,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_audio: {fileID: 4852138127984212164}
-  maxHealth: 200
+  maxHealth: 300
   bloodEffect: {fileID: 946820834762324403, guid: b938fa393ddcb8242ac70ed4bb384e7e, type: 3}
   boss: {fileID: 2152633211823046921}
   particles: {fileID: 6864153387828342143}
-  healAmount: 5
+  healAmount: 20
   difficulty: 0
 --- !u!82 &4852138127984212164
 AudioSource:
