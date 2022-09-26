@@ -108,7 +108,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: ME16
-  mutationPoints: 250
+  mutationPoints: 300
   entityData: {fileID: 11400000, guid: c1bbd797cdcd62a4aae95ba675b03d93, type: 2}
   wallCheck: {fileID: 1963497736171914148}
   ledgeCheck: {fileID: 1963497736189689681}

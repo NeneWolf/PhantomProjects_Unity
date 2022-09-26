@@ -232,7 +232,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: The Eye
-  mutationPoints: 350
+  mutationPoints: 400
   entityData: {fileID: 11400000, guid: 75e66275d06fd184284ed4c7c98b6dd5, type: 2}
   wallCheck: {fileID: 6148322109853209573}
   ledgeCheck: {fileID: 6148322108881915938}
