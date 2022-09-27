@@ -6236,7 +6236,7 @@ MonoBehaviour:
   boss: {fileID: 2152633211823046921}
   laser: {fileID: 6673807177560994012}
   warningTime: 3
-  speed: 2
+  speed: 5
 --- !u!82 &7399623782007735700
 AudioSource:
   m_ObjectHideFlags: 0
