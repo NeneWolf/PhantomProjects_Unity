@@ -9,21 +9,28 @@ public class PlayerDontDestroy : MonoBehaviour
     PlayerStats stats;
     Transform spawnPosition;
 
-    private void Update()
+    private void Start()
     {
-        FindOtherPlayers();       
-    }
-
-
-    void FindOtherPlayers()
-    {
-        otherPlayers = GameObject.FindGameObjectsWithTag("Player");
-
-        if (otherPlayers.Length > 1)
-        {
-            Destroy(this.gameObject);
-        }
-
         DontDestroyOnLoad(this.gameObject);
     }
+
+    //private void Update()
+    //{
+    //    FindOtherPlayers();       
+    //}
+
+
+    //void FindOtherPlayers()
+    //{
+    //    otherPlayers = GameObject.FindGameObjectsWithTag("Player");
+
+    //    if (otherPlayers.Length > 1)
+    //    {
+    //        Destroy(this.gameObject);
+    //    }
+    //    else
+    //        return;
+
+    //    DontDestroyOnLoad(this.gameObject);
+    //}
 }

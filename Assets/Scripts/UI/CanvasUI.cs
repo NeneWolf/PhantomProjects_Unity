@@ -64,6 +64,7 @@ public class CanvasUI : MonoBehaviour
     {
         uiManager = GameObject.Find("UIManager").GetComponent<UIManager>();
     }
+    
     private void Update()
     {
         player = GameObject.FindGameObjectWithTag("Player");

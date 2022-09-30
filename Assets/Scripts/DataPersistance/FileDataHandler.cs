@@ -62,6 +62,7 @@ public class FileDataHandler
 
         // use Path.Combine to account for different OS's having different path separators
         string fullPath = Path.Combine(dataDirPath, profileId, dataFileName);
+        
         try
         {
             // create the directory the file will be written to if it doesn't already exist

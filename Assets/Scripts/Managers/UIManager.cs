@@ -12,6 +12,7 @@ namespace PhantomProjects.Managers
 
         //Player
         GameObject player;
+        float playerHealth;
         int playerIndex;
         public Sprite[] characterSprite;
 
@@ -27,20 +28,18 @@ namespace PhantomProjects.Managers
             gameManager = FindObjectOfType<GameManager>();
         }
 
-        void  Update()
+        void Update()
         {
             if (gameManager.inStartLevel)
             {
-                if (GameObject.Find("Canvas").GetComponent<CanvasUI>() != null)
-                {
-                    canvas = GameObject.Find("Canvas").GetComponent<CanvasUI>();
-                    levelUIManager();
-                }
+                if (player == null)
+                    player = GameObject.FindGameObjectWithTag("Player");
+                
+                canvas = GameObject.FindObjectOfType<CanvasUI>();
 
-                if (GameObject.FindGameObjectWithTag("Player").gameObject.GetComponent<PlayerStats>().currentHealth <=0)
+                if (canvas != null)
                 {
-                    currentKeycards = 0;
-                    currentMutationPoints = 0;
+                    levelUIManager();
                 }
             }
         }
@@ -81,6 +80,11 @@ namespace PhantomProjects.Managers
             data.mutationPoints = this.currentMutationPoints;
         }
 
+        public void ResetAllData()
+        {
+            currentKeycards = 0;
+            currentMutationPoints = 0;
+        }
 
         public void ResetKeyCards(){
             currentKeycards = 0;

@@ -30,6 +30,7 @@ public class PlayerStats : MonoBehaviour, IDataPersistance
 
     GameObject gameManager;
     GameObject scenesManager;
+    GameObject uiManager;
 
     bool isRegenEnergy = false;
 
@@ -39,6 +40,7 @@ public class PlayerStats : MonoBehaviour, IDataPersistance
     {
         gameManager = GameObject.FindObjectOfType<GameManager>().gameObject;
         scenesManager = GameObject.FindObjectOfType<ScenesManager>().gameObject;
+        uiManager = GameObject.FindObjectOfType<UIManager>().gameObject;
 
         if (!gameManager.GetComponent<GameManager>().loadedSave)
         {
@@ -75,6 +77,7 @@ public class PlayerStats : MonoBehaviour, IDataPersistance
     IEnumerator WaitToDie()
     {
         yield return new WaitForSeconds(2f);
+        uiManager.GetComponent<UIManager>().ResetAllData();
         scenesManager.GetComponent<ScenesManager>().LoadScene(5);
         StopCoroutine(WaitToDie());
     }
