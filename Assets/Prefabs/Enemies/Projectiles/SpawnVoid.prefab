@@ -75,7 +75,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1838932657
-  m_SortingLayer: 7
+  m_SortingLayer: 6
   m_SortingOrder: 20
   m_Sprite: {fileID: -602447754, guid: 24c1acbc29c22fd4eb9e9e39181cb48e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -5037,7 +5037,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1838932657
-  m_SortingLayer: 7
+  m_SortingLayer: 6
   m_SortingOrder: 20
   m_Sprite: {fileID: -2146177517, guid: 331e384bc6f9ba64bb87b93572e71f9b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -5063,7 +5063,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireBall: {fileID: 28153485269348646}
-  interval: 4
+  interval: 2
 --- !u!95 &473552869820373531
 Animator:
   serializedVersion: 4

@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using PhantomProjects.Managers;
+using UnityEngine.SceneManagement;
 
 public class CanvasUI : MonoBehaviour
 {
@@ -60,6 +61,10 @@ public class CanvasUI : MonoBehaviour
     [SerializeField] GameObject shieldCooldownUI;
     [SerializeField] Text shieldCooldownUITimer;
 
+
+    //Level text
+    [SerializeField] Text level;
+
     private void Start()
     {
         uiManager = GameObject.Find("UIManager").GetComponent<UIManager>();
@@ -83,7 +88,7 @@ public class CanvasUI : MonoBehaviour
         if(boss != null)
             BossUI();
 
-        if (Input.GetKeyDown(KeyCode.P) && upgradePanel.active == false && storyMenu.active == false)
+        if (Input.GetKeyDown(KeyCode.P) && upgradePanel.activeInHierarchy == false && storyMenu.activeInHierarchy == false)
         {
             if (!isPaused)
             {
@@ -91,11 +96,18 @@ public class CanvasUI : MonoBehaviour
             }
         }
 
-        if(Input.GetKeyDown(KeyCode.U) && pauseMenu.active == false && storyMenu.active == false)
+        if (Input.GetKeyDown(KeyCode.U) && pauseMenu.activeInHierarchy == false && storyMenu.activeInHierarchy == false)
         {
             TurnOnOrOFFPanel(true);
         }
+
+        UpdateLevelText();
     }
+
+    void UpdateLevelText() {
+        level.text = SceneManager.GetActiveScene().name;
+    }
+
 
     void PauseGame()
     {
@@ -182,6 +194,7 @@ public class CanvasUI : MonoBehaviour
     //Turn on and off Upgrade Panel
     public void TurnOnOrOFFPanel(bool value)
     {
+        print("Upgrade Panel -  Triggered");
         upgradePanel.SetActive(value);
 
         if (value)

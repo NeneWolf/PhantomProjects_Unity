@@ -246,7 +246,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1838932657
-  m_SortingLayer: 7
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: -3301723577448011057, guid: 9f2959c7bbb6ab7439ed347a718c1709, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -452,7 +452,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 24300002, guid: 0516aec6963970f40b205ec2cfb9ab11, type: 2}
   m_audioClip: {fileID: 8300000, guid: f423dd4abb3eb0c478bd615c38905181, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.3
+  m_Volume: 0.1
   m_Pitch: 0.4
   Loop: 0
   Mute: 0

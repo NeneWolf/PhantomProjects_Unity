@@ -7,7 +7,8 @@ public class PlayerStats : MonoBehaviour, IDataPersistance
 {
     #region Variables
     PrototypeHero controls;
-
+    BoxCollider2D playerCollider;
+    
     [Header("Health & Energy")]
     [Space]
     [SerializeField] public float maxHealth = 100;                    // Player's maximum amount of health
@@ -41,6 +42,7 @@ public class PlayerStats : MonoBehaviour, IDataPersistance
         gameManager = GameObject.FindObjectOfType<GameManager>().gameObject;
         scenesManager = GameObject.FindObjectOfType<ScenesManager>().gameObject;
         uiManager = GameObject.FindObjectOfType<UIManager>().gameObject;
+        playerCollider = GetComponent<BoxCollider2D>();
 
         if (!gameManager.GetComponent<GameManager>().loadedSave)
         {
@@ -77,7 +79,10 @@ public class PlayerStats : MonoBehaviour, IDataPersistance
     IEnumerator WaitToDie()
     {
         yield return new WaitForSeconds(2f);
-        uiManager.GetComponent<UIManager>().ResetAllData();
+        uiManager.GetComponent<UIManager>().ResetKeyCards();
+        playerCollider.enabled = false;
+        currentHealth = maxHealth;
+        currentEnergy = maxEnergy;
         scenesManager.GetComponent<ScenesManager>().LoadScene(5);
         StopCoroutine(WaitToDie());
     }

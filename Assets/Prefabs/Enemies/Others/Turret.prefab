@@ -325,7 +325,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1838932657
-  m_SortingLayer: 7
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 1f02bf67f80222e4fa1a92e00d82e6f4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -355,7 +355,7 @@ MonoBehaviour:
   turretHead: {fileID: 2120051949411289487}
   shootPoint: {fileID: 2120051949013552730}
   bullet: {fileID: 2106420017863790262, guid: 5958735ab4ca7684e8057cfa89b123b3, type: 3}
-  fireRate: 1.2
+  fireRate: 0.5
   force: 150
   agrooRange: 6
   whatIsPlayer:
@@ -560,7 +560,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1838932657
-  m_SortingLayer: 7
+  m_SortingLayer: 6
   m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 9c8bc3031bdd7cf409d9a7581a7225a5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

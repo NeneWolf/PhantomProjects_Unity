@@ -34,7 +34,7 @@ public class DialogueManager : MonoBehaviour
         }
 
         string sentence = sentences.Dequeue();
-        StopAllCoroutines();
+        StopCoroutine(TypeSentence(sentence));
         StartCoroutine(TypeSentence(sentence));
     }
 
@@ -50,7 +50,7 @@ public class DialogueManager : MonoBehaviour
 
     void EndDialogue()
     {
-        GameObject.Find("DialogueBox").SetActive(false);
+        GameObject.Find("DialogMenu").SetActive(false);
         Time.timeScale = 1f;
     }
 }

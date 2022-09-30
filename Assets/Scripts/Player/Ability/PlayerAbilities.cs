@@ -110,7 +110,7 @@ public class PlayerAbilities : MonoBehaviour
 
     IEnumerator ShieldDuration()                                            // Method to keep shield active for the specified duration
     {
-        yield return new WaitForSecondsRealtime(shieldDuration);            // How long the shield will stay up for in seconds
+        yield return new WaitForSeconds(shieldDuration);            // How long the shield will stay up for in seconds
 
         shield.SetActive(false);                                            // Deactivate shield
         shieldActive = false;                                               // Set shield active check to false
@@ -122,7 +122,7 @@ public class PlayerAbilities : MonoBehaviour
     IEnumerator ShieldCooldown()                                            // Method to prepare shield for next use after cooldown period
     {
         shieldOnCooldown = true;
-        yield return new WaitForSecondsRealtime(shieldCooldown);            // How long before the next shield activation
+        yield return new WaitForSeconds(shieldCooldown);            // How long before the next shield activation
 
         shieldReady = true;                                                 // Set shield ready to be true so the player will be able to activate it again
         shieldOnCooldown = false;

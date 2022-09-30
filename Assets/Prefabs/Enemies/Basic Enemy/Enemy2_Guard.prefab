@@ -116,7 +116,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1838932657
-  m_SortingLayer: 7
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: -1566551997, guid: 05ff52adc49dbb443ad2d39a76fe8d05, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -579,7 +579,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: Security Guard
-  mutationPoints: 50
+  mutationPoints: 30
   entityData: {fileID: 11400000, guid: a9a4893ad76f6494a9ddfd0260519f5a, type: 2}
   wallCheck: {fileID: 8402189772926320214}
   ledgeCheck: {fileID: 8402189772820283902}

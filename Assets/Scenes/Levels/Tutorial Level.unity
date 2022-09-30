@@ -11758,7 +11758,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22740d0ce926ef94ca3034d06412f56a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueBox: {fileID: 1062892165}
+  dialogueBox: {fileID: 1062892167}
   dialogue:
     sentences:
     - Press F to interact with doors.
@@ -11779,7 +11779,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22740d0ce926ef94ca3034d06412f56a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueBox: {fileID: 1062892165}
+  dialogueBox: {fileID: 1062892167}
   dialogue:
     sentences:
     - Press F to interact with objects found on each level.
@@ -11795,7 +11795,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22740d0ce926ef94ca3034d06412f56a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueBox: {fileID: 1062892165}
+  dialogueBox: {fileID: 1062892167}
   dialogue:
     sentences:
     - A KEYCARD, this looks like it could be helpful, better hold on to it.
@@ -12005,82 +12005,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 205329546, guid: bdfd41d3a2df1ce4388c04a794dda989, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 205329546, guid: bdfd41d3a2df1ce4388c04a794dda989, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 205329546, guid: bdfd41d3a2df1ce4388c04a794dda989, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 205329546, guid: bdfd41d3a2df1ce4388c04a794dda989, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 347359023, guid: bdfd41d3a2df1ce4388c04a794dda989, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -22
-      objectReference: {fileID: 0}
-    - target: {fileID: 731611477, guid: bdfd41d3a2df1ce4388c04a794dda989, type: 3}
-      propertyPath: m_Text
-      value: Unstable Charge
-      objectReference: {fileID: 0}
-    - target: {fileID: 1162193301, guid: bdfd41d3a2df1ce4388c04a794dda989, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1162193301, guid: bdfd41d3a2df1ce4388c04a794dda989, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1162193301, guid: bdfd41d3a2df1ce4388c04a794dda989, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1162193301, guid: bdfd41d3a2df1ce4388c04a794dda989, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1325883131, guid: bdfd41d3a2df1ce4388c04a794dda989, type: 3}
-      propertyPath: m_Text
-      value: Weapon
-      objectReference: {fileID: 0}
-    - target: {fileID: 1413701521, guid: bdfd41d3a2df1ce4388c04a794dda989, type: 3}
-      propertyPath: m_Text
-      value: Fire Rate
-      objectReference: {fileID: 0}
-    - target: {fileID: 1552402417, guid: bdfd41d3a2df1ce4388c04a794dda989, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1552402417, guid: bdfd41d3a2df1ce4388c04a794dda989, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1552402417, guid: bdfd41d3a2df1ce4388c04a794dda989, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1552402417, guid: bdfd41d3a2df1ce4388c04a794dda989, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 234848130599098532, guid: bdfd41d3a2df1ce4388c04a794dda989, type: 3}
-      propertyPath: m_Name
-      value: CooldownTimerText
-      objectReference: {fileID: 0}
-    - target: {fileID: 1524864487540427209, guid: bdfd41d3a2df1ce4388c04a794dda989, type: 3}
-      propertyPath: m_Name
-      value: DurationTimerText
-      objectReference: {fileID: 0}
-    - target: {fileID: 1840261173941764760, guid: bdfd41d3a2df1ce4388c04a794dda989, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2765511913538290260, guid: bdfd41d3a2df1ce4388c04a794dda989, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -12189,17 +12113,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5516526338746781994, guid: bdfd41d3a2df1ce4388c04a794dda989, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bdfd41d3a2df1ce4388c04a794dda989, type: 3}
---- !u!1 &1062892165 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6293524105969498749, guid: bdfd41d3a2df1ce4388c04a794dda989, type: 3}
-  m_PrefabInstance: {fileID: 1062892164}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1062892166 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1062892166, guid: bdfd41d3a2df1ce4388c04a794dda989, type: 3}
@@ -12211,6 +12126,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1062892167 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9209508187844750078, guid: bdfd41d3a2df1ce4388c04a794dda989, type: 3}
+  m_PrefabInstance: {fileID: 1062892164}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1078767734
 GameObject:
   m_ObjectHideFlags: 0
@@ -63325,7 +63245,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22740d0ce926ef94ca3034d06412f56a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueBox: {fileID: 1062892165}
+  dialogueBox: {fileID: 1062892167}
   dialogue:
     sentences:
     - Use A and D to move Left and Right.
@@ -63349,7 +63269,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22740d0ce926ef94ca3034d06412f56a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueBox: {fileID: 1062892165}
+  dialogueBox: {fileID: 1062892167}
   dialogue:
     sentences:
     - Where am I?
@@ -63380,7 +63300,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22740d0ce926ef94ca3034d06412f56a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueBox: {fileID: 1062892165}
+  dialogueBox: {fileID: 1062892167}
   dialogue:
     sentences:
     - "That sound again\u2026 What is that thing ahead of me\u2026"
@@ -66994,7 +66914,7 @@ PrefabInstance:
     - target: {fileID: 1129965057030473517, guid: f54c84b0d1db401498a731162a1c8776, type: 3}
       propertyPath: dialogueBox
       value: 
-      objectReference: {fileID: 1062892165}
+      objectReference: {fileID: 1062892167}
     - target: {fileID: 1129965057030473517, guid: f54c84b0d1db401498a731162a1c8776, type: 3}
       propertyPath: dialogue.sentences.Array.size
       value: 7
@@ -67153,6 +67073,10 @@ PrefabInstance:
     - target: {fileID: 7475328517001802992, guid: 1c6fe887704bace49bb9043e4d5349e7, type: 3}
       propertyPath: m_Name
       value: Door
+      objectReference: {fileID: 0}
+    - target: {fileID: 7475328517001802992, guid: 1c6fe887704bace49bb9043e4d5349e7, type: 3}
+      propertyPath: m_TagString
+      value: ExitDoor
       objectReference: {fileID: 0}
     - target: {fileID: 7475328517001802993, guid: 1c6fe887704bace49bb9043e4d5349e7, type: 3}
       propertyPath: m_RootOrder
