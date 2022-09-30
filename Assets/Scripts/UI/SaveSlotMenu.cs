@@ -38,7 +38,7 @@ public class SaveSlotMenu : MonoBehaviour
             profilesGameData.TryGetValue(saveSlot.GetProfileId(), out profileData);
             saveSlot.SetData(profileData);
 
-            if (saveSlot.GetLevelCurrentlyIn(profileData) == "Character Selection")
+            if (saveSlot.GetLevelCurrentlyIn(profileData) == "MainMenu")
             {
                 DataPersistanceManager.instanceData.DeleteProfileData(saveSlot.GetProfileId());
                 saveSlot.ResetSlot();

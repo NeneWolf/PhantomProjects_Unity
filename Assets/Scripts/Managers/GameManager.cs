@@ -119,8 +119,8 @@ namespace PhantomProjects.Managers
 
             if (inStartLevel)
                 data.currentLevelIndex = currentSceneIndex + 1;
-            else
-                data.currentLevelIndex = 1;
+            //else
+            //    data.currentLevelIndex = 1;
 
         }
 
