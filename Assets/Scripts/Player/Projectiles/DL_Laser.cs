@@ -47,8 +47,15 @@ public class DL_Laser : MonoBehaviour
 
         if (enemyHit & laserTickRateCounter == 0)                               // If the raycast hits an object and the tick rate is 0
         {
-            laserTickRateCounter = laserTickRate;                               // Reset the tick rate counter to prevent damage from occuring continously 
-            enemyHit.collider.transform.parent.GetComponent<Entity>().Damage(damage);                  // Deal the laser's damage to the object hit if it's an enemy
+            laserTickRateCounter = laserTickRate;       // Reset the tick rate counter to prevent damage from occuring continously 
+            if (enemyHit.collider.tag =="Enemy")
+            {
+               enemyHit.collider.transform.parent.GetComponent<Entity>().Damage(damage);                  // Deal the laser's damage to the object hit if it's an enemy
+            }
+            else if(enemyHit.collider.tag == "BMinion")
+            {
+                enemyHit.collider.gameObject.GetComponentInParent<MinionsControls>().TakeMinionDamage(enemyHit.collider.gameObject.name, damage);                  // Deal the laser's damage to the object hit if it's an enemy 
+            }
         }
     }
 

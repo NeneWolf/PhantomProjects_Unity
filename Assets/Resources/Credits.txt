@@ -13,7 +13,7 @@ Lead Programmer & Lead Tester
 Ines Mateus Lobo 
 
 Project Assistant
-Spencer
+Spencer Dunsford
 
 
 !Unity Assets
@@ -62,12 +62,7 @@ Universal Sound FX by Imphenzia
 
 Ultimate Game Music Collection by John Leonard French
 
-
-
-!Playtesters
-
-To be added...
-
+Dark Laboratory by NormalCatStudio
 
 
 !Special Thanks 
@@ -80,8 +75,4 @@ Jack Ingram
 
 Stephen Selwood
 
-
-
-Copy Right information
-@2022 Future App 
 
