@@ -48,7 +48,7 @@ public class CanvasUI : MonoBehaviour
 
     UIManager uiManager;
 
-    // Timer
+    // Timers
     PlayerAbilities shield;
 
     [Header("Shield Duration")]
@@ -61,8 +61,15 @@ public class CanvasUI : MonoBehaviour
     [SerializeField] GameObject shieldCooldownUI;
     [SerializeField] Text shieldCooldownUITimer;
 
+    TargetIndicator arrow;
+
+    [Header("Arrow Indicator Cooldown")]
+    [Space]
+    [SerializeField] GameObject arrowCooldownUI;
+    [SerializeField] Text arrowCooldownUITimer;
 
     //Level text
+    [Space]
     [SerializeField] Text level;
 
     private void Start()
@@ -83,6 +90,8 @@ public class CanvasUI : MonoBehaviour
             updateSliders();
 
             updateShieldUI();
+
+            updateArrowInidcatorUI();
         }
 
         if(boss != null)
@@ -150,6 +159,19 @@ public class CanvasUI : MonoBehaviour
         }
         else
             shieldCooldownUI.SetActive(false);
+    }
+
+    void updateArrowInidcatorUI()
+    {
+        arrow = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<TargetIndicator>();
+
+        if (arrow.arrowOnCooldown == true)
+        {
+            arrowCooldownUI.SetActive(true);
+            arrowCooldownUITimer.text = "Cooldown: " + (int)arrow.arrowCooldownCounter;
+        }
+        else
+            arrowCooldownUI.SetActive(false);
     }
     
     //Player Sliders

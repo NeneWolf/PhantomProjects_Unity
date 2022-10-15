@@ -11,13 +11,15 @@ public class TargetIndicator : MonoBehaviour
     [SerializeField] float arrowDuration = 2f;
     [SerializeField] float arrowCooldown = 2f;
     private float arrowDurationCounter;
-    private float arrowCooldownCounter;
-    bool arrowActive = false;
+    public float arrowCooldownCounter { get; private set; }
+    public bool arrowActive { get; private set; } = false;
+    public bool arrowOnCooldown { get; private set; } = false;
     bool arrowReady = true;
-    bool arrowOnCooldown = false;
 
     private void Start()
     {
+        arrowDurationCounter = arrowDuration;
+        arrowCooldownCounter = arrowCooldown;
         arrowAnim = arrow.GetComponent<Animator>();
     }
 
@@ -110,7 +112,7 @@ public class TargetIndicator : MonoBehaviour
     {
         yield return new WaitForSeconds(arrowDuration);
         arrow.SetActive(false);
-        arrowReady = false;
+        arrowActive = false;
         arrowCooldownCounter = arrowCooldown;
         StartCoroutine(ArrowCooldown());
     }
