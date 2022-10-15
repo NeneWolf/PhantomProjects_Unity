@@ -18,8 +18,6 @@ public class TargetIndicator : MonoBehaviour
 
     private void Start()
     {
-        arrowDurationCounter = arrowDuration;
-        arrowCooldownCounter = arrowCooldown;
         arrowAnim = arrow.GetComponent<Animator>();
     }
 
