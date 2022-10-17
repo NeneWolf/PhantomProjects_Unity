@@ -12004,34 +12004,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1868501785542885497, guid: bdfd41d3a2df1ce4388c04a794dda989, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 250
-      objectReference: {fileID: 0}
-    - target: {fileID: 2587211282515529672, guid: bdfd41d3a2df1ce4388c04a794dda989, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 450
-      objectReference: {fileID: 0}
-    - target: {fileID: 2587211282515529672, guid: bdfd41d3a2df1ce4388c04a794dda989, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 15
-      objectReference: {fileID: 0}
     - target: {fileID: 2765511913538290260, guid: bdfd41d3a2df1ce4388c04a794dda989, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1914356263}
-    - target: {fileID: 2923910577802440739, guid: bdfd41d3a2df1ce4388c04a794dda989, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4533075580534609283, guid: bdfd41d3a2df1ce4388c04a794dda989, type: 3}
-      propertyPath: m_Name
-      value: UITimers
-      objectReference: {fileID: 0}
-    - target: {fileID: 4533075580534609283, guid: bdfd41d3a2df1ce4388c04a794dda989, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4592463774451269173, guid: bdfd41d3a2df1ce4388c04a794dda989, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -12135,18 +12111,6 @@ PrefabInstance:
     - target: {fileID: 4592463775148371838, guid: bdfd41d3a2df1ce4388c04a794dda989, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5400824529974894628, guid: bdfd41d3a2df1ce4388c04a794dda989, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6346743935678173565, guid: bdfd41d3a2df1ce4388c04a794dda989, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7862599902092358017, guid: bdfd41d3a2df1ce4388c04a794dda989, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 80
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bdfd41d3a2df1ce4388c04a794dda989, type: 3}
