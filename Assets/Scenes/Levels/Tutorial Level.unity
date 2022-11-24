@@ -12004,6 +12004,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1062892166, guid: bdfd41d3a2df1ce4388c04a794dda989, type: 3}
+      propertyPath: m_FontData.m_MaxSize
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1062892166, guid: bdfd41d3a2df1ce4388c04a794dda989, type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2765511913538290260, guid: bdfd41d3a2df1ce4388c04a794dda989, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -12110,6 +12118,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4592463775148371838, guid: bdfd41d3a2df1ce4388c04a794dda989, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9209508187844750078, guid: bdfd41d3a2df1ce4388c04a794dda989, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -63335,7 +63347,7 @@ MonoBehaviour:
   dialogueBox: {fileID: 1062892167}
   dialogue:
     sentences:
-    - "That sound again\u2026 What is that thing ahead of me\u2026"
+    - "That sound again\u2026 What is that thing ahead of me?"
     - "It's some sort of creature, the lack of lighting makes it hard to see but
       it doesn\u2019t look too friendly."
     - "Looks like it\u2019s heading towards me... I guess this is a good time to
@@ -66949,80 +66961,73 @@ PrefabInstance:
       objectReference: {fileID: 1062892167}
     - target: {fileID: 1129965057030473517, guid: f54c84b0d1db401498a731162a1c8776, type: 3}
       propertyPath: dialogue.sentences.Array.size
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1129965057030473517, guid: f54c84b0d1db401498a731162a1c8776, type: 3}
       propertyPath: dialogue.sentences.Array.data[0]
-      value: 'Test Subject X154
+      value: '
 
-        Entry 1
+        Test Subject X154
 
 
-        Unlike the other subjects,
-        injection of the substance into subject X154 has proven to be successful.
-        Vitals appear to be stable and there have been no signs of mutation.'
+        Entry 1'
       objectReference: {fileID: 0}
     - target: {fileID: 1129965057030473517, guid: f54c84b0d1db401498a731162a1c8776, type: 3}
       propertyPath: dialogue.sentences.Array.data[1]
-      value: 'Test Subject X154
-
-        Entry 1
-
-
-        Extra caution is advised
-        when handling subject X154. During testing, another scientist attempted to
-        grab the subject''s arm and a powerful laser beam was shot out of the subject''s
-        hand resulting in two casualties.'
+      value: '>>> Unlike the other subjects, injection of the substance into subject
+        X154 has proven to be successful. Vitals appear to be stable and there have
+        been no signs of mutation. <<<'
       objectReference: {fileID: 0}
     - target: {fileID: 1129965057030473517, guid: f54c84b0d1db401498a731162a1c8776, type: 3}
       propertyPath: dialogue.sentences.Array.data[2]
-      value: 'Test Subject X154
-
-        Entry 1
-
-
-        We conclude that this
-        is the unique ability the substance has provided to this individual. We have
-        decided to name this ability: Unstable charge, as we currently have no control
-        over its devastating power.'
+      value: '>>> Extra caution is advised when handling subject X154. During testing,
+        another scientist attempted to grab the subject''s arm and a powerful laser
+        beam was shot out of the subject''s hand resulting in two casualties. <<<'
       objectReference: {fileID: 0}
     - target: {fileID: 1129965057030473517, guid: f54c84b0d1db401498a731162a1c8776, type: 3}
       propertyPath: dialogue.sentences.Array.data[3]
-      value: 'Test Subject X154
-
-        Entry 1
-
-
-        We will continue to monitor
-        subject X154 and further testing will commence once the substance has fully
-        spread throughout the subject''s body.'
+      value: '>>> We conclude that this is the unique ability the substance has provided
+        to this individual. We have decided to name this ability: Unstable charge,
+        as we currently have no control over its devastating power. <<<'
       objectReference: {fileID: 0}
     - target: {fileID: 1129965057030473517, guid: f54c84b0d1db401498a731162a1c8776, type: 3}
       propertyPath: dialogue.sentences.Array.data[4]
+      value: '>>> We will continue to monitor subject X154 and further testing will
+        commence once the substance has fully spread throughout the subject''s body.
+        <<<'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1129965057030473517, guid: f54c84b0d1db401498a731162a1c8776, type: 3}
+      propertyPath: dialogue.sentences.Array.data[5]
       value: Are these notes about me? Looks like I was being experimented on...
         A powerful laser beam? Unstable charge... Am I really able to do something
         like that? Guess it wouldn't hurt to try out.
       objectReference: {fileID: 0}
     - target: {fileID: 1129965057030473517, guid: f54c84b0d1db401498a731162a1c8776, type: 3}
-      propertyPath: dialogue.sentences.Array.data[5]
+      propertyPath: dialogue.sentences.Array.data[6]
       value: I don't know why I was chosen for this, but trying to sit here and figure
         it out won't do me any good if I can't remember anything.
       objectReference: {fileID: 0}
     - target: {fileID: 1129965057030473517, guid: f54c84b0d1db401498a731162a1c8776, type: 3}
-      propertyPath: dialogue.sentences.Array.data[6]
-      value: 'Press the right mouse button to use your special ability: Unstable
-        Charge.'
+      propertyPath: dialogue.sentences.Array.data[7]
+      value: '>>> Press the right mouse button to use your special ability: Unstable
+        Charge. <<<'
       objectReference: {fileID: 0}
     - target: {fileID: 1129965057030473517, guid: f54c84b0d1db401498a731162a1c8776, type: 3}
-      propertyPath: dialogue.sentences.Array.data[7]
-      value: 'Test Subject X154
+      propertyPath: dialogue.sentences.Array.data[8]
+      value: '
 
-        Entry 1
+        Test Subject X154
 
 
-        Unlike the other subjects,
-        injection of the substance into subject X154 has proven to be successful.
-        Vitals appear to be stable and there have been no signs of mutation.'
+        Entry 1'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1129965058381812434, guid: f54c84b0d1db401498a731162a1c8776, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1129965058573786704, guid: f54c84b0d1db401498a731162a1c8776, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5528226818991698801, guid: f54c84b0d1db401498a731162a1c8776, type: 3}
       propertyPath: m_RootOrder
