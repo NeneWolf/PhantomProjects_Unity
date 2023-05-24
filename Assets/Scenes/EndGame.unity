@@ -646,8 +646,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 1931.3995, y: 244.35303}
-  m_SizeDelta: {x: 167.0631, y: 31.298}
+  m_AnchoredPosition: {x: 1931.3995, y: 215.53784}
+  m_SizeDelta: {x: 167.0631, y: 37.3004}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &508858863
 MonoBehaviour:
@@ -682,8 +682,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: This is the end of the ALPHA VERSION. More levels and new exciting content
-    will be added in future updates.
+  m_Text: "Thank you for playing our demo. More levels and new exciting content coming
+    soon. \n\nfollow us on our website or linkedin for more information on Phantom
+    Projects journey."
 --- !u!222 &508858864
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4590,8 +4591,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 787.9995, y: 630}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 836.6897, y: 630}
+  m_SizeDelta: {x: 151.2464, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1288146284
 MonoBehaviour:
@@ -4615,10 +4616,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 652f7165b7c30ab46af6c4aad90a639b, type: 2}
-    m_FontSize: 18
+    m_FontSize: 15
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -4626,7 +4627,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: You Have Escaped !
+  m_Text: Thank you for playing !
 --- !u!222 &1288146285
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5665,8 +5666,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 771, y: 637.99976}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 820.6201, y: 637.99976}
+  m_SizeDelta: {x: 151.2464, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1796487555
 MonoBehaviour:
@@ -5690,10 +5691,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 652f7165b7c30ab46af6c4aad90a639b, type: 2}
-    m_FontSize: 18
+    m_FontSize: 15
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -5701,7 +5702,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: You Have Escaped !
+  m_Text: Thank you for playing !
 --- !u!222 &1796487556
 CanvasRenderer:
   m_ObjectHideFlags: 0
